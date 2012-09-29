@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.9.29)  29 SEP 2012 19:27
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.9.29)  29 SEP 2012 19:36
 entering extended mode
 **lastenheft.tex
 (C:\Users\joscha\Documents\GitHub\SWE-Bullshit\lastenheft.tex
@@ -1114,9 +1114,10 @@ Package: titlesec 2011/12/15 v2.10.0 Sectioning titles
 \titlewidthlast=\dimen161
 \titlewidthfirst=\dimen162
 )
-No file lastenheft.aux.
+(C:\Users\joscha\Documents\GitHub\SWE-Bullshit\lastenheft.aux)
 LaTeX Font Info:    Checking defaults for OML/jkp/m/it on input line 36.
 LaTeX Font Info:    Try loading font information for OML+jkp on input line 36.
+
 (C:\Users\joscha\AppData\Roaming\MiKTeX\2.9\tex\latex\kpfonts\omljkp.fd
 File: omljkp.fd 2006/08/15 v1.0
 )
@@ -1217,9 +1218,9 @@ LaTeX Font Info:    Try loading font information for T1+jkpss on input line 42.
 (C:\Users\joscha\AppData\Roaming\MiKTeX\2.9\tex\latex\kpfonts\t1jkpss.fd
 File: t1jkpss.fd 2007/07/16 Fontinst v1.928 font definitions for T1/jkpss.
 )
-No file lastenheft.toc.
+(C:\Users\joscha\Documents\GitHub\SWE-Bullshit\lastenheft.toc)
 \tf@toc=\write4
-[1
+ [1
 
 ]
 Chapter 1.
@@ -1231,7 +1232,7 @@ Chapter 2.
 
 ]
 Chapter 3.
-<images/umweltdiagramm.png, id=21, 305.7021pt x 203.0787pt>
+<images/umweltdiagramm.png, id=22, 305.7021pt x 203.0787pt>
 File: images/umweltdiagramm.png Graphic file (type png)
 
 <use images/umweltdiagramm.png>
@@ -1285,23 +1286,23 @@ Chapter 14.
 
 ] (C:\Users\joscha\Documents\GitHub\SWE-Bullshit\lastenheft.aux) ) 
 Here is how much of TeX's memory you used:
- 12888 strings out of 494045
- 226704 string characters out of 3145966
- 254420 words of memory out of 3000000
+ 12892 strings out of 494045
+ 226944 string characters out of 3145966
+ 256200 words of memory out of 3000000
  15892 multiletter control sequences out of 15000+200000
  70278 words of font info for 92 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
  56i,10n,75p,510b,1052s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program F
-iles (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}{C:/Users/joscha/AppData/
-Roaming/MiKTeX/2.9/fonts/enc/dvips/kpfonts/kpfonts-expert.enc}<C:/Users/joscha/
+{C:/Users/jos
+cha/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/kpfonts/kpfonts-expert.enc}{C:/P
+rogram Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Users/joscha/
 AppData/Roaming/MiKTeX/2.9/fonts/type1/public/kpfonts/jkpbn8a.pfb><C:/Users/jos
 cha/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/kpfonts/jkpmn8a.pfb><C:/Users
 /joscha/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/kpfonts/jkpmne.pfb><C:/Us
 ers/joscha/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/kpfonts/jkpssbsc8a.pfb
 ><C:/Users/joscha/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/kpfonts/jkpttmn
 8a.pfb>
-Output written on lastenheft.pdf (16 pages, 88556 bytes).
+Output written on lastenheft.pdf (16 pages, 94208 bytes).
 PDF statistics:
  82 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
