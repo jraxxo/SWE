@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.9.29)  7 OCT 2012 17:00
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.9.29)  7 OCT 2012 17:37
 entering extended mode
 **specification_sheet.tex
 (C:\Users\joscha\Documents\GitHub\SWE\specification_sheet.tex
@@ -59,56 +59,71 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 ]
 Chapter 1.
-Chapter 2.
-Chapter 3.
-Chapter 4.
-Chapter 5.
-Chapter 6.
-(C:\Users\joscha\Documents\GitHub\SWE\specification_sheet.aux) [2
 
+Underfull \hbox (badness 10000) in paragraph at lines 9--11
 
-\@writefile{toc}{\contentsline {chapter}{\numberline {1}Purpose/Aims of the Pro
-duct}{2}}
-\@writefile{lof}{\addvspace {10\p@ }}
-\@writefile{lot}{\addvspace {10\p@ }}
+ []
+
+[2
+
 ]
-Overfull \vbox (230.3472pt too high) has occurred while \output is active []
+Chapter 2.
 
+Underfull \hbox (badness 10000) in paragraph at lines 12--14
+
+ []
 
 [3
-\@writefile{toc}{\contentsline {chapter}{\numberline {2}Usage of the Product}{3
-}}
-\@writefile{lof}{\addvspace {10\p@ }}
-\@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {chapter}{\numberline {3}Product Overview}{3}}
-\@writefile{lof}{\addvspace {10\p@ }}
-\@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {chapter}{\numberline {4}Product Functions}{3}}
-\@writefile{lof}{\addvspace {10\p@ }}
-\@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Product Data}{3}}
-\@writefile{lof}{\addvspace {10\p@ }}
-\@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {chapter}{\numberline {6}Product Performance}{3}
-}
-\@writefile{lof}{\addvspace {10\p@ }}
-\@writefile{lot}{\addvspace {10\p@ }}
-] ) 
+
+]
+Chapter 3.
+
+Underfull \hbox (badness 10000) in paragraph at lines 15--17
+
+ []
+
+[4
+
+]
+Chapter 4.
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--20
+
+ []
+
+[5
+
+]
+Chapter 5.
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--23
+
+ []
+
+[6
+
+]
+Chapter 6.
+[7
+
+] (C:\Users\joscha\Documents\GitHub\SWE\specification_sheet.aux) ) 
 Here is how much of TeX's memory you used:
- 252 strings out of 494045
- 3124 string characters out of 3145966
+ 256 strings out of 494045
+ 3157 string characters out of 3145966
  50890 words of memory out of 3000000
- 3617 multiletter control sequences out of 15000+200000
- 7887 words of font info for 28 fonts, out of 3000000 for 9000
+ 3620 multiletter control sequences out of 15000+200000
+ 8195 words of font info for 29 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
- 23i,6n,17p,692b,179s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb
-><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C
-:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/P
-rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on specification_sheet.pdf (4 pages, 60328 bytes).
+ 23i,6n,17p,942b,179s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program F
+iles (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Fil
+es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files
+ (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x
+86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files (x86)
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb>
+Output written on specification_sheet.pdf (8 pages, 80146 bytes).
 PDF statistics:
- 31 PDF objects out of 1000 (max. 8388607)
+ 49 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
