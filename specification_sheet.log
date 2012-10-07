@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.9.29)  7 OCT 2012 18:02
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.9.29)  7 OCT 2012 18:12
 entering extended mode
 **specification_sheet.tex
 (C:\Users\joscha\Documents\GitHub\SWE\specification_sheet.tex
@@ -53,26 +53,6 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (C:\Users\joscha\Documents\GitHub\SWE\specification_sheet.toc)
 \tf@toc=\write3
 
-Overfull \hbox (67.73041pt too wide) in paragraph at lines 1--9
-\OT1/cmr/m/n/10 Purpose/Aims of the Prod-uct2 []Usage
- []
-
-
-Overfull \hbox (12.0081pt too wide) in paragraph at lines 1--9
-\OT1/cmr/m/n/10 of the Prod-uct3 []Product
- []
-
-
-Overfull \hbox (17.84142pt too wide) in paragraph at lines 1--9
-\OT1/cmr/m/n/10 Overview4 []Product Func-
- []
-
-
-Overfull \hbox (4.81363pt too wide) in paragraph at lines 1--9
-[]\OT1/cmr/m/n/10 Product Per-for-mance7 
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 11--13
 
  []
@@ -82,14 +62,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 14--16
 
  []
 
+[1
 
+{C:/Users/joscha/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 Underfull \hbox (badness 10000) in paragraph at lines 17--19
 
  []
 
-[1
 
-{C:/Users/joscha/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 Underfull \hbox (badness 10000) in paragraph at lines 20--22
 
  []
@@ -101,21 +81,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 23--25
 
 [2] (C:\Users\joscha\Documents\GitHub\SWE\specification_sheet.aux) ) 
 Here is how much of TeX's memory you used:
- 233 strings out of 494045
- 2907 string characters out of 3145966
+ 234 strings out of 494045
+ 2919 string characters out of 3145966
  52890 words of memory out of 3000000
  3598 multiletter control sequences out of 15000+200000
- 7280 words of font info for 26 fonts, out of 3000000 for 9000
+ 7588 words of font info for 27 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
  23i,6n,17p,942b,187s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program
- Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program F
-iles (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program File
-s (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files (
-x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on specification_sheet.pdf (2 pages, 62780 bytes).
+ Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program F
+iles (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fil
+es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files 
+(x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files (x8
+6)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb>
+Output written on specification_sheet.pdf (2 pages, 76600 bytes).
 PDF statistics:
- 25 PDF objects out of 1000 (max. 8388607)
+ 29 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
