@@ -1,4 +1,4 @@
-\documentclass[a4paper]{article}
+\documentclass[a4paper,draft]{article}
 \author{Christian Schulz\\crs.s@gmx.net \and Marc A. Harnos\\mharnos@gmail.com \and Joscha Rapp\\jraxxo@gmail.com}
 
 \begin{document}
@@ -10,11 +10,12 @@
 \clearpage
 
 \section{Purpose/Aims of the Product}
-The goal of the project is to create a software that will drastically reduce the amount of work the employees of "BookExpress" spend on logistics and administration, thus speeding up the processes and making sure that every customer gets his or her orders as soon as possible, within the specified timeframe (24 hours). The current IT system is not as flexible or comfortable as it should be - as a result the business processes, such as maintaining a stock database that is consistent as well as up-to-date, are overly complex and time-consuming. The user interface has to be intuitive and performant, relieving the employees of a lot of administrative work and quite possibly reducing the time that new employees need to become familiar with it. By establishing a direct connection to the customers and publishers, all processes can be handled faster. This new IT system consists of Software as well as Hardware. 
+The goal of the project is to create a software that will drastically reduce the amount of work the employees of "BookExpress" spend on logistics and administration, thus speeding up the processes and making sure that every customer gets his or her orders as soon as possible, within the specified timeframe (24 hours). The current IT system is not as flexible or comfortable as it should be - as a result the business processes, such as maintaining a stock database that is consistent as well as up-to-date, are overly complex and time-consuming. The user interface has to be intuitive and performant, relieving the employees of a lot of administrative work and quite possibly reducing the time that new employees need to become familiar with it. By establishing a direct connection to the customers and publishers, all processes can be handled faster - furthermore, as almost all processes are handled by the software, automatic tracking of orders and deliveries is possible, giving estimates of delivery dates/hours. This new IT system will also need a renewal of the existent hardware as it is severely outdated. 
 \\
 \section{Usage of the Product}
 The new IT system will be used by employees of BookExpress as well as the customers and publishers themselves. With the new system, customers will be able to submit orders automatically, depending on their demands, e.g. if their stock is below a certain threshold or they need to get a book for a final customer. The publisher on the other hand can push updates in their stock in realtime - as soon as a new book is available, it can be ordered from BookExpress. Furthermore, the new user experience will be much more modern and streamlined - instead of the old text-based system, all users will be able to use a modern, web-based interface which can even be accessed on mobile devices such as smartphones and tablets, thus increasing the flexibility of employees and customers even more.
-\\	
+\\
+\clearpage
 \section{Product Overview}
 OVERVIEW - what else?
 \\
@@ -23,7 +24,9 @@ OVERVIEW - what else?
 \hspace{3cm}\=\kill
   /SF10/ \> Inventory maintenance (Publisher)\\ 
   Actor(s): \> Publishers\\ 
-  Description: \> Publishers can update their inventory list\\ \> (i.e. the list of available books) either via   	mail or using the \\ \> direct connection over the web-based interface.\\
+  Description: \> Publishers can update their inventory list\\ 
+  \> (i.e. the list of available books) either via mail or using the \\
+  \> direct connection over the web-based interface.\\
   \\
   /SF20/ \> BookExpress Order \\
   Actor(s): \> Employee \\
@@ -33,9 +36,10 @@ OVERVIEW - what else?
  /SF30/ \> Book Store Order \\
  Actor(s): \> Book Store Employee \\
  Description: \> The Book Store orders a book from BookExpress. \\
- \> This can either happen through a constant connection where every order is \\
- \> individually processed or the store can choose to collect orders internally \\
- \> and send them as one big order every day. \\
+ \> This can either happen through a constant connection where \\
+ \> every order is individually processed or the store can choose \\
+ \> to collect orders internally and send them \\
+ \> as one big order every day. \\
  \\
  /SF40/ \> Stock Update (BookExpress) \\
  Actor(s): \> Stock Employee \\
@@ -47,12 +51,30 @@ OVERVIEW - what else?
  Description: \> The employee at the book store can cancel the order \\
  \> if it hasn't been shipped yet. \\
  \\
- /SF60/ \ 
- 
+ /SF60/ \> Tracking System \\
+ Actor(s): \> Book Store Employee \\
+ Description: \> The employee at the book store can look up at which stage \\
+ \> his order is right now, e.g. processing or shipping \\
+ \> to BookExpress/the book store.\\
+ \\
 \end{tabbing} 
+\clearpage
 \section{Product Data}
-here be data
+\begin{tabbing}
+\hspace{3cm}\=\kill
+/SD10/ \>  Book Data - ISBN, UPC/EAN, Title/Author, Publisher, Availability... \\
+Maximum: \> 1,500,000 \\
 \\
+/SD20/ \> Book Store Data - PIN/Password, Name / Address,\\
+ \> Order Type (Continuous / Summary), Contact Data\\
+Maximum: \> 10,000
+\\
+/SD30/ \> Publisher Data - Account Name/Password, Name/Address, \\
+\> Stock-keeping Type (Direct/Written Notes), Contact Data\\
+Maximum: \> 15,000\\
+\\
+/SD40/ \> 
+\end{tabbing} 
 \section{Product Performance}
 it's fucking fast, too
 
