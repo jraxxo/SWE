@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.9.29)  7 OCT 2012 15:16
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.9.29)  7 OCT 2012 16:08
 entering extended mode
 **specification_sheet.tex
 (C:\Users\joscha\Documents\GitHub\SWE\specification_sheet.tex
@@ -31,117 +31,85 @@ File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-! Undefined control sequence.
-<argument> \patchcmd 
-                     
-l.3 \patchcmd{
-              \chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Argument of \@xdblarg has an extra }.
-<inserted text> 
-                \par 
-l.3 \patchcmd{\chapter}
-                       {\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}
-I've run across a `}' that doesn't seem to match anything.
-For example, `\def\a#1{...}' and `\a}' would produce
-this error. If you simply proceed now, the `\par' that
-I've just inserted will cause me to report a runaway
-argument that might be the root of the problem. But if
-your `}' was spurious, just type `2' and it will go away.
-
-Runaway argument?
-! Paragraph ended before \@xdblarg was complete.
-<to be read again> 
-                   \par 
-l.3 \patchcmd{\chapter}
-                       {\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
 (C:\Users\joscha\Documents\GitHub\SWE\specification_sheet.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 6.
+(Font)              <12> on input line 5.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 6.
+(Font)              <8> on input line 5.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 6.
-
-
-LaTeX Warning: No \author given.
-
-[1
-
-
+(Font)              <6> on input line 5.
+ [1
 
 {C:/Users/joscha/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-(C:\Users\joscha\Documents\GitHub\SWE\specification_sheet.toc
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 1.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 1.
-)
+(C:\Users\joscha\Documents\GitHub\SWE\specification_sheet.toc)
 \tf@toc=\write3
  [1
 
 ]
 Chapter 1.
-[2
-
-]
 Chapter 2.
-[3
-
-]
 Chapter 3.
-[4
-
-]
 Chapter 4.
-[5
-
-]
 Chapter 5.
-[6
-
-]
 Chapter 6.
-[7
+(C:\Users\joscha\Documents\GitHub\SWE\specification_sheet.aux) [2
 
-] (C:\Users\joscha\Documents\GitHub\SWE\specification_sheet.aux) ) 
+
+\@writefile{toc}{\contentsline {chapter}{\numberline {1}Purpose/Aims of the pro
+duct}{2}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+]
+Overfull \vbox (216.40276pt too high) has occurred while \output is active []
+
+
+[3
+\@writefile{toc}{\contentsline {chapter}{\numberline {2}Usage of the Product}{3
+}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {chapter}{\numberline {3}Product Overview}{3}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}Product Functions}{3}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Product Data}{3}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}Product Performance}{3}
+}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+] ) 
 Here is how much of TeX's memory you used:
- 257 strings out of 494045
- 3172 string characters out of 3145966
+ 254 strings out of 494045
+ 3145 string characters out of 3145966
  49890 words of memory out of 3000000
- 3622 multiletter control sequences out of 15000+200000
- 7887 words of font info for 28 fonts, out of 3000000 for 9000
+ 3618 multiletter control sequences out of 15000+200000
+ 8195 words of font info for 29 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
- 23i,6n,18p,172b,185s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program F
-iles (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fil
-es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files 
-(x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files (x8
-6)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on specification_sheet.pdf (8 pages, 56118 bytes).
+ 23i,6n,17p,347b,179s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
+C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/
+Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Pro
+gram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb>
+Output written on specification_sheet.pdf (4 pages, 73938 bytes).
 PDF statistics:
- 45 PDF objects out of 1000 (max. 8388607)
+ 35 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
