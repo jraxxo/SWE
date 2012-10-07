@@ -22,60 +22,101 @@ OVERVIEW - what else?
 \section{Product Functions}
 \begin{tabbing}
 \hspace{3cm}\=\kill
-  /SF10/ \> Inventory maintenance (Publisher)\\ 
-  Actor(s): \> Publishers\\ 
-  Description: \> Publishers can update their inventory list\\ 
-  \> (i.e. the list of available books) either via mail or using the \\
-  \> direct connection over the web-based interface.\\
-  \\
-  /SF20/ \> BookExpress Order \\
-  Actor(s): \> Employee \\
-  Description: \> The Employee orders a number of Books from the publisher.\\
-  \\
-  \\
- /SF30/ \> Book Store Order \\
- Actor(s): \> Book Store Employee \\
- Description: \> The Book Store orders a book from BookExpress. \\
- \> This can either happen through a constant connection where \\
- \> every order is individually processed or the store can choose \\
- \> to collect orders internally and send them \\
- \> as one big order every day. \\
- \\
- /SF40/ \> Stock Update (BookExpress) \\
- Actor(s): \> Stock Employee \\
- Description: \> The employee in charge of the stock checks the availability \\
- \> of all books and updates the stock accordingly. \\
- \\
- /SF50/ \> Cancel Order \\
- Actor(s): \> Book Store Employee \\
- Description: \> The employee at the book store can cancel the order \\
- \> if it hasn't been shipped yet. \\
- \\
- /SF60/ \> Tracking System \\
- Actor(s): \> Book Store Employee \\
- Description: \> The employee at the book store can look up at which stage \\
- \> his order is right now, e.g. processing or shipping \\
- \> to BookExpress/the book store.\\
- \\
+	 /SF10/ \> Inventory maintenance (Publisher)\\ 
+	 Actor(s): \> Publishers\\ 
+	 Description: \> Publishers can update their inventory list\\ 
+	 \> (i.e. the list of available books) either via mail or using the \\
+	 \> direct connection over the web-based interface.\\
+	 \\
+	 /SF20/ \> BookExpress Order \\
+	 Actor(s): \> Employee \\
+	 Description: \> The Employee orders a number of Books from the publisher.\\
+	 \\
+	 \\
+	 /SF30/ \> Book Store Order \\
+	 Actor(s): \> Book Store Employee \\
+	 Description: \> The Book Store orders a book from BookExpress. \\
+	 \> This can either happen through a constant connection where \\
+	 \> every order is individually processed or the store can choose \\
+	 \> to collect orders internally and send them \\
+	 \> as one big order every day. \\
+	 \\
+	 /SF40/ \> Stock Update (BookExpress) \\
+	 Actor(s): \> Stock Employee \\
+	 Description: \> The employee in charge of the stock checks the availability \\
+	 \> of all books and updates the stock accordingly. \\
+	 \\
+	 /SF50/ \> Cancel Order \\
+	 Actor(s): \> Book Store Employee \\
+	 Description: \> The employee at the book store can cancel the order \\
+	 \> if it hasn't been shipped yet. \\
+	 \\
+	 /SF60/ \> Tracking System \\
+	 Actor(s): \> Book Store Employee \\
+	 Description: \> The employee at the book store can look up at which stage \\
+	 \> his order is right now, e.g. processing or shipping \\
+	 \> to BookExpress/the book store.\\
+	 \\
 \end{tabbing} 
 \clearpage
 \section{Product Data}
 \begin{tabbing}
 \hspace{3cm}\=\kill
-/SD10/ \>  Book Data - ISBN, UPC/EAN, Title/Author, Publisher, Availability... \\
-Maximum: \> 1,500,000 \\
-\\
-/SD20/ \> Book Store Data - PIN/Password, Name / Address,\\
- \> Order Type (Continuous / Summary), Contact Data\\
-Maximum: \> 10,000
-\\
-/SD30/ \> Publisher Data - Account Name/Password, Name/Address, \\
-\> Stock-keeping Type (Direct/Written Notes), Contact Data\\
-Maximum: \> 15,000\\
-\\
-/SD40/ \> 
+	/SD10/ \>  Book Data - ISBN, UPC/EAN, Title/Author, \\
+	\> Publisher, Availability... \\
+	Maximum: \> 1,500,000 \\
+	\\
+	/SD20/ \> Book Store Data - PIN/Password, Name / Address,\\
+	 \> Order Type (Continuous / Summary), Contact Data\\
+	Maximum: \> 10,000
+	\\
+	/SD30/ \> Publisher Data - Account Name/Password, Name/Address, \\
+	\> Stock-keeping Type (Direct/Written Notes), Contact Data\\
+	Maximum: \> 15,000\\
+	\\
+	/SD40/ \> Order Data - ISBN, Amount, Price, Current State\\
+	Maximum: \> 500,000\\
+	\\
+	/SD50/ \> Truck Fleet Data - Driver, Registration Number\\
+	Maximum: \> 1000\\
+	\\
 \end{tabbing} 
 \section{Product Performance}
-it's fucking fast, too
-
+\begin{tabbing}
+\hspace{3cm}\=\kill
+	/SP10/ \> The Web Interface has to be comfortably reachable\\
+	\> from computers and tablets/smartphones, it has to be \\
+	\> intuitive and interactive.\\
+	\\
+	/SP20/ \> The amount of transferred data should be minimal.\\
+	\\
+	/SP20/ \> If either a book store or an employee submits an \\
+	\> order, there has to be an immediate notification if said\\
+	\> order was successful.\\
+	\\
+	/SP30/ \> We need a highly reliable infrastructure, for an \\
+	\> uptime of 99\% or preferably more. \\
+	\\
+	/SP40/ \> The system has to be able to process up to 2000\\
+	\> orders submitted at once.\\
+	\\
+	/SP50/ \> If a book is running low on stock, the system\\
+	\> shall automatically try to order a certain amount \\
+	\> of that book from the publisher.  If that fails\\
+	\> for whatever reason, the employees shall be notified.\\
+	\\
+\end{tabbing} 
+\section{Quality Requirements}
+As stated before, the system has to be extremely reliable as it is very important for every customer. The interface has to be highly performant and intuitive to provide a comfortable ordering experience for the customers as well as the employees. The complete software has to be engineered according to the guidelines defined in ISO/IEC 25000. As BookExpress cannot afford a downtime of any kind, the transition from the old system to the new one has to be very smooth. If a restart is required, it is to be executed during the night of a holiday, if possible. Additionally, we need a dedicated support team for hardware and software to ensure a flawless performance if anything goes wrong.
+\section{Amendments}
+To enhance the customer experience and speed up processes even more, every (bigger) customer will be asked to upgrade to a direct line instead of summary order. Moreover, The tracking system shall be implemented by getting direct GPS data from the truck that is transporting the shipment, thus providing truly accurate estimates of the time of delivery. The web interface has to be thoroughly tested in the currently important browsers(Chrome, FireFox, Opera, Safari, IE8+, mobile Browsers (Opera mobile, iOS (Safari), Chrome, Android(Dolphin))).
+\section{Glossary}
+\begin{tabbing}
+\hspace{3cm}\=\kill
+	Customer  \> Book Store with an account\\
+	\\
+	PIN       \> Personal Identification Number, used to identify the customer\\
+	\\
+	 
+\end{tabbing} 
 \end{document}
