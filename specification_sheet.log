@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.9.29)  7 OCT 2012 19:09
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.9.29)  7 OCT 2012 23:15
 entering extended mode
 **specification_sheet.tex
 (C:\Users\joscha\Documents\GitHub\SWE\specification_sheet.tex
@@ -71,14 +71,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 19--21
 
  []
 
+[3
 
-Underfull \hbox (badness 10000) in paragraph at lines 34--36
+]
+Underfull \hbox (badness 10000) in paragraph at lines 54--56
 
  []
 
-[3
-
-] [4] (C:\Users\joscha\Documents\GitHub\SWE\specification_sheet.aux) ) 
+[4] (C:\Users\joscha\Documents\GitHub\SWE\specification_sheet.aux) ) 
 Here is how much of TeX's memory you used:
  234 strings out of 494045
  2919 string characters out of 3145966
@@ -87,13 +87,13 @@ Here is how much of TeX's memory you used:
  7588 words of font info for 27 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
  23i,6n,17p,942b,199s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Progr
-am Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program
- Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program F
-iles (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program File
-s (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files (
-x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on specification_sheet.pdf (4 pages, 80172 bytes).
+<C:/Program
+ Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program F
+iles (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fil
+es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files 
+(x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files (x8
+6)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb>
+Output written on specification_sheet.pdf (4 pages, 81561 bytes).
 PDF statistics:
  35 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

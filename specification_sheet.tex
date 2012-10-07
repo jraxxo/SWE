@@ -21,7 +21,7 @@ OVERVIEW - what else?
 \section{Product Functions}
 \begin{tabbing}
 \hspace{3cm}\=\kill
-  /SF10/ \> Inventory maintenance \\ 
+  /SF10/ \> Inventory maintenance (Publisher)\\ 
   Actor(s): \> Publishers\\ 
   Description: \> Publishers can update their inventory list\\ \> (i.e. the list of available books) either via   	mail or using the \\ \> direct connection over the web-based interface.\\
   \\
@@ -29,13 +29,25 @@ OVERVIEW - what else?
   Actor(s): \> Employee \\
   Description: \> The Employee orders a number of Books from the publisher.\\
   \\
- /SF30/ \> Customer Order \\
- Actor(s): \> Book Store \\
+  \\
+ /SF30/ \> Book Store Order \\
+ Actor(s): \> Book Store Employee \\
  Description: \> The Book Store orders a book from BookExpress. \\
  \> This can either happen through a constant connection where every order is \\
  \> individually processed or the store can choose to collect orders internally \\
  \> and send them as one big order every day. \\
  \\
+ /SF40/ \> Stock Update (BookExpress) \\
+ Actor(s): \> Stock Employee \\
+ Description: \> The employee in charge of the stock checks the availability \\
+ \> of all books and updates the stock accordingly. \\
+ \\
+ /SF50/ \> Cancel Order \\
+ Actor(s): \> Book Store Employee \\
+ Description: \> The employee at the book store can cancel the order \\
+ \> if it hasn't been shipped yet. \\
+ \\
+ /SF60/ \ 
  
 \end{tabbing} 
 \section{Product Data}
