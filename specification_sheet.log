@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.9.29)  7 OCT 2012 16:18
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.9.29)  7 OCT 2012 17:00
 entering extended mode
 **specification_sheet.tex
 (C:\Users\joscha\Documents\GitHub\SWE\specification_sheet.tex
@@ -67,7 +67,7 @@ Chapter 6.
 (C:\Users\joscha\Documents\GitHub\SWE\specification_sheet.aux) [2
 
 
-\@writefile{toc}{\contentsline {chapter}{\numberline {1}Purpose/Aims of the pro
+\@writefile{toc}{\contentsline {chapter}{\numberline {1}Purpose/Aims of the Pro
 duct}{2}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
@@ -97,16 +97,16 @@ Overfull \vbox (230.3472pt too high) has occurred while \output is active []
 Here is how much of TeX's memory you used:
  252 strings out of 494045
  3124 string characters out of 3145966
- 49890 words of memory out of 3000000
+ 50890 words of memory out of 3000000
  3617 multiletter control sequences out of 15000+200000
  7887 words of font info for 28 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
- 23i,6n,17p,347b,179s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 23i,6n,17p,692b,179s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C
 :/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/P
 rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on specification_sheet.pdf (4 pages, 59780 bytes).
+Output written on specification_sheet.pdf (4 pages, 60328 bytes).
 PDF statistics:
  31 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
