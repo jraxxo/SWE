@@ -11,25 +11,25 @@
 \usepackage[explicit]{titlesec}
 
 
-\newcommand*\chapterlabel{}
-\titleformat{\chapter}
-  {\gdef\chapterlabel{}
-   \normalfont\sffamily\Huge\bfseries\scshape}
-  {\gdef\chapterlabel{\thechapter\ }}{0pt}
-  {\begin{tikzpicture}[remember picture,overlay]
-    \node[yshift=-3cm] at (current page.north west)
-      {\begin{tikzpicture}[remember picture, overlay]
-        \draw[fill=LightSkyBlue] (0,0) rectangle
-          (\paperwidth,3cm);
-        \node[anchor=east,xshift=.9\paperwidth,rectangle,
-              rounded corners=20pt,inner sep=11pt,
-              fill=MidnightBlue]
-              {\color{white}\chapterlabel#1};
-       \end{tikzpicture}
-      };
-   \end{tikzpicture}
-  }
-\titlespacing*{\chapter}{0pt}{50pt}{-60pt}
+%\newcommand*\chapterlabel{}
+%\titleformat{\chapter}
+%  {\gdef\chapterlabel{}
+%   \normalfont\sffamily\Huge\bfseries\scshape}
+%  {\gdef\chapterlabel{\thechapter\ }}{0pt}
+%  {\begin{tikzpicture}[remember picture,overlay]
+%    \node[yshift=-3cm] at (current page.north west)
+%      {\begin{tikzpicture}[remember picture, overlay]
+%        \draw[fill=LightSkyBlue] (0,0) rectangle
+%          (\paperwidth,3cm);
+%        \node[anchor=east,xshift=.9\paperwidth,rectangle,
+%              rounded corners=20pt,inner sep=11pt,
+%              fill=MidnightBlue]
+%              {\color{white}\chapterlabel#1};
+%       \end{tikzpicture}
+%      };
+%   \end{tikzpicture}
+%  }
+%\titlespacing*{\chapter}{0pt}{50pt}{-60pt}
 
 
 
@@ -41,11 +41,20 @@
 \maketitle
 \tableofcontents
 
+\chapter*{Document History}
+BLA
+
 \chapter{Product Purpose}
 To handle the addition of new books and the distribution in a better way, "BookExpress" asked us to develop an IT solution to optimize the idle time and labour usage by getting rid of the current, deprecated system. Furthermore one important goal of the software solution is to be very user friendly and easy to use; also there should be remote access implemented, so several customers can access the software at once and distribution partners can access and keep their book stock up to date.
+\section{Obligatory Requirements (``must have'')}
+\section{Optional Requirements (``nice to have'')}
+\section{Non-Requirements (``need to have'')}
 
 \chapter{Product Environment}
-The Product takes the orders from the book stores and files them into the system, so that they can be prepared for shipping. For different sized book stores there should be several account types with separate functionality and different options for packaging and ordering. The targeting groups of the software solution are the book store owners, our consumers, the assistants of "BookExpress" and the distribution partners. PENIS
+The Product takes the orders from the book stores and files them into the system, so that they can be prepared for shipping. For different sized book stores there should be several account types with separate functionality and different options for packaging and ordering. The targeting groups of the software solution are the book store owners, our consumers, the assistants of "BookExpress" and the distribution partners.
+\section{Application Area}
+\section{User Groups}
+\section{Operating Conditions}
 
 \chapter{Product Overview}
 The products environmental diagram.
@@ -69,8 +78,20 @@ The products environmental diagram.
 	\> \textbf{Actor:} customer\\ 
 	\>\textbf{Description:} It should be possible to have all items on an order card. A person can add or delete books to that card.\\
 \end{tabbing}
+\section{Internal}
+\subsection{Employees of ``BookExpress''}
+
+\section{External}
+\subsection{Bookstores (``Clients'')}
+\subsection{Publishers}
 
 \chapter{Product Data}
+\section{Customer Data}
+\subsection{Bookstores}
+\subsection{Publishers}
+\section{Order Data}
+\section{Internal Data}
+
 \chapter{Product Performance}
 \chapter{Quality Requirements}
 \begin{table}[h!]
@@ -89,10 +110,27 @@ The products environmental diagram.
 \end{table}
 
 \chapter{User Interface}
+\section{Client Application (for clerks)}
+\section{Webinterface (for customers)}
+
 \chapter{Non-Functional Requirements}
 \chapter{Technical Product Environment}
+\section{Software}
+\section{Hardware}
+\section{Orgware}
+\section{Interfaces (product)}
+
 \chapter{Special Requirements For The Development Environment}
+\section{Software}
+\section{Hardware}
+\section{Orgware}
+\section{Interfaces (development)}
+
 \chapter{Subproducts And Subsystems}
+\section{Server}
+\section{Webinterface / Webservice}
+\section{Client Application}
+
 \chapter{Additional Specifications And Stipulations}
 \chapter{Appendices}
 None.

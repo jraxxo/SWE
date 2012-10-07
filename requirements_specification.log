@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2012.9.18)  29 SEP 2012 22:29
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2012.9.18)  7 OCT 2012 15:16
 entering extended mode
-**C:/Users/harnos/Documents/GitHub/SWE/lastenheft.tex
-(C:/Users/harnos/Documents/GitHub/SWE/lastenheft.tex
+**C:/Users/harnos/Documents/GitHub/SWE/requirements_specification.tex
+(C:/Users/harnos/Documents/GitHub/SWE/requirements_specification.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -1114,7 +1114,7 @@ Package: titlesec 2011/12/15 v2.10.0 Sectioning titles
 \titlewidthlast=\dimen161
 \titlewidthfirst=\dimen162
 )
-(C:\Users\harnos\Documents\GitHub\SWE\lastenheft.aux)
+(C:\Users\harnos\Documents\GitHub\SWE\requirements_specification.aux)
 LaTeX Font Info:    Checking defaults for OML/jkp/m/it on input line 36.
 LaTeX Font Info:    Try loading font information for OML+jkp on input line 36.
 
@@ -1212,92 +1212,89 @@ File: t1jkptt.fd 2007/01/26 Fontinst v1.928 font definitions for T1/jkptt.
 [1
 
 {C:/Users/harnos/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-LaTeX Font Info:    Try loading font information for T1+jkpss on input line 42.
+(C:\Users\harnos\Documents\GitHub\SWE\requirements_specification.toc [1
 
-
-(C:\Users\harnos\AppData\Roaming\MiKTeX\2.9\tex\latex\kpfonts\t1jkpss.fd
-File: t1jkpss.fd 2007/07/16 Fontinst v1.928 font definitions for T1/jkpss.
-)
-(C:\Users\harnos\Documents\GitHub\SWE\lastenheft.toc)
+])
 \tf@toc=\write4
- [1
+
+[2] [3
 
 ]
 Chapter 1.
-[2
+[4
 
 ]
 Chapter 2.
-[3
-
-]
-Chapter 3.
-<images/umweltdiagramm.png, id=22, 305.7021pt x 203.0787pt> [4
-
-]
-Chapter 4.
 [5
 
 ]
-Chapter 5.
-[6
+Chapter 3.
+<images/umweltdiagramm.png, id=27, 305.7021pt x 203.0787pt> [6
 
 ]
-Chapter 6.
+Chapter 4.
 [7
 
 ]
-Chapter 7.
+Chapter 5.
 [8
 
 ]
-Chapter 8.
+Chapter 6.
 [9
 
 ]
-Chapter 9.
+Chapter 7.
 [10
 
 ]
-Chapter 10.
+Chapter 8.
 [11
 
 ]
-Chapter 11.
+Chapter 9.
 [12
 
 ]
-Chapter 12.
+Chapter 10.
 [13
 
 ]
-Chapter 13.
+Chapter 11.
 [14
 
 ]
-Chapter 14.
+Chapter 12.
 [15
 
-] (C:\Users\harnos\Documents\GitHub\SWE\lastenheft.aux) ) 
+]
+Chapter 13.
+[16
+
+]
+Chapter 14.
+[17
+
+] (C:\Users\harnos\Documents\GitHub\SWE\requirements_specification.aux) ) 
 Here is how much of TeX's memory you used:
- 12894 strings out of 493921
- 226419 string characters out of 3147279
- 256269 words of memory out of 3000000
- 15893 multiletter control sequences out of 15000+200000
- 71181 words of font info for 95 fonts, out of 3000000 for 9000
+ 12807 strings out of 493921
+ 224446 string characters out of 3147279
+ 256991 words of memory out of 3000000
+ 15806 multiletter control sequences out of 15000+200000
+ 91887 words of font info for 104 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 56i,10n,75p,547b,1052s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/harnos/AppDa
-ta/Roaming/MiKTeX/2.9/fonts/enc/dvips/kpfonts/kpfonts-expert.enc}{C:/Program Fi
-les/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Users/harnos/AppData/Roaming
-/MiKTeX/2.9/fonts/type1/public/kpfonts/jkpbn8a.pfb><C:/Users/harnos/AppData/Roa
-ming/MiKTeX/2.9/fonts/type1/public/kpfonts/jkpmn8a.pfb><C:/Users/harnos/AppData
-/Roaming/MiKTeX/2.9/fonts/type1/public/kpfonts/jkpmne.pfb><C:/Users/harnos/AppD
-ata/Roaming/MiKTeX/2.9/fonts/type1/public/kpfonts/jkpssbsc8a.pfb><C:/Users/harn
-os/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/kpfonts/jkpttmn8a.pfb>
-Output written on lastenheft.pdf (16 pages, 60179 bytes).
+ 56i,8n,55p,563b,289s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Us
+ers/harnos/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/kpfonts/kpfonts-expert.en
+c}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Users/harnos
+/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/kpfonts/jkpbn8a.pfb><C:/Users/ha
+rnos/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/kpfonts/jkpmn8a.pfb><C:/User
+s/harnos/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/kpfonts/jkpmne.pfb><C:/U
+sers/harnos/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/kpfonts/jkpttmn8a.pfb
+>
+Output written on requirements_specification.pdf (18 pages, 53707 bytes).
 PDF statistics:
- 81 PDF objects out of 1000 (max. 8388607)
+ 83 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 
