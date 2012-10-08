@@ -96,7 +96,7 @@ The products environmental diagram.
 
 
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
-/PF/	& \textbf{Process} & Edit client information\\
+/PF/	& \textbf{Process} & Update account information\\
 		& \textbf{Actor(s)} & BookExpress employee\\
 		& \textbf{Category} & \\
 		& \textbf{Description}	 & The clients data is outdated and needs to be updated\\
@@ -104,9 +104,9 @@ The products environmental diagram.
 		& \textbf{Preconditions} & Client exists in database\\
 		& \textbf{Postcondition success} & Client data is updated and a notification mail is sent to the client.\\
 		& \textbf{Postcondition failure} & Client data is not updated but rolled back to the previous state. Notification with problem report is shown to the employee.\\
-		& \textbf{Trigger} & Menu option "edit client data" (Software)\\
-		& \textbf{Sequence} & Menu option "edit client data"\\
-		& & Edit specific data\\
+		& \textbf{Trigger} & Menu option "Update client information" (Software)\\
+		& \textbf{Sequence} Edit specific data\\
+		& & System checks correctness of data (e.g. mail format etc.)\\
 		& & Submit edited data to the server\\
 \hfill \\
 \end{tabular}
@@ -296,6 +296,62 @@ The products environmental diagram.
 
 
 \section{External}
+
+\subsection{Book Stores and Publishers}
+
+\noindent
+\begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
+/PF/	& \textbf{Process} & Login\\
+		& \textbf{Actor(s)} & Book store/publisher\\
+		& \textbf{Category} & \\
+		& \textbf{Description}	 & The user logs on with his PIN and password\\
+		& \textbf{Goal} & Provide a fully functional system to the user\\
+		& \textbf{Preconditions} & Existing account\\
+		& \textbf{Postcondition success} & Successful login\\
+		& \textbf{Postcondition failure} & Unsuccessful login caused by a wrong PIN or password\\
+		& \textbf{Trigger} & Menu Option "Login"\\
+		& \textbf{Sequence} & Enter PIN\\
+		& & Enter password\\
+		& & Validity of data is checked by the System\\
+		& & Login successful or display an error message in case of unsuccessful login
+		
+\hfill \\
+\end{tabular}
+
+\begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
+/PF/	& \textbf{Process} & Update account information\\
+		& \textbf{Actor(s)} & Book store/publisher\\
+		& \textbf{Category} & \\
+		& \textbf{Description}	 & The user is able to edit/update its account information (e.g. address, correspondent etc.)\\
+		& \textbf{Goal} & User is able to update changes\\
+		& \textbf{Preconditions} & User is logged on\\
+		& \textbf{Postcondition success} & Updating the account succeeded\\
+		& \textbf{Postcondition failure} & Updating the account failed\\
+		& \textbf{Trigger} & Menu option "edit\\
+		& \textbf{Sequence} Edit specific data\\
+		& & System checks correctness of data (e.g. email format etc.)\\
+		& & Submit edited data to the server\\
+		
+\hfill \\
+\end{tabular}
+
+\begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
+/PF/	& \textbf{Process} & Logout\\
+		& \textbf{Actor(s)} & Book store/publisher\\
+		& \textbf{Category} & \\
+		& \textbf{Description}	 & User logs out\\
+		& \textbf{Goal} & User is logged out\\
+		& \textbf{Preconditions} & User is logged in\\
+		& \textbf{Postcondition success} & Successful logout\\
+		& \textbf{Postcondition failure} & Unsuccessful logout caused by an abort of the user\\
+		& \textbf{Trigger} & Menu option "Logout"\\
+		& \textbf{Sequence} & User confirms to log out\\
+		& & The system terminates the current session\\
+\hfill \\
+\end{tabular}
+
+
+
 \subsection{Book Stores (``Clients'')}
 
 \hfill \\
