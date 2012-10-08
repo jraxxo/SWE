@@ -1,0 +1,134 @@
+%% nicht vergessen draft raus zu nehmen, um echte Bilder einzubinden und die Problem-Vierecke verschwinden zu lassen
+\documentclass[11pt,a4paper,oneside,svgnames,draft]{report}
+
+\usepackage[british]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{ae}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{kpfonts}
+\usepackage[explicit]{titlesec}
+
+
+\begin{document}
+
+\title{Software Requirements Specifications\\ for\\ Project ``BookExpress''}
+\author{Marc A. Harnos\\ \texttt{mharnos@gmail.com} \and Joscha Rapp\\ \texttt{jraxxo@gmail.com} \and Christian Schulz\\ \texttt{crs.s@gmx.net}}
+\date{October 2012}
+\maketitle
+\tableofcontents
+
+\chapter*{Document History}
+\begin{tabular}{|l|l|l|l|}
+\hline 
+Editor(s) & Date & Purpose of Editing & Version \\ 
+\hline 
+Harnos, Rapp, Schulz & 2012-10-01 & Initial Document Creation & v0.01 \\ 
+\hline 
+\end{tabular} 
+
+\chapter{Product Purpose}
+To handle the addition of new books and the distribution in a better way, "BookExpress" asked us to develop an IT solution to optimize the idle time and labour usage by getting rid of the current, deprecated system. Furthermore one important goal of the software solution is to be very user friendly and easy to use; also there should be remote access implemented, so several customers can access the software at once and distribution partners can access and keep their book stock up to date.
+\section{Obligatory Requirements (``must have'')}
+\section{Optional Requirements (``nice to have'')}
+\section{Non-Requirements (``need to have'')}
+
+\chapter{Product Environment}
+The Product takes the orders from the book stores and files them into the system, so that they can be prepared for shipping. For different sized book stores there should be several account types with separate functionality and different options for packaging and ordering. The targeting groups of the software solution are the book store owners, our consumers, the assistants of "BookExpress" and the distribution partners.
+\section{Application Area}
+\section{User Groups}
+\section{Operating Conditions}
+
+\chapter{Product Overview}
+The products environmental diagram.
+
+\begin{figure}[h!]
+ \begin{center}
+  \includegraphics[scale=0.8]{images/umweltdiagramm.png}
+ \end{center}
+ \caption{The environmental view of the product}
+\end{figure}
+
+
+\chapter{Product Functions}
+\begin{tabular}{llp{10cm}}
+/LF10/ & \textbf{Process} & Search for a book\\
+& \textbf{Actor} & Customer\\
+& \textbf{Description} & If a customer wants to order a book, he first has to search for it. A book can be searched by ISBN, title, author, year of publishing and genre.\\
+
+\hfill \\
+
+/LF10/ & \textbf{Process} & Search for a book\\
+& \textbf{Actor} & Customer\\
+& \textbf{Description} & If a customer wants to order a book, he first has to search for it. A book can be searched by ISBN, title, author, year of publishing and genre.\\
+\end{tabular} 
+
+\begin{tabbing}
+    xxxxxxxxxx \= xxxxx \kill
+    /LF10/ \> \textbf{Process:} search for a book\\
+	\> \textbf{Actor:} customer\\ 
+	\>\textbf{Description:} If a customer wants to order a book, he first has to search for it. A book can be searched by ISBN, title, author, year of publishing and genre.\\
+	
+	/LF20/ \> \textbf{Process:} modify order card\\
+	\> \textbf{Actor:} customer\\ 
+	\>\textbf{Description:} It should be possible to have all items on an order card. A person can add or delete books to that card.\\
+\end{tabbing}
+\section{Internal}
+\subsection{Employees of ``BookExpress''}
+
+\section{External}
+\subsection{Book Stores (``Clients'')}
+\subsection{Publishers}
+
+\chapter{Product Data}
+\section{Customer Data}
+\subsection{Book Stores}
+\subsection{Publishers}
+\section{Order Data}
+\section{Internal Data}
+
+\chapter{Product Performance}
+\chapter{Quality Requirements}
+\begin{table}[h!]
+ \begin{tabular}{lllll}
+  \hline
+  Quality & very good & good & normal & irrelevant \\
+  \hline
+  Functionality & X & & & \\
+  Reliability & X & & & \\
+  Usability & & & X & \\
+  Efficiency & & X & & \\
+  Modifiability & & & X & \\
+  Portability & & & & X \\
+  \hline
+ \end{tabular}
+\end{table}
+
+\chapter{User Interface}
+\section{Client Application (for clerks)}
+\section{Web Interface (for customers)}
+
+\chapter{Non-Functional Requirements}
+\chapter{Technical Product Environment}
+\section{Software}
+\section{Hardware}
+\section{Orgware}
+\section{Interfaces (product)}
+
+\chapter{Special Requirements for the Development Environment}
+\section{Software}
+\section{Hardware}
+\section{Orgware}
+\section{Interfaces (development)}
+
+\chapter{Subproducts and Subsystems}
+\section{Server}
+\section{Web Interface / Web Service}
+\section{Client Application}
+
+\chapter{Additional Specifications and Stipulations}
+\chapter{Appendices}
+None.
+
+\end{document}

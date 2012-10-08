@@ -61,6 +61,7 @@ The products environmental diagram.
 
 
 \chapter{Product Functions}
+<<<<<<< HEAD
 \begin{tabular}{llp{10cm}}
 /PF10/	& \textbf{Process}		& Search for a book\\
 		& \textbf{Actor}		& Customer\\
@@ -73,6 +74,9 @@ The products environmental diagram.
 		& \textbf{Description}	& It should be possible to have all items on an order card. A person WHAT can add or delete books to that card.\\
 \end{tabular} 
 
+=======
+
+>>>>>>> 9e75d2399c4579f9980be06acc64a8c972adeb38
 \section{Internal}
 \subsection{Employees of ``BookExpress''}
 
