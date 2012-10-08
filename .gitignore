@@ -9,6 +9,7 @@
 *.glg
 *.glo
 *.gls
+*.gz
 *.idx
 *.ilg
 *.ind
@@ -26,8 +27,10 @@
 *.pdf
 *.ps
 *.snm
-*.synctex.gz
 *.toc
 *.vrb
 *.xdy
 *.tdo
+*.orig
+*.bak
+*.swp
