@@ -205,8 +205,9 @@ The products environmental diagram.
 		& \textbf{Postcondition failure} & Order could not be marked as sent\\
 		& \textbf{Trigger} & Forward order to Logistics\\
 		& \textbf{Sequence} & Check if books are in stock\\
-		& & Check if 
-		& & \\
+		& & Receive book store information
+		& & Sent order to book store
+		& & Mark order as sent
 		
 \hfill \\
 \end{tabular}
@@ -216,14 +217,13 @@ The products environmental diagram.
 		& \textbf{Actor(s)} & Employee (Logistics)\\
 		& \textbf{Category} & \\
 		& \textbf{Description}	 & Logistics confirms the correct delivery of an order\\
-		& \textbf{Goal} & Deliver ordered books\\
-		& \textbf{Preconditions} & Order is valid\\
-		& & Books are in stock
-		& \textbf{Postcondition success} & Order is marked as sent\\
-		& \textbf{Postcondition failure} & Order could not be marked as sent\\
-		& \textbf{Trigger} & Forward order to Logistics\\
-		& \textbf{Sequence} & \\
-		& & \\
+		& \textbf{Goal} & Delivery is successful\\
+		& \textbf{Preconditions} & Order is marked as sent\\
+		& \textbf{Postcondition success} & Order is marked as delivered\\
+		& \textbf{Postcondition failure} & Order could not be marked as delivered\\
+		& \textbf{Trigger} & Deliver order\\
+		& \textbf{Sequence} & Get delivery status\\
+		& & Mark order as delivered if delivery status is "successfully delivered"
 		
 \hfill \\
 \end{tabular}
@@ -243,6 +243,57 @@ The products environmental diagram.
 		
 \hfill \\
 \end{tabular}
+
+\begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
+/PF/	& \textbf{Process} & Create an invoice\\
+		& \textbf{Actor(s)} & System\\
+		& \textbf{Category} & \\
+		& \textbf{Description}	 & The system creates an invoice after TODO /PF/ order is valid\\
+		& \textbf{Goal} & Documenting order and deliver it with invoice\\
+		& \textbf{Preconditions} & Order is valid\\
+		& \textbf{Postcondition success} & Invoice successfully created\\
+		& \textbf{Postcondition failure} & Invoice could not be created\\
+		& & Check information about order\\
+		& \textbf{Trigger} & Order is valid TODO /PF/\\
+		& \textbf{Sequence} & Create an entry in database\\
+		& & List the ordered books with price\\
+		& & List tax to invoice\\
+		
+\hfill \\
+\end{tabular}
+
+\begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
+/PF/	& \textbf{Process} & Send invoice\\
+		& \textbf{Actor(s)} & System\\
+		& \textbf{Category} & \\
+		& \textbf{Description}	 & The invoice is send to the book store via mail\\
+		& \textbf{Goal} & Inform the book shop\\
+		& \textbf{Preconditions} & Successful created invoice\\
+		& \textbf{Postcondition success} & Book store receives a notification mail\\
+		& \textbf{Postcondition failure} & -\\
+		& \textbf{Trigger} & Creation of an invoice\\
+		& \textbf{Sequence} & Get invoice\\
+		& & Send invoice to book store
+		
+\hfill \\
+\end{tabular}
+
+\begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
+/PF/	& \textbf{Process} & Backup\\
+		& \textbf{Actor(s)} & System\\
+		& \textbf{Category} & \\
+		& \textbf{Description}	 & A backup of the complete databases must be done. This should happen periodically and save all data on a server.\\
+		& \textbf{Goal} & In case of a crash, every data must be saves as a preventative backup\\
+		& \textbf{Preconditions} & Server for the backup\\
+		& \textbf{Postcondition success} & Successful backup in periodical intervals\\
+		& \textbf{Postcondition failure} & A notification will be send to the administrator of the system\\
+		& \textbf{Trigger} & Configured time to start a backup\\
+		& \textbf{Sequence} & Start Backup\\
+		& & Place backup on the backup server
+		
+\hfill \\
+\end{tabular}
+
 
 \section{External}
 \subsection{Book Stores (``Clients'')}
