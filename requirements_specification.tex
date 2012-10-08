@@ -1,5 +1,5 @@
 %% nicht vergessen draft raus zu nehmen, um echte Bilder einzubinden und die Problem-Vierecke verschwinden zu lassen
-\documentclass[11pt,a4paper,oneside,svgnames,draft]{report}
+\documentclass[11pt,a4paper,oneside,svgnames]{report}
 
 \usepackage[british]{babel}
 \usepackage[utf8]{inputenc}
@@ -9,12 +9,19 @@
 \usepackage{tikz}
 \usepackage{kpfonts}
 \usepackage[explicit]{titlesec}
+\usepackage[acronym,toc,nonumberlist,style=tree]{glossaries}
+
+\makeglossaries
+
+\newglossaryentry{pin}{name=PIN,description={Personal Identification Number},plural=PINs, first={Personal Identification Number (PIN)}}
+
+\newacronym{led}{LED}{light-emitting diode}
 
 
 \begin{document}
 
 \title{Software Requirements Specifications\\ for\\ Project ``BookExpress''}
-\author{Marc A. Harnos\\ \texttt{mharnos@gmail.com} \and Joscha Rapp\\ \texttt{jraxxo@gmail.com} \and Christian Schulz\\ \texttt{crs.s@gmx.net}}
+\author{Marc A. Harnos\\ {mharnos@gmail.com} \and Joscha Rapp\\ {jraxxo@gmail.com} \and Christian Schulz\\ {crs.s@gmx.net}}
 \date{October 2012}
 \maketitle
 \tableofcontents
@@ -31,6 +38,8 @@ Harnos, Rapp, Schulz & 2012-10-01 & Initial Document Creation & v0.01 \\
 \chapter{Product Purpose}
 To handle the addition of new books and the distribution in a better way, "BookExpress" asked us to develop an IT solution to optimize the idle time and labour usage by getting rid of the current, deprecated system. Furthermore one important goal of the software solution is to be very user friendly and easy to use; also there should be remote access implemented, so several customers can access the software at once and distribution partners can access and keep their book stock up to date.
 \section{Obligatory Requirements (``must have'')}
+\subsection{Book Store}
+BLABLABLABLA \gls{pin} BLUB! \gls{led}
 \section{Optional Requirements (``nice to have'')}
 \section{Non-Requirements (``need to have'')}
 
@@ -53,27 +62,17 @@ The products environmental diagram.
 
 \chapter{Product Functions}
 \begin{tabular}{llp{10cm}}
-/LF10/ & \textbf{Process} & Search for a book\\
-& \textbf{Actor} & Customer\\
-& \textbf{Description} & If a customer wants to order a book, he first has to search for it. A book can be searched by ISBN, title, author, year of publishing and genre.\\
+/PF10/	& \textbf{Process}		& Search for a book\\
+		& \textbf{Actor}		& Customer\\
+		& \textbf{Description}	& If a customer wants to order a book, he first has to search for it. A book can be searched by ISBN, title, author, year of publishing and genre.\\
 
 \hfill \\
 
-/LF10/ & \textbf{Process} & Search for a book\\
-& \textbf{Actor} & Customer\\
-& \textbf{Description} & If a customer wants to order a book, he first has to search for it. A book can be searched by ISBN, title, author, year of publishing and genre.\\
+/PF20/	& \textbf{Process}		& Modify Order Card\\
+		& \textbf{Actor}		& Customer\\
+		& \textbf{Description}	& It should be possible to have all items on an order card. A person can add or delete books to that card.\\
 \end{tabular} 
 
-\begin{tabbing}
-    xxxxxxxxxx \= xxxxx \kill
-    /LF10/ \> \textbf{Process:} search for a book\\
-	\> \textbf{Actor:} customer\\ 
-	\>\textbf{Description:} If a customer wants to order a book, he first has to search for it. A book can be searched by ISBN, title, author, year of publishing and genre.\\
-	
-	/LF20/ \> \textbf{Process:} modify order card\\
-	\> \textbf{Actor:} customer\\ 
-	\>\textbf{Description:} It should be possible to have all items on an order card. A person can add or delete books to that card.\\
-\end{tabbing}
 \section{Internal}
 \subsection{Employees of ``BookExpress''}
 
@@ -129,6 +128,6 @@ The products environmental diagram.
 
 \chapter{Additional Specifications and Stipulations}
 \chapter{Appendices}
-None.
+\printglossaries
 
 \end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2012.9.18)  7 OCT 2012 16:42
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2012.9.18)  7 OCT 2012 20:23
 entering extended mode
 **requirements_specification.tex
 (C:\Users\harnos\Documents\GitHub\SWE\requirements_specification.tex
@@ -1114,100 +1114,214 @@ Package: titlesec 2011/12/15 v2.10.0 Sectioning titles
 \titlewidthlast=\dimen161
 \titlewidthfirst=\dimen162
 )
+(C:\Users\harnos\AppData\Roaming\MiKTeX\2.9\tex\latex\glossaries\base\glossarie
+s.sty
+Package: glossaries 2012/05/21 v3.02 (NLCT)
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\xkeyval\xkeyval.sty"
+Package: xkeyval 2008/08/13 v2.6a package option processing (HA)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\xkeyval\xkeyval.tex"
+\XKV@toks=\toks32
+\XKV@tempa@toks=\toks33
+\XKV@depth=\count125
+File: xkeyval.tex 2008/08/13 v2.6a key=value parser (HA)
+))
+(C:\Users\harnos\AppData\Roaming\MiKTeX\2.9\tex\latex\glossaries\base\mfirstuc.
+sty
+Package: mfirstuc 2012/05/21 v1.06 (NLCT)
+ (C:\Users\harnos\AppData\Roaming\MiKTeX\2.9\tex\latex\etoolbox\etoolbox.sty
+Package: etoolbox 2011/01/03 v2.1 e-TeX tools for LaTeX
+("C:\Program Files\MiKTeX 2.9\tex\latex\misc\etex.sty"
+Package: etex 1998/03/26 v2.0 eTeX basic definition package (PEB)
+\et@xins=\count126
+)
+\etb@tempcnta=\count127
+)
+\@glsmfirst=\toks34
+\@glsmrest=\toks35
+)
+(C:\Users\harnos\AppData\Roaming\MiKTeX\2.9\tex\latex\xfor\xfor.sty
+Package: xfor 2009/02/05 v1.05 (NLCT)
+)
+(C:\Users\harnos\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\base\translator\tr
+anslator.sty
+Package: translator 2010/06/12 ver 1.10
+
+(C:\Users\harnos\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\base\translator\tr
+anslator-language-mappings.tex))
+\gls@level=\count128
+\@gls@tmpb=\toks36
+\gls@tmplen=\skip48
+\glswrite=\write4
+\glskeylisttok=\toks37
+\glslabeltok=\toks38
+\glsshorttok=\toks39
+\glslongtok=\toks40
+
+(C:\Users\harnos\AppData\Roaming\MiKTeX\2.9\tex\latex\glossaries\styles\glossar
+y-hypernav.sty
+Package: glossary-hypernav 2007/07/04 v1.01 (NLCT)
+)
+(C:\Users\harnos\AppData\Roaming\MiKTeX\2.9\tex\latex\glossaries\styles\glossar
+y-list.sty
+Package: glossary-list 2011/03/28 v3.0 (NLCT)
+\glslistdottedwidth=\skip49
+)
+(C:\Users\harnos\AppData\Roaming\MiKTeX\2.9\tex\latex\glossaries\styles\glossar
+y-long.sty
+Package: glossary-long 2011/03/28 v3.0 (NLCT)
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\longtable.sty"
+Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
+\LTleft=\skip50
+\LTright=\skip51
+\LTpre=\skip52
+\LTpost=\skip53
+\LTchunksize=\count129
+\LTcapwidth=\dimen163
+\LT@head=\box38
+\LT@firsthead=\box39
+\LT@foot=\box40
+\LT@lastfoot=\box41
+\LT@cols=\count130
+\LT@rows=\count131
+\c@LT@tables=\count132
+\c@LT@chunks=\count133
+\LT@p@ftn=\toks41
+)
+\glsdescwidth=\skip54
+\glspagelistwidth=\skip55
+)
+(C:\Users\harnos\AppData\Roaming\MiKTeX\2.9\tex\latex\glossaries\styles\glossar
+y-super.sty
+Package: glossary-super 2011/03/28 v3.0 (NLCT)
+
+(C:\Users\harnos\AppData\Roaming\MiKTeX\2.9\tex\latex\supertabular\supertabular
+.sty
+Package: supertabular 2004/02/20 v4.1e the supertabular environment
+\c@tracingst=\count134
+\ST@wd=\dimen164
+\ST@rightskip=\skip56
+\ST@leftskip=\skip57
+\ST@parfillskip=\skip58
+\ST@pageleft=\dimen165
+\ST@headht=\dimen166
+\ST@tailht=\dimen167
+\ST@pagesofar=\dimen168
+\ST@pboxht=\dimen169
+\ST@lineht=\dimen170
+\ST@stretchht=\dimen171
+\ST@prevht=\dimen172
+\ST@toadd=\dimen173
+\ST@dimen=\dimen174
+\ST@pbox=\box42
+))
+(C:\Users\harnos\AppData\Roaming\MiKTeX\2.9\tex\latex\glossaries\styles\glossar
+y-tree.sty
+Package: glossary-tree 2011/03/28 v3.0 (NLCT)
+\glstreeindent=\skip59
+))
+\glo@main@file=\write5
+Package glossaries Info: Writing glossary file requirements_specification.glo o
+n input line 14.
+\glo@acronym@file=\write6
+Package glossaries Info: Writing glossary file requirements_specification.acn o
+n input line 14.
+
 (C:\Users\harnos\Documents\GitHub\SWE\requirements_specification.aux)
-LaTeX Font Info:    Checking defaults for OML/jkp/m/it on input line 36.
-LaTeX Font Info:    Try loading font information for OML+jkp on input line 36.
+LaTeX Font Info:    Checking defaults for OML/jkp/m/it on input line 21.
+LaTeX Font Info:    Try loading font information for OML+jkp on input line 21.
 
 (C:\Users\harnos\AppData\Roaming\MiKTeX\2.9\tex\latex\kpfonts\omljkp.fd
 File: omljkp.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OMS/jkp/m/n on input line 36.
-LaTeX Font Info:    Try loading font information for OMS+jkp on input line 36.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMS/jkp/m/n on input line 21.
+LaTeX Font Info:    Try loading font information for OMS+jkp on input line 21.
 
 (C:\Users\harnos\AppData\Roaming\MiKTeX\2.9\tex\latex\kpfonts\omsjkp.fd
 File: omsjkp.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OMX/jkp/m/n on input line 36.
-LaTeX Font Info:    Try loading font information for OMX+jkp on input line 36.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMX/jkp/m/n on input line 21.
+LaTeX Font Info:    Try loading font information for OMX+jkp on input line 21.
 
 (C:\Users\harnos\AppData\Roaming\MiKTeX\2.9\tex\latex\kpfonts\omxjkp.fd
 File: omxjkp.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for U/jkpexa/m/n on input line 36.
-LaTeX Font Info:    Try loading font information for U+jkpexa on input line 36.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for U/jkpexa/m/n on input line 21.
+LaTeX Font Info:    Try loading font information for U+jkpexa on input line 21.
 
 
 (C:\Users\harnos\AppData\Roaming\MiKTeX\2.9\tex\latex\kpfonts\ujkpexa.fd
 File: ujkpexa.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 36.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 36.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 21.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 21.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Try loading font information for T1+jkp on input line 36.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Try loading font information for T1+jkp on input line 21.
 
 (C:\Users\harnos\AppData\Roaming\MiKTeX\2.9\tex\latex\kpfonts\t1jkp.fd
 File: t1jkp.fd 2007/01/24 Fontinst v1.928 font definitions for T1/jkp.
 )
 (C:\Users\harnos\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count125
-\scratchdimen=\dimen163
-\scratchbox=\box38
-\nofMPsegments=\count126
-\nofMParguments=\count127
-\everyMPshowfont=\toks32
-\MPscratchCnt=\count128
-\MPscratchDim=\dimen164
-\MPnumerator=\count129
-\makeMPintoPDFobject=\count130
-\everyMPtoPDFconversion=\toks33
+\scratchcounter=\count135
+\scratchdimen=\dimen175
+\scratchbox=\box43
+\nofMPsegments=\count136
+\nofMParguments=\count137
+\everyMPshowfont=\toks42
+\MPscratchCnt=\count138
+\MPscratchDim=\dimen176
+\MPnumerator=\count139
+\makeMPintoPDFobject=\count140
+\everyMPtoPDFconversion=\toks43
 ) ABD: EveryShipout initializing macros
-LaTeX Font Info:    Try loading font information for OT1+jkp on input line 41.
+(C:\Users\harnos\AppData\Roaming\MiKTeX\2.9\tex\latex\glossaries\dict\glossarie
+s-dictionary-English.dict
+Dictionary: glossaries-dictionary, Language: English 
+)
+LaTeX Font Info:    Try loading font information for OT1+jkp on input line 26.
 
 (C:\Users\harnos\AppData\Roaming\MiKTeX\2.9\tex\latex\kpfonts\ot1jkp.fd
 File: ot1jkp.fd 2007/08/30 Fontinst v1.928 font definitions for OT1/jkp.
 )
-LaTeX Font Info:    Try loading font information for U+jkpmia on input line 41.
+LaTeX Font Info:    Try loading font information for U+jkpmia on input line 26.
 
 
 (C:\Users\harnos\AppData\Roaming\MiKTeX\2.9\tex\latex\kpfonts\ujkpmia.fd
 File: ujkpmia.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    Try loading font information for U+jkpsya on input line 41.
+LaTeX Font Info:    Try loading font information for U+jkpsya on input line 26.
 
 
 (C:\Users\harnos\AppData\Roaming\MiKTeX\2.9\tex\latex\kpfonts\ujkpsya.fd
 File: ujkpsya.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    Try loading font information for U+jkpsyb on input line 41.
+LaTeX Font Info:    Try loading font information for U+jkpsyb on input line 26.
 
 
 (C:\Users\harnos\AppData\Roaming\MiKTeX\2.9\tex\latex\kpfonts\ujkpsyb.fd
 File: ujkpsyb.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    Try loading font information for U+jkpsyc on input line 41.
+LaTeX Font Info:    Try loading font information for U+jkpsyc on input line 26.
 
 
 (C:\Users\harnos\AppData\Roaming\MiKTeX\2.9\tex\latex\kpfonts\ujkpsyc.fd
 File: ujkpsyc.fd 2006/08/15 v1.0
-)
-LaTeX Font Info:    Try loading font information for T1+jkptt on input line 41.
-
-
-(C:\Users\harnos\AppData\Roaming\MiKTeX\2.9\tex\latex\kpfonts\t1jkptt.fd
-File: t1jkptt.fd 2007/01/26 Fontinst v1.928 font definitions for T1/jkptt.
 )
 [1
 
@@ -1215,17 +1329,23 @@ File: t1jkptt.fd 2007/01/26 Fontinst v1.928 font definitions for T1/jkptt.
 (C:\Users\harnos\Documents\GitHub\SWE\requirements_specification.toc [1
 
 ])
-\tf@toc=\write4
+\tf@toc=\write7
 
 [2]
-Overfull \hbox (13.12686pt too wide) in paragraph at lines 45--52
-[] |
+Overfull \hbox (13.12686pt too wide) in paragraph at lines 30--37
+[] 
  []
 
 [3
 
 ]
 Chapter 1.
+
+Overfull \hbox (11.02788pt too wide) in paragraph at lines 42--43
+\T1/jkp/m/n/10.95 BLABLABLABLA []Per-sonal Iden-ti-fic-a-tion Num-ber (PIN) BLU
+B! []light-emitting
+ []
+
 [4
 
 ]
@@ -1234,10 +1354,21 @@ Chapter 2.
 
 ]
 Chapter 3.
-<images/umweltdiagramm.png, id=27, 305.7021pt x 203.0787pt> [6
+<images/umweltdiagramm.png, id=26, 305.7021pt x 203.0787pt>
+File: images/umweltdiagramm.png Graphic file (type png)
 
-]
+<use images/umweltdiagramm.png>
+Package pdftex.def Info: images/umweltdiagramm.png used on input line 57.
+(pdftex.def)             Requested size: 244.562pt x 162.46318pt.
+ [6
+
+ <C:/Users/harnos/Documents/GitHub/SWE/images/umweltdiagramm.png>]
 Chapter 4.
+
+Overfull \hbox (55.59535pt too wide) in paragraph at lines 64--75
+[] 
+ []
+
 [7
 
 ]
@@ -1278,28 +1409,32 @@ Chapter 13.
 
 ]
 Chapter 14.
-[17
+(C:\Users\harnos\Documents\GitHub\SWE\requirements_specification.gls [17
+
+])
+(C:\Users\harnos\Documents\GitHub\SWE\requirements_specification.acr [18
+
+])
+[19
 
 ] (C:\Users\harnos\Documents\GitHub\SWE\requirements_specification.aux) ) 
 Here is how much of TeX's memory you used:
- 12807 strings out of 493921
- 224446 string characters out of 3147279
- 256991 words of memory out of 3000000
- 15806 multiletter control sequences out of 15000+200000
- 91887 words of font info for 104 fonts, out of 3000000 for 9000
+ 15048 strings out of 493921
+ 257988 string characters out of 3147279
+ 311725 words of memory out of 3000000
+ 17981 multiletter control sequences out of 15000+200000
+ 90081 words of font info for 98 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 56i,8n,55p,526b,289s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 56i,8n,55p,1447b,325s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Us
 ers/harnos/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/kpfonts/kpfonts-expert.en
 c}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Users/harnos
 /AppData/Roaming/MiKTeX/2.9/fonts/type1/public/kpfonts/jkpbn8a.pfb><C:/Users/ha
 rnos/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/kpfonts/jkpmn8a.pfb><C:/User
-s/harnos/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/kpfonts/jkpmne.pfb><C:/U
-sers/harnos/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/kpfonts/jkpttmn8a.pfb
->
-Output written on requirements_specification.pdf (18 pages, 54133 bytes).
+s/harnos/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/kpfonts/jkpmne.pfb>
+Output written on requirements_specification.pdf (20 pages, 85724 bytes).
 PDF statistics:
- 83 PDF objects out of 1000 (max. 8388607)
+ 87 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 
