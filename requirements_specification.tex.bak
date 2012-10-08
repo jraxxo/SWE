@@ -1,5 +1,5 @@
 %% nicht vergessen draft raus zu nehmen, um echte Bilder einzubinden und die Problem-Vierecke verschwinden zu lassen
-\documentclass[11pt,a4paper,oneside,svgnames,draft]{report}
+\documentclass[11pt,a4paper,oneside,svgnames]{report}
 
 \usepackage[british]{babel}
 \usepackage[utf8]{inputenc}
@@ -9,12 +9,19 @@
 \usepackage{tikz}
 \usepackage{kpfonts}
 \usepackage[explicit]{titlesec}
+\usepackage[acronym,toc,nonumberlist,style=tree]{glossaries}
+
+\makeglossaries
+
+\newglossaryentry{pin}{name=PIN,description={Personal Identification Number},plural=PINs, first={Personal Identification Number (PIN)}}
+
+\newacronym{led}{LED}{light-emitting diode}
 
 
 \begin{document}
 
 \title{Software Requirements Specifications\\ for\\ Project ``BookExpress''}
-\author{Marc A. Harnos\\ \texttt{mharnos@gmail.com} \and Joscha Rapp\\ \texttt{jraxxo@gmail.com} \and Christian Schulz\\ \texttt{crs.s@gmx.net}}
+\author{Marc A. Harnos\\ {mharnos@gmail.com} \and Joscha Rapp\\ {jraxxo@gmail.com} \and Christian Schulz\\ {crs.s@gmx.net}}
 \date{October 2012}
 \maketitle
 \tableofcontents
@@ -31,6 +38,8 @@ Harnos, Rapp, Schulz & 2012-10-01 & Initial Document Creation & v0.01 \\
 \chapter{Product Purpose}
 To handle the addition of new books and the distribution in a better way, "BookExpress" asked us to develop an IT solution to optimize the idle time and labour usage by getting rid of the current, deprecated system. Furthermore one important goal of the software solution is to be very user friendly and easy to use; also there should be remote access implemented, so several customers can access the software at once and distribution partners can access and keep their book stock up to date.
 \section{Obligatory Requirements (``must have'')}
+\subsection{Book Store}
+BLABLABLABLA \gls{pin} BLUB! \gls{led}
 \section{Optional Requirements (``nice to have'')}
 \section{Non-Requirements (``need to have'')}
 
@@ -52,184 +61,173 @@ The products environmental diagram.
 
 
 \chapter{Product Functions}
+\begin{tabular}{llp{10cm}}
+/PF10/	& \textbf{Process}		& Search for a book\\
+		& \textbf{Actor}		& Customer\\
+		& \textbf{Description}	& If a customer wants to order a book, he first has to search for it. A book can be searched by ISBN, title, author, year of publishing and genre.\\
+
+\hfill \\
+
+/PF20/	& \textbf{Process}		& Modify Order Card\\
+		& \textbf{Actor}		& Customer\\
+		& \textbf{Description}	& It should be possible to have all items on an order card. A person WHAT can add or delete books to that card.\\
+\end{tabular} 
 
 \section{Internal}
 \subsection{Employees of ``BookExpress''}
 
-\begin{tabbing}
-\hspace{3cm}\=\kill
-	 /PF/ \> Register Publisher or Book Shop (client)\\ 
-	 Category: \> \\
-	 Actor(s): \> BookExpress employee\\ 
-	 Description: \> A Book Express employee creates an account for\\ 
-	 \> a book shop or publisher after both business partners have signed\\
-	 \> a contract handling the business relations.\\
-	 Goal: \> The contract partner should have an account to log into the Software.\\
-	 \> After registration through the Book Express employee, the contract partner will be send\\
-	 \> a verification and its account information via email.\\
-	 Preconditions: \> Contract signed\\
-	 Postcondition success: \> Successfully created account\\
-	 Postcondition failure: \> Unsuccessful in creating an account\\
-	 Trigger: \> Menu option "register new client" (Software)\\
-	 Sequence: Input relevant data and contractor details into the managements system\\
-	 \> Save the signed contract on the server\\
-	 \> Register a new client by creating a new ClientID in the database\\
-	 \> Send verification and account information to the contractor\\
-	 Expansion: \> -\\
-	 Alternatives: \> -\\
-	 \\
-	 /PF/ \> Edit client information\\ 
-	 Category: \> \\
-	 Actor(s): \> BookExpress employee\\ 
-	 Description: \> The clients data is outdated and needs to be updated\\ 
-	 Goal: \> Client data is updated\\
-	 Preconditions: \> Client exists in database\\
-	 Postcondition success: \> Client data is updated and a notification mail is sent to the client.\\
-	 Postcondition failure: \> Client data is not updated but rolled back to the previous state\\
-	 \> Notification with problem report is shown to the employee.
-	 Trigger: \> Menu option "edit client data" (Software)\\
-	 Sequence: \> Menu option "edit client data"\\
-	 \> Edit specific data
-	 \> Submit edited data to the server
-	 Expansion: \> -\\
-	 Alternatives: \> -\\
-	 \\
-	 /PF/ \> Delete client\\ 
-	 Category: \> \\
-	 Actor(s): \> BookExpress Employee\\ 
-	 Description: \> Client gets deleted due to resignation of the contract\\ 
-	 Goal: \> Delete client from the system\\
-	 Preconditions: \> Client exists in database\\
-	 \> Contract is being resigned by one of the contractors
-	 Postcondition success: \> Client is deleted from the system\\
-	 Postcondition failure: \> Client could not be deleted because of existing orders\\
-	 Trigger: \> Menu option "delete client" (Software)\\
-	 Sequence: \> Choose client\\
-	 \> Check if client is deletable (i.e. no existing orders)
-	 \> Send notification mail to client
-	 \> Delete client
-	 Expansion: \> -\\
-	 Alternatives: \> -\\
-	 \\
-	 /PF/ \> Client places order (via telephone)\\ 
-	 Category: \> \\
-	 Actor(s): \> BookExpress employee, client\\ 
-	 Description: \> A client orders book via telephone\\ 
-	 Goal: \> Order is placed in an order queue\\
-	 Preconditions: \> Client exists in database\\
-	 \> Client is authorized
-	 Postcondition success: \> Order is placed in an order queue\\
-	 Postcondition failure: \> -\\
-	 Trigger: \> Client initiates order process by calling an BookExpress employee\\
-	 \> BookExpress employee triggers manual order process
-	 Sequence: \> BookExpress employee selects client in Software\\
-	 \> BookExpress employee enters ordered book into the system\\
-	 \> Order is placed in order queue\\
-	 \> Order notification containing detailed report is sent to client
-	 Expansion: \> -\\
-	 Alternatives: \> -\\
-	 \\
-	 /PF/ \> Validate order\\ 
-	 Category: \> \\
-	 Actor(s): \> System\\ 
-	 Description: \> Order is checked for validation\\ 
-	 Goal: \> The software checks every order for validation and confirms it\\
-	 \> to the client. BookExpress knows about every orders validation status.\\
-	 Preconditions: \> Order is in order queue\\
-	 Postcondition success: \> Client receives a confirmation email\\
-	 Postcondition failure: \> Client receives a problem report about invalid order\\
-	 Trigger: \> Order was placed and exists in order queue\\
-	 Sequence: \> System  gathers details and checks whether order is valid or not\\
-	 \> System sends mail to client\\
-	 Expansion: \> -\\
-	 Alternatives: \> -\\
-	 \\
-	 /PF/ \> Check stock\\ 
-	 Category: \> \\
-	 Actor(s): \> System/BookExpress employee\\ 
-	 Description: \> The system checks whether the amount of books, which\\
-	 \> the client orders, is available or nearly out of stock.\\ 
-	 Goal: \> Check succeeds\\
-	 Preconditions: \> Order is placed or BookExpress employee initiates check\\
-	 Postcondition success: \> Books which are nearly out of stock get displayed as a list\\
-	 Postcondition failure: \> -\\
-	 Trigger: \> Stock check is initiated\\
-	 Sequence: \> Check \\
-	 Expansion: \> -\\
-	 Alternatives: \> -\\
-	 \\
-	 /PF/ \> Forward order to Logistics\\ 
-	 Category: \> \\
-	 Actor(s): \> System\\ 
-	 Description: \> A validated order gets forwarded to Logistics\\ 
-	 Goal: \> Logistics proceeds processing the order\\
-	 Preconditions: \> Order is valid\\
-	 Postcondition success: \> Logistics processes delivery\\
-	 Postcondition failure: \> Order could not be forwarded to Logistics\\
-	 Trigger: \> Order is validated\\
-	 Sequence: \> Send order information/details to Logistics\\
-	 Expansion: \> -\\
-	 Alternatives: \> -\\
-	 \\
-	 /PF/ \> \\ 
-	 Category: \> \\
-	 Actor(s): \> \\ 
-	 Description: \> \\ 
-	 Goal: \> \\
-	 Preconditions: \> \\
-	 Postcondition success: \> \\
-	 Postcondition failure: \> \\
-	 Trigger: \> \\
-	 Sequence: \> \\
-	 Expansion: \> -\\
-	 Alternatives: \> -\\
-	 \\
-\end{tabbing} 
-\clearpage
+\hfill \\
+
+\begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
+/PF10/	& \textbf{Process}	& Register Publisher or Book Shop (client)\\
+		& \textbf{Actor(s)} & BookExpress employee\\
+		& \textbf{Category} & \\
+		& \textbf{Description}	 & A Book Express employee creates an account for a book shop or publisher after both business partners have signed a contract handling the business relations.\\
+		& \textbf{Goal} & The contract partner should have an account to log into the Software. After registration through the Book Express employee, the contract partner will be send a verification and its account information via email.\\
+		& \textbf{Preconditions} & Contract signed\\
+		& \textbf{Postcondition success} & Successfully created account\\
+		& \textbf{Postcondition failure} & Unsuccessful in creating an account\\
+		& \textbf{Trigger} & Menu option "register new client" (Software)\\
+		& \textbf{Sequence} & Input relevant data and contractor details into the managements system\\
+		& & Save the signed contract on the server\\
+		& & Register a new client by creating a new ClientID in the database\\
+		& & Send verification and account information to the contractor\\
+\hfill \\
+\end{tabular}
+
+
+\begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
+/PF20/	& \textbf{Process} & Edit client information\\
+		& \textbf{Actor(s)} & BookExpress employee\\
+		& \textbf{Category} & \\
+		& \textbf{Description}	 & The clients data is outdated and needs to be updated\\
+		& \textbf{Goal} & Client data is updated\\
+		& \textbf{Preconditions} & Client exists in database\\
+		& \textbf{Postcondition success} & Client data is updated and a notification mail is sent to the client.\\
+		& \textbf{Postcondition failure} & Client data is not updated but rolled back to the previous state. Notification with problem report is shown to the employee.\\
+		& \textbf{Trigger} & Menu option "edit client data" (Software)\\
+		& \textbf{Sequence} & Menu option "edit client data"\\
+		& & Edit specific data\\
+		& & Submit edited data to the server\\
+
+\end{tabular}
+
+\begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
+
+/PF/	& \textbf{Process} & Delete client\\ 
+		& \textbf{Actor(s)} & BookExpress Employee\\ 
+		& \textbf{Category} & \\
+		& \textbf{Description}	 & Client gets deleted due to resignation of the contract\\ 
+		& \textbf{Goal} & Delete client from the system\\
+		& \textbf{Preconditions} & Client exists in database\\
+		& & Contract is being resigned by one of the contractors\\
+		& \textbf{Postcondition success} & Client is deleted from the system\\
+		& \textbf{Postcondition failure} & Client could not be deleted because of existing orders\\
+		& \textbf{Trigger} & Menu option "delete client" (Software)\\
+		& \textbf{Sequence} & Choose client\\
+		& & Check if client is deletable (i.e. no existing orders)\\
+		& & Send notification mail to client\\
+		& & Delete client\\
+		
+\end{tabular}
+
+\begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
+	 /PF/	& \textbf{Process} & Client places order (via telephone)\\ 
+		& \textbf{Category} & \\
+		& \textbf{Actor(s)} & BookExpress employee, client\\ 
+		& \textbf{Description}	 & A client orders book via telephone\\ 
+		& \textbf{Goal} & Order is placed in an order queue\\
+		& \textbf{Preconditions} & Client exists in database\\
+		& & Client is authorized\\
+		& \textbf{Postcondition success} & Order is placed in an order queue\\
+		& \textbf{Postcondition failure} & -\\
+		& \textbf{Trigger} & Client initiates order process by calling an BookExpress employee\\
+		& & BookExpress employee triggers manual order process\\
+		& \textbf{Sequence} & BookExpress employee selects client in Software\\
+		& & BookExpress employee enters ordered book into the system\\
+		& & Order is placed in order queue\\
+		& & Order notification containing detailed report is sent to client\\
+\end{tabular}
+
+\begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
+	 /PF/	& \textbf{Process} & Validate order\\ 
+		& \textbf{Category} & \\
+		& \textbf{Actor(s)} & System\\ 
+		& \textbf{Description}	 & Order is checked for validation\\ 
+		& \textbf{Goal} & The software checks every order for validation and confirms it to the client. BookExpress knows about every orders validation status.\\
+		& \textbf{Preconditions} & Order is in order queue\\
+		& \textbf{Postcondition success} & Client receives a confirmation email\\
+		& \textbf{Postcondition failure} & Client receives a problem report about invalid order\\
+		& \textbf{Trigger} & Order was placed and exists in order queue\\
+		& \textbf{Sequence} & System  gathers details and checks whether order is valid or not\\
+		& & System sends mail to client\\
+\end{tabular}
+
+\begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
+	 /PF/	& \textbf{Process} & Check stock\\ 
+		& \textbf{Category} & \\
+		& \textbf{Actor(s)} & System/BookExpress employee\\ 
+		& \textbf{Description}	 & The system checks whether the amount of books, which the client orders, is available or nearly out of stock.\\ 
+		& \textbf{Goal} & Check succeeds\\
+		& \textbf{Preconditions} & Order is placed or BookExpress employee initiates check\\
+		& \textbf{Postcondition success} & Books which are nearly out of stock get displayed as a list\\
+		& \textbf{Postcondition failure} & -\\
+		& \textbf{Trigger} & Stock check is initiated\\
+		& \textbf{Sequence} & Check \\
+\end{tabular}
+
+\begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
+	 /PF/	& \textbf{Process} & Forward order to Logistics\\ 
+		& \textbf{Category} & \\
+		& \textbf{Actor(s)} & System\\ 
+		& \textbf{Description}	 & A validated order gets forwarded to Logistics\\ 
+		& \textbf{Goal} & Logistics proceeds processing the order\\
+		& \textbf{Preconditions} & Order is valid\\
+		& \textbf{Postcondition success} & Logistics processes delivery\\
+		& \textbf{Postcondition failure} & Order could not be forwarded to Logistics\\
+		& \textbf{Trigger} & Order is validated\\
+		& \textbf{Sequence} & Send order information/details to Logistics\\
+\end{tabular}
+
 
 \section{External}
 \subsection{Book Stores (``Clients'')}
 
-\begin{tabbing}
-\hspace{3cm}\=\kill
-/PF/ \> Client places order (via web interface)\\ 
-	 Category: \> \\
-	 Actor(s): \> Client\\ 
-	 Description: \> Client places an over via the web interface of BookExpress\\ 
-	 Goal: \> Order is placed\\
-	 Preconditions: \> Client is successfully logged into the web interface\\
-	 \> Connection to BookExpress server is established
-	 Postcondition success: \> Order is delivered to BookExpress\\
-	 \> and added to the order queue
-	 Postcondition failure: \> Order is saved as draft and\\
-	 \> client gets a notification
-	 Trigger: \> Menu Option "create new order" (Web interface)\\
-	 Sequence: \> Client adds books to order (via book search or ISBN)\\
-	 \> Client specifies amount for every book
-	 \> Client submits order to server
-	 \> Order is in the order queue
-	 Expansion: \> -\\
-	 Alternatives: \> -\\
-	 \\
-	 /PF/ \> Search for a book\\ 
-	 Category: \> \\
-	 Actor(s): \> Client\\ 
-	 Description: \> Client searches for a book to add it to his order\\ 
-	 Goal: \> Searching for a book succeeded\\
-	 Preconditions: \> Client is logged into the system\\
-	 Postcondition success: \> Book is being found\\
-	 \> Display items and options
-	 Postcondition failure: \> Book could not be found\\
-	 \> Display notification
-	 Trigger: \> Menu option "find books" (Software)\\
-	 Sequence: \> Enter ISBN/title/author/genre in search bar\\
-	 \> Hit the "Search"-Button
-	 \> Choose book from list to add it to the order
-	 Expansion: \> -\\
-	 Alternatives: \> -\\
-	 \\
-\end{tabbing} 
-\clearpage
+\begin{tabular}{llp{10cm}}
+/PF/	& \textbf{Process} & Client places order (via web interface)\\ 
+		& \textbf{Category} & \\
+		& \textbf{Actor(s)} & Client\\ 
+		& \textbf{Description}	 & Client places an over via the web interface of BookExpress\\ 
+		& \textbf{Goal} & Order is placed\\
+		& \textbf{Preconditions} & Client is successfully logged into the web interface\\
+		& & Connection to BookExpress server is established\\
+		& \textbf{Postcondition success} & Order is delivered to BookExpress  and added to the order queue\\
+		& \textbf{Postcondition failure} & Order is saved as draft and client gets a notification\\
+		& \textbf{Trigger} & Menu Option "create new order" (Web interface)\\
+		& \textbf{Sequence} & Client adds books to order (via book search or ISBN)\\
+		& & Client specifies amount for every book\\
+		& & Client submits order to server\\
+		& & Order is in the order queue\\
+
+\end{tabular}
+
+\begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
+	 /PF/	& \textbf{Process} & Search for a book\\ 
+		& \textbf{Category} & \\
+		& \textbf{Actor(s)} & Client\\ 
+		& \textbf{Description}	 & Client searches for a book to add it to his order\\ 
+		& \textbf{Goal} & Searching for a book succeeded\\
+		& \textbf{Preconditions} & Client is logged into the system\\
+		& \textbf{Postcondition success} & Book is being found\\
+		& & Display items and options\\
+		& \textbf{Postcondition failure} & Book could not be found\\
+		& & Display notification\\
+		& \textbf{Trigger} & Menu option "find books" (Software)\\
+		& \textbf{Sequence} & Enter ISBN/title/author/genre in search bar\\
+		& & Hit the "Search"-Button\\
+		& & Choose book from list to add it to the order\\
+
+\end{tabular}
 
 \subsection{Publishers}
 
@@ -281,6 +279,6 @@ The products environmental diagram.
 
 \chapter{Additional Specifications and Stipulations}
 \chapter{Appendices}
-None.
+\printglossaries
 
 \end{document}
