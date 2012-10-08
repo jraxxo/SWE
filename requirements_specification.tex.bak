@@ -68,7 +68,7 @@ The products environmental diagram.
 \hfill \\
 
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
-/PF10/	& \textbf{Process}	& Register Publisher or Book Shop (client)\\
+/PF/	& \textbf{Process}	& Register Publisher or Book Shop\\
 		& \textbf{Actor(s)} & BookExpress employee\\
 		& \textbf{Category} & \\
 		& \textbf{Description}	 & A Book Express employee creates an account for a book shop or publisher after both business partners have signed a contract handling the business relations.\\
@@ -86,7 +86,7 @@ The products environmental diagram.
 
 
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
-/PF20/	& \textbf{Process} & Edit client information\\
+/PF/	& \textbf{Process} & Edit client information\\
 		& \textbf{Actor(s)} & BookExpress employee\\
 		& \textbf{Category} & \\
 		& \textbf{Description}	 & The clients data is outdated and needs to be updated\\
@@ -154,16 +154,18 @@ The products environmental diagram.
 \end{tabular}
 
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
-	 /PF/	& \textbf{Process} & Check stock\\ 
+	 /PF/	& \textbf{Process} & Stock Update\\ 
 		& \textbf{Category} & \\
 		& \textbf{Actor(s)} & System/BookExpress employee\\ 
-		& \textbf{Description}	 & The system checks whether the amount of books, which the client orders, is available or nearly out of stock.\\ 
+		& \textbf{Description}	 & The employee in charge of the stock checks the availability of all books and updates the stock accordingly.\\ 
 		& \textbf{Goal} & Check succeeds\\
 		& \textbf{Preconditions} & Order is placed or BookExpress employee initiates check\\
 		& \textbf{Postcondition success} & Books which are nearly out of stock get displayed as a list\\
 		& \textbf{Postcondition failure} & -\\
 		& \textbf{Trigger} & Stock check is initiated\\
-		& \textbf{Sequence} & Check \\
+		& \textbf{Sequence} & Check if a book is available in an sufficient amount\\
+		& & Make a list of all books which need to be ordered
+		& & Submit list to system
 \hfill \\
 \end{tabular}
 
@@ -181,6 +183,21 @@ The products environmental diagram.
 \hfill \\
 \end{tabular}
 
+\begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
+/PF/	& \textbf{Process} & BookExpress Order\\
+		& \textbf{Actor(s)} & BookExpress employee\\
+		& \textbf{Category} & \\
+		& \textbf{Description}	 & The Employee orders a number of books from the publisher\\
+		& \textbf{Goal} & Order books from a publisher\\
+		& \textbf{Preconditions} & need for new books\\
+		& \textbf{Postcondition success} & Books are ordered and publisher gets an notification mail\\
+		& \textbf{Postcondition failure} & -\\
+		& \textbf{Trigger} & BookExpress employee initates an order\\
+		& \textbf{Sequence} & Select books from list or search TODO /PF/\\
+		& & Submit list to publisher\\
+		
+\hfill \\
+\end{tabular}
 
 \section{External}
 \subsection{Book Stores (``Clients'')}
@@ -188,10 +205,12 @@ The products environmental diagram.
 \hfill \\
 
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
-/PF/	& \textbf{Process} & Client places order (via web interface)\\ 
+/PF/	& \textbf{Process} & Book Store Order\\ 
 		& \textbf{Category} & \\
-		& \textbf{Actor(s)} & Client\\ 
-		& \textbf{Description}	 & Client places an over via the web interface of BookExpress\\ 
+		& \textbf{Actor(s)} & Book Store Employee\\ 
+		& \textbf{Description}	 & The Book Store orders a book from BookExpress.
+This can either happen through a constant connection where every order is individually processed or the store can choose to collect orders internally and send them
+as one big order every day.\\ 
 		& \textbf{Goal} & Order is placed\\
 		& \textbf{Preconditions} & Client is successfully logged into the web interface\\
 		& & Connection to BookExpress server is established\\
@@ -223,7 +242,58 @@ The products environmental diagram.
 \hfill \\
 \end{tabular}
 
+\begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
+/PF/	& \textbf{Process} & Cancel Order\\
+		& \textbf{Actor(s)} & Book Store Employee\\
+		& \textbf{Category} & \\
+		& \textbf{Description}	 & The employee at the book store can cancel the order if it hasn’t been shipped yet\\
+		& \textbf{Goal} & Current orders can be cancelled\\
+		& \textbf{Preconditions} & Order exists\\
+		& \textbf{Postcondition success} & Order successfully cancelled. Book Store receives a confirmation mail\\
+		& \textbf{Postcondition failure} & Book Store receives a problem report\\
+		& \textbf{Trigger} & Menu option "cancel order"\\
+		& \textbf{Sequence} & Select order to cancel\\
+		& & Check whether order isn't shipped yet\\
+		& & Cancel order
+		
+\hfill \\
+\end{tabular}
+
+\begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
+/PF/	& \textbf{Process} & Tracking System\\
+		& \textbf{Actor(s)} & Book Store Employee\\
+		& \textbf{Category} & \\
+		& \textbf{Description}	 & The employee at the book store can look up at which stage his order is right now, e.g. processing or shipping to BookExpress/the book store.\\
+		& \textbf{Goal} & Look up order information/status\\
+		& \textbf{Preconditions} & Order exists\\
+		& \textbf{Postcondition success} & Employee receives information/status of order\\
+		& \textbf{Postcondition failure} & -\\
+		& \textbf{Trigger} & Menu option "tracking system"\\
+		& \textbf{Sequence} & Select order to track\\
+		
+\hfill \\
+\end{tabular}
+
 \subsection{Publishers}
+
+\hfill \\
+
+\begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
+/PF/	& \textbf{Process} & Inventory maintenance\\
+		& \textbf{Actor(s)} & Publisher\\
+		& \textbf{Category} & \\
+		& \textbf{Description}	 & Publishers can update their inventory list
+(i.e. the list of available books) either via mail or using the direct connection over the web-based interface.\\
+		& \textbf{Goal} & Updated inventory list\\
+		& \textbf{Preconditions} & Publisher exists\\
+		& \textbf{Postcondition success} & Send success mail to publisher\\
+		& \textbf{Postcondition failure} & Send problem report to publisher\\
+		& \textbf{Trigger} & Menu option "inventory maintenance" (Software) or via mail\\
+		& \textbf{Sequence} & Edit inventory list (i.e with TODO book search)\\
+		& & Submit list to server
+		
+\hfill \\
+\end{tabular}
 
 \chapter{Product Data}
 \section{Customer Data}
