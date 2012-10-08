@@ -144,6 +144,20 @@ The products environmental diagram.
 	 Expansion: \> -\\
 	 Alternatives: \> -\\
 	 \\
+	 /PF/ \> Check stock\\ 
+	 Category: \> \\
+	 Actor(s): \> System\\ 
+	 Description: \> The system checks whether the amount of books, which\\
+	 \> the client orders, is available in or nearly out of stock.\\ 
+	 Goal: \> Check succeeds\\
+	 Preconditions: \> Order\\
+	 Postcondition success: \> \\
+	 Postcondition failure: \> \\
+	 Trigger: \> \\
+	 Sequence: \> \\
+	 Expansion: \> -\\
+	 Alternatives: \> -\\
+	 \\
 	 /PF/ \> Forward order to Logistics\\ 
 	 Category: \> \\
 	 Actor(s): \> System\\ 
@@ -154,19 +168,6 @@ The products environmental diagram.
 	 Postcondition failure: \> Order could not be forwarded to Logistics\\
 	 Trigger: \> Order is validated\\
 	 Sequence: \> Send order information/details to Logistics\\
-	 Expansion: \> -\\
-	 Alternatives: \> -\\
-	 \\
-	 /PF/ \> Forward order to client\\ 
-	 Category: \> \\
-	 Actor(s): \> System\\ 
-	 Description: \> \\ 
-	 Goal: \> \\
-	 Preconditions: \> \\
-	 Postcondition success: \> \\
-	 Postcondition failure: \> \\
-	 Trigger: \> \\
-	 Sequence: \> \\
 	 Expansion: \> -\\
 	 Alternatives: \> -\\
 	 \\
@@ -191,16 +192,39 @@ The products environmental diagram.
 
 \begin{tabbing}
 \hspace{3cm}\=\kill
-/PF/ \> \\ 
+/PF/ \> Client places order (via web interface)\\ 
 	 Category: \> \\
-	 Actor(s): \> \\ 
-	 Description: \> \\ 
-	 Goal: \> \\
-	 Preconditions: \> \\
-	 Postcondition success: \> \\
-	 Postcondition failure: \> \\
-	 Trigger: \> \\
-	 Sequence: \> \\
+	 Actor(s): \> Client\\ 
+	 Description: \> Client places an over via the web interface of BookExpress\\ 
+	 Goal: \> Order is placed\\
+	 Preconditions: \> Client is successfully logged into the web interface\\
+	 \> Connection to BookExpress server is established
+	 Postcondition success: \> Order is delivered to BookExpress\\
+	 \> and added to the order queue
+	 Postcondition failure: \> Order is saved as draft and\\
+	 \> client gets a notification
+	 Trigger: \> Menu Option "create new order" (Web interface)\\
+	 Sequence: \> Client adds books to order (via book search or ISBN)\\
+	 \> Client specifies amount for every book
+	 \> Client submits order to server
+	 \> Order is in the order queue
+	 Expansion: \> -\\
+	 Alternatives: \> -\\
+	 \\
+	 /PF/ \> Search for a book\\ 
+	 Category: \> \\
+	 Actor(s): \> Client\\ 
+	 Description: \> Client searches for a book to add it to his order\\ 
+	 Goal: \> Searching for a book succeeded\\
+	 Preconditions: \> Client is logged into the system\\
+	 Postcondition success: \> Book is being found\\
+	 \> Display items and options
+	 Postcondition failure: \> Book could not be found\\
+	 \> Display notification
+	 Trigger: \> Menu option "find books" (Software)\\
+	 Sequence: \> Enter ISBN/title/author/genre in search bar\\
+	 \> Hit the "Search"-Button
+	 \> Choose book from list to add it to the order
 	 Expansion: \> -\\
 	 Alternatives: \> -\\
 	 \\
