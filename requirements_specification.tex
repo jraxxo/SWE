@@ -98,11 +98,10 @@ The products environmental diagram.
 		& \textbf{Sequence} & Menu option "edit client data"\\
 		& & Edit specific data\\
 		& & Submit edited data to the server\\
-
+\hfill \\
 \end{tabular}
 
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
-
 /PF/	& \textbf{Process} & Delete client\\ 
 		& \textbf{Actor(s)} & BookExpress Employee\\ 
 		& \textbf{Category} & \\
@@ -117,7 +116,7 @@ The products environmental diagram.
 		& & Check if client is deletable (i.e. no existing orders)\\
 		& & Send notification mail to client\\
 		& & Delete client\\
-		
+\hfill \\		
 \end{tabular}
 
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
@@ -136,6 +135,7 @@ The products environmental diagram.
 		& & BookExpress employee enters ordered book into the system\\
 		& & Order is placed in order queue\\
 		& & Order notification containing detailed report is sent to client\\
+\hfill \\
 \end{tabular}
 
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
@@ -150,6 +150,7 @@ The products environmental diagram.
 		& \textbf{Trigger} & Order was placed and exists in order queue\\
 		& \textbf{Sequence} & System  gathers details and checks whether order is valid or not\\
 		& & System sends mail to client\\
+\hfill \\
 \end{tabular}
 
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
@@ -163,6 +164,7 @@ The products environmental diagram.
 		& \textbf{Postcondition failure} & -\\
 		& \textbf{Trigger} & Stock check is initiated\\
 		& \textbf{Sequence} & Check \\
+\hfill \\
 \end{tabular}
 
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
@@ -176,13 +178,16 @@ The products environmental diagram.
 		& \textbf{Postcondition failure} & Order could not be forwarded to Logistics\\
 		& \textbf{Trigger} & Order is validated\\
 		& \textbf{Sequence} & Send order information/details to Logistics\\
+\hfill \\
 \end{tabular}
 
 
 \section{External}
 \subsection{Book Stores (``Clients'')}
 
-\begin{tabular}{llp{10cm}}
+\hfill \\
+
+\begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
 /PF/	& \textbf{Process} & Client places order (via web interface)\\ 
 		& \textbf{Category} & \\
 		& \textbf{Actor(s)} & Client\\ 
@@ -197,7 +202,7 @@ The products environmental diagram.
 		& & Client specifies amount for every book\\
 		& & Client submits order to server\\
 		& & Order is in the order queue\\
-
+\hfill \\
 \end{tabular}
 
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
@@ -215,7 +220,7 @@ The products environmental diagram.
 		& \textbf{Sequence} & Enter ISBN/title/author/genre in search bar\\
 		& & Hit the "Search"-Button\\
 		& & Choose book from list to add it to the order\\
-
+\hfill \\
 \end{tabular}
 
 \subsection{Publishers}

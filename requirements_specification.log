@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2011.6.13)  8 OCT 2012 14:39
+This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2011.6.13)  8 OCT 2012 15:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1378,204 +1378,219 @@ Package pdftex.def Info: images/umweltdiagramm.png used on input line 57.
  <./images/umweltdiagramm.png>]
 Chapter 4.
 
-Overfull \hbox (55.59535pt too wide) in paragraph at lines 64--75
-[] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 79--80
+Underfull \hbox (badness 10000) in paragraph at lines 68--69
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 88--88
+Underfull \hbox (badness 10000) in paragraph at lines 77--77
 []\T1/jkp/b/n/10.95 Postcondition
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 89--89
+Underfull \hbox (badness 10000) in paragraph at lines 78--78
 []\T1/jkp/b/n/10.95 Postcondition
  []
 
 
-Overfull \hbox (48.65942pt too wide) in paragraph at lines 81--97
+Overfull \hbox (48.65942pt too wide) in paragraph at lines 70--86
 [][] 
  []
 
 [7
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 106--106
+Underfull \hbox (badness 10000) in paragraph at lines 95--95
 []\T1/jkp/b/n/10.95 Postcondition
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 107--107
+Underfull \hbox (badness 10000) in paragraph at lines 96--96
 []\T1/jkp/b/n/10.95 Postcondition
  []
 
 
-Overfull \hbox (48.65942pt too wide) in paragraph at lines 99--114
+Overfull \hbox (48.65942pt too wide) in paragraph at lines 88--103
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 124--124
+Underfull \hbox (badness 10000) in paragraph at lines 112--112
 []\T1/jkp/b/n/10.95 Postcondition
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 125--125
+Underfull \hbox (badness 10000) in paragraph at lines 113--113
 []\T1/jkp/b/n/10.95 Postcondition
  []
 
 
-Overfull \hbox (48.65942pt too wide) in paragraph at lines 115--133
+Overfull \hbox (48.65942pt too wide) in paragraph at lines 104--121
 [][] 
  []
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 142--142
+Underfull \hbox (badness 10000) in paragraph at lines 130--130
 []\T1/jkp/b/n/10.95 Postcondition
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 143--143
+Underfull \hbox (badness 10000) in paragraph at lines 131--131
 []\T1/jkp/b/n/10.95 Postcondition
  []
 
 
-Underfull \hbox (badness 1158) in paragraph at lines 144--145
+Underfull \hbox (badness 1158) in paragraph at lines 132--133
 []\T1/jkp/m/n/10.95 Client ini-ti-ates or-der pro-cess by call-ing an
  []
 
 
-Underfull \hbox (badness 1478) in paragraph at lines 147--148
+Underfull \hbox (badness 1478) in paragraph at lines 135--136
 []\T1/jkp/m/n/10.95 BookExpress em-ployee enters ordered book
  []
 
 
-Overfull \hbox (48.65942pt too wide) in paragraph at lines 134--151
+Overfull \hbox (48.65942pt too wide) in paragraph at lines 122--140
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 159--159
+Underfull \hbox (badness 10000) in paragraph at lines 148--148
 []\T1/jkp/b/n/10.95 Postcondition
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 160--160
+Underfull \hbox (badness 10000) in paragraph at lines 149--149
 []\T1/jkp/b/n/10.95 Postcondition
  []
 
 
-Overfull \hbox (48.65942pt too wide) in paragraph at lines 152--165
+Overfull \hbox (48.65942pt too wide) in paragraph at lines 141--155
 [][] 
  []
 
 [9]
-Underfull \hbox (badness 1354) in paragraph at lines 170--171
+Underfull \hbox (badness 1354) in paragraph at lines 160--161
 []\T1/jkp/m/n/10.95 The sys-tem checks whether the amount of
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 173--173
+Underfull \hbox (badness 10000) in paragraph at lines 163--163
 []\T1/jkp/b/n/10.95 Postcondition
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 174--174
+Underfull \hbox (badness 10000) in paragraph at lines 164--164
 []\T1/jkp/b/n/10.95 Postcondition
  []
 
 
-Overfull \hbox (48.65942pt too wide) in paragraph at lines 166--178
+Overfull \hbox (48.65942pt too wide) in paragraph at lines 156--169
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 186--186
+Underfull \hbox (badness 10000) in paragraph at lines 177--177
 []\T1/jkp/b/n/10.95 Postcondition
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 187--187
+Underfull \hbox (badness 10000) in paragraph at lines 178--178
 []\T1/jkp/b/n/10.95 Postcondition
  []
 
 
-Overfull \hbox (48.65942pt too wide) in paragraph at lines 179--191
+Overfull \hbox (48.65942pt too wide) in paragraph at lines 170--183
 [][] 
- []
-
-
-Overfull \hbox (92.92384pt too wide) in paragraph at lines 196--213
-[] 
  []
 
 [10]
-Underfull \hbox (badness 10000) in paragraph at lines 221--221
+Underfull \hbox (badness 10000) in paragraph at lines 188--189
+
+ []
+
+
+Underfull \hbox (badness 1270) in paragraph at lines 197--198
+[]\T1/jkp/m/n/10.95 Connection to Book-Ex-press server is es-tab-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 198--198
 []\T1/jkp/b/n/10.95 Postcondition
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 223--223
+Underfull \hbox (badness 10000) in paragraph at lines 199--199
 []\T1/jkp/b/n/10.95 Postcondition
  []
 
 
-Overfull \hbox (48.65942pt too wide) in paragraph at lines 214--231
+Overfull \hbox (48.65942pt too wide) in paragraph at lines 190--207
 [][] 
  []
 
-[11]
-Chapter 5.
-[12
 
-]
-Chapter 6.
+Underfull \hbox (badness 10000) in paragraph at lines 215--215
+[]\T1/jkp/b/n/10.95 Postcondition
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 217--217
+[]\T1/jkp/b/n/10.95 Postcondition
+ []
+
+
+Overfull \hbox (48.65942pt too wide) in paragraph at lines 208--225
+[][] 
+ []
+
+[11] [12]
+Chapter 5.
 [13
 
 ]
-Chapter 7.
+Chapter 6.
 [14
 
 ]
-Chapter 8.
+Chapter 7.
 [15
 
 ]
-Chapter 9.
+Chapter 8.
 [16
 
 ]
-Chapter 10.
+Chapter 9.
 [17
 
 ]
-Chapter 11.
+Chapter 10.
 [18
 
 ]
-Chapter 12.
+Chapter 11.
 [19
 
 ]
-Chapter 13.
+Chapter 12.
 [20
+
+]
+Chapter 13.
+[21
 
 ]
 Chapter 14.
 No file requirements_specification.gls.
 No file requirements_specification.acr.
-[21
+[22
 
 ] (./requirements_specification.aux) ) 
 Here is how much of TeX's memory you used:
  15284 strings out of 493763
  261127 string characters out of 3144954
- 329039 words of memory out of 3000000
+ 328039 words of memory out of 3000000
  18197 multiletter control sequences out of 15000+200000
  90081 words of font info for 98 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
@@ -1586,10 +1601,10 @@ Here is how much of TeX's memory you used:
 pfonts/jkpbn8a.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/kpfon
 ts/jkpmn8a.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/kpfonts/j
 kpmne.pfb>
-Output written on requirements_specification.pdf (22 pages, 81437 bytes).
+Output written on requirements_specification.pdf (23 pages, 81511 bytes).
 PDF statistics:
- 95 PDF objects out of 1000 (max. 8388607)
- 65 compressed objects within 1 object stream
+ 98 PDF objects out of 1000 (max. 8388607)
+ 67 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 
