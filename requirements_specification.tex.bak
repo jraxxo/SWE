@@ -65,10 +65,9 @@ The products environmental diagram.
 \section{Internal}
 \subsection{Employees of ``BookExpress''}
 
-\hfill \\
-
+\noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
-/PF/	& \textbf{Process}	& Register Publisher or Book Shop\\
+/PF00/	& \textbf{Process}	& Register Publisher or Book Shop\\
 		& \textbf{Actor(s)} & BookExpress employee\\
 		& \textbf{Category} & \\
 		& \textbf{Description}	 & A Book Express employee creates an account for a book shop or publisher after both business partners have signed a contract handling the business relations.\\
@@ -84,9 +83,9 @@ The products environmental diagram.
 \hfill \\
 \end{tabular}
 
-
+\noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
-/PF/	& \textbf{Process} & Update account information\\
+/PF01/	& \textbf{Process} & Update account information\\
 		& \textbf{Actor(s)} & BookExpress employee\\
 		& \textbf{Category} & \\
 		& \textbf{Description}	 & The clients data is outdated and needs to be updated\\
@@ -101,8 +100,9 @@ The products environmental diagram.
 \hfill \\
 \end{tabular}
 
+\noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
-/PF/	& \textbf{Process} & Delete client\\ 
+/PF02/	& \textbf{Process} & Delete account\\ 
 		& \textbf{Actor(s)} & BookExpress Employee\\ 
 		& \textbf{Category} & \\
 		& \textbf{Description}	 & Client gets deleted due to resignation of the contract\\ 
@@ -119,8 +119,9 @@ The products environmental diagram.
 \hfill \\		
 \end{tabular}
 
+\noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
-	 /PF/	& \textbf{Process} & Client places order (via telephone)\\ 
+	 /PF/	& \textbf{Process} & Client places order\\ 
 		& \textbf{Category} & \\
 		& \textbf{Actor(s)} & BookExpress employee, client\\ 
 		& \textbf{Description}	 & A client orders book via telephone\\ 
@@ -138,6 +139,7 @@ The products environmental diagram.
 \hfill \\
 \end{tabular}
 
+\noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
 	 /PF/	& \textbf{Process} & Validate order\\ 
 		& \textbf{Category} & \\
@@ -153,6 +155,7 @@ The products environmental diagram.
 \hfill \\
 \end{tabular}
 
+\noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
 	 /PF/	& \textbf{Process} & Stock Update\\ 
 		& \textbf{Category} & \\
@@ -164,11 +167,12 @@ The products environmental diagram.
 		& \textbf{Postcondition failure} & -\\
 		& \textbf{Trigger} & Stock check is initiated\\
 		& \textbf{Sequence} & Check if a book is available in an sufficient amount\\
-		& & Make a list of all books which need to be ordered
-		& & Submit list to system
+		& & Make a list of all books which need to be ordered\\
+		& & Submit list to system\\
 \hfill \\
 \end{tabular}
 
+\noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
 	 /PF/	& \textbf{Process} & Forward order to Logistics\\ 
 		& \textbf{Category} & \\
@@ -183,6 +187,7 @@ The products environmental diagram.
 \hfill \\
 \end{tabular}
 
+\noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
 /PF/	& \textbf{Process} & Deliver order\\
 		& \textbf{Actor(s)} & System\\
@@ -195,13 +200,14 @@ The products environmental diagram.
 		& \textbf{Postcondition failure} & Order could not be marked as sent\\
 		& \textbf{Trigger} & Forward order to Logistics\\
 		& \textbf{Sequence} & Check if books are in stock\\
-		& & Receive book store information
-		& & Sent order to book store
-		& & Mark order as sent
+		& & Receive book store information\\
+		& & Sent order to book store\\
+		& & Mark order as sent\\
 		
 \hfill \\
 \end{tabular}
 
+\noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
 /PF/	& \textbf{Process} & Confirm delivery\\
 		& \textbf{Actor(s)} & Employee (Logistics)\\
@@ -218,6 +224,7 @@ The products environmental diagram.
 \hfill \\
 \end{tabular}
 
+\noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
 /PF/	& \textbf{Process} & BookExpress Order\\
 		& \textbf{Actor(s)} & BookExpress employee\\
@@ -234,6 +241,7 @@ The products environmental diagram.
 \hfill \\
 \end{tabular}
 
+\noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
 /PF/	& \textbf{Process} & Create an invoice\\
 		& \textbf{Actor(s)} & System\\
@@ -252,6 +260,7 @@ The products environmental diagram.
 \hfill \\
 \end{tabular}
 
+\noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
 /PF/	& \textbf{Process} & Send invoice\\
 		& \textbf{Actor(s)} & System\\
@@ -268,6 +277,7 @@ The products environmental diagram.
 \hfill \\
 \end{tabular}
 
+\noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
 /PF/	& \textbf{Process} & Backup\\
 		& \textbf{Actor(s)} & System\\
@@ -308,6 +318,7 @@ The products environmental diagram.
 \hfill \\
 \end{tabular}
 
+\noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
 /PF/	& \textbf{Process} & Update account information\\
 		& \textbf{Actor(s)} & Book store/publisher\\
@@ -325,6 +336,7 @@ The products environmental diagram.
 \hfill \\
 \end{tabular}
 
+\noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
 /PF/	& \textbf{Process} & Logout\\
 		& \textbf{Actor(s)} & Book store/publisher\\
@@ -362,6 +374,7 @@ The products environmental diagram.
 \hfill \\
 \end{tabular}
 
+\noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
 /PF/	& \textbf{Process} & Book Store Order\\ 
 		& \textbf{Category} & \\
@@ -382,23 +395,27 @@ as one big order every day.\\
 \hfill \\
 \end{tabular}
 
+\noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
 /PF/	& \textbf{Process} & Change order\\
 		& \textbf{Actor(s)} & Book store\\
 		& \textbf{Category} & \\
-		& \textbf{Description}	 & \\
-		& \textbf{Goal} & \\
-		& \textbf{Preconditions} & \\
-		& \textbf{Postcondition success} & \\
-		& \textbf{Postcondition failure} & \\
-		& \textbf{Trigger} & \\
-		& \textbf{Sequence} & \\
-		& & \\
+		& \textbf{Description}	 & As long as the order is not validated, the user can change information\\
+		& \textbf{Goal} & User can correct an order\\
+		& \textbf{Preconditions} & Order exists and user is logged in\\
+		& \textbf{Postcondition success} & Order information successfully changed\\
+		& \textbf{Postcondition failure} & Order information could not be changed because the order is already being validated\\
+		& \textbf{Trigger} & Menu option "Change order"\\
+		& \textbf{Sequence} & Select order to be changed\\
+		& & System checks validity status of the order\\
+		& & If not validated, user can change order information\\
+		& & Submit changes to the System\\
+		& & User receives a confirmation mail\\
 		
 \hfill \\
 \end{tabular}
 
-
+\noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
 /PF/	& \textbf{Process} & Cancel Order\\
 		& \textbf{Actor(s)} & Book Store Employee\\
@@ -416,6 +433,7 @@ as one big order every day.\\
 \hfill \\
 \end{tabular}
 
+\noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
 /PF/	& \textbf{Process} & Tracking System\\
 		& \textbf{Actor(s)} & Book Store Employee\\
@@ -433,10 +451,9 @@ as one big order every day.\\
 
 \subsection{Publishers}
 
-\hfill \\
-
+\noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
-/PF/	& \textbf{Process} & Inventory maintenance\\
+/PF10/	& \textbf{Process} & Inventory maintenance\\
 		& \textbf{Actor(s)} & Publisher\\
 		& \textbf{Category} & \\
 		& \textbf{Description}	 & Publishers can update their inventory list

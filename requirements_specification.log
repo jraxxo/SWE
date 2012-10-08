@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2011.6.13)  8 OCT 2012 18:21
+This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2011.6.13)  8 OCT 2012 18:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1378,8 +1378,8 @@ Package pdftex.def Info: images/umweltdiagramm.png used on input line 57.
  <./images/umweltdiagramm.png>]
 Chapter 4.
 
-Underfull \hbox (badness 10000) in paragraph at lines 68--69
-
+Underfull \hbox (badness 10000) in paragraph at lines 76--76
+[]\T1/jkp/b/n/10.95 Postcondition
  []
 
 
@@ -1388,38 +1388,33 @@ Underfull \hbox (badness 10000) in paragraph at lines 77--77
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 78--78
+Overfull \hbox (31.65942pt too wide) in paragraph at lines 68--85
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 94--94
 []\T1/jkp/b/n/10.95 Postcondition
  []
 
 
-Overfull \hbox (48.65942pt too wide) in paragraph at lines 70--86
-[][] 
- []
-
-[7
-
-]
 Underfull \hbox (badness 10000) in paragraph at lines 95--95
 []\T1/jkp/b/n/10.95 Postcondition
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 96--96
-[]\T1/jkp/b/n/10.95 Postcondition
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 98--99
+Underfull \hbox (badness 10000) in paragraph at lines 97--98
 []\T1/jkp/b/n/10.95 Sequence \T1/jkp/m/n/10.95 Edit
  []
 
 
-Overfull \hbox (48.65942pt too wide) in paragraph at lines 88--103
-[][] 
+Overfull \hbox (31.65942pt too wide) in paragraph at lines 86--102
+[] 
  []
 
-[8]
+[7
+
+]
 Underfull \hbox (badness 10000) in paragraph at lines 112--112
 []\T1/jkp/b/n/10.95 Postcondition
  []
@@ -1430,13 +1425,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 113--113
  []
 
 
-Overfull \hbox (48.65942pt too wide) in paragraph at lines 104--121
-[][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 130--130
-[]\T1/jkp/b/n/10.95 Postcondition
+Overfull \hbox (31.65942pt too wide) in paragraph at lines 103--121
+[] 
  []
 
 
@@ -1445,352 +1435,352 @@ Underfull \hbox (badness 10000) in paragraph at lines 131--131
  []
 
 
-Underfull \hbox (badness 1158) in paragraph at lines 132--133
+Underfull \hbox (badness 10000) in paragraph at lines 132--132
+[]\T1/jkp/b/n/10.95 Postcondition
+ []
+
+
+Underfull \hbox (badness 1158) in paragraph at lines 133--134
 []\T1/jkp/m/n/10.95 Client ini-ti-ates or-der pro-cess by call-ing an
  []
 
 
-Underfull \hbox (badness 1478) in paragraph at lines 135--136
+Underfull \hbox (badness 1478) in paragraph at lines 136--137
 []\T1/jkp/m/n/10.95 BookExpress em-ployee enters ordered book
  []
 
 
-Overfull \hbox (48.65942pt too wide) in paragraph at lines 122--140
-[][] 
- []
-
-[9]
-Underfull \hbox (badness 10000) in paragraph at lines 148--148
-[]\T1/jkp/b/n/10.95 Postcondition
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 149--149
-[]\T1/jkp/b/n/10.95 Postcondition
- []
-
-
-Overfull \hbox (48.65942pt too wide) in paragraph at lines 141--155
-[][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 163--163
-[]\T1/jkp/b/n/10.95 Postcondition
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 164--164
-[]\T1/jkp/b/n/10.95 Postcondition
- []
-
-
-Overfull \hbox (48.65942pt too wide) in paragraph at lines 156--171
-[][] 
- []
-
-[10]
-Underfull \hbox (badness 10000) in paragraph at lines 179--179
-[]\T1/jkp/b/n/10.95 Postcondition
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 180--180
-[]\T1/jkp/b/n/10.95 Postcondition
- []
-
-
-Overfull \hbox (48.65942pt too wide) in paragraph at lines 172--185
-[][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 194--194
-[]\T1/jkp/b/n/10.95 Postcondition
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 195--195
-[]\T1/jkp/b/n/10.95 Postcondition
- []
-
-
-Overfull \hbox (48.65942pt too wide) in paragraph at lines 186--204
-[][] 
- []
-
-[11]
-Underfull \hbox (badness 10000) in paragraph at lines 212--212
-[]\T1/jkp/b/n/10.95 Postcondition
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 213--213
-[]\T1/jkp/b/n/10.95 Postcondition
- []
-
-
-Overfull \hbox (48.65942pt too wide) in paragraph at lines 205--220
-[][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 228--228
-[]\T1/jkp/b/n/10.95 Postcondition
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 229--229
-[]\T1/jkp/b/n/10.95 Postcondition
- []
-
-
-Overfull \hbox (48.65942pt too wide) in paragraph at lines 221--236
-[][] 
- []
-
-[12]
-Underfull \hbox (badness 10000) in paragraph at lines 244--244
-[]\T1/jkp/b/n/10.95 Postcondition
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 245--245
-[]\T1/jkp/b/n/10.95 Postcondition
- []
-
-
-Overfull \hbox (48.65942pt too wide) in paragraph at lines 237--254
-[][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 262--262
-[]\T1/jkp/b/n/10.95 Postcondition
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 263--263
-[]\T1/jkp/b/n/10.95 Postcondition
- []
-
-
-Overfull \hbox (48.65942pt too wide) in paragraph at lines 255--270
-[][] 
- []
-
-[13]
-Underfull \hbox (badness 10000) in paragraph at lines 278--278
-[]\T1/jkp/b/n/10.95 Postcondition
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 279--279
-[]\T1/jkp/b/n/10.95 Postcondition
- []
-
-
-Overfull \hbox (48.65942pt too wide) in paragraph at lines 271--286
-[][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 300--300
-[]\T1/jkp/b/n/10.95 Postcondition
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 301--301
-[]\T1/jkp/b/n/10.95 Postcondition
- []
-
-
-Overfull \hbox (31.65942pt too wide) in paragraph at lines 292--310
+Overfull \hbox (31.65942pt too wide) in paragraph at lines 122--141
 [] 
  []
 
-[14]
-Underfull \hbox (badness 10000) in paragraph at lines 318--318
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 150--150
 []\T1/jkp/b/n/10.95 Postcondition
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 319--319
+Underfull \hbox (badness 10000) in paragraph at lines 151--151
 []\T1/jkp/b/n/10.95 Postcondition
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 321--322
+Overfull \hbox (31.65942pt too wide) in paragraph at lines 142--157
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 166--166
+[]\T1/jkp/b/n/10.95 Postcondition
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 167--167
+[]\T1/jkp/b/n/10.95 Postcondition
+ []
+
+
+Overfull \hbox (31.65942pt too wide) in paragraph at lines 158--174
+[] 
+ []
+
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 183--183
+[]\T1/jkp/b/n/10.95 Postcondition
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 184--184
+[]\T1/jkp/b/n/10.95 Postcondition
+ []
+
+
+Overfull \hbox (31.65942pt too wide) in paragraph at lines 175--189
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 199--199
+[]\T1/jkp/b/n/10.95 Postcondition
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 200--200
+[]\T1/jkp/b/n/10.95 Postcondition
+ []
+
+
+Overfull \hbox (31.65942pt too wide) in paragraph at lines 190--209
+[] 
+ []
+
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 218--218
+[]\T1/jkp/b/n/10.95 Postcondition
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 219--219
+[]\T1/jkp/b/n/10.95 Postcondition
+ []
+
+
+Overfull \hbox (31.65942pt too wide) in paragraph at lines 210--226
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 235--235
+[]\T1/jkp/b/n/10.95 Postcondition
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 236--236
+[]\T1/jkp/b/n/10.95 Postcondition
+ []
+
+
+Overfull \hbox (31.65942pt too wide) in paragraph at lines 227--243
+[] 
+ []
+
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 252--252
+[]\T1/jkp/b/n/10.95 Postcondition
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 253--253
+[]\T1/jkp/b/n/10.95 Postcondition
+ []
+
+
+Overfull \hbox (31.65942pt too wide) in paragraph at lines 244--262
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 271--271
+[]\T1/jkp/b/n/10.95 Postcondition
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 272--272
+[]\T1/jkp/b/n/10.95 Postcondition
+ []
+
+
+Overfull \hbox (31.65942pt too wide) in paragraph at lines 263--279
+[] 
+ []
+
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 288--288
+[]\T1/jkp/b/n/10.95 Postcondition
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 289--289
+[]\T1/jkp/b/n/10.95 Postcondition
+ []
+
+
+Overfull \hbox (31.65942pt too wide) in paragraph at lines 280--296
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 310--310
+[]\T1/jkp/b/n/10.95 Postcondition
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 311--311
+[]\T1/jkp/b/n/10.95 Postcondition
+ []
+
+
+Overfull \hbox (31.65942pt too wide) in paragraph at lines 302--320
+[] 
+ []
+
+[13]
+Underfull \hbox (badness 10000) in paragraph at lines 329--329
+[]\T1/jkp/b/n/10.95 Postcondition
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 330--330
+[]\T1/jkp/b/n/10.95 Postcondition
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 332--333
 []\T1/jkp/b/n/10.95 Sequence \T1/jkp/m/n/10.95 Edit
  []
 
 
-Overfull \hbox (48.65942pt too wide) in paragraph at lines 311--327
-[][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 335--335
-[]\T1/jkp/b/n/10.95 Postcondition
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 336--336
-[]\T1/jkp/b/n/10.95 Postcondition
- []
-
-
-Overfull \hbox (48.65942pt too wide) in paragraph at lines 328--342
-[][] 
- []
-
-[15]
-Underfull \hbox (badness 10000) in paragraph at lines 354--354
-[]\T1/jkp/b/n/10.95 Postcondition
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 356--356
-[]\T1/jkp/b/n/10.95 Postcondition
- []
-
-
-Overfull \hbox (31.65942pt too wide) in paragraph at lines 346--364
+Overfull \hbox (31.65942pt too wide) in paragraph at lines 321--338
 [] 
  []
 
 
-Underfull \hbox (badness 1270) in paragraph at lines 374--375
+Underfull \hbox (badness 10000) in paragraph at lines 347--347
+[]\T1/jkp/b/n/10.95 Postcondition
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 348--348
+[]\T1/jkp/b/n/10.95 Postcondition
+ []
+
+
+Overfull \hbox (31.65942pt too wide) in paragraph at lines 339--354
+[] 
+ []
+
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 366--366
+[]\T1/jkp/b/n/10.95 Postcondition
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 368--368
+[]\T1/jkp/b/n/10.95 Postcondition
+ []
+
+
+Overfull \hbox (31.65942pt too wide) in paragraph at lines 358--376
+[] 
+ []
+
+
+Underfull \hbox (badness 1270) in paragraph at lines 387--388
 []\T1/jkp/m/n/10.95 Connection to Book-Ex-press server is es-tab-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 375--375
+Underfull \hbox (badness 10000) in paragraph at lines 388--388
 []\T1/jkp/b/n/10.95 Postcondition
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 376--376
+Underfull \hbox (badness 10000) in paragraph at lines 389--389
 []\T1/jkp/b/n/10.95 Postcondition
  []
 
 
-Overfull \hbox (48.65942pt too wide) in paragraph at lines 365--384
-[][] 
+Overfull \hbox (31.65942pt too wide) in paragraph at lines 377--397
+[] 
+ []
+
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 406--406
+[]\T1/jkp/b/n/10.95 Postcondition
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 407--407
+[]\T1/jkp/b/n/10.95 Postcondition
+ []
+
+
+Overfull \hbox (31.65942pt too wide) in paragraph at lines 398--417
+[] 
  []
 
 [16]
-Underfull \hbox (badness 10000) in paragraph at lines 392--392
+Underfull \hbox (badness 10000) in paragraph at lines 426--426
 []\T1/jkp/b/n/10.95 Postcondition
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 393--393
+Underfull \hbox (badness 10000) in paragraph at lines 427--427
 []\T1/jkp/b/n/10.95 Postcondition
  []
 
 
-Overfull \hbox (48.65942pt too wide) in paragraph at lines 385--403
-[][] 
+Overfull \hbox (31.65942pt too wide) in paragraph at lines 418--435
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 444--444
+[]\T1/jkp/b/n/10.95 Postcondition
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 445--445
+[]\T1/jkp/b/n/10.95 Postcondition
+ []
+
+
+Overfull \hbox (31.65942pt too wide) in paragraph at lines 436--451
+[] 
  []
 
 [17]
-Underfull \hbox (badness 10000) in paragraph at lines 412--412
+Underfull \hbox (badness 10000) in paragraph at lines 463--463
 []\T1/jkp/b/n/10.95 Postcondition
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 413--413
+Underfull \hbox (badness 10000) in paragraph at lines 464--464
 []\T1/jkp/b/n/10.95 Postcondition
  []
 
 
-Overfull \hbox (48.65942pt too wide) in paragraph at lines 405--421
-[][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 429--429
-[]\T1/jkp/b/n/10.95 Postcondition
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 430--430
-[]\T1/jkp/b/n/10.95 Postcondition
- []
-
-
-Overfull \hbox (48.65942pt too wide) in paragraph at lines 422--436
-[][] 
+Overfull \hbox (31.65942pt too wide) in paragraph at lines 454--471
+[] 
  []
 
 [18]
-Underfull \hbox (badness 10000) in paragraph at lines 439--440
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 449--449
-[]\T1/jkp/b/n/10.95 Postcondition
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 450--450
-[]\T1/jkp/b/n/10.95 Postcondition
- []
-
-
-Overfull \hbox (48.65942pt too wide) in paragraph at lines 441--457
-[][] 
- []
-
-[19]
 Chapter 5.
-[20
+[19
 
 ]
 Chapter 6.
-[21
+[20
 
 ]
 Chapter 7.
-[22
+[21
 
 ]
 Chapter 8.
-[23
+[22
 
 ]
 Chapter 9.
-[24
+[23
 
 ]
 Chapter 10.
-[25
+[24
 
 ]
 Chapter 11.
-[26
+[25
 
 ]
 Chapter 12.
-[27
+[26
 
 ]
 Chapter 13.
-[28
+[27
 
 ]
 Chapter 14.
 No file requirements_specification.gls.
 No file requirements_specification.acr.
-[29
+[28
 
 ] (./requirements_specification.aux) ) 
 Here is how much of TeX's memory you used:
  15284 strings out of 493763
  261127 string characters out of 3144954
- 329039 words of memory out of 3000000
+ 328039 words of memory out of 3000000
  18197 multiletter control sequences out of 15000+200000
  90081 words of font info for 98 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
@@ -1801,10 +1791,10 @@ Here is how much of TeX's memory you used:
 pfonts/jkpbn8a.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/kpfon
 ts/jkpmn8a.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/kpfonts/j
 kpmne.pfb>
-Output written on requirements_specification.pdf (30 pages, 88310 bytes).
+Output written on requirements_specification.pdf (29 pages, 88066 bytes).
 PDF statistics:
- 120 PDF objects out of 1000 (max. 8388607)
- 82 compressed objects within 1 object stream
+ 117 PDF objects out of 1000 (max. 8388607)
+ 80 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 
