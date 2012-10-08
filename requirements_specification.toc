@@ -15,34 +15,41 @@
 \contentsline {chapter}{\numberline {4}Product Functions}{9}
 \contentsline {section}{\numberline {4.1}Internal}{9}
 \contentsline {subsection}{\numberline {4.1.1}Employees of ``BookExpress''}{9}
-\contentsline {section}{\numberline {4.2}External}{13}
-\contentsline {subsection}{\numberline {4.2.1}Book Stores (``Clients'')}{13}
-\contentsline {subsection}{\numberline {4.2.2}Publishers}{14}
-\contentsline {chapter}{\numberline {5}Product Data}{15}
-\contentsline {section}{\numberline {5.1}Customer Data}{15}
-\contentsline {subsection}{\numberline {5.1.1}Book Stores}{15}
-\contentsline {subsection}{\numberline {5.1.2}Publishers}{15}
-\contentsline {section}{\numberline {5.2}Order Data}{15}
-\contentsline {section}{\numberline {5.3}Internal Data}{15}
-\contentsline {chapter}{\numberline {6}Product Performance}{16}
-\contentsline {chapter}{\numberline {7}Quality Requirements}{17}
-\contentsline {chapter}{\numberline {8}User Interface}{18}
-\contentsline {section}{\numberline {8.1}Client Application (for clerks)}{18}
-\contentsline {section}{\numberline {8.2}Web Interface (for customers)}{18}
-\contentsline {chapter}{\numberline {9}Non-Functional Requirements}{19}
-\contentsline {chapter}{\numberline {10}Technical Product Environment}{20}
-\contentsline {section}{\numberline {10.1}Software}{20}
-\contentsline {section}{\numberline {10.2}Hardware}{20}
-\contentsline {section}{\numberline {10.3}Orgware}{20}
-\contentsline {section}{\numberline {10.4}Interfaces (product)}{20}
-\contentsline {chapter}{\numberline {11}Special Requirements for the Development Environment}{21}
-\contentsline {section}{\numberline {11.1}Software}{21}
-\contentsline {section}{\numberline {11.2}Hardware}{21}
-\contentsline {section}{\numberline {11.3}Orgware}{21}
-\contentsline {section}{\numberline {11.4}Interfaces (development)}{21}
-\contentsline {chapter}{\numberline {12}Subproducts and Subsystems}{22}
-\contentsline {section}{\numberline {12.1}Server}{22}
-\contentsline {section}{\numberline {12.2}Web Interface / Web Service}{22}
-\contentsline {section}{\numberline {12.3}Client Application}{22}
-\contentsline {chapter}{\numberline {13}Additional Specifications and Stipulations}{23}
-\contentsline {chapter}{\numberline {14}Appendices}{24}
+\contentsline {section}{\numberline {4.2}External}{16}
+\contentsline {subsection}{\numberline {4.2.1}Book Stores (``Clients'')}{16}
+\contentsline {subsection}{\numberline {4.2.2}Book Stores and Publishers}{16}
+\contentsline {subsection}{\numberline {4.2.3}Book Stores (``Clients'')}{17}
+\contentsline {subsection}{\numberline {4.2.4}Publishers}{20}
+\contentsline {chapter}{\numberline {5}Product Data}{21}
+\contentsline {section}{\numberline {5.1}User Data}{21}
+\contentsline {subsection}{\numberline {5.1.1}Book Stores}{21}
+\contentsline {subsection}{\numberline {5.1.2}Publishers}{21}
+\contentsline {section}{\numberline {5.2}Order Data}{21}
+\contentsline {section}{\numberline {5.3}Internal Data}{22}
+\contentsline {subsection}{\numberline {5.3.1}Book Stock}{22}
+\contentsline {subsection}{\numberline {5.3.2}Truck Information}{22}
+\contentsline {chapter}{\numberline {6}Product Performance}{23}
+\contentsline {section}{\numberline {6.1}System}{23}
+\contentsline {section}{\numberline {6.2}Database}{23}
+\contentsline {section}{\numberline {6.3}Security}{24}
+\contentsline {chapter}{\numberline {7}Quality Requirements}{25}
+\contentsline {chapter}{\numberline {8}User Interface}{26}
+\contentsline {section}{\numberline {8.1}Client Application (for clerks)}{26}
+\contentsline {section}{\numberline {8.2}Web Interface (for customers)}{26}
+\contentsline {chapter}{\numberline {9}Non-Functional Requirements}{27}
+\contentsline {chapter}{\numberline {10}Technical Product Environment}{28}
+\contentsline {section}{\numberline {10.1}Software}{28}
+\contentsline {section}{\numberline {10.2}Hardware}{28}
+\contentsline {section}{\numberline {10.3}Orgware}{28}
+\contentsline {section}{\numberline {10.4}Interfaces (product)}{28}
+\contentsline {chapter}{\numberline {11}Special Requirements for the Development Environment}{29}
+\contentsline {section}{\numberline {11.1}Software}{29}
+\contentsline {section}{\numberline {11.2}Hardware}{29}
+\contentsline {section}{\numberline {11.3}Orgware}{29}
+\contentsline {section}{\numberline {11.4}Interfaces (development)}{29}
+\contentsline {chapter}{\numberline {12}Subproducts and Subsystems}{30}
+\contentsline {section}{\numberline {12.1}Server}{30}
+\contentsline {section}{\numberline {12.2}Web Interface / Web Service}{30}
+\contentsline {section}{\numberline {12.3}Client Application}{30}
+\contentsline {chapter}{\numberline {13}Additional Specifications and Stipulations}{31}
+\contentsline {chapter}{\numberline {14}Appendices}{32}
