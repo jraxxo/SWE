@@ -428,7 +428,7 @@ The products environmental diagram.
 \noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
 /PF/	& \textbf{Process} & Book Store Order\\ 
-		& \textbf{Category} & \\
+		& \textbf{Category} & Must have\\
 		& \textbf{Actor(s)} & Book Store Employee\\ 
 		& \textbf{Description}	 & The Book Store orders a book from BookExpress.
 This can either happen through a constant connection where every order is individually processed or the store can choose to collect orders internally and send them
@@ -450,7 +450,7 @@ as one big order every day.\\
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
 /PF/	& \textbf{Process} & Change order\\
 		& \textbf{Actor(s)} & Book store\\
-		& \textbf{Category} & \\
+		& \textbf{Category} & Must have\\
 		& \textbf{Description}	 & As long as the order is not validated, the user can change information\\
 		& \textbf{Goal} & User can correct an order\\
 		& \textbf{Preconditions} & Order exists and user is logged in\\
@@ -470,7 +470,7 @@ as one big order every day.\\
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
 /PF/	& \textbf{Process} & Cancel Order\\
 		& \textbf{Actor(s)} & Book Store Employee\\
-		& \textbf{Category} & \\
+		& \textbf{Category} & Must have\\
 		& \textbf{Description}	 & The employee at the book store can cancel the order if it hasn’t been shipped yet\\
 		& \textbf{Goal} & Current orders can be cancelled\\
 		& \textbf{Preconditions} & Order exists\\
@@ -488,7 +488,7 @@ as one big order every day.\\
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
 /PF/	& \textbf{Process} & Tracking System\\
 		& \textbf{Actor(s)} & Book Store Employee\\
-		& \textbf{Category} & \\
+		& \textbf{Category} & Must have\\
 		& \textbf{Description}	 & The employee at the book store can look up at which stage his order is right now, e.g. processing or shipping to BookExpress/the book store.\\
 		& \textbf{Goal} & Look up order information/status\\
 		& \textbf{Preconditions} & Order exists\\
