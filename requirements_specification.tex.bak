@@ -184,6 +184,40 @@ The products environmental diagram.
 \end{tabular}
 
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
+/PF/	& \textbf{Process} & Deliver order\\
+		& \textbf{Actor(s)} & System\\
+		& \textbf{Category} & \\
+		& \textbf{Description}	 &  confirms the correct delivery of an order\\
+		& \textbf{Goal} & Deliver ordered books\\
+		& \textbf{Preconditions} & Order is valid\\
+		& & Books are in stock
+		& \textbf{Postcondition success} & Order is marked as sent\\
+		& \textbf{Postcondition failure} & Order could not be marked as sent\\
+		& \textbf{Trigger} & Forward order to Logistics\\
+		& \textbf{Sequence} & \\
+		& & \\
+		
+\hfill \\
+\end{tabular}
+
+\begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
+/PF/	& \textbf{Process} & Confirm delivery\\
+		& \textbf{Actor(s)} & Employee (Logistics)\\
+		& \textbf{Category} & \\
+		& \textbf{Description}	 & Logistics confirms the correct delivery of an order\\
+		& \textbf{Goal} & Deliver ordered books\\
+		& \textbf{Preconditions} & Order is valid\\
+		& & Books are in stock
+		& \textbf{Postcondition success} & Order is marked as sent\\
+		& \textbf{Postcondition failure} & Order could not be marked as sent\\
+		& \textbf{Trigger} & Forward order to Logistics\\
+		& \textbf{Sequence} & \\
+		& & \\
+		
+\hfill \\
+\end{tabular}
+
+\begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
 /PF/	& \textbf{Process} & BookExpress Order\\
 		& \textbf{Actor(s)} & BookExpress employee\\
 		& \textbf{Category} & \\
