@@ -98,16 +98,13 @@ The products environmental diagram.
 	 Category: \> \\
 	 Actor(s): \> BookExpress Employee\\ 
 	 Description: \> Client gets deleted due to resignation of the contract\\ 
-	 Goal: \> Delete client from the system\\
+	 Goal: \> Delete client from the database\\
 	 Preconditions: \> Client exists in database\\
-	 \> Contract is being resigned by one of the contractors
-	 Postcondition success: \> Client is deleted from the system\\
-	 Postcondition failure: \> Client could not be deleted because of existing orders\\
-	 Trigger: \> Menu option "delete client" (Software)\\
-	 Sequence: \> Choose client\\
-	 \> Check if client is deletable (i.e. no existing orders)
-	 \> Send notification mail to client
-	 \> Delete client
+	 \> Contract is being resigned by cont
+	 Postcondition success: \> \\
+	 Postcondition failure: \> \\
+	 Trigger: \> \\
+	 Sequence: \> \\
 	 Expansion: \> -\\
 	 Alternatives: \> -\\
 	 \\
