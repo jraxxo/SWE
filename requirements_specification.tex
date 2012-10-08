@@ -146,15 +146,15 @@ The products environmental diagram.
 	 \\
 	 /PF/ \> Check stock\\ 
 	 Category: \> \\
-	 Actor(s): \> System\\ 
+	 Actor(s): \> System/BookExpress employee\\ 
 	 Description: \> The system checks whether the amount of books, which\\
-	 \> the client orders, is available in or nearly out of stock.\\ 
+	 \> the client orders, is available or nearly out of stock.\\ 
 	 Goal: \> Check succeeds\\
-	 Preconditions: \> Order\\
-	 Postcondition success: \> \\
-	 Postcondition failure: \> \\
-	 Trigger: \> \\
-	 Sequence: \> \\
+	 Preconditions: \> Order is placed or BookExpress employee initiates check\\
+	 Postcondition success: \> Books which are nearly out of stock get displayed as a list\\
+	 Postcondition failure: \> -\\
+	 Trigger: \> Stock check is initiated\\
+	 Sequence: \> Check \\
 	 Expansion: \> -\\
 	 Alternatives: \> -\\
 	 \\
