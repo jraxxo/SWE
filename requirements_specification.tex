@@ -106,11 +106,11 @@ The products environmental diagram.
 	 Preconditions: \> Client exists in database\\
 	 Postcondition success: \> Client data is updated and a notification mail is sent to the client.\\
 	 Postcondition failure: \> Client data is not updated but rolled back to the previous state\\
-	 \> Notification with problem report is shown to the employee.
+	 \> Notification with problem report is shown to the employee.\\
 	 Trigger: \> Menu option "edit client data" (Software)\\
 	 Sequence: \> Menu option "edit client data"\\
-	 \> Edit specific data
-	 \> Submit edited data to the server
+	 \> Edit specific data\\
+	 \> Submit edited data to the server\\
 	 Expansion: \> -\\
 	 Alternatives: \> -\\
 	 \\
@@ -120,14 +120,14 @@ The products environmental diagram.
 	 Description: \> Client gets deleted due to resignation of the contract\\ 
 	 Goal: \> Delete client from the system\\
 	 Preconditions: \> Client exists in database\\
-	 \> Contract is being resigned by one of the contractors
+	 \> Contract is being resigned by one of the contractors\\
 	 Postcondition success: \> Client is deleted from the system\\
 	 Postcondition failure: \> Client could not be deleted because of existing orders\\
 	 Trigger: \> Menu option "delete client" (Software)\\
 	 Sequence: \> Choose client\\
-	 \> Check if client is deletable (i.e. no existing orders)
-	 \> Send notification mail to client
-	 \> Delete client
+	 \> Check if client is deletable (i.e. no existing orders)\\
+	 \> Send notification mail to client\\
+	 \> Delete client\\
 	 Expansion: \> -\\
 	 Alternatives: \> -\\
 	 \\
@@ -137,15 +137,15 @@ The products environmental diagram.
 	 Description: \> A client orders book via telephone\\ 
 	 Goal: \> Order is placed in an order queue\\
 	 Preconditions: \> Client exists in database\\
-	 \> Client is authorized
+	 \> Client is authorized\\
 	 Postcondition success: \> Order is placed in an order queue\\
 	 Postcondition failure: \> -\\
 	 Trigger: \> Client initiates order process by calling an BookExpress employee\\
-	 \> BookExpress employee triggers manual order process
+	 \> BookExpress employee triggers manual order process\\
 	 Sequence: \> BookExpress employee selects client in Software\\
 	 \> BookExpress employee enters ordered book into the system\\
 	 \> Order is placed in order queue\\
-	 \> Order notification containing detailed report is sent to client
+	 \> Order notification containing detailed report is sent to client\\
 	 Expansion: \> -\\
 	 Alternatives: \> -\\
 	 \\
@@ -218,16 +218,16 @@ The products environmental diagram.
 	 Description: \> Client places an over via the web interface of BookExpress\\ 
 	 Goal: \> Order is placed\\
 	 Preconditions: \> Client is successfully logged into the web interface\\
-	 \> Connection to BookExpress server is established
+	 \> Connection to BookExpress server is established\\
 	 Postcondition success: \> Order is delivered to BookExpress\\
-	 \> and added to the order queue
+	 \> and added to the order queue\\
 	 Postcondition failure: \> Order is saved as draft and\\
-	 \> client gets a notification
+	 \> client gets a notification\\
 	 Trigger: \> Menu Option "create new order" (Web interface)\\
 	 Sequence: \> Client adds books to order (via book search or ISBN)\\
-	 \> Client specifies amount for every book
-	 \> Client submits order to server
-	 \> Order is in the order queue
+	 \> Client specifies amount for every book\\
+	 \> Client submits order to server\\
+	 \> Order is in the order queue\\
 	 Expansion: \> -\\
 	 Alternatives: \> -\\
 	 \\
@@ -238,13 +238,13 @@ The products environmental diagram.
 	 Goal: \> Searching for a book succeeded\\
 	 Preconditions: \> Client is logged into the system\\
 	 Postcondition success: \> Book is being found\\
-	 \> Display items and options
+	 \> Display items and options\\
 	 Postcondition failure: \> Book could not be found\\
-	 \> Display notification
+	 \> Display notification\\
 	 Trigger: \> Menu option "find books" (Software)\\
 	 Sequence: \> Enter ISBN/title/author/genre in search bar\\
-	 \> Hit the "Search"-Button
-	 \> Choose book from list to add it to the order
+	 \> Hit the "Search"-Button\\
+	 \> Choose book from list to add it to the order\\
 	 Expansion: \> -\\
 	 Alternatives: \> -\\
 	 \\
