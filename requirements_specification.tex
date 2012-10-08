@@ -119,16 +119,17 @@ The products environmental diagram.
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
 /PF10/	& \textbf{Process}	& Register Publisher or Book Shop (client)\\
 		& \textbf{Actor(s)} & BookExpress employee\\
-		& \textbf{Category} & \\
+		& \textbf{Category} & Must have\\
 		& \textbf{Description}	 & A Book Express employee creates an account for a book shop or publisher after both business partners have signed a contract handling the business relations.\\
-		& \textbf{Goal} & The contract partner should have an account to log into the Software. After registration through the Book Express employee, the contract partner will be send a verification and its account information via email.\\
+		& \textbf{Goal} & The contract partner should have an account to log into the Software. After registration through the Book Express employee, the contract partner will be send a verification and its 
+		 information via email.\\
 		& \textbf{Preconditions} & Contract signed\\
 		& \textbf{Postcondition success} & Successfully created account\\
 		& \textbf{Postcondition failure} & Unsuccessful in creating an account\\
 		& \textbf{Trigger} & Menu option "register new client" (Software)\\
 		& \textbf{Sequence} & Input relevant data and contractor details into the managements system\\
 		& & Save the signed contract on the server\\
-		& & Register a new client by creating a new ClientID in the database\\
+		& & Register a new client by creating a new PIN in the database\\
 		& & Send verification and account information to the contractor\\
 \hfill \\
 \end{tabular}
@@ -208,7 +209,7 @@ The products environmental diagram.
 \noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
 	 /PF/	& \textbf{Process} & Stock Update\\ 
-		& \textbf{Category} & \\
+		& \textbf{Category} & Must have\\
 		& \textbf{Actor(s)} & System/BookExpress employee\\ 
 		& \textbf{Description}	 & The employee in charge of the stock checks the availability of all books and updates the stock accordingly.\\ 
 		& \textbf{Goal} & Check succeeds\\
@@ -353,7 +354,7 @@ The products environmental diagram.
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
 /PF/	& \textbf{Process} & Login\\
 		& \textbf{Actor(s)} & Book store/publisher\\
-		& \textbf{Category} & \\
+		& \textbf{Category} & Must have\\
 		& \textbf{Description}	 & The user logs on with his PIN and password\\
 		& \textbf{Goal} & Provide a fully functional system to the user\\
 		& \textbf{Preconditions} & Existing account\\
@@ -372,7 +373,7 @@ The products environmental diagram.
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
 /PF/	& \textbf{Process} & Update account information\\
 		& \textbf{Actor(s)} & Book store/publisher\\
-		& \textbf{Category} & \\
+		& \textbf{Category} & Must have\\
 		& \textbf{Description}	 & The user is able to edit/update its account information (e.g. address, correspondent etc.)\\
 		& \textbf{Goal} & User is able to update changes\\
 		& \textbf{Preconditions} & User is logged on\\
@@ -390,7 +391,7 @@ The products environmental diagram.
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
 /PF/	& \textbf{Process} & Logout\\
 		& \textbf{Actor(s)} & Book store/publisher\\
-		& \textbf{Category} & \\
+		& \textbf{Category} & Must have\\
 		& \textbf{Description}	 & User logs out\\
 		& \textbf{Goal} & User is logged out\\
 		& \textbf{Preconditions} & User is logged in\\
@@ -407,8 +408,8 @@ The products environmental diagram.
 
 \noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
-	 /PF/	& \textbf{Process} & Search for a book\\ 
-		& \textbf{Category} & \\
+	 /PF/	& \textbf{Process} & Search for a book/show catalogue\\ 
+		& \textbf{Category} & Must have\\
 		& \textbf{Actor(s)} & Client\\ 
 		& \textbf{Description}	 & Client searches for a book to add it to his order\\ 
 		& \textbf{Goal} & Searching for a book succeeded\\
@@ -505,7 +506,7 @@ as one big order every day.\\
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
 /PF10/	& \textbf{Process} & Inventory maintenance\\
 		& \textbf{Actor(s)} & Publisher\\
-		& \textbf{Category} & \\
+		& \textbf{Category} & Must have\\
 		& \textbf{Description}	 & Publishers can update their inventory list
 (i.e. the list of available books) either via mail or using the direct connection over the web-based interface.\\
 		& \textbf{Goal} & Updated inventory list\\
