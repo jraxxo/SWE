@@ -1,8 +1,8 @@
 <<<<<<< HEAD
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2012.9.18)  8 OCT 2012 12:37
+This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2011.6.13)  8 OCT 2012 18:25
 =======
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.9.29)  7 OCT 2012 19:42
->>>>>>> 9e75d2399c4579f9980be06acc64a8c972adeb38
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.9.29)  8 OCT 2012 18:28
+>>>>>>> c15aef3fab52d0472d365f38c25b24015248572f
 entering extended mode
 **requirements_specification.tex
 (C:\Users\joscha\Documents\GitHub\SWE\requirements_specification.tex
@@ -1118,28 +1118,27 @@ Package: titlesec 2011/12/15 v2.10.0 Sectioning titles
 \titlewidthlast=\dimen161
 \titlewidthfirst=\dimen162
 )
-<<<<<<< HEAD
-(C:\Users\harnos\AppData\Roaming\MiKTeX\2.9\tex\latex\glossaries\base\glossarie
+(C:\Users\joscha\AppData\Roaming\MiKTeX\2.9\tex\latex\glossaries\base\glossarie
 s.sty
-Package: glossaries 2012/05/21 v3.02 (NLCT)
- ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+Package: glossaries 2012/09/21 v3.03 (NLCT)
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ifthen.sty"
 Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\xkeyval\xkeyval.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\xkeyval\xkeyval.sty"
 Package: xkeyval 2008/08/13 v2.6a package option processing (HA)
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\xkeyval\xkeyval.tex"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xkeyval\xkeyval.tex"
 \XKV@toks=\toks32
 \XKV@tempa@toks=\toks33
 \XKV@depth=\count125
 File: xkeyval.tex 2008/08/13 v2.6a key=value parser (HA)
 ))
-(C:\Users\harnos\AppData\Roaming\MiKTeX\2.9\tex\latex\glossaries\base\mfirstuc.
+(C:\Users\joscha\AppData\Roaming\MiKTeX\2.9\tex\latex\glossaries\base\mfirstuc.
 sty
 Package: mfirstuc 2012/05/21 v1.06 (NLCT)
- (C:\Users\harnos\AppData\Roaming\MiKTeX\2.9\tex\latex\etoolbox\etoolbox.sty
+ (C:\Users\joscha\AppData\Roaming\MiKTeX\2.9\tex\latex\etoolbox\etoolbox.sty
 Package: etoolbox 2011/01/03 v2.1 e-TeX tools for LaTeX
-("C:\Program Files\MiKTeX 2.9\tex\latex\misc\etex.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\misc\etex.sty"
 Package: etex 1998/03/26 v2.0 eTeX basic definition package (PEB)
 \et@xins=\count126
 )
@@ -1148,14 +1147,14 @@ Package: etex 1998/03/26 v2.0 eTeX basic definition package (PEB)
 \@glsmfirst=\toks34
 \@glsmrest=\toks35
 )
-(C:\Users\harnos\AppData\Roaming\MiKTeX\2.9\tex\latex\xfor\xfor.sty
+(C:\Users\joscha\AppData\Roaming\MiKTeX\2.9\tex\latex\xfor\xfor.sty
 Package: xfor 2009/02/05 v1.05 (NLCT)
 )
-(C:\Users\harnos\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\base\translator\tr
+(C:\Users\joscha\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\base\translator\tr
 anslator.sty
 Package: translator 2010/06/12 ver 1.10
 
-(C:\Users\harnos\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\base\translator\tr
+(C:\Users\joscha\AppData\Roaming\MiKTeX\2.9\tex\latex\beamer\base\translator\tr
 anslator-language-mappings.tex))
 \gls@level=\count128
 \@gls@tmpb=\toks36
@@ -1166,19 +1165,19 @@ anslator-language-mappings.tex))
 \glsshorttok=\toks39
 \glslongtok=\toks40
 
-(C:\Users\harnos\AppData\Roaming\MiKTeX\2.9\tex\latex\glossaries\styles\glossar
+(C:\Users\joscha\AppData\Roaming\MiKTeX\2.9\tex\latex\glossaries\styles\glossar
 y-hypernav.sty
 Package: glossary-hypernav 2007/07/04 v1.01 (NLCT)
 )
-(C:\Users\harnos\AppData\Roaming\MiKTeX\2.9\tex\latex\glossaries\styles\glossar
+(C:\Users\joscha\AppData\Roaming\MiKTeX\2.9\tex\latex\glossaries\styles\glossar
 y-list.sty
-Package: glossary-list 2011/03/28 v3.0 (NLCT)
+Package: glossary-list 2012/09/21 v3.03 (NLCT)
 \glslistdottedwidth=\skip49
 )
-(C:\Users\harnos\AppData\Roaming\MiKTeX\2.9\tex\latex\glossaries\styles\glossar
+(C:\Users\joscha\AppData\Roaming\MiKTeX\2.9\tex\latex\glossaries\styles\glossar
 y-long.sty
-Package: glossary-long 2011/03/28 v3.0 (NLCT)
- ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\longtable.sty"
+Package: glossary-long 2012/09/21 v3.03 (NLCT)
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\longtable.sty"
 Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
 \LTleft=\skip50
 \LTright=\skip51
@@ -1199,11 +1198,11 @@ Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
 \glsdescwidth=\skip54
 \glspagelistwidth=\skip55
 )
-(C:\Users\harnos\AppData\Roaming\MiKTeX\2.9\tex\latex\glossaries\styles\glossar
+(C:\Users\joscha\AppData\Roaming\MiKTeX\2.9\tex\latex\glossaries\styles\glossar
 y-super.sty
-Package: glossary-super 2011/03/28 v3.0 (NLCT)
+Package: glossary-super 2012/09/21 v3.03 (NLCT)
 
-(C:\Users\harnos\AppData\Roaming\MiKTeX\2.9\tex\latex\supertabular\supertabular
+(C:\Users\joscha\AppData\Roaming\MiKTeX\2.9\tex\latex\supertabular\supertabular
 .sty
 Package: supertabular 2004/02/20 v4.1e the supertabular environment
 \c@tracingst=\count134
@@ -1223,9 +1222,9 @@ Package: supertabular 2004/02/20 v4.1e the supertabular environment
 \ST@dimen=\dimen174
 \ST@pbox=\box42
 ))
-(C:\Users\harnos\AppData\Roaming\MiKTeX\2.9\tex\latex\glossaries\styles\glossar
+(C:\Users\joscha\AppData\Roaming\MiKTeX\2.9\tex\latex\glossaries\styles\glossar
 y-tree.sty
-Package: glossary-tree 2011/03/28 v3.0 (NLCT)
+Package: glossary-tree 2012/09/21 v3.03 (NLCT)
 \glstreeindent=\skip59
 ))
 \glo@main@file=\write5
@@ -1235,19 +1234,13 @@ n input line 14.
 Package glossaries Info: Writing glossary file requirements_specification.acn o
 n input line 14.
 
-(C:\Users\harnos\Documents\GitHub\SWE\requirements_specification.aux)
+(C:\Users\joscha\Documents\GitHub\SWE\requirements_specification.aux)
 LaTeX Font Info:    Checking defaults for OML/jkp/m/it on input line 21.
 LaTeX Font Info:    Try loading font information for OML+jkp on input line 21.
-=======
-(C:\Users\joscha\Documents\GitHub\SWE\requirements_specification.aux)
-LaTeX Font Info:    Checking defaults for OML/jkp/m/it on input line 14.
-LaTeX Font Info:    Try loading font information for OML+jkp on input line 14.
->>>>>>> 9e75d2399c4579f9980be06acc64a8c972adeb38
 
 (C:\Users\joscha\AppData\Roaming\MiKTeX\2.9\tex\latex\kpfonts\omljkp.fd
 File: omljkp.fd 2006/08/15 v1.0
 )
-<<<<<<< HEAD
 LaTeX Font Info:    ... okay on input line 21.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
 LaTeX Font Info:    ... okay on input line 21.
@@ -1256,66 +1249,33 @@ LaTeX Font Info:    ... okay on input line 21.
 LaTeX Font Info:    Checking defaults for OMS/jkp/m/n on input line 21.
 LaTeX Font Info:    Try loading font information for OMS+jkp on input line 21.
 
-(C:\Users\harnos\AppData\Roaming\MiKTeX\2.9\tex\latex\kpfonts\omsjkp.fd
+(C:\Users\joscha\AppData\Roaming\MiKTeX\2.9\tex\latex\kpfonts\omsjkp.fd
 File: omsjkp.fd 2006/08/15 v1.0
 )
 LaTeX Font Info:    ... okay on input line 21.
 LaTeX Font Info:    Checking defaults for OMX/jkp/m/n on input line 21.
 LaTeX Font Info:    Try loading font information for OMX+jkp on input line 21.
-=======
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OMS/jkp/m/n on input line 14.
-LaTeX Font Info:    Try loading font information for OMS+jkp on input line 14.
-
-(C:\Users\joscha\AppData\Roaming\MiKTeX\2.9\tex\latex\kpfonts\omsjkp.fd
-File: omsjkp.fd 2006/08/15 v1.0
-)
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OMX/jkp/m/n on input line 14.
-LaTeX Font Info:    Try loading font information for OMX+jkp on input line 14.
->>>>>>> 9e75d2399c4579f9980be06acc64a8c972adeb38
 
 (C:\Users\joscha\AppData\Roaming\MiKTeX\2.9\tex\latex\kpfonts\omxjkp.fd
 File: omxjkp.fd 2006/08/15 v1.0
 )
-<<<<<<< HEAD
 LaTeX Font Info:    ... okay on input line 21.
 LaTeX Font Info:    Checking defaults for U/jkpexa/m/n on input line 21.
 LaTeX Font Info:    Try loading font information for U+jkpexa on input line 21.
-=======
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for U/jkpexa/m/n on input line 14.
-LaTeX Font Info:    Try loading font information for U+jkpexa on input line 14.
->>>>>>> 9e75d2399c4579f9980be06acc64a8c972adeb38
 
 
 (C:\Users\joscha\AppData\Roaming\MiKTeX\2.9\tex\latex\kpfonts\ujkpexa.fd
 File: ujkpexa.fd 2006/08/15 v1.0
 )
-<<<<<<< HEAD
 LaTeX Font Info:    ... okay on input line 21.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 21.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 21.
-=======
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 14.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 14.
->>>>>>> 9e75d2399c4579f9980be06acc64a8c972adeb38
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-<<<<<<< HEAD
 LaTeX Font Info:    ... okay on input line 21.
 LaTeX Font Info:    Try loading font information for T1+jkp on input line 21.
-=======
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Try loading font information for T1+jkp on input line 14.
->>>>>>> 9e75d2399c4579f9980be06acc64a8c972adeb38
 
 (C:\Users\joscha\AppData\Roaming\MiKTeX\2.9\tex\latex\kpfonts\t1jkp.fd
 File: t1jkp.fd 2007/01/24 Fontinst v1.928 font definitions for T1/jkp.
@@ -1334,68 +1294,39 @@ File: t1jkp.fd 2007/01/24 Fontinst v1.928 font definitions for T1/jkp.
 \makeMPintoPDFobject=\count140
 \everyMPtoPDFconversion=\toks43
 ) ABD: EveryShipout initializing macros
-<<<<<<< HEAD
-(C:\Users\harnos\AppData\Roaming\MiKTeX\2.9\tex\latex\glossaries\dict\glossarie
+(C:\Users\joscha\AppData\Roaming\MiKTeX\2.9\tex\latex\glossaries\dict\glossarie
 s-dictionary-English.dict
 Dictionary: glossaries-dictionary, Language: English 
 )
 LaTeX Font Info:    Try loading font information for OT1+jkp on input line 26.
-=======
-LaTeX Font Info:    Try loading font information for OT1+jkp on input line 19.
->>>>>>> 9e75d2399c4579f9980be06acc64a8c972adeb38
 
 (C:\Users\joscha\AppData\Roaming\MiKTeX\2.9\tex\latex\kpfonts\ot1jkp.fd
 File: ot1jkp.fd 2007/08/30 Fontinst v1.928 font definitions for OT1/jkp.
 )
-<<<<<<< HEAD
 LaTeX Font Info:    Try loading font information for U+jkpmia on input line 26.
-=======
-LaTeX Font Info:    Try loading font information for U+jkpmia on input line 19.
->>>>>>> 9e75d2399c4579f9980be06acc64a8c972adeb38
 
 
 (C:\Users\joscha\AppData\Roaming\MiKTeX\2.9\tex\latex\kpfonts\ujkpmia.fd
 File: ujkpmia.fd 2006/08/15 v1.0
 )
-<<<<<<< HEAD
 LaTeX Font Info:    Try loading font information for U+jkpsya on input line 26.
-=======
-LaTeX Font Info:    Try loading font information for U+jkpsya on input line 19.
->>>>>>> 9e75d2399c4579f9980be06acc64a8c972adeb38
 
 
 (C:\Users\joscha\AppData\Roaming\MiKTeX\2.9\tex\latex\kpfonts\ujkpsya.fd
 File: ujkpsya.fd 2006/08/15 v1.0
 )
-<<<<<<< HEAD
 LaTeX Font Info:    Try loading font information for U+jkpsyb on input line 26.
-=======
-LaTeX Font Info:    Try loading font information for U+jkpsyb on input line 19.
->>>>>>> 9e75d2399c4579f9980be06acc64a8c972adeb38
 
 
 (C:\Users\joscha\AppData\Roaming\MiKTeX\2.9\tex\latex\kpfonts\ujkpsyb.fd
 File: ujkpsyb.fd 2006/08/15 v1.0
 )
-<<<<<<< HEAD
 LaTeX Font Info:    Try loading font information for U+jkpsyc on input line 26.
-=======
-LaTeX Font Info:    Try loading font information for U+jkpsyc on input line 19.
->>>>>>> 9e75d2399c4579f9980be06acc64a8c972adeb38
 
 
 (C:\Users\joscha\AppData\Roaming\MiKTeX\2.9\tex\latex\kpfonts\ujkpsyc.fd
 File: ujkpsyc.fd 2006/08/15 v1.0
 )
-<<<<<<< HEAD
-=======
-LaTeX Font Info:    Try loading font information for T1+jkptt on input line 19.
-
-
-(C:\Users\joscha\AppData\Roaming\MiKTeX\2.9\tex\latex\kpfonts\t1jkptt.fd
-File: t1jkptt.fd 2007/01/26 Fontinst v1.928 font definitions for T1/jkptt.
-)
->>>>>>> 9e75d2399c4579f9980be06acc64a8c972adeb38
 [1
 
 {C:/Users/joscha/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
@@ -1405,13 +1336,8 @@ File: t1jkptt.fd 2007/01/26 Fontinst v1.928 font definitions for T1/jkptt.
 \tf@toc=\write7
 
 [2]
-<<<<<<< HEAD
 Overfull \hbox (13.12686pt too wide) in paragraph at lines 30--37
 [] 
-=======
-Overfull \hbox (13.12686pt too wide) in paragraph at lines 23--30
-[] |
->>>>>>> 9e75d2399c4579f9980be06acc64a8c972adeb38
  []
 
 [3
@@ -1419,6 +1345,7 @@ Overfull \hbox (13.12686pt too wide) in paragraph at lines 23--30
 ]
 Chapter 1.
 
+<<<<<<< HEAD
 Overfull \hbox (11.02788pt too wide) in paragraph at lines 42--43
 \T1/jkp/m/n/10.95 BLABLABLABLA []Per-sonal Iden-ti-fic-a-tion Num-ber (PIN) BLU
 B! []light-emitting
@@ -1432,7 +1359,7 @@ Chapter 2.
 
 ]
 Chapter 3.
-<images/umweltdiagramm.png, id=26, 305.7021pt x 203.0787pt>
+<images/umweltdiagramm.png, id=27, 305.7021pt x 203.0787pt>
 File: images/umweltdiagramm.png Graphic file (type png)
 
 <use images/umweltdiagramm.png>
@@ -1440,103 +1367,694 @@ Package pdftex.def Info: images/umweltdiagramm.png used on input line 57.
 (pdftex.def)             Requested size: 244.562pt x 162.46318pt.
  [6
 
- <C:/Users/harnos/Documents/GitHub/SWE/images/umweltdiagramm.png>]
+ <./images/umweltdiagramm.png>]
 Chapter 4.
 
-<<<<<<< HEAD
-Overfull \hbox (55.59535pt too wide) in paragraph at lines 64--75
+Underfull \hbox (badness 10000) in paragraph at lines 76--76
+[]\T1/jkp/b/n/10.95 Postcondition
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 77--77
+[]\T1/jkp/b/n/10.95 Postcondition
+ []
+
+
+Overfull \hbox (31.65942pt too wide) in paragraph at lines 68--85
 [] 
-=======
-Overfull \hbox (55.59535pt too wide) in paragraph at lines 55--66
-[] |
->>>>>>> 9e75d2399c4579f9980be06acc64a8c972adeb38
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 94--94
+[]\T1/jkp/b/n/10.95 Postcondition
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 95--95
+[]\T1/jkp/b/n/10.95 Postcondition
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 97--98
+[]\T1/jkp/b/n/10.95 Sequence \T1/jkp/m/n/10.95 Edit
+ []
+
+
+Overfull \hbox (31.65942pt too wide) in paragraph at lines 86--102
+[] 
  []
 
 [7
 
 ]
+Underfull \hbox (badness 10000) in paragraph at lines 112--112
+[]\T1/jkp/b/n/10.95 Postcondition
+ []
+=======
+Underfull \hbox (badness 10000) in paragraph at lines 42--43
+
+ []
+
+LaTeX Font Info:    Try loading font information for TS1+jkp on input line 44.
+(C:\Users\joscha\AppData\Roaming\MiKTeX\2.9\tex\latex\kpfonts\ts1jkp.fd
+File: ts1jkp.fd 2007/08/30 Fontinst v1.928 font definitions for TS1/jkp.
+)
+Overfull \hbox (2.84311pt too wide) in paragraph at lines 45--46
+\T1/jkp/m/n/10.95 book data), edit their per-sonal data, view stat-ist-ics on h
+ow of-ten which
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--47
+
+ []
+
+>>>>>>> c15aef3fab52d0472d365f38c25b24015248572f
+
+Underfull \hbox (badness 10000) in paragraph at lines 49--50
+
+ []
+
+[4
+
+<<<<<<< HEAD
+Overfull \hbox (31.65942pt too wide) in paragraph at lines 103--121
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 131--131
+[]\T1/jkp/b/n/10.95 Postcondition
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 132--132
+[]\T1/jkp/b/n/10.95 Postcondition
+ []
+
+
+Underfull \hbox (badness 1158) in paragraph at lines 133--134
+[]\T1/jkp/m/n/10.95 Client ini-ti-ates or-der pro-cess by call-ing an
+=======
+]
+Underfull \hbox (badness 10000) in paragraph at lines 54--55
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 62--63
+
+>>>>>>> c15aef3fab52d0472d365f38c25b24015248572f
+ []
+
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 74--75
+
+<<<<<<< HEAD
+Underfull \hbox (badness 1478) in paragraph at lines 136--137
+[]\T1/jkp/m/n/10.95 BookExpress em-ployee enters ordered book
+ []
+
+
+Overfull \hbox (31.65942pt too wide) in paragraph at lines 122--141
+[] 
+ []
+
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 150--150
+[]\T1/jkp/b/n/10.95 Postcondition
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 151--151
+[]\T1/jkp/b/n/10.95 Postcondition
+=======
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 80--81
+
+>>>>>>> c15aef3fab52d0472d365f38c25b24015248572f
+ []
+
+[6]
+Chapter 2.
+[7
+
+<<<<<<< HEAD
+Overfull \hbox (31.65942pt too wide) in paragraph at lines 142--157
+[] 
+ []
+=======
+]
+Chapter 3.
+<images/umweltdiagramm.png, id=33, 305.7021pt x 203.0787pt>
+File: images/umweltdiagramm.png Graphic file (type png)
+>>>>>>> c15aef3fab52d0472d365f38c25b24015248572f
+
+<use images/umweltdiagramm.png>
+Package pdftex.def Info: images/umweltdiagramm.png used on input line 100.
+(pdftex.def)             Requested size: 244.562pt x 162.46318pt.
+ [8
+
+<<<<<<< HEAD
+Underfull \hbox (badness 10000) in paragraph at lines 166--166
+[]\T1/jkp/b/n/10.95 Postcondition
+ []
+=======
+ <C:/Users/joscha/Documents/GitHub/SWE/images/umweltdiagramm.png>]
+Chapter 4.
+>>>>>>> c15aef3fab52d0472d365f38c25b24015248572f
+
+Underfull \hbox (badness 10000) in paragraph at lines 111--112
+
+<<<<<<< HEAD
+Underfull \hbox (badness 10000) in paragraph at lines 167--167
+[]\T1/jkp/b/n/10.95 Postcondition
+ []
+
+
+Overfull \hbox (31.65942pt too wide) in paragraph at lines 158--174
+[] 
+ []
+
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 183--183
+=======
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 120--120
+>>>>>>> c15aef3fab52d0472d365f38c25b24015248572f
+[]\T1/jkp/b/n/10.95 Postcondition
+ []
+
+
+<<<<<<< HEAD
+Underfull \hbox (badness 10000) in paragraph at lines 184--184
+=======
+Underfull \hbox (badness 10000) in paragraph at lines 121--121
+>>>>>>> c15aef3fab52d0472d365f38c25b24015248572f
+[]\T1/jkp/b/n/10.95 Postcondition
+ []
+
+
+<<<<<<< HEAD
+Overfull \hbox (31.65942pt too wide) in paragraph at lines 175--189
+[] 
+=======
+Overfull \hbox (48.65942pt too wide) in paragraph at lines 113--129
+[][] 
+>>>>>>> c15aef3fab52d0472d365f38c25b24015248572f
+ []
+
+[9
+
+<<<<<<< HEAD
+Underfull \hbox (badness 10000) in paragraph at lines 199--199
+[]\T1/jkp/b/n/10.95 Postcondition
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 200--200
+[]\T1/jkp/b/n/10.95 Postcondition
+ []
+
+
+Overfull \hbox (31.65942pt too wide) in paragraph at lines 190--209
+[] 
+ []
+
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 218--218
+=======
+]
+Underfull \hbox (badness 10000) in paragraph at lines 138--138
+>>>>>>> c15aef3fab52d0472d365f38c25b24015248572f
+[]\T1/jkp/b/n/10.95 Postcondition
+ []
+
+
+<<<<<<< HEAD
+Underfull \hbox (badness 10000) in paragraph at lines 219--219
+=======
+Underfull \hbox (badness 10000) in paragraph at lines 139--139
+>>>>>>> c15aef3fab52d0472d365f38c25b24015248572f
+[]\T1/jkp/b/n/10.95 Postcondition
+ []
+
+
+<<<<<<< HEAD
+Overfull \hbox (31.65942pt too wide) in paragraph at lines 210--226
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 235--235
+=======
+Overfull \hbox (48.65942pt too wide) in paragraph at lines 131--146
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 155--155
+>>>>>>> c15aef3fab52d0472d365f38c25b24015248572f
+[]\T1/jkp/b/n/10.95 Postcondition
+ []
+
+
+<<<<<<< HEAD
+Underfull \hbox (badness 10000) in paragraph at lines 236--236
+=======
+Underfull \hbox (badness 10000) in paragraph at lines 156--156
+>>>>>>> c15aef3fab52d0472d365f38c25b24015248572f
+[]\T1/jkp/b/n/10.95 Postcondition
+ []
+
+
+<<<<<<< HEAD
+Overfull \hbox (31.65942pt too wide) in paragraph at lines 227--243
+[] 
+ []
+
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 252--252
+=======
+Overfull \hbox (48.65942pt too wide) in paragraph at lines 147--164
+[][] 
+ []
+
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 173--173
+>>>>>>> c15aef3fab52d0472d365f38c25b24015248572f
+[]\T1/jkp/b/n/10.95 Postcondition
+ []
+
+
+<<<<<<< HEAD
+Underfull \hbox (badness 10000) in paragraph at lines 253--253
+=======
+Underfull \hbox (badness 10000) in paragraph at lines 174--174
+>>>>>>> c15aef3fab52d0472d365f38c25b24015248572f
+[]\T1/jkp/b/n/10.95 Postcondition
+ []
+
+
+<<<<<<< HEAD
+Overfull \hbox (31.65942pt too wide) in paragraph at lines 244--262
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 271--271
+[]\T1/jkp/b/n/10.95 Postcondition
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 272--272
+[]\T1/jkp/b/n/10.95 Postcondition
+ []
+
+
+Overfull \hbox (31.65942pt too wide) in paragraph at lines 263--279
+[] 
+ []
+
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 288--288
+=======
+Underfull \hbox (badness 1158) in paragraph at lines 175--176
+[]\T1/jkp/m/n/10.95 Client ini-ti-ates or-der pro-cess by call-ing an
+ []
+
+
+Underfull \hbox (badness 1478) in paragraph at lines 178--179
+[]\T1/jkp/m/n/10.95 BookExpress em-ployee enters ordered book
+ []
+
+
+Overfull \hbox (48.65942pt too wide) in paragraph at lines 165--183
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 191--191
+>>>>>>> c15aef3fab52d0472d365f38c25b24015248572f
+[]\T1/jkp/b/n/10.95 Postcondition
+ []
+
+
+<<<<<<< HEAD
+Underfull \hbox (badness 10000) in paragraph at lines 289--289
+=======
+Underfull \hbox (badness 10000) in paragraph at lines 192--192
+>>>>>>> c15aef3fab52d0472d365f38c25b24015248572f
+[]\T1/jkp/b/n/10.95 Postcondition
+ []
+
+
+<<<<<<< HEAD
+Overfull \hbox (31.65942pt too wide) in paragraph at lines 280--296
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 310--310
+[]\T1/jkp/b/n/10.95 Postcondition
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 311--311
+[]\T1/jkp/b/n/10.95 Postcondition
+ []
+
+
+Overfull \hbox (31.65942pt too wide) in paragraph at lines 302--320
+[] 
+ []
+
+[13]
+Underfull \hbox (badness 10000) in paragraph at lines 329--329
+=======
+Overfull \hbox (48.65942pt too wide) in paragraph at lines 184--198
+[][] 
+ []
+
+[11]
+Underfull \hbox (badness 1354) in paragraph at lines 203--204
+[]\T1/jkp/m/n/10.95 The sys-tem checks whether the amount of
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 206--206
+>>>>>>> c15aef3fab52d0472d365f38c25b24015248572f
+[]\T1/jkp/b/n/10.95 Postcondition
+ []
+
+
+<<<<<<< HEAD
+Underfull \hbox (badness 10000) in paragraph at lines 330--330
+=======
+Underfull \hbox (badness 10000) in paragraph at lines 207--207
+>>>>>>> c15aef3fab52d0472d365f38c25b24015248572f
+[]\T1/jkp/b/n/10.95 Postcondition
+ []
+
+
+<<<<<<< HEAD
+Underfull \hbox (badness 10000) in paragraph at lines 332--333
+[]\T1/jkp/b/n/10.95 Sequence \T1/jkp/m/n/10.95 Edit
+ []
+
+
+Overfull \hbox (31.65942pt too wide) in paragraph at lines 321--338
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 347--347
+=======
+Overfull \hbox (48.65942pt too wide) in paragraph at lines 199--212
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 220--220
+>>>>>>> c15aef3fab52d0472d365f38c25b24015248572f
+[]\T1/jkp/b/n/10.95 Postcondition
+ []
+
+
+<<<<<<< HEAD
+Underfull \hbox (badness 10000) in paragraph at lines 348--348
+=======
+Underfull \hbox (badness 10000) in paragraph at lines 221--221
+>>>>>>> c15aef3fab52d0472d365f38c25b24015248572f
+[]\T1/jkp/b/n/10.95 Postcondition
+ []
+
+
+<<<<<<< HEAD
+Overfull \hbox (31.65942pt too wide) in paragraph at lines 339--354
+[] 
+ []
+
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 366--366
+[]\T1/jkp/b/n/10.95 Postcondition
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 368--368
+[]\T1/jkp/b/n/10.95 Postcondition
+ []
+
+
+Overfull \hbox (31.65942pt too wide) in paragraph at lines 358--376
+[] 
+ []
+
+
+Underfull \hbox (badness 1270) in paragraph at lines 387--388
+=======
+Overfull \hbox (48.65942pt too wide) in paragraph at lines 213--226
+[][] 
+ []
+
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 231--232
+
+ []
+
+
+Underfull \hbox (badness 1270) in paragraph at lines 240--241
+>>>>>>> c15aef3fab52d0472d365f38c25b24015248572f
+[]\T1/jkp/m/n/10.95 Connection to Book-Ex-press server is es-tab-
+ []
+
+
+<<<<<<< HEAD
+Underfull \hbox (badness 10000) in paragraph at lines 388--388
+=======
+Underfull \hbox (badness 10000) in paragraph at lines 241--241
+>>>>>>> c15aef3fab52d0472d365f38c25b24015248572f
+[]\T1/jkp/b/n/10.95 Postcondition
+ []
+
+
+<<<<<<< HEAD
+Underfull \hbox (badness 10000) in paragraph at lines 389--389
+=======
+Underfull \hbox (badness 10000) in paragraph at lines 242--242
+>>>>>>> c15aef3fab52d0472d365f38c25b24015248572f
+[]\T1/jkp/b/n/10.95 Postcondition
+ []
+
+
+<<<<<<< HEAD
+Overfull \hbox (31.65942pt too wide) in paragraph at lines 377--397
+[] 
+ []
+
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 406--406
+[]\T1/jkp/b/n/10.95 Postcondition
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 407--407
+[]\T1/jkp/b/n/10.95 Postcondition
+ []
+
+
+Overfull \hbox (31.65942pt too wide) in paragraph at lines 398--417
+[] 
+ []
+
+[16]
+Underfull \hbox (badness 10000) in paragraph at lines 426--426
+=======
+Overfull \hbox (48.65942pt too wide) in paragraph at lines 233--250
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 258--258
+>>>>>>> c15aef3fab52d0472d365f38c25b24015248572f
+[]\T1/jkp/b/n/10.95 Postcondition
+ []
+
+
+<<<<<<< HEAD
+Underfull \hbox (badness 10000) in paragraph at lines 427--427
+=======
+Underfull \hbox (badness 10000) in paragraph at lines 260--260
+>>>>>>> c15aef3fab52d0472d365f38c25b24015248572f
+[]\T1/jkp/b/n/10.95 Postcondition
+ []
+
+
+<<<<<<< HEAD
+Overfull \hbox (31.65942pt too wide) in paragraph at lines 418--435
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 444--444
+[]\T1/jkp/b/n/10.95 Postcondition
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 445--445
+[]\T1/jkp/b/n/10.95 Postcondition
+ []
+
+
+Overfull \hbox (31.65942pt too wide) in paragraph at lines 436--451
+[] 
+ []
+
+[17]
+Underfull \hbox (badness 10000) in paragraph at lines 463--463
+[]\T1/jkp/b/n/10.95 Postcondition
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 464--464
+[]\T1/jkp/b/n/10.95 Postcondition
+ []
+
+
+Overfull \hbox (31.65942pt too wide) in paragraph at lines 454--471
+[] 
+ []
+
+[18]
 Chapter 5.
-[8
+[19
 
 ]
 Chapter 6.
-[9
+[20
 
 ]
 Chapter 7.
-[10
+[21
 
 ]
 Chapter 8.
-[11
+[22
 
 ]
 Chapter 9.
-[12
+[23
 
 ]
 Chapter 10.
-[13
+[24
 
 ]
 Chapter 11.
-[14
+[25
 
 ]
 Chapter 12.
-[15
+[26
 
 ]
 Chapter 13.
+[27
+=======
+Overfull \hbox (48.65942pt too wide) in paragraph at lines 251--268
+[][] 
+ []
+
+[13] [14]
+Chapter 5.
+[15
+
+]
+Chapter 6.
 [16
 
 ]
-Chapter 14.
-(C:\Users\harnos\Documents\GitHub\SWE\requirements_specification.gls [17
+Chapter 7.
+[17
 
-])
-(C:\Users\harnos\Documents\GitHub\SWE\requirements_specification.acr [18
+]
+Chapter 8.
+[18
 
-])
+]
+Chapter 9.
 [19
+
+]
+Chapter 10.
+[20
+
+]
+Chapter 11.
+[21
+
+]
+Chapter 12.
+[22
+
+]
+Chapter 13.
+[23
+>>>>>>> c15aef3fab52d0472d365f38c25b24015248572f
+
+]
+Chapter 14.
+No file requirements_specification.gls.
+No file requirements_specification.acr.
+<<<<<<< HEAD
+[28
+=======
+[24
+>>>>>>> c15aef3fab52d0472d365f38c25b24015248572f
 
 ] (C:\Users\joscha\Documents\GitHub\SWE\requirements_specification.aux) ) 
 Here is how much of TeX's memory you used:
 <<<<<<< HEAD
- 15048 strings out of 493921
- 257988 string characters out of 3147279
- 311725 words of memory out of 3000000
- 17981 multiletter control sequences out of 15000+200000
+ 15284 strings out of 493763
+ 261127 string characters out of 3144954
+ 328039 words of memory out of 3000000
+ 18197 multiletter control sequences out of 15000+200000
  90081 words of font info for 98 fonts, out of 3000000 for 9000
- 841 hyphenation exceptions out of 8191
- 56i,8n,55p,1447b,325s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Us
-ers/harnos/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/kpfonts/kpfonts-expert.en
-c}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Users/harnos
-/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/kpfonts/jkpbn8a.pfb><C:/Users/ha
-rnos/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/kpfonts/jkpmn8a.pfb><C:/User
-s/harnos/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/kpfonts/jkpmne.pfb>
-Output written on requirements_specification.pdf (20 pages, 85735 bytes).
-=======
- 12807 strings out of 494045
- 224896 string characters out of 3145966
- 256845 words of memory out of 3000000
- 15805 multiletter control sequences out of 15000+200000
- 91887 words of font info for 104 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
- 56i,8n,55p,526b,289s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 56i,8n,55p,1321b,327s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/local/texlive/2010/texmf-dist/fonts
+/enc/dvips/kpfonts/kpfonts-expert.enc}{/usr/local/texlive/2010/texmf-dist/fonts
+/enc/dvips/base/8r.enc}</usr/local/texlive/2010/texmf-dist/fonts/type1/public/k
+pfonts/jkpbn8a.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/kpfon
+ts/jkpmn8a.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/kpfonts/j
+kpmne.pfb>
+Output written on requirements_specification.pdf (29 pages, 88066 bytes).
+PDF statistics:
+ 117 PDF objects out of 1000 (max. 8388607)
+ 80 compressed objects within 1 object stream
+=======
+ 15101 strings out of 494045
+ 259200 string characters out of 3145966
+ 320836 words of memory out of 3000000
+ 18032 multiletter control sequences out of 15000+200000
+ 90813 words of font info for 100 fonts, out of 3000000 for 9000
+ 715 hyphenation exceptions out of 8191
+ 56i,8n,55p,1462b,325s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Us
 ers/joscha/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/kpfonts/kpfonts-expert.en
 c}{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Users/
 joscha/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/kpfonts/jkpbn8a.pfb><C:/Us
 ers/joscha/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/kpfonts/jkpmn8a.pfb><C
 :/Users/joscha/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/kpfonts/jkpmne.pfb
-><C:/Users/joscha/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/kpfonts/jkpttmn
-8a.pfb>
-Output written on requirements_specification.pdf (18 pages, 54358 bytes).
->>>>>>> 9e75d2399c4579f9980be06acc64a8c972adeb38
+>
+Output written on requirements_specification.pdf (25 pages, 94819 bytes).
 PDF statistics:
- 87 PDF objects out of 1000 (max. 8388607)
+ 103 PDF objects out of 1000 (max. 8388607)
+>>>>>>> c15aef3fab52d0472d365f38c25b24015248572f
  0 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 
