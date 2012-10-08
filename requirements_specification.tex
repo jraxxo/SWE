@@ -138,7 +138,7 @@ The products environmental diagram.
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
 /PF20/	& \textbf{Process} & Update account information\\
 		& \textbf{Actor(s)} & BookExpress employee\\
-		& \textbf{Category} & \\
+		& \textbf{Category} & Must have\\
 		& \textbf{Description}	 & The clients data is outdated and needs to be updated\\
 		& \textbf{Goal} & Client data is updated\\
 		& \textbf{Preconditions} & Client exists in database\\
@@ -154,7 +154,7 @@ The products environmental diagram.
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
 /PF02/	& \textbf{Process} & Delete account\\ 
 		& \textbf{Actor(s)} & BookExpress Employee\\ 
-		& \textbf{Category} & \\
+		& \textbf{Category} & Must have\\
 		& \textbf{Description}	 & Client gets deleted due to resignation of the contract\\ 
 		& \textbf{Goal} & Delete client from the system\\
 		& \textbf{Preconditions} & Client exists in database\\
@@ -172,7 +172,7 @@ The products environmental diagram.
 \noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
 	 /PF/	& \textbf{Process} & Client places order\\ 
-		& \textbf{Category} & \\
+		& \textbf{Category} & Must have\\
 		& \textbf{Actor(s)} & BookExpress employee, client\\ 
 		& \textbf{Description}	 & A client orders book via telephone\\ 
 		& \textbf{Goal} & Order is placed in an order queue\\
@@ -192,7 +192,7 @@ The products environmental diagram.
 \noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
 	 /PF/	& \textbf{Process} & Validate order\\ 
-		& \textbf{Category} & \\
+		& \textbf{Category} & Must have\\
 		& \textbf{Actor(s)} & System\\ 
 		& \textbf{Description}	 & Order is checked for validation\\ 
 		& \textbf{Goal} & The software checks every order for validation and confirms it to the client. BookExpress knows about every orders validation status.\\
@@ -225,7 +225,7 @@ The products environmental diagram.
 \noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
 	 /PF/	& \textbf{Process} & Forward order to Logistics\\ 
-		& \textbf{Category} & \\
+		& \textbf{Category} & Primary\\
 		& \textbf{Actor(s)} & System\\ 
 		& \textbf{Description}	 & A validated order gets forwarded to Logistics\\ 
 		& \textbf{Goal} & Logistics proceeds processing the order\\
@@ -241,7 +241,7 @@ The products environmental diagram.
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
 /PF/	& \textbf{Process} & Deliver order\\
 		& \textbf{Actor(s)} & System\\
-		& \textbf{Category} & \\
+		& \textbf{Category} & Primary\\
 		& \textbf{Description}	 &  The order is send to the book store\\
 		& \textbf{Goal} & Deliver ordered books\\
 		& \textbf{Preconditions} & Order is valid\\
@@ -261,7 +261,7 @@ The products environmental diagram.
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
 /PF/	& \textbf{Process} & Confirm delivery\\
 		& \textbf{Actor(s)} & Employee (Logistics)\\
-		& \textbf{Category} & \\
+		& \textbf{Category} & Primary\\
 		& \textbf{Description}	 & Logistics confirms the correct delivery of an order\\
 		& \textbf{Goal} & Delivery is successful\\
 		& \textbf{Preconditions} & Order is marked as sent\\
@@ -278,7 +278,7 @@ The products environmental diagram.
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
 /PF/	& \textbf{Process} & BookExpress Order\\
 		& \textbf{Actor(s)} & BookExpress employee\\
-		& \textbf{Category} & \\
+		& \textbf{Category} & Must have\\
 		& \textbf{Description}	 & The Employee orders a number of books from the publisher\\
 		& \textbf{Goal} & Order books from a publisher\\
 		& \textbf{Preconditions} & need for new books\\
@@ -295,7 +295,7 @@ The products environmental diagram.
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
 /PF/	& \textbf{Process} & Create an invoice\\
 		& \textbf{Actor(s)} & System\\
-		& \textbf{Category} & \\
+		& \textbf{Category} & Secondary\\
 		& \textbf{Description}	 & The system creates an invoice after TODO /PF/ order is valid\\
 		& \textbf{Goal} & Documenting order and deliver it with invoice\\
 		& \textbf{Preconditions} & Order is valid\\
@@ -314,7 +314,7 @@ The products environmental diagram.
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
 /PF/	& \textbf{Process} & Send invoice\\
 		& \textbf{Actor(s)} & System\\
-		& \textbf{Category} & \\
+		& \textbf{Category} & Secondary\\
 		& \textbf{Description}	 & The invoice is send to the book store via mail\\
 		& \textbf{Goal} & Inform the book shop\\
 		& \textbf{Preconditions} & Successful created invoice\\
@@ -331,7 +331,7 @@ The products environmental diagram.
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
 /PF/	& \textbf{Process} & Backup\\
 		& \textbf{Actor(s)} & System\\
-		& \textbf{Category} & \\
+		& \textbf{Category} & Primary\\
 		& \textbf{Description}	 & A backup of the complete databases must be done. This should happen periodically and save all data on a server.\\
 		& \textbf{Goal} & In case of a crash, every data must be saves as a preventative backup\\
 		& \textbf{Preconditions} & Server for the backup\\
@@ -478,7 +478,7 @@ as one big order every day.\\
 		& \textbf{Trigger} & Menu option "cancel order"\\
 		& \textbf{Sequence} & Select order to cancel\\
 		& & Check whether order isn't shipped yet\\
-		& & Cancel order
+		& & Cancel order\\
 		
 \hfill \\
 \end{tabular}
