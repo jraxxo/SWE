@@ -351,10 +351,26 @@ The products environmental diagram.
 \end{tabular}
 
 
-
 \subsection{Book Stores (``Clients'')}
 
+\noindent
+\begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
+	 /PF/	& \textbf{Process} & Search for a book\\ 
+		& \textbf{Category} & \\
+		& \textbf{Actor(s)} & Client\\ 
+		& \textbf{Description}	 & Client searches for a book to add it to his order\\ 
+		& \textbf{Goal} & Searching for a book succeeded\\
+		& \textbf{Preconditions} & Client is logged into the system\\
+		& \textbf{Postcondition success} & Book is being found\\
+		& & Display items and options\\
+		& \textbf{Postcondition failure} & Book could not be found\\
+		& & Display notification\\
+		& \textbf{Trigger} & Menu option "find books" (Software)\\
+		& \textbf{Sequence} & Enter ISBN/title/author/genre in search bar\\
+		& & Hit the "Search"-Button\\
+		& & Choose book from list to add it to the order\\
 \hfill \\
+\end{tabular}
 
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
 /PF/	& \textbf{Process} & Book Store Order\\ 
@@ -377,22 +393,24 @@ as one big order every day.\\
 \end{tabular}
 
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
-	 /PF/	& \textbf{Process} & Search for a book\\ 
+/PF/	& \textbf{Process} & Change order\\
+		& \textbf{Actor(s)} & Book store\\
 		& \textbf{Category} & \\
-		& \textbf{Actor(s)} & Client\\ 
-		& \textbf{Description}	 & Client searches for a book to add it to his order\\ 
-		& \textbf{Goal} & Searching for a book succeeded\\
-		& \textbf{Preconditions} & Client is logged into the system\\
-		& \textbf{Postcondition success} & Book is being found\\
-		& & Display items and options\\
-		& \textbf{Postcondition failure} & Book could not be found\\
-		& & Display notification\\
-		& \textbf{Trigger} & Menu option "find books" (Software)\\
-		& \textbf{Sequence} & Enter ISBN/title/author/genre in search bar\\
-		& & Hit the "Search"-Button\\
-		& & Choose book from list to add it to the order\\
+		& \textbf{Description}	 & As long as the order is not validated, the user can change information\\
+		& \textbf{Goal} & User can correct an order\\
+		& \textbf{Preconditions} & Order exists and user is logged in\\
+		& \textbf{Postcondition success} & Order information successfully changed\\
+		& \textbf{Postcondition failure} & Order information could not be changed because the order is already being validated\\
+		& \textbf{Trigger} & Menu option "Change order"\\
+		& \textbf{Sequence} & Select order to be changed\\
+		& & System checks validity status of the order\\
+		& & If not validated, user can change order information\\
+		& & Submit changes to the System\\
+		& & User receives a confirmation mail\\
+		
 \hfill \\
 \end{tabular}
+
 
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
 /PF/	& \textbf{Process} & Cancel Order\\

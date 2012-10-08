@@ -96,6 +96,7 @@ The products environmental diagram.
 		& \textbf{Postcondition failure} & Client data is not updated but rolled back to the previous state. Notification with problem report is shown to the employee.\\
 		& \textbf{Trigger} & Menu option "Update client information" (Software)\\
 		& \textbf{Sequence} Edit specific data\\
+		& & System checks correctness of data (e.g. mail format etc.)\\
 		& & Submit edited data to the server\\
 \hfill \\
 \end{tabular}
@@ -290,7 +291,7 @@ The products environmental diagram.
 
 \noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
-/PF/	& \textbf{Process} & Login to System\\
+/PF/	& \textbf{Process} & Login\\
 		& \textbf{Actor(s)} & Book store/publisher\\
 		& \textbf{Category} & \\
 		& \textbf{Description}	 & The user logs on with his PIN and password\\
@@ -317,16 +318,49 @@ The products environmental diagram.
 		& \textbf{Postcondition success} & Updating the account succeeded\\
 		& \textbf{Postcondition failure} & Updating the account failed\\
 		& \textbf{Trigger} & Menu option "edit\\
-		& \textbf{Sequence} & \\
-		& & \\
+		& \textbf{Sequence} Edit specific data\\
+		& & System checks correctness of data (e.g. email format etc.)\\
+		& & Submit edited data to the server\\
 		
+\hfill \\
+\end{tabular}
+
+\begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
+/PF/	& \textbf{Process} & Logout\\
+		& \textbf{Actor(s)} & Book store/publisher\\
+		& \textbf{Category} & \\
+		& \textbf{Description}	 & User logs out\\
+		& \textbf{Goal} & User is logged out\\
+		& \textbf{Preconditions} & User is logged in\\
+		& \textbf{Postcondition success} & Successful logout\\
+		& \textbf{Postcondition failure} & Unsuccessful logout caused by an abort of the user\\
+		& \textbf{Trigger} & Menu option "Logout"\\
+		& \textbf{Sequence} & User confirms to log out\\
+		& & The system terminates the current session\\
 \hfill \\
 \end{tabular}
 
 
 \subsection{Book Stores (``Clients'')}
 
+\noindent
+\begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
+	 /PF/	& \textbf{Process} & Search for a book\\ 
+		& \textbf{Category} & \\
+		& \textbf{Actor(s)} & Client\\ 
+		& \textbf{Description}	 & Client searches for a book to add it to his order\\ 
+		& \textbf{Goal} & Searching for a book succeeded\\
+		& \textbf{Preconditions} & Client is logged into the system\\
+		& \textbf{Postcondition success} & Book is being found\\
+		& & Display items and options\\
+		& \textbf{Postcondition failure} & Book could not be found\\
+		& & Display notification\\
+		& \textbf{Trigger} & Menu option "find books" (Software)\\
+		& \textbf{Sequence} & Enter ISBN/title/author/genre in search bar\\
+		& & Hit the "Search"-Button\\
+		& & Choose book from list to add it to the order\\
 \hfill \\
+\end{tabular}
 
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
 /PF/	& \textbf{Process} & Book Store Order\\ 
@@ -349,22 +383,21 @@ as one big order every day.\\
 \end{tabular}
 
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
-	 /PF/	& \textbf{Process} & Search for a book\\ 
+/PF/	& \textbf{Process} & Change order\\
+		& \textbf{Actor(s)} & Book store\\
 		& \textbf{Category} & \\
-		& \textbf{Actor(s)} & Client\\ 
-		& \textbf{Description}	 & Client searches for a book to add it to his order\\ 
-		& \textbf{Goal} & Searching for a book succeeded\\
-		& \textbf{Preconditions} & Client is logged into the system\\
-		& \textbf{Postcondition success} & Book is being found\\
-		& & Display items and options\\
-		& \textbf{Postcondition failure} & Book could not be found\\
-		& & Display notification\\
-		& \textbf{Trigger} & Menu option "find books" (Software)\\
-		& \textbf{Sequence} & Enter ISBN/title/author/genre in search bar\\
-		& & Hit the "Search"-Button\\
-		& & Choose book from list to add it to the order\\
+		& \textbf{Description}	 & \\
+		& \textbf{Goal} & \\
+		& \textbf{Preconditions} & \\
+		& \textbf{Postcondition success} & \\
+		& \textbf{Postcondition failure} & \\
+		& \textbf{Trigger} & \\
+		& \textbf{Sequence} & \\
+		& & \\
+		
 \hfill \\
 \end{tabular}
+
 
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
 /PF/	& \textbf{Process} & Cancel Order\\
