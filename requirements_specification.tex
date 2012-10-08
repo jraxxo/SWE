@@ -38,15 +38,58 @@ Harnos, Rapp, Schulz & 2012-10-01 & Initial Document Creation & v0.01 \\
 \chapter{Product Purpose}
 To handle the addition of new books and the distribution in a better way, "BookExpress" asked us to develop an IT solution to optimize the idle time and labour usage by getting rid of the current, deprecated system. Furthermore one important goal of the software solution is to be very user friendly and easy to use; also there should be remote access implemented, so several customers can access the software at once and distribution partners can access and keep their book stock up to date.
 \section{Obligatory Requirements (``must have'')}
-\subsection{Book Store}
-BLABLABLABLA \gls{pin} BLUB! \gls{led}
-\section{Optional Requirements (``nice to have'')}
-\section{Non-Requirements (``need to have'')}
+\subsection{Communication with Publishers}
+The direct connection between the \textbf{publishers} and BookExpress shall be implemented by providing a web interface for the publishers.\\
+\begin{itemize}
+\item As each publisher also has a PIN, it will be used as the account name for the interface.
+\item The web interface has to provide the following features for the publisher: maintain the book database (add books, remove books, edit book data), edit their personal data, view statistics on how often which books are bought
+\item The interface has to be comfortably accessible from mobile devices as well, the data that is transmitted should be minimal\\
+\end{itemize}
+\subsection{Communication with Customers}
+The direct connection between the \textbf{customers} and BookExpress shall also be implemented by providing a web interface for the customers.\\
+\begin{itemize}
+\item As each customer already has a unique identifier, the PIN, we will use it as an account name for the login.
+\item The web interface has to provide the following features: view catalogue and stock, submit orders, view  the current state of their orders and cancel them (if they haven't been shipped yet)
+\item The system has to assign a unique ID to each order, ideally incorporating the PIN of the customer
+\item The interface has to be comfortably accessible from mobile devices as well, the data that is transmitted should be minimal\\
+\end{itemize}
+\subsection{Internal Administration}
+The employees of BookExpress shall be provided a web interface as well. 
+\begin{itemize}
+\item Each employee will get a unique user ID to log into the web interface. Ideally, this will be formatted along the lines of surname.name or something similar.
+\item The web interface must provide the following features for the employees: processing, editing and cancellation  of submitted orders, directly contact the customers and publishers as well as the truck fleet and the warehouse
+\item Furthermore, the underlying system shall generate logfiles with login times, error codes and statistics (e.g. which books are ordered the most and by whom) for the publishers and the accounting and IT department / tech support.
+\item The interface has to be comfortably accessible from mobile devices as well, the data that is transmitted should be minimal\\ 
+\end{itemize}
+\subsection{Support}
+\begin{itemize}
+\item The system should be as automatic as possible - we need a good, user-oriented manual.
+\item Additionally, a context-sensitive help tool has to be implemented in the interface itself. 
+\item Moreover, As we want to make sure that the system is as reliable as possible, we will need a dedicated support team that is available 24/7 and can be dispatched in less than 2 hours to fix critical issues.
+\end{itemize}
 
+\section{Optional Requirements (``nice to have'')}
+\begin{itemize}
+\item Book Stores should be able to save recurring orders
+\item Book Stores should be notified when the delivery of their order is imminent\\
+\end{itemize}
+
+\section{Non-Requirements (``need not have'')}
+\begin{itemize}
+\item The software should not allow final customers to buy books. It is only intended for retailers.
+\item Moreover, invoices are generated elsewhere, as well as financial reports, so the system should not interfere with that.\\
+\end{itemize}
 \chapter{Product Environment}
-The Product takes the orders from the book stores and files them into the system, so that they can be prepared for shipping. For different sized book stores there should be several account types with separate functionality and different options for packaging and ordering. The targeting groups of the software solution are the book store owners, our consumers, the assistants of "BookExpress" and the distribution partners.
+The Product takes the orders from the book stores and files them into the system, so that they can be prepared for shipping. For different sized book stores there should be several account types with separate functionality and different options for packaging and ordering. The targeting groups of the software solution are the book store owners(our consumers), the assistants of "BookExpress" and the distribution partners.
 \section{Application Area}
+The new IT system should replace the old system and provide administrative and commercial functions to relieve the employees of unnecessarily complex administrative tasks. Certain processes can be handled without any interaction at all, e.g. if a book runs low in stock, the system will automatically order new copies from the publisher.
 \section{User Groups}
+\begin{itemize}
+\item BookExpress commercial employees
+\item BookExpress IT employees
+\item Publishers
+\item Book Stores
+\end{itemize}
 \section{Operating Conditions}
 
 \chapter{Product Overview}
@@ -67,7 +110,7 @@ The products environmental diagram.
 
 \noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
-/PF00/	& \textbf{Process}	& Register Publisher or Book Shop\\
+/PF10/	& \textbf{Process}	& Register Publisher or Book Shop (client)\\
 		& \textbf{Actor(s)} & BookExpress employee\\
 		& \textbf{Category} & \\
 		& \textbf{Description}	 & A Book Express employee creates an account for a book shop or publisher after both business partners have signed a contract handling the business relations.\\
@@ -85,7 +128,7 @@ The products environmental diagram.
 
 \noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
-/PF01/	& \textbf{Process} & Update account information\\
+/PF20/	& \textbf{Process} & Edit client information\\
 		& \textbf{Actor(s)} & BookExpress employee\\
 		& \textbf{Category} & \\
 		& \textbf{Description}	 & The clients data is outdated and needs to be updated\\
@@ -93,9 +136,9 @@ The products environmental diagram.
 		& \textbf{Preconditions} & Client exists in database\\
 		& \textbf{Postcondition success} & Client data is updated and a notification mail is sent to the client.\\
 		& \textbf{Postcondition failure} & Client data is not updated but rolled back to the previous state. Notification with problem report is shown to the employee.\\
-		& \textbf{Trigger} & Menu option "Update client information" (Software)\\
-		& \textbf{Sequence} Edit specific data\\
-		& & System checks correctness of data (e.g. mail format etc.)\\
+		& \textbf{Trigger} & Menu option "edit client data" (Software)\\
+		& \textbf{Sequence} & Menu option "edit client data"\\
+		& & Edit specific data\\
 		& & Submit edited data to the server\\
 \hfill \\
 \end{tabular}
@@ -295,6 +338,7 @@ The products environmental diagram.
 \end{tabular}
 
 \section{External}
+\subsection{Book Stores (``Clients'')}
 
 \subsection{Book Stores and Publishers}
 
