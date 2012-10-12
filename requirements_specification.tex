@@ -23,6 +23,10 @@
 \newglossaryentry{pin}{name=PIN,description={Personal Identification Number},plural=PINs, first={Personal Identification Number (PIN)}}
 
 \newacronym{led}{LED}{light-emitting diode}
+\newacronym{html}{HTML}{Hypertext Markup Language}
+\newacronym{css}{CSS}{Cascade Stylesheet}
+\newacronym{js}{JS}{JavaScript}
+\newacronym{ie}{IE}{InternetExplorer}
 
 
 \begin{document}
@@ -676,8 +680,61 @@ exchangeability &  &  &  & \checkmark \\
 \end{tabular}
 
 \chapter{User Interface}
+Description of user interface elements for the client application and the web interface. Also a brief specification of the user rights management.
+
 \section{Client Application (for clerks)}
+\noindent
+\begin{tabular}{llp{10cm}}
+\cellcolor{white}/U10/	& \textbf{Name}			& Interface\\
+\cellcolor{white}		& \textbf{Description}	& xxx\\
+\cellcolor{white}		\hfill \\
+\end{tabular}
+
 \section{Web Interface (for customers)}
+\noindent
+\begin{tabular}{llp{10cm}}
+\cellcolor{white}/U20/	& \textbf{Name}			& Interface\\
+\cellcolor{white}		& \textbf{Description}	& An easy to use interface should be developed through clear structures and responsible use of styling elements, especially an appropriate amount of whitespace.\\
+\cellcolor{white}		\hfill \\
+\end{tabular}
+
+\noindent
+\begin{tabular}{llp{10cm}}
+\cellcolor{white}/U21/	& \textbf{Name}			& Compatibility\\
+\cellcolor{white}		& \textbf{Description}	& New web technologies such as \acrshort{html}5, \acrshort{css}3 and modern \gls{js} libraries like jQuery or Dojo should be used to deliver an appealing user experience, but downwards compatibility for different browsers has to be ensured also. The major browsers should be supported to at least 1 previous major version, except \gls{ie} which should only be supported from IE9 onwards.\\
+\cellcolor{white}		\hfill \\
+\end{tabular}
+
+\noindent
+\begin{tabular}{llp{10cm}}
+\cellcolor{white}/U22/	& \textbf{Name}			& Error Handling\\
+\cellcolor{white}		& \textbf{Description}	& A graceful error handling should be realised through means of various \gls{js} technologies displaying error messages instantly and where appropriate, e.g. directly beneath or adjanced[wie schreibt man das] to where the error occured, or if it is an error returned from the server on the location for general error and information messages. Those messages should be short and easy to understand, massively long error codes like introduced in Microsoft Windows have to be avoided.\\
+\cellcolor{white}		\hfill \\
+\end{tabular}
+
+\noindent
+\begin{tabular}{llp{10cm}}
+\cellcolor{white}/U23/	& \textbf{Name}			& Input Handling\\
+\cellcolor{white}		& \textbf{Description}	& Whenever an user has to input data, several client and server based sanity checks should be employed to ensure consistent data. The client should, whenever appropriate, be supported by auto completion or suggest drop downs, speeding up data input and search processes.\\
+\cellcolor{white}		\hfill \\
+\end{tabular}
+\noindent
+\begin{tabular}{llp{10cm}}
+\cellcolor{white}/U24/	& \textbf{Name}			& Roles\\
+\cellcolor{white}		& \textbf{Description}	& Different types of users can perform different actions, this should be reflected by appropriate "views" for every user type.\\
+\cellcolor{white}		& \textbf{Role}			& \textbf{Book Store Client}\\
+\cellcolor{white}		&						& A book store client can see and edit parts of its own data, make new orders and edit orders it made.\\
+\cellcolor{white}		&						& \textbf{Publisher Client}\\
+\cellcolor{white}		&						& Publishers can see and edit their own data, including book information and the stock of books. Also it should be possible to display any placed orders and the correspondent order status. This status can also be updated.\\
+\cellcolor{white}		&						& \textbf{BookExpress Employee}\\
+\cellcolor{white}		&						& \\
+\cellcolor{white}		&						& \textbf{Administration}\\
+\cellcolor{white}		&						& \\
+\cellcolor{white}		\hfill \\
+\end{tabular}
+
+\section{Rights Management}
+
 
 \chapter{Non-Functional Requirements}
 \chapter{Technical Product Environment}
