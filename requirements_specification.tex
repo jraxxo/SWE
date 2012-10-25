@@ -2,9 +2,12 @@
 \documentclass[11pt,a4paper,oneside,svgnames]{report}
 
 \usepackage[british]{babel}
+\usepackage{mathpazo}
+\usepackage{eurosym}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{ae}
+\usepackage{hyperref}
 \usepackage[table]{xcolor}
 \usepackage{colortbl}
 \usepackage{graphicx}
@@ -13,6 +16,8 @@
 \usepackage[explicit]{titlesec}
 \usepackage[acronym,toc,nonumberlist,style=tree]{glossaries}
 \usepackage{amssymb}
+
+\hypersetup{pdfpagemode=UseNone}
 
 %BEGIN Chapter Definition
 
@@ -45,6 +50,41 @@
 
 %END Chapter Definition
 
+%BEGIN Title Definition
+
+\makeatletter
+\def\thickhrulefill{\leavevmode \leaders \hrule height 1pt\hfill \kern \z@}
+\renewcommand{\maketitle}{\begin{titlepage}%
+    \let\footnotesize\small
+    \let\footnoterule\relax
+    \parindent \z@
+    \reset@font
+    \null\vfil
+    \begin{flushleft}
+      \huge \@title
+    \end{flushleft}
+    \par
+    \hrule height 4pt
+    \par
+    \begin{flushright}
+      \LARGE \@author \par
+    \end{flushright}
+    \vskip 60\p@
+    \vfil\null
+  \end{titlepage}%
+  \setcounter{footnote}{0}%
+}
+
+%END Title Definition
+
+\makeatother
+\title{Software Requirements Specifications for Project ``BookExpress''}
+\author{Marc A. Harnos\\ {mharnos@gmail.com} \and Joscha Rapp\\ {jraxxo@gmail.com} \and Christian Schulz\\ {crs.s@gmx.net}}
+\author{Marc A. Harnos\\ Joscha Rapp\\ Christian Schulz}
+\date{October 2012}
+
+
+
 \definecolor{tableHead}{HTML}{40DD0E}
 \definecolor{tableEven}{HTML}{D7FCCC}
 \definecolor{tableOdd}{HTML}{F0FEEC}
@@ -62,9 +102,6 @@
 
 \begin{document}
 
-\title{Software Requirements Specifications\\ for\\ Project ``BookExpress''}
-\author{Marc A. Harnos\\ {mharnos@gmail.com} \and Joscha Rapp\\ {jraxxo@gmail.com} \and Christian Schulz\\ {crs.s@gmx.net}}
-\date{October 2012}
 \maketitle
 \tableofcontents
 
