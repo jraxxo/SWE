@@ -756,7 +756,28 @@ Description of user interface elements for the client application and the web in
 \noindent
 \begin{tabular}{llp{8cm}}
 \cellcolor{white}/U10/	& \textbf{Name}			& Interface\\
-\cellcolor{white}		& \textbf{Description}	& xxx\\
+\cellcolor{white}		& \textbf{Description}	& A clean and simple interface for the application should be developed, following BookExpress guidelines incorporated with recognizable and consistent menu structures and nomenclature. Integrating Drag\&Drop functionality into the interface to catch text- and file drops is also a necessity.\\
+\cellcolor{white}		\hfill \\
+\end{tabular}
+
+\noindent
+\begin{tabular}{llp{8cm}}
+\cellcolor{white}/U11/	& \textbf{Name}			& Input Handling\\
+\cellcolor{white}		& \textbf{Description}	& Much like in the web interface the client should be always informed when his data might be inconsistent or contain errors - sanity checks should display information where necessary. Also an auto completion should appear where appropriate to support the user - this should also apply to Drag\&Dropped input.\\
+\cellcolor{white}		\hfill \\
+\end{tabular}
+
+\noindent
+\begin{tabular}{llp{8cm}}
+\cellcolor{white}/U12/	& \textbf{Name}			& Performance\\
+\cellcolor{white}		& \textbf{Description}	& The application should have a maximum boot time of 5 seconds, loading more complex data in background threads to speed up the process. The application should for no other task take longer than 2 to 3 seconds, but if an delay is experienced through locked CPU, full memory, network delays or other means which cannot be affected by the application itself, there should be an appropriate message indicating that the application is experiencing unexpected delays.\\
+\cellcolor{white}		\hfill \\
+\end{tabular}
+
+\noindent
+\begin{tabular}{llp{8cm}}
+\cellcolor{white}/U13/	& \textbf{Name}			& Data Consistency\\
+\cellcolor{white}		& \textbf{Description}	& The application should make auto saves and save its working data as often as possible from memory to the hard drive to be able to recover from an unexpected system failure or experienced error. Also there should be a revisioning system implemented to handle wrongly entered data and make reverting to previous states as easy as possible. There should be at least 25 steps of retention.\\
 \cellcolor{white}		\hfill \\
 \end{tabular}
 
@@ -789,28 +810,74 @@ Description of user interface elements for the client application and the web in
 \cellcolor{white}		\hfill \\
 \end{tabular}
 
+\section{Rights Management}
 \noindent
 \begin{tabular}{llp{8cm}}
-\cellcolor{white}/U24/	& \textbf{Name}			& Roles\\
+\cellcolor{white}/U30/	& \textbf{Name}			& Roles\\
 \cellcolor{white}		& \textbf{Description}	& Different types of users can perform different actions, this should be reflected by appropriate "views" for every user type.\\
 \cellcolor{white}		& \textbf{Role}			& \textbf{Book Store Client}\\
 \cellcolor{white}		&						& A book store client can see and edit parts of its own data, make new orders and edit orders it made.\\
 \cellcolor{white}		&						& \textbf{Publisher Client}\\
 \cellcolor{white}		&						& Publishers can see and edit their own data, including book information and the stock of books. Also it should be possible to display any placed orders and the correspondent order status. This status can also be updated.\\
 \cellcolor{white}		&						& \textbf{BookExpress Employee}\\
-\cellcolor{white}		&						& \\
+\cellcolor{white}		&						& BookExpress employees can update, create and close orders, they take from publishers who call in with information or fax the information to BookExpress. They can also update book store and publisher user data, create new entries and edit information. The employees can also create new accounts for book stores and publishers.\\
 \cellcolor{white}		&						& \textbf{Administration}\\
-\cellcolor{white}		&						& \\
+\cellcolor{white}		&						& Administrators have access to all data, have rights to create, edit and delete everything. Also administrators can create new accounts for BookExpress employees, restrict access and close accounts. All administrators are required to sign special disclosure agreements to protect the user data. There should be as few as possible administrator accounts created.\\
 \cellcolor{white}		\hfill \\
 \end{tabular}
 
-\section{Rights Management}
-
 
 \chapter{Non-Functional Requirements}
+\begin{itemize}
+	\item All connections through networks should be at least secured with a 512bit SSL encryption
+	\item A redundant server base should be established to ensure high availability
+		\begin{itemize}
+			\item Those servers should also communicate with encryption between each other
+			\item The servers should be on different server farms, in different physical locations
+			\item The nearest server has to respond to client requests
+			\item Maintenance for a specific server should not lead to data delivery delays but be compensated through other servers
+		\end{itemize}
+	\item Books are identified through their unique ISBN Code. If a book is not yet published or has - for whatever reason - no ISBN Code, an internal processing code should be temporarily used as identification
+	\item Passwords should follow certain protocol, but this should not be enforced - only the length of a password should be enforced to be at least 8 characters to ensure a properly sized encryption hash
+\end{itemize}
+
 \chapter{Technical Product Environment}
 \section{Software}
+	\subsection{Server}
+		\begin{itemize}
+			\item Unix based Linux/GNU Server - 64bit System
+			\item SQL based database system, preferably MySQL
+			\item Web server (Java Webserver Technology)
+			\item BookExpress data processing application
+		\end{itemize}
+	\subsection{Client}
+		\begin{itemize}
+			\item Operating System (Windows, MACINTOSH, Linux/GNU)
+			\item Graphics drivers, functioning window management
+		\end{itemize}
+		\subsubsection{Web interface}
+			\begin{itemize}
+				\item Compatible web browser
+			\end{itemize}
+			
+		\subsubsection{Client application}
+			\begin{itemize}
+				\item Java Runtime Environment (JRE)
+			\end{itemize}
 \section{Hardware}
+	\subsection{Server}
+		There should be at least two physically separate server locations with each having at least one application server, one web server and one server handling database queries.
+		\begin{itemize}
+			\item 4GHz Quad-Core CPUs
+			\item 32GB to 64GB RAM
+			\item 3TB to 5TB storage
+			\item At least 10GBit LAN Connection
+		\end{itemize}
+	\subsection{Client}
+		\begin{itemize}
+			\item At least 2GB of RAM
+			\item Minimal requirements of the operating system
+		\end{itemize}
 \section{Orgware}
 \section{Interfaces (product)}
 
