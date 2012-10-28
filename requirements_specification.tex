@@ -194,7 +194,7 @@ The products environmental diagram.
 
 \noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
-/PF10/	& \textbf{Process}	& Register Publisher or Book Shop (client)\\
+/PF00/	& \textbf{Process}	& Register Publisher or Book Shop (client)\\
 		& \textbf{Actor(s)} & BookExpress employee\\
 		& \textbf{Category} & Must have\\
 		& \textbf{Description}	 & A Book Express employee creates an account for a book shop or publisher after both business partners have signed a contract handling the business relations.\\
@@ -213,7 +213,7 @@ The products environmental diagram.
 
 \noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
-/PF20/	& \textbf{Process} & Update Account Information\\
+/PF01/	& \textbf{Process} & Edit client information\\
 		& \textbf{Actor(s)} & BookExpress employee\\
 		& \textbf{Category} & Must have\\
 		& \textbf{Description}	 & The clients data is outdated and needs to be updated\\
@@ -221,8 +221,9 @@ The products environmental diagram.
 		& \textbf{Preconditions} & Client exists in database\\
 		& \textbf{Postcondition success} & Client data is updated and a notification mail is sent to the client.\\
 		& \textbf{Postcondition failure} & Client data is not updated but rolled back to the previous state. Notification with problem report is shown to the employee.\\
-		& \textbf{Trigger}	& Menu option "Update Account" (Software)\\
-		& \textbf{Sequence}	& Edit specific data\\
+		& \textbf{Trigger} & Menu option "edit client data" (Software)\\
+		& \textbf{Sequence} & Menu option "edit client data"\\
+		& & Edit specific data\\
 		& & Submit edited data to the server\\
 \hfill \\
 \end{tabular}
@@ -248,7 +249,7 @@ The products environmental diagram.
 
 \noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
-	 /PF/	& \textbf{Process} & Client places order\\ 
+	 /PF10/	& \textbf{Process} & Client places order\\ 
 		& \textbf{Category} & Must have\\
 		& \textbf{Actor(s)} & BookExpress employee, client\\ 
 		& \textbf{Description}	 & A client orders book via telephone\\ 
@@ -268,7 +269,7 @@ The products environmental diagram.
 
 \noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
-	 /PF/	& \textbf{Process} & Validate order\\ 
+	 /PF11/	& \textbf{Process} & Validate order\\ 
 		& \textbf{Category} & Must have\\
 		& \textbf{Actor(s)} & System\\ 
 		& \textbf{Description}	 & Order is checked for validation\\ 
@@ -284,7 +285,7 @@ The products environmental diagram.
 
 \noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
-	 /PF/	& \textbf{Process} & Stock Update\\ 
+	 /PF12/	& \textbf{Process} & Stock Update\\ 
 		& \textbf{Category} & Must have\\
 		& \textbf{Actor(s)} & System/BookExpress employee\\ 
 		& \textbf{Description}	 & The employee in charge of the stock checks the availability of all books and updates the stock accordingly.\\ 
@@ -301,7 +302,7 @@ The products environmental diagram.
 
 \noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
-	 /PF/	& \textbf{Process} & Forward order to Logistics\\ 
+	 /PF13/	& \textbf{Process} & Forward order to Logistics\\ 
 		& \textbf{Category} & Primary\\
 		& \textbf{Actor(s)} & System\\ 
 		& \textbf{Description}	 & A validated order gets forwarded to Logistics\\ 
@@ -316,7 +317,7 @@ The products environmental diagram.
 
 \noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
-/PF/	& \textbf{Process} & Deliver order\\
+/PF14/	& \textbf{Process} & Deliver order\\
 		& \textbf{Actor(s)} & System\\
 		& \textbf{Category} & Primary\\
 		& \textbf{Description}	 &  The order is send to the book store\\
@@ -336,7 +337,7 @@ The products environmental diagram.
 
 \noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
-/PF/	& \textbf{Process} & Confirm delivery\\
+/PF15/	& \textbf{Process} & Confirm delivery\\
 		& \textbf{Actor(s)} & Employee (Logistics)\\
 		& \textbf{Category} & Primary\\
 		& \textbf{Description}	 & Logistics confirms the correct delivery of an order\\
@@ -353,7 +354,7 @@ The products environmental diagram.
 
 \noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
-/PF/	& \textbf{Process} & BookExpress Order\\
+/PF16/	& \textbf{Process} & BookExpress Order\\
 		& \textbf{Actor(s)} & BookExpress employee\\
 		& \textbf{Category} & Must have\\
 		& \textbf{Description}	 & The Employee orders a number of books from the publisher\\
@@ -370,7 +371,7 @@ The products environmental diagram.
 
 \noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
-/PF/	& \textbf{Process} & Create an invoice\\
+/PF20/	& \textbf{Process} & Create an invoice\\
 		& \textbf{Actor(s)} & System\\
 		& \textbf{Category} & Secondary\\
 		& \textbf{Description}	 & The system creates an invoice after TODO /PF/ order is valid\\
@@ -389,7 +390,7 @@ The products environmental diagram.
 
 \noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
-/PF/	& \textbf{Process} & Send invoice\\
+/PF21/	& \textbf{Process} & Send invoice\\
 		& \textbf{Actor(s)} & System\\
 		& \textbf{Category} & Secondary\\
 		& \textbf{Description}	 & The invoice is send to the book store via mail\\
@@ -406,7 +407,7 @@ The products environmental diagram.
 
 \noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
-/PF/	& \textbf{Process} & Backup\\
+/PF30/	& \textbf{Process} & Backup\\
 		& \textbf{Actor(s)} & System\\
 		& \textbf{Category} & Primary\\
 		& \textbf{Description}	 & A backup of the complete databases must be done. This should happen periodically and save all data on a server.\\
@@ -428,7 +429,7 @@ The products environmental diagram.
 
 \noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
-/PF/	& \textbf{Process} & Login\\
+/PF03/	& \textbf{Process} & Login\\
 		& \textbf{Actor(s)} & Book store/publisher\\
 		& \textbf{Category} & Must have\\
 		& \textbf{Description}	 & The user logs on with his PIN and password\\
@@ -447,7 +448,7 @@ The products environmental diagram.
 
 \noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
-/PF/	& \textbf{Process} & Update account information\\
+/PF04/	& \textbf{Process} & Update account information\\
 		& \textbf{Actor(s)} & Book store/publisher\\
 		& \textbf{Category} & Must have\\
 		& \textbf{Description}	 & The user is able to edit/update its account information (e.g. address, correspondent etc.)\\
@@ -455,7 +456,7 @@ The products environmental diagram.
 		& \textbf{Preconditions} & User is logged on\\
 		& \textbf{Postcondition success} & Updating the account succeeded\\
 		& \textbf{Postcondition failure} & Updating the account failed\\
-		& \textbf{Trigger} & Menu option "Update Account"\\
+		& \textbf{Trigger} & Menu option "edit\\
 		& \textbf{Sequence} Edit specific data\\
 		& & System checks correctness of data (e.g. email format etc.)\\
 		& & Submit edited data to the server\\
@@ -465,7 +466,7 @@ The products environmental diagram.
 
 \noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
-/PF/	& \textbf{Process} & Logout\\
+/PF05/	& \textbf{Process} & Logout\\
 		& \textbf{Actor(s)} & Book store/publisher\\
 		& \textbf{Category} & Must have\\
 		& \textbf{Description}	 & User logs out\\
@@ -484,7 +485,7 @@ The products environmental diagram.
 
 \noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
-	 /PF/	& \textbf{Process} & Search for a book/show catalogue\\ 
+	 /PF40/	& \textbf{Process} & Search for a book/show catalogue\\ 
 		& \textbf{Category} & Must have\\
 		& \textbf{Actor(s)} & Client\\ 
 		& \textbf{Description}	 & Client searches for a book to add it to his order\\ 
@@ -503,7 +504,7 @@ The products environmental diagram.
 
 \noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
-/PF/	& \textbf{Process} & Book Store Order\\ 
+/PF17/	& \textbf{Process} & Book Store Order\\ 
 		& \textbf{Category} & Must have\\
 		& \textbf{Actor(s)} & Book Store Employee\\ 
 		& \textbf{Description}	 & The Book Store orders a book from BookExpress.
@@ -524,7 +525,7 @@ as one big order every day.\\
 
 \noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
-/PF/	& \textbf{Process} & Change order\\
+/PF18/	& \textbf{Process} & Change order\\
 		& \textbf{Actor(s)} & Book store\\
 		& \textbf{Category} & Must have\\
 		& \textbf{Description}	 & As long as the order is not validated, the user can change information\\
@@ -544,10 +545,10 @@ as one big order every day.\\
 
 \noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
-/PF/	& \textbf{Process} & Cancel Order\\
+/PF19/	& \textbf{Process} & Cancel Order\\
 		& \textbf{Actor(s)} & Book Store Employee\\
 		& \textbf{Category} & Must have\\
-		& \textbf{Description}	 & The employee at the book store can cancel the order if it hasn’t been shipped yet\\
+		& \textbf{Description}	 & The employee at the book store can cancel the order if it hasn?t been shipped yet\\
 		& \textbf{Goal} & Current orders can be cancelled\\
 		& \textbf{Preconditions} & Order exists\\
 		& \textbf{Postcondition success} & Order successfully cancelled. Book Store receives a confirmation mail\\
@@ -562,7 +563,7 @@ as one big order every day.\\
 
 \noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
-/PF/	& \textbf{Process} & Tracking System\\
+/PF50/	& \textbf{Process} & Tracking System\\
 		& \textbf{Actor(s)} & Book Store Employee\\
 		& \textbf{Category} & Must have\\
 		& \textbf{Description}	 & The employee at the book store can look up at which stage his order is right now, e.g. processing or shipping to BookExpress/the book store.\\
@@ -580,7 +581,7 @@ as one big order every day.\\
 
 \noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
-/PF10/	& \textbf{Process} & Inventory maintenance\\
+/PF60/	& \textbf{Process} & Inventory maintenance\\
 		& \textbf{Actor(s)} & Publisher\\
 		& \textbf{Category} & Must have\\
 		& \textbf{Description}	 & Publishers can update their inventory list
@@ -595,6 +596,7 @@ as one big order every day.\\
 		
 \hfill \\
 \end{tabular}
+
 
 \chapter{Product Data}
 \section{User Data}
