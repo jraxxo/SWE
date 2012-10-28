@@ -196,7 +196,7 @@ The products environmental diagram.
 
 \noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
-/PF00/	& \textbf{Process}	& Register Publisher or Book Shop (client)\\
+/PF00/	& \textbf{Process}	& Register Publisher or Book Store (client)\\
 		& \textbf{Actor(s)} & BookExpress employee\\
 		& \textbf{Category} & Must have\\
 		& \textbf{Description}	 & A Book Express employee creates an account for a book shop or publisher after both business partners have signed a contract handling the business relations.\\
@@ -246,6 +246,24 @@ The products environmental diagram.
 		& & Check if client is deletable (i.e. no existing orders)\\
 		& & Send notification mail to client\\
 		& & Delete client\\
+\hfill \\		
+\end{tabular}
+
+\noindent
+\begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
+/PF03/	& \textbf{Process} & Register new BookExpress employee\\ 
+		& \textbf{Actor(s)} & Administrator\\ 
+		& \textbf{Category} & Must have\\
+		& \textbf{Description}	 & Register a new BookExpress employee\\ 
+		& \textbf{Goal} & New BookExpress employee\\
+		& \textbf{Preconditions} & There is a request to register a new employee\\
+		& \textbf{Postcondition success} & Employee is created\\
+		& \textbf{Postcondition failure} & -\\
+		& \textbf{Trigger} & Request to register new employee\\
+		& \textbf{Sequence} & Read request\\
+		& & Register employee with its data\\
+		& & Send notification mail to new employee\\
+		& & Close ticket\\
 \hfill \\		
 \end{tabular}
 
@@ -431,7 +449,7 @@ The products environmental diagram.
 
 \noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
-/PF03/	& \textbf{Process} & Login\\
+/PF04/	& \textbf{Process} & Login\\
 		& \textbf{Actor(s)} & Book store/publisher\\
 		& \textbf{Category} & Must have\\
 		& \textbf{Description}	 & The user logs on with his PIN and password\\
@@ -450,7 +468,7 @@ The products environmental diagram.
 
 \noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
-/PF04/	& \textbf{Process} & Update account information\\
+/PF05/	& \textbf{Process} & Update account information\\
 		& \textbf{Actor(s)} & Book store/publisher\\
 		& \textbf{Category} & Must have\\
 		& \textbf{Description}	 & The user is able to edit/update its account information (e.g. address, correspondent etc.)\\
@@ -468,7 +486,7 @@ The products environmental diagram.
 
 \noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
-/PF05/	& \textbf{Process} & Logout\\
+/PF06/	& \textbf{Process} & Logout\\
 		& \textbf{Actor(s)} & Book store/publisher\\
 		& \textbf{Category} & Must have\\
 		& \textbf{Description}	 & User logs out\\
