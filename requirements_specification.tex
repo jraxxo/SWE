@@ -99,6 +99,8 @@
 \newacronym{css}{CSS}{Cascade Stylesheet}
 \newacronym{js}{JS}{JavaScript}
 \newacronym{ie}{IE}{InternetExplorer}
+\newacronym{vm}{VM}{Virtual Machine}
+\newacronym{ide}{IDE}{Integrated Development Environment}
 
 
 \begin{document}
@@ -878,18 +880,48 @@ Description of user interface elements for the client application and the web in
 			\item At least 2GB of RAM
 			\item Minimal requirements of the operating system
 		\end{itemize}
+
 \section{Orgware}
+\begin{itemize}
+	\item Internal connections and connections between BookExpress locations should be connected through a high-speed network connection, ensuring fast response time while employees are in the Intranet
+	\item All connections should be encrypted
+\end{itemize}
+
 \section{Interfaces (product)}
+\label{sec:tpe-interfaces}
+The application should be enhanced with interface integration of bar code scanners for easy recognition of ISBN codes, GPS tracking devices on the delivery trucks from BookExpress to save location and "process of delivery" real time. Also graphic tablets or other means of stylus input should be supported to be able to save signatures from delivery, processing and logistics in general.
+
+No special interfaces are required for the web application, almost everything is processed through the browsers \gls{vm} and the rest, i.e. signatures for logistics, is realised through JavaScript and browser plugins.
 
 \chapter{Special Requirements for the Development Environment}
 \section{Software}
+	\begin{itemize}
+		\item \gls{ide} for Java (Eclipse, IBM Rational)
+		\item Java JDK, Java JRE
+		\item Local web application server
+		\item Virtualization for cross browser installations (VMWare, VirtualBox, etc.)
+		\item Version control system (Git Client)
+	\end{itemize}
 \section{Hardware}
+	\begin{itemize}
+		\item The Hardware should have enough memory to hold the OS, the VM and several running applications including the \gls{ide} - at least 8GB RAM
+	\end{itemize}
 \section{Orgware}
+	\begin{itemize}
+		\item Network connection to the Intranet and Internet
+	\end{itemize}
 \section{Interfaces (development)}
+Same interfaces required as for \ref{sec:tpe-interfaces}
 
 \chapter{Subproducts and Subsystems}
+The product can be divided into 1 server sub product and 2 client sub products with a web interface or a separate application.
+
 \section{Server}
+The server application provides every interface with data, processes new, incoming data and reads and writes to the database. This product component provides all necessary functionality to operate the clients and data management. It has to be implemented from the start.
+
 \section{Web Interface / Web Service}
+The web interface provides the 
+
 \section{Client Application}
 
 \chapter{Additional Specifications and Stipulations}
