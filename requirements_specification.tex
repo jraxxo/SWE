@@ -15,8 +15,9 @@
 \usepackage{tikz}
 \usepackage{kpfonts}
 \usepackage[explicit]{titlesec}
-\usepackage[acronym,toc,nonumberlist,style=tree]{glossaries}
+\usepackage[acronym,nonumberlist,style=tree]{glossaries}
 \usepackage{amssymb}
+\usepackage[left=3.65cm,right=3.65cm]{geometry}
 
 \hypersetup{pdfpagemode=UseNone}
 
@@ -109,6 +110,9 @@
 \tableofcontents
 
 \chapter*{Document History}
+
+\begin{center}
+
 \begin{tabular}{|l|l|l|l|}
 \hline 
 Editor(s) & Date & Purpose of Editing & Version \\ 
@@ -121,13 +125,15 @@ Schulz & 2012-10-08 & Fick Das Nicht - Überstimmt & v0.03 \\
 \hline 
 \end{tabular} 
 
+\end{center}
+
 \chapter{Product Purpose}
 To handle the addition of new books and the distribution in a better way, "BookExpress" asked us to develop an IT solution to optimize the idle time and labour usage by getting rid of the current, deprecated system. Furthermore one important goal of the software solution is to be very user friendly and easy to use; also there should be remote access implemented, so several customers can access the software at once and distribution partners can access and keep their book stock up to date.
 \section{Obligatory Requirements (``must have'')}
 \subsection{Communication with Publishers}
 The direct connection between the \textbf{publishers} and BookExpress shall be implemented by providing a web interface for the publishers.\\
 \begin{itemize}
-\item As each publisher also has a PIN, it will be used as the account name for the interface.
+\item As each publisher also has a \gls{pin}, it will be used as the account name for the interface.
 \item The web interface has to provide the following features for the publisher: maintain the book database (add books, remove books, edit book data), edit their personal data, view statistics on how often which books are bought
 \item The interface has to be comfortably accessible from mobile devices as well, the data that is transmitted should be minimal\\
 \end{itemize}
@@ -197,62 +203,72 @@ BookExpress has a restricted rights management with several roles (see \ref{sec:
 \subsection{Employees of ``BookExpress''}
 
 \noindent
+\rowcolors{1}{tableEven}{tableOdd}
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
+<<<<<<< HEAD
 /PF00/	& \textbf{Process}	& Register Publisher or Book Store (client)\\
 		& \textbf{Actor(s)} & BookExpress employee\\
 		& \textbf{Category} & Must have\\
 		& \textbf{Description}	 & A Book Express employee creates an account for a book shop or publisher after both business partners have signed a contract handling the business relations.\\
 		& \textbf{Goal} & The contract partner should have an account to log into the Software. After registration through the Book Express employee, the contract partner will be send a verification and its 
+=======
+\cellcolor{white}/PF00/	& \textbf{Process}	& Register Publisher or Book Shop (client)\\
+\cellcolor{white}		& \textbf{Actor(s)} & BookExpress employee\\
+\cellcolor{white}		& \textbf{Category} & Must have\\
+\cellcolor{white}		& \textbf{Description}	 & A Book Express employee creates an account for a book shop or publisher after both business partners have signed a contract handling the business relations.\\
+\cellcolor{white}		& \textbf{Goal} & The contract partner should have an account to log into the Software. After registration through the Book Express employee, the contract partner will be send a verification and its 
+>>>>>>> changed glossaries, margin width, added cell colouring
 		 information via email.\\
-		& \textbf{Preconditions} & Contract signed\\
-		& \textbf{Postcondition success} & Successfully created account\\
-		& \textbf{Postcondition failure} & Unsuccessful in creating an account\\
-		& \textbf{Trigger} & Menu option "register new client" (Software)\\
-		& \textbf{Sequence} & Input relevant data and contractor details into the managements system\\
-		& & Save the signed contract on the server\\
-		& & Register a new client by creating a new PIN in the database\\
-		& & Send verification and account information to the contractor\\
+\cellcolor{white}		& \textbf{Preconditions} & Contract signed\\
+\cellcolor{white}		& \textbf{Postcondition success} & Successfully created account\\
+\cellcolor{white}		& \textbf{Postcondition failure} & Unsuccessful in creating an account\\
+\cellcolor{white}		& \textbf{Trigger} & Menu option "register new client" (Software)\\
+\cellcolor{white}		& \textbf{Sequence} & Input relevant data and contractor details into the managements system\\
+\cellcolor{white}		& & Save the signed contract on the server\\
+\cellcolor{white}		& & Register a new client by creating a new PIN in the database\\
+\cellcolor{white}		& & Send verification and account information to the contractor\\
 \hfill \\
 \end{tabular}
 
 \noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
-/PF01/	& \textbf{Process} & Edit client information\\
-		& \textbf{Actor(s)} & BookExpress employee\\
-		& \textbf{Category} & Must have\\
-		& \textbf{Description}	 & The clients data is outdated and needs to be updated\\
-		& \textbf{Goal} & Client data is updated\\
-		& \textbf{Preconditions} & Client exists in database\\
-		& \textbf{Postcondition success} & Client data is updated and a notification mail is sent to the client.\\
-		& \textbf{Postcondition failure} & Client data is not updated but rolled back to the previous state. Notification with problem report is shown to the employee.\\
-		& \textbf{Trigger} & Menu option "edit client data" (Software)\\
-		& \textbf{Sequence} & Menu option "edit client data"\\
-		& & Edit specific data\\
-		& & Submit edited data to the server\\
-\hfill \\
+\cellcolor{white}/PF01/	& \textbf{Process} & Edit client information\\
+\cellcolor{white}		& \textbf{Actor(s)} & BookExpress employee\\
+\cellcolor{white}		& \textbf{Category} & Must have\\
+\cellcolor{white}		& \textbf{Description}	 & The clients data is outdated and needs to be updated\\
+\cellcolor{white}		& \textbf{Goal} & Client data is updated\\
+\cellcolor{white}		& \textbf{Preconditions} & Client exists in database\\
+\cellcolor{white}		& \textbf{Postcondition success} & Client data is updated and a notification mail is sent to the client.\\
+\cellcolor{white}		& \textbf{Postcondition failure} & Client data is not updated but rolled back to the previous state. Notification with problem report is shown to the employee.\\
+\cellcolor{white}		& \textbf{Trigger} & Menu option "edit client data" (Software)\\
+\cellcolor{white}		& \textbf{Sequence} & Menu option "edit client data"\\
+\cellcolor{white}		& & Edit specific data\\
+\cellcolor{white}		& & Submit edited data to the server\\
+\cellcolor{white}\hfill \\
 \end{tabular}
 
 \noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
-/PF02/	& \textbf{Process} & Delete account\\ 
-		& \textbf{Actor(s)} & BookExpress Employee\\ 
-		& \textbf{Category} & Must have\\
-		& \textbf{Description}	 & Client gets deleted due to resignation of the contract\\ 
-		& \textbf{Goal} & Delete client from the system\\
-		& \textbf{Preconditions} & Client exists in database\\
-		& & Contract is being resigned by one of the contractors\\
-		& \textbf{Postcondition success} & Client is deleted from the system\\
-		& \textbf{Postcondition failure} & Client could not be deleted because of existing orders\\
-		& \textbf{Trigger} & Menu option "delete client" (Software)\\
-		& \textbf{Sequence} & Choose client\\
-		& & Check if client is deletable (i.e. no existing orders)\\
-		& & Send notification mail to client\\
-		& & Delete client\\
-\hfill \\		
+\cellcolor{white}/PF02/	& \textbf{Process} & Delete account\\ 
+\cellcolor{white}		& \textbf{Actor(s)} & BookExpress Employee\\ 
+\cellcolor{white}		& \textbf{Category} & Must have\\
+\cellcolor{white}		& \textbf{Description}	 & Client gets deleted due to resignation of the contract\\ 
+\cellcolor{white}		& \textbf{Goal} & Delete client from the system\\
+\cellcolor{white}		& \textbf{Preconditions} & Client exists in database\\
+\cellcolor{white}		& & Contract is being resigned by one of the contractors\\
+\cellcolor{white}		& \textbf{Postcondition success} & Client is deleted from the system\\
+\cellcolor{white}		& \textbf{Postcondition failure} & Client could not be deleted because of existing orders\\
+\cellcolor{white}		& \textbf{Trigger} & Menu option "delete client" (Software)\\
+\cellcolor{white}		& \textbf{Sequence} & Choose client\\
+\cellcolor{white}		& & Check if client is deletable (i.e. no existing orders)\\
+\cellcolor{white}		& & Send notification mail to client\\
+\cellcolor{white}		& & Delete client\\
+\cellcolor{white}\hfill \\		
 \end{tabular}
 
 \noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
+<<<<<<< HEAD
 /PF03/	& \textbf{Process} & Register new BookExpress employee\\ 
 		& \textbf{Actor(s)} & Administrator\\ 
 		& \textbf{Category} & Must have\\
@@ -287,58 +303,77 @@ BookExpress has a restricted rights management with several roles (see \ref{sec:
 		& & Order is placed in order queue\\
 		& & Order notification containing detailed report is sent to client\\
 \hfill \\
+=======
+\cellcolor{white}	 /PF10/	& \textbf{Process} & Client places order\\ 
+\cellcolor{white}		& \textbf{Category} & Must have\\
+\cellcolor{white}		& \textbf{Actor(s)} & BookExpress employee, client\\ 
+\cellcolor{white}		& \textbf{Description}	 & A client orders book via telephone\\ 
+\cellcolor{white}		& \textbf{Goal} & Order is placed in an order queue\\
+\cellcolor{white}		& \textbf{Preconditions} & Client exists in database\\
+\cellcolor{white}		& & Client is authorized\\
+\cellcolor{white}		& \textbf{Postcondition success} & Order is placed in an order queue\\
+\cellcolor{white}		& \textbf{Postcondition failure} & -\\
+\cellcolor{white}		& \textbf{Trigger} & Client initiates order process by calling an BookExpress employee\\
+\cellcolor{white}		& & BookExpress employee triggers manual order process\\
+\cellcolor{white}		& \textbf{Sequence} & BookExpress employee selects client in Software\\
+\cellcolor{white}		& & BookExpress employee enters ordered book into the system\\
+\cellcolor{white}		& & Order is placed in order queue\\
+\cellcolor{white}		& & Order notification containing detailed report is sent to client\\
+\cellcolor{white}\hfill \\
+>>>>>>> changed glossaries, margin width, added cell colouring
 \end{tabular}
 
 \noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
-	 /PF11/	& \textbf{Process} & Validate order\\ 
-		& \textbf{Category} & Must have\\
-		& \textbf{Actor(s)} & System\\ 
-		& \textbf{Description}	 & Order is checked for validation\\ 
-		& \textbf{Goal} & The software checks every order for validation and confirms it to the client. BookExpress knows about every orders validation status.\\
-		& \textbf{Preconditions} & Order is in order queue\\
-		& \textbf{Postcondition success} & Client receives a confirmation email\\
-		& \textbf{Postcondition failure} & Client receives a problem report about invalid order\\
-		& \textbf{Trigger} & Order was placed and exists in order queue\\
-		& \textbf{Sequence} & System  gathers details and checks whether order is valid or not\\
-		& & System sends mail to client\\
-\hfill \\
+\cellcolor{white}	 /PF11/	& \textbf{Process} & Validate order\\ 
+\cellcolor{white}		& \textbf{Category} & Must have\\
+\cellcolor{white}		& \textbf{Actor(s)} & System\\ 
+\cellcolor{white}		& \textbf{Description}	 & Order is checked for validation\\ 
+\cellcolor{white}		& \textbf{Goal} & The software checks every order for validation and confirms it to the client. BookExpress knows about every orders validation status.\\
+\cellcolor{white}		& \textbf{Preconditions} & Order is in order queue\\
+\cellcolor{white}		& \textbf{Postcondition success} & Client receives a confirmation email\\
+\cellcolor{white}		& \textbf{Postcondition failure} & Client receives a problem report about invalid order\\
+\cellcolor{white}		& \textbf{Trigger} & Order was placed and exists in order queue\\
+\cellcolor{white}		& \textbf{Sequence} & System  gathers details and checks whether order is valid or not\\
+\cellcolor{white}		& & System sends mail to client\\
+\cellcolor{white}\hfill \\
 \end{tabular}
 
 \noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
-	 /PF12/	& \textbf{Process} & Stock Update\\ 
-		& \textbf{Category} & Must have\\
-		& \textbf{Actor(s)} & System/BookExpress employee\\ 
-		& \textbf{Description}	 & The employee in charge of the stock checks the availability of all books and updates the stock accordingly.\\ 
-		& \textbf{Goal} & Check succeeds\\
-		& \textbf{Preconditions} & Order is placed or BookExpress employee initiates check\\
-		& \textbf{Postcondition success} & Books which are nearly out of stock get displayed as a list\\
-		& \textbf{Postcondition failure} & -\\
-		& \textbf{Trigger} & Stock check is initiated\\
-		& \textbf{Sequence} & Check if a book is available in an sufficient amount\\
-		& & Make a list of all books which need to be ordered\\
-		& & Submit list to system\\
-\hfill \\
+\cellcolor{white}	 /PF12/	& \textbf{Process} & Stock Update\\ 
+\cellcolor{white}		& \textbf{Category} & Must have\\
+\cellcolor{white}		& \textbf{Actor(s)} & System/BookExpress employee\\ 
+\cellcolor{white}		& \textbf{Description}	 & The employee in charge of the stock checks the availability of all books and updates the stock accordingly.\\ 
+\cellcolor{white}		& \textbf{Goal} & Check succeeds\\
+\cellcolor{white}		& \textbf{Preconditions} & Order is placed or BookExpress employee initiates check\\
+\cellcolor{white}		& \textbf{Postcondition success} & Books which are nearly out of stock get displayed as a list\\
+\cellcolor{white}		& \textbf{Postcondition failure} & -\\
+\cellcolor{white}		& \textbf{Trigger} & Stock check is initiated\\
+\cellcolor{white}		& \textbf{Sequence} & Check if a book is available in an sufficient amount\\
+\cellcolor{white}		& & Make a list of all books which need to be ordered\\
+\cellcolor{white}		& & Submit list to system\\
+\cellcolor{white}\hfill \\
 \end{tabular}
 
 \noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
-	 /PF13/	& \textbf{Process} & Forward order to Logistics\\ 
-		& \textbf{Category} & Primary\\
-		& \textbf{Actor(s)} & System\\ 
-		& \textbf{Description}	 & A validated order gets forwarded to Logistics\\ 
-		& \textbf{Goal} & Logistics proceeds processing the order\\
-		& \textbf{Preconditions} & Order is valid\\
-		& \textbf{Postcondition success} & Logistics processes delivery\\
-		& \textbf{Postcondition failure} & Order could not be forwarded to Logistics\\
-		& \textbf{Trigger} & Order is validated\\
-		& \textbf{Sequence} & Send order information/details to Logistics\\
-\hfill \\
+\cellcolor{white}	 /PF13/	& \textbf{Process} & Forward order to Logistics\\ 
+\cellcolor{white}		& \textbf{Category} & Primary\\
+\cellcolor{white}		& \textbf{Actor(s)} & System\\ 
+\cellcolor{white}		& \textbf{Description}	 & A validated order gets forwarded to Logistics\\ 
+\cellcolor{white}		& \textbf{Goal} & Logistics proceeds processing the order\\
+\cellcolor{white}		& \textbf{Preconditions} & Order is valid\\
+\cellcolor{white}		& \textbf{Postcondition success} & Logistics processes delivery\\
+\cellcolor{white}		& \textbf{Postcondition failure} & Order could not be forwarded to Logistics\\
+\cellcolor{white}		& \textbf{Trigger} & Order is validated\\
+\cellcolor{white}		& \textbf{Sequence} & Send order information/details to Logistics\\
+\cellcolor{white}\hfill \\
 \end{tabular}
 
 \noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
+<<<<<<< HEAD
 /PF14/	& \textbf{Process} & Deliver order\\
 		& \textbf{Actor(s)} & Logistics\\
 		& \textbf{Category} & Primary\\
@@ -355,10 +390,28 @@ BookExpress has a restricted rights management with several roles (see \ref{sec:
 		& & Mark order as sent\\
 		
 \hfill \\
+=======
+\cellcolor{white}/PF14/	& \textbf{Process} & Deliver order\\
+\cellcolor{white}		& \textbf{Actor(s)} & System\\
+\cellcolor{white}		& \textbf{Category} & Primary\\
+\cellcolor{white}		& \textbf{Description}	 &  The order is send to the book store\\
+\cellcolor{white}		& \textbf{Goal} & Deliver ordered books\\
+\cellcolor{white}		& \textbf{Preconditions} & Order is valid\\
+\cellcolor{white}		& & Books are available in stock\\
+\cellcolor{white}		& \textbf{Postcondition success} & Order is marked as sent\\
+\cellcolor{white}		& \textbf{Postcondition failure} & Order could not be marked as sent\\
+\cellcolor{white}		& \textbf{Trigger} & Forward order to Logistics\\
+\cellcolor{white}		& \textbf{Sequence} & Check if books are in stock\\
+\cellcolor{white}		& & Receive book store information\\
+\cellcolor{white}		& & Sent order to book store\\
+\cellcolor{white}		& & Mark order as sent\\
+\cellcolor{white}\hfill \\
+>>>>>>> changed glossaries, margin width, added cell colouring
 \end{tabular}
 
 \noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
+<<<<<<< HEAD
 /PF15/	& \textbf{Process} & Confirm delivery\\
 		& \textbf{Actor(s)} & Logistics\\
 		& \textbf{Category} & Primary\\
@@ -372,76 +425,86 @@ BookExpress has a restricted rights management with several roles (see \ref{sec:
 		& & Mark order as delivered if delivery status is "successfully delivered"
 		
 \hfill \\
+=======
+\cellcolor{white}/PF15/	& \textbf{Process} & Confirm delivery\\
+\cellcolor{white}		& \textbf{Actor(s)} & Employee (Logistics)\\
+\cellcolor{white}		& \textbf{Category} & Primary\\
+\cellcolor{white}		& \textbf{Description}	 & Logistics confirms the correct delivery of an order\\
+\cellcolor{white}		& \textbf{Goal} & Delivery is successful\\
+\cellcolor{white}		& \textbf{Preconditions} & Order is marked as sent\\
+\cellcolor{white}		& \textbf{Postcondition success} & Order is marked as delivered\\
+\cellcolor{white}		& \textbf{Postcondition failure} & Order could not be marked as delivered\\
+\cellcolor{white}		& \textbf{Trigger} & Deliver order\\
+\cellcolor{white}		& \textbf{Sequence} & Get delivery status\\
+\cellcolor{white}		& & Mark order as delivered if delivery status is "successfully delivered"\\
+\cellcolor{white}\hfill \\
+>>>>>>> changed glossaries, margin width, added cell colouring
 \end{tabular}
 
 \noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
-/PF16/	& \textbf{Process} & BookExpress Order\\
-		& \textbf{Actor(s)} & BookExpress employee\\
-		& \textbf{Category} & Must have\\
-		& \textbf{Description}	 & The Employee orders a number of books from the publisher\\
-		& \textbf{Goal} & Order books from a publisher\\
-		& \textbf{Preconditions} & need for new books\\
-		& \textbf{Postcondition success} & Books are ordered and publisher gets an notification mail\\
-		& \textbf{Postcondition failure} & -\\
-		& \textbf{Trigger} & BookExpress employee initates an order\\
-		& \textbf{Sequence} & Select books from list or search TODO /PF/\\
-		& & Submit list to publisher\\
-		
-\hfill \\
+\cellcolor{white}/PF16/	& \textbf{Process} & BookExpress Order\\
+\cellcolor{white}		& \textbf{Actor(s)} & BookExpress employee\\
+\cellcolor{white}		& \textbf{Category} & Must have\\
+\cellcolor{white}		& \textbf{Description}	 & The Employee orders a number of books from the publisher\\
+\cellcolor{white}		& \textbf{Goal} & Order books from a publisher\\
+\cellcolor{white}		& \textbf{Preconditions} & need for new books\\
+\cellcolor{white}		& \textbf{Postcondition success} & Books are ordered and publisher gets an notification mail\\
+\cellcolor{white}		& \textbf{Postcondition failure} & -\\
+\cellcolor{white}		& \textbf{Trigger} & BookExpress employee initates an order\\
+\cellcolor{white}		& \textbf{Sequence} & Select books from list or search TODO /PF/\\
+\cellcolor{white}		& & Submit list to publisher\\
+\cellcolor{white}\hfill \\
 \end{tabular}
 
 \noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
-/PF20/	& \textbf{Process} & Create an invoice\\
-		& \textbf{Actor(s)} & System\\
-		& \textbf{Category} & Secondary\\
-		& \textbf{Description}	 & The system creates an invoice after TODO /PF/ order is valid\\
-		& \textbf{Goal} & Documenting order and deliver it with invoice\\
-		& \textbf{Preconditions} & Order is valid\\
-		& \textbf{Postcondition success} & Invoice successfully created\\
-		& \textbf{Postcondition failure} & Invoice could not be created\\
-		& & Check information about order\\
-		& \textbf{Trigger} & Order is valid TODO /PF/\\
-		& \textbf{Sequence} & Create an entry in database\\
-		& & List the ordered books with price\\
-		& & List tax to invoice\\
-		
-\hfill \\
+\cellcolor{white}/PF20/	& \textbf{Process} & Create an invoice\\
+\cellcolor{white}		& \textbf{Actor(s)} & System\\
+\cellcolor{white}		& \textbf{Category} & Secondary\\
+\cellcolor{white}		& \textbf{Description}	 & The system creates an invoice after TODO /PF/ order is valid\\
+\cellcolor{white}		& \textbf{Goal} & Documenting order and deliver it with invoice\\
+\cellcolor{white}		& \textbf{Preconditions} & Order is valid\\
+\cellcolor{white}		& \textbf{Postcondition success} & Invoice successfully created\\
+\cellcolor{white}		& \textbf{Postcondition failure} & Invoice could not be created\\
+\cellcolor{white}		& & Check information about order\\
+\cellcolor{white}		& \textbf{Trigger} & Order is valid TODO /PF/\\
+\cellcolor{white}		& \textbf{Sequence} & Create an entry in database\\
+\cellcolor{white}		& & List the ordered books with price\\
+\cellcolor{white}		& & List tax to invoice\\
+\cellcolor{white}\hfill \\
 \end{tabular}
 
 \noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
-/PF21/	& \textbf{Process} & Send invoice\\
-		& \textbf{Actor(s)} & System\\
-		& \textbf{Category} & Secondary\\
-		& \textbf{Description}	 & The invoice is send to the book store via mail\\
-		& \textbf{Goal} & Inform the book shop\\
-		& \textbf{Preconditions} & Successful created invoice\\
-		& \textbf{Postcondition success} & Book store receives a notification mail\\
-		& \textbf{Postcondition failure} & -\\
-		& \textbf{Trigger} & Creation of an invoice\\
-		& \textbf{Sequence} & Get invoice\\
-		& & Send invoice to book store
-		
-\hfill \\
+\cellcolor{white}/PF21/	& \textbf{Process} & Send invoice\\
+\cellcolor{white}		& \textbf{Actor(s)} & System\\
+\cellcolor{white}		& \textbf{Category} & Secondary\\
+\cellcolor{white}		& \textbf{Description}	 & The invoice is send to the book store via mail\\
+\cellcolor{white}		& \textbf{Goal} & Inform the book shop\\
+\cellcolor{white}		& \textbf{Preconditions} & Successful created invoice\\
+\cellcolor{white}		& \textbf{Postcondition success} & Book store receives a notification mail\\
+\cellcolor{white}		& \textbf{Postcondition failure} & -\\
+\cellcolor{white}		& \textbf{Trigger} & Creation of an invoice\\
+\cellcolor{white}		& \textbf{Sequence} & Get invoice\\
+\cellcolor{white}		& & Send invoice to book store\\
+\cellcolor{white}\hfill \\
 \end{tabular}
 
 \noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
-/PF30/	& \textbf{Process} & Backup\\
-		& \textbf{Actor(s)} & System\\
-		& \textbf{Category} & Primary\\
-		& \textbf{Description}	 & A backup of the complete databases must be done. This should happen periodically and save all data on a server.\\
-		& \textbf{Goal} & In case of a crash, every data must be saves as a preventative backup\\
-		& \textbf{Preconditions} & Server for the backup\\
-		& \textbf{Postcondition success} & Successful backup in periodical intervals\\
-		& \textbf{Postcondition failure} & A notification will be send to the administrator of the system\\
-		& \textbf{Trigger} & Configured time to start a backup\\
-		& \textbf{Sequence} & Start Backup\\
-		& & Place backup on the backup server
-		
-\hfill \\
+\cellcolor{white}/PF30/	& \textbf{Process} & Backup\\
+\cellcolor{white}		& \textbf{Actor(s)} & System\\
+\cellcolor{white}		& \textbf{Category} & Primary\\
+\cellcolor{white}		& \textbf{Description}	 & A backup of the complete databases must be done. This should happen periodically and save all data on a server.\\
+\cellcolor{white}		& \textbf{Goal} & In case of a crash, every data must be saves as a preventative backup\\
+\cellcolor{white}		& \textbf{Preconditions} & Server for the backup\\
+\cellcolor{white}		& \textbf{Postcondition success} & Successful backup in periodical intervals\\
+\cellcolor{white}		& \textbf{Postcondition failure} & A notification will be send to the administrator of the system\\
+\cellcolor{white}		& \textbf{Trigger} & Configured time to start a backup\\
+\cellcolor{white}		& \textbf{Sequence} & Start Backup\\
+\cellcolor{white}		& & Place backup on the backup server\\
+\cellcolor{white}\hfill \\
 \end{tabular}
 
 \section{External}
@@ -451,6 +514,7 @@ BookExpress has a restricted rights management with several roles (see \ref{sec:
 
 \noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
+<<<<<<< HEAD
 /PF04/	& \textbf{Process} & Login\\
 		& \textbf{Actor(s)} & Book store/publisher\\
 		& \textbf{Category} & Must have\\
@@ -466,10 +530,27 @@ BookExpress has a restricted rights management with several roles (see \ref{sec:
 		& & Login successful or display an error message in case of unsuccessful login
 		
 \hfill \\
+=======
+\cellcolor{white}/PF03/	& \textbf{Process} & Login\\
+\cellcolor{white}		& \textbf{Actor(s)} & Book store/publisher\\
+\cellcolor{white}		& \textbf{Category} & Must have\\
+\cellcolor{white}		& \textbf{Description}	 & The user logs on with his PIN and password\\
+\cellcolor{white}		& \textbf{Goal} & Provide a fully functional system to the user\\
+\cellcolor{white}		& \textbf{Preconditions} & Existing account\\
+\cellcolor{white}		& \textbf{Postcondition success} & Successful login\\
+\cellcolor{white}		& \textbf{Postcondition failure} & Unsuccessful login caused by a wrong PIN or password\\
+\cellcolor{white}		& \textbf{Trigger} & Menu Option "Login"\\
+\cellcolor{white}		& \textbf{Sequence} & Enter PIN\\
+\cellcolor{white}		& & Enter password\\
+\cellcolor{white}		& & Validity of data is checked by the System\\
+\cellcolor{white}		& & Login successful or display an error message in case of unsuccessful login\\
+\cellcolor{white}\hfill \\
+>>>>>>> changed glossaries, margin width, added cell colouring
 \end{tabular}
 
 \noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
+<<<<<<< HEAD
 /PF05/	& \textbf{Process} & Update account information\\
 		& \textbf{Actor(s)} & Book store/publisher\\
 		& \textbf{Category} & Must have\\
@@ -484,10 +565,26 @@ BookExpress has a restricted rights management with several roles (see \ref{sec:
 		& & Submit edited data to the server\\
 		
 \hfill \\
+=======
+\cellcolor{white}/PF04/	& \textbf{Process} & Update account information\\
+\cellcolor{white}		& \textbf{Actor(s)} & Book store/publisher\\
+\cellcolor{white}		& \textbf{Category} & Must have\\
+\cellcolor{white}		& \textbf{Description}	 & The user is able to edit/update its account information (e.g. address, correspondent etc.)\\
+\cellcolor{white}		& \textbf{Goal} & User is able to update changes\\
+\cellcolor{white}		& \textbf{Preconditions} & User is logged on\\
+\cellcolor{white}		& \textbf{Postcondition success} & Updating the account succeeded\\
+\cellcolor{white}		& \textbf{Postcondition failure} & Updating the account failed\\
+\cellcolor{white}		& \textbf{Trigger} & Menu option "edit\\
+\cellcolor{white}		& \textbf{Sequence} & Edit specific data\\
+\cellcolor{white}		& & System checks correctness of data (e.g. email format etc.)\\
+\cellcolor{white}		& & Submit edited data to the server\\
+\cellcolor{white}\hfill \\
+>>>>>>> changed glossaries, margin width, added cell colouring
 \end{tabular}
 
 \noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
+<<<<<<< HEAD
 /PF06/	& \textbf{Process} & Logout\\
 		& \textbf{Actor(s)} & Book store/publisher\\
 		& \textbf{Category} & Must have\\
@@ -500,6 +597,20 @@ BookExpress has a restricted rights management with several roles (see \ref{sec:
 		& \textbf{Sequence} & User confirms to log out\\
 		& & The system terminates the current session\\
 \hfill \\
+=======
+\cellcolor{white}/PF05/	& \textbf{Process} & Logout\\
+\cellcolor{white}		& \textbf{Actor(s)} & Book store/publisher\\
+\cellcolor{white}		& \textbf{Category} & Must have\\
+\cellcolor{white}		& \textbf{Description}	 & User logs out\\
+\cellcolor{white}		& \textbf{Goal} & User is logged out\\
+\cellcolor{white}		& \textbf{Preconditions} & User is logged in\\
+\cellcolor{white}		& \textbf{Postcondition success} & Successful logout\\
+\cellcolor{white}		& \textbf{Postcondition failure} & Unsuccessful logout caused by an abort of the user\\
+\cellcolor{white}		& \textbf{Trigger} & Menu option "Logout"\\
+\cellcolor{white}		& \textbf{Sequence} & User confirms to log out\\
+\cellcolor{white}		& & The system terminates the current session\\
+\cellcolor{white}\hfill \\
+>>>>>>> changed glossaries, margin width, added cell colouring
 \end{tabular}
 
 
@@ -507,116 +618,112 @@ BookExpress has a restricted rights management with several roles (see \ref{sec:
 
 \noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
-	 /PF40/	& \textbf{Process} & Search for a book/show catalogue\\ 
-		& \textbf{Category} & Must have\\
-		& \textbf{Actor(s)} & Client\\ 
-		& \textbf{Description}	 & Client searches for a book to add it to his order\\ 
-		& \textbf{Goal} & Searching for a book succeeded\\
-		& \textbf{Preconditions} & Client is logged into the system\\
-		& \textbf{Postcondition success} & Book is being found\\
-		& & Display items and options\\
-		& \textbf{Postcondition failure} & Book could not be found\\
-		& & Display notification\\
-		& \textbf{Trigger} & Menu option "find books" (Software)\\
-		& \textbf{Sequence} & Enter ISBN/title/author/genre in search bar\\
-		& & Hit the "Search"-Button\\
-		& & Choose book from list to add it to the order\\
-\hfill \\
+\cellcolor{white}	 /PF40/	& \textbf{Process} & Search for a book/show catalogue\\ 
+\cellcolor{white}		& \textbf{Category} & Must have\\
+\cellcolor{white}		& \textbf{Actor(s)} & Client\\ 
+\cellcolor{white}		& \textbf{Description}	 & Client searches for a book to add it to his order\\ 
+\cellcolor{white}		& \textbf{Goal} & Searching for a book succeeded\\
+\cellcolor{white}		& \textbf{Preconditions} & Client is logged into the system\\
+\cellcolor{white}		& \textbf{Postcondition success} & Book is being found\\
+\cellcolor{white}		& & Display items and options\\
+\cellcolor{white}		& \textbf{Postcondition failure} & Book could not be found\\
+\cellcolor{white}		& & Display notification\\
+\cellcolor{white}		& \textbf{Trigger} & Menu option "find books" (Software)\\
+\cellcolor{white}		& \textbf{Sequence} & Enter ISBN/title/author/genre in search bar\\
+\cellcolor{white}		& & Hit the "Search"-Button\\
+\cellcolor{white}		& & Choose book from list to add it to the order\\
+\cellcolor{white}\hfill \\
 \end{tabular}
 
 \noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
-/PF17/	& \textbf{Process} & Book Store Order\\ 
-		& \textbf{Category} & Must have\\
-		& \textbf{Actor(s)} & Book Store Employee\\ 
-		& \textbf{Description}	 & The Book Store orders a book from BookExpress.
+\cellcolor{white}/PF17/	& \textbf{Process} & Book Store Order\\ 
+\cellcolor{white}		& \textbf{Category} & Must have\\
+\cellcolor{white}		& \textbf{Actor(s)} & Book Store Employee\\ 
+\cellcolor{white}		& \textbf{Description}	 & The Book Store orders a book from BookExpress.
 This can either happen through a constant connection where every order is individually processed or the store can choose to collect orders internally and send them
 as one big order every day.\\ 
-		& \textbf{Goal} & Order is placed\\
-		& \textbf{Preconditions} & Client is successfully logged into the web interface\\
-		& & Connection to BookExpress server is established\\
-		& \textbf{Postcondition success} & Order is delivered to BookExpress  and added to the order queue\\
-		& \textbf{Postcondition failure} & Order is saved as draft and client gets a notification\\
-		& \textbf{Trigger} & Menu Option "create new order" (Web interface)\\
-		& \textbf{Sequence} & Client adds books to order (via book search or ISBN)\\
-		& & Client specifies amount for every book\\
-		& & Client submits order to server\\
-		& & Order is in the order queue\\
-\hfill \\
+\cellcolor{white}		& \textbf{Goal} & Order is placed\\
+\cellcolor{white}		& \textbf{Preconditions} & Client is successfully logged into the web interface\\
+\cellcolor{white}		& & Connection to BookExpress server is established\\
+\cellcolor{white}		& \textbf{Postcondition success} & Order is delivered to BookExpress  and added to the order queue\\
+\cellcolor{white}		& \textbf{Postcondition failure} & Order is saved as draft and client gets a notification\\
+\cellcolor{white}		& \textbf{Trigger} & Menu Option "create new order" (Web interface)\\
+\cellcolor{white}		& \textbf{Sequence} & Client adds books to order (via book search or ISBN)\\
+\cellcolor{white}		& & Client specifies amount for every book\\
+\cellcolor{white}		& & Client submits order to server\\
+\cellcolor{white}		& & Order is in the order queue\\
+\cellcolor{white}\hfill \\
 \end{tabular}
 
 \noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
-/PF18/	& \textbf{Process} & Change order\\
-		& \textbf{Actor(s)} & Book store\\
-		& \textbf{Category} & Must have\\
-		& \textbf{Description}	 & As long as the order is not validated, the user can change information\\
-		& \textbf{Goal} & User can correct an order\\
-		& \textbf{Preconditions} & Order exists and user is logged in\\
-		& \textbf{Postcondition success} & Order information successfully changed\\
-		& \textbf{Postcondition failure} & Order information could not be changed because the order is already being validated\\
-		& \textbf{Trigger} & Menu option "Change order"\\
-		& \textbf{Sequence} & Select order to be changed\\
-		& & System checks validity status of the order\\
-		& & If not validated, user can change order information\\
-		& & Submit changes to the System\\
-		& & User receives a confirmation mail\\
-		
-\hfill \\
+\cellcolor{white}/PF18/	& \textbf{Process} & Change order\\
+\cellcolor{white}		& \textbf{Actor(s)} & Book store\\
+\cellcolor{white}		& \textbf{Category} & Must have\\
+\cellcolor{white}		& \textbf{Description}	 & As long as the order is not validated, the user can change information\\
+\cellcolor{white}		& \textbf{Goal} & User can correct an order\\
+\cellcolor{white}		& \textbf{Preconditions} & Order exists and user is logged in\\
+\cellcolor{white}		& \textbf{Postcondition success} & Order information successfully changed\\
+\cellcolor{white}		& \textbf{Postcondition failure} & Order information could not be changed because the order is already being validated\\
+\cellcolor{white}		& \textbf{Trigger} & Menu option "Change order"\\
+\cellcolor{white}		& \textbf{Sequence} & Select order to be changed\\
+\cellcolor{white}		& & System checks validity status of the order\\
+\cellcolor{white}		& & If not validated, user can change order information\\
+\cellcolor{white}		& & Submit changes to the System\\
+\cellcolor{white}		& & User receives a confirmation mail\\
+\cellcolor{white}\hfill \\
 \end{tabular}
 
 \noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
-/PF19/	& \textbf{Process} & Cancel Order\\
-		& \textbf{Actor(s)} & Book Store Employee\\
-		& \textbf{Category} & Must have\\
-		& \textbf{Description}	 & The employee at the book store can cancel the order if it hasn?t been shipped yet\\
-		& \textbf{Goal} & Current orders can be cancelled\\
-		& \textbf{Preconditions} & Order exists\\
-		& \textbf{Postcondition success} & Order successfully cancelled. Book Store receives a confirmation mail\\
-		& \textbf{Postcondition failure} & Book Store receives a problem report\\
-		& \textbf{Trigger} & Menu option "cancel order"\\
-		& \textbf{Sequence} & Select order to cancel\\
-		& & Check whether order isn't shipped yet\\
-		& & Cancel order\\
-		
-\hfill \\
+\cellcolor{white}/PF19/	& \textbf{Process} & Cancel Order\\
+\cellcolor{white}		& \textbf{Actor(s)} & Book Store Employee\\
+\cellcolor{white}		& \textbf{Category} & Must have\\
+\cellcolor{white}		& \textbf{Description}	 & The employee at the book store can cancel the order if it hasn?t been shipped yet\\
+\cellcolor{white}		& \textbf{Goal} & Current orders can be cancelled\\
+\cellcolor{white}		& \textbf{Preconditions} & Order exists\\
+\cellcolor{white}		& \textbf{Postcondition success} & Order successfully cancelled. Book Store receives a confirmation mail\\
+\cellcolor{white}		& \textbf{Postcondition failure} & Book Store receives a problem report\\
+\cellcolor{white}		& \textbf{Trigger} & Menu option "cancel order"\\
+\cellcolor{white}		& \textbf{Sequence} & Select order to cancel\\
+\cellcolor{white}		& & Check whether order isn't shipped yet\\
+\cellcolor{white}		& & Cancel order\\
+\cellcolor{white}\hfill \\
 \end{tabular}
 
 \noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
-/PF50/	& \textbf{Process} & Tracking System\\
-		& \textbf{Actor(s)} & Book Store Employee\\
-		& \textbf{Category} & Must have\\
-		& \textbf{Description}	 & The employee at the book store can look up at which stage his order is right now, e.g. processing or shipping to BookExpress/the book store.\\
-		& \textbf{Goal} & Look up order information/status\\
-		& \textbf{Preconditions} & Order exists\\
-		& \textbf{Postcondition success} & Employee receives information/status of order\\
-		& \textbf{Postcondition failure} & -\\
-		& \textbf{Trigger} & Menu option "tracking system"\\
-		& \textbf{Sequence} & Select order to track\\
-		
-\hfill \\
+\cellcolor{white}/PF50/	& \textbf{Process} & Tracking System\\
+\cellcolor{white}		& \textbf{Actor(s)} & Book Store Employee\\
+\cellcolor{white}		& \textbf{Category} & Must have\\
+\cellcolor{white}		& \textbf{Description}	 & The employee at the book store can look up at which stage his order is right now, e.g. processing or shipping to BookExpress/the book store.\\
+\cellcolor{white}		& \textbf{Goal} & Look up order information/status\\
+\cellcolor{white}		& \textbf{Preconditions} & Order exists\\
+\cellcolor{white}		& \textbf{Postcondition success} & Employee receives information/status of order\\
+\cellcolor{white}		& \textbf{Postcondition failure} & -\\
+\cellcolor{white}		& \textbf{Trigger} & Menu option "tracking system"\\
+\cellcolor{white}		& \textbf{Sequence} & Select order to track\\
+\cellcolor{white}\hfill \\
 \end{tabular}
 
 \subsection{Publishers}
 
 \noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
-/PF60/	& \textbf{Process} & Inventory maintenance\\
-		& \textbf{Actor(s)} & Publisher\\
-		& \textbf{Category} & Must have\\
-		& \textbf{Description}	 & Publishers can update their inventory list
+\cellcolor{white}/PF60/	& \textbf{Process} & Inventory maintenance\\
+\cellcolor{white}		& \textbf{Actor(s)} & Publisher\\
+\cellcolor{white}		& \textbf{Category} & Must have\\
+\cellcolor{white}		& \textbf{Description}	 & Publishers can update their inventory list
 (i.e. the list of available books) either via mail or using the direct connection over the web-based interface.\\
-		& \textbf{Goal} & Updated inventory list\\
-		& \textbf{Preconditions} & Publisher exists\\
-		& \textbf{Postcondition success} & Send success mail to publisher\\
-		& \textbf{Postcondition failure} & Send problem report to publisher\\
-		& \textbf{Trigger} & Menu option "inventory maintenance" (Software) or via mail\\
-		& \textbf{Sequence} & Edit inventory list (i.e with TODO book search)\\
-		& & Submit list to server
-		
-\hfill \\
+\cellcolor{white}		& \textbf{Goal} & Updated inventory list\\
+\cellcolor{white}		& \textbf{Preconditions} & Publisher exists\\
+\cellcolor{white}		& \textbf{Postcondition success} & Send success mail to publisher\\
+\cellcolor{white}		& \textbf{Postcondition failure} & Send problem report to publisher\\
+\cellcolor{white}		& \textbf{Trigger} & Menu option "inventory maintenance" (Software) or via mail\\
+\cellcolor{white}		& \textbf{Sequence} & Edit inventory list (i.e with TODO book search)\\
+\cellcolor{white}		& & Submit list to server\\
+\cellcolor{white}\hfill \\
 \end{tabular}
 
 
@@ -625,21 +732,21 @@ as one big order every day.\\
 \subsection{Book Stores}
 
 \rowcolors{1}{tableEven}{tableOdd}
-\begin{tabular}{llp{8cm}}
+\begin{tabular}{llp{8.75cm}}
 \cellcolor{white}/PD20/	& \textbf{Data}			& Book Store Data\\
 \cellcolor{white}		& \textbf{Composition}	& Name, PIN, Address, Correspondent, E-Mail Address, Phone Number, Contract Data\\
 \cellcolor{white}		& \textbf{Size}		& approx 10,000\\
 \cellcolor{white}		& \textbf{Traffic}		& Low\\
 \end{tabular} 
 \subsection{Publishers}
-\begin{tabular}{llp{8cm}}
+\begin{tabular}{llp{8.75cm}}
 \cellcolor{white}/PD30/	& \textbf{Data}			& Publisher Data\\
 \cellcolor{white}		& \textbf{Composition}	& Name, PIN, Address, Correspondent, E-Mail Address, Phone Number, Contract Data\\
 \cellcolor{white}		& \textbf{Size}		& approx 15,000\\
 \cellcolor{white}		& \textbf{Traffic}		& Low\\
 \end{tabular} 
 \section{Order Data}
-\begin{tabular}{llp{8cm}}
+\begin{tabular}{llp{8.75cm}}
 \cellcolor{white}/PD40/	& \textbf{Data}			& Order Data\\
 \cellcolor{white}		& \textbf{Composition}	& PIN, ISBN, Amount, Price, Date, Current Ordering State\\
 \cellcolor{white}		& \textbf{Size}		& 500,000\\
@@ -652,14 +759,14 @@ as one big order every day.\\
 \end{tabular} 
 \section{Internal Data}
 \subsection{Book Stock}
-\begin{tabular}{llp{8cm}}
+\begin{tabular}{llp{8.75cm}}
 \cellcolor{white}/PD10/	& \textbf{Data}			& Book Data\\
 \cellcolor{white}		& \textbf{Composition}	& ISBN, UPC/EAN, Title, Author, Publisher, Availability\\
 \cellcolor{white}		& \textbf{Size}		& approx 1,500,000\\
 \cellcolor{white}		& \textbf{Traffic}		& Average\\
 \end{tabular} 
 \subsection{Truck Information}
-\begin{tabular}{llp{8cm}}
+\begin{tabular}{llp{8.75cm}}
 \cellcolor{white}/PD50/	& \textbf{Data}			& Truck Fleet Data\\
 \cellcolor{white}		& \textbf{Composition}	& Driver, Registration Number, Status\\
 \cellcolor{white}		& \textbf{Size}		& 1,000\\
@@ -669,28 +776,28 @@ as one big order every day.\\
 \chapter{Product Performance}
 \section{System}
 \noindent
-\begin{tabular}{llp{8cm}}
+\begin{tabular}{llp{8.75cm}}
 \cellcolor{white}/PP10/	& \textbf{Type}			& System (Web Interface)\\
 \cellcolor{white}		& \textbf{Description}	& The Web Interface should be always reachable during business hours, but also 24/7 for quick changes. The availability outside business hours can be less than 100\% but should not fall below 99.7\%.\\
 \cellcolor{white}		\hfill \\
 \end{tabular}
 
 \noindent
-\begin{tabular}{llp{8cm}}
+\begin{tabular}{llp{8.75cm}}
 \cellcolor{white}/PP30/	& \textbf{Type}			& System (Order Processing)\\
 \cellcolor{white}		& \textbf{Description}	& The order processing should always be reachable, confirming (or informing about, in case of error) any order.\\
 \cellcolor{white}		\hfill \\
 \end{tabular}
 
 \noindent
-\begin{tabular}{llp{8cm}}
+\begin{tabular}{llp{8.75cm}}
 \cellcolor{white}/PP40/	& \textbf{Type}			& System\\
 \cellcolor{white}		& \textbf{Description}	& The System in general should be reliable and responsive all the time, taking not longer than 1-3 seconds for any request.\\
 \cellcolor{white}		\hfill \\
 \end{tabular}
 
 \noindent
-\begin{tabular}{llp{8cm}}
+\begin{tabular}{llp{8.75cm}}
 \cellcolor{white}/PP50/	& \textbf{Type}			& System\\
 \cellcolor{white}		& \textbf{Description}	& The response time criteria should also be met, when the processing limit of max. 2.000 simultaneous orders is reached.\\
 \cellcolor{white}		\hfill \\
@@ -699,14 +806,14 @@ as one big order every day.\\
 \section{Database}
 
 \noindent
-\begin{tabular}{llp{8cm}}
+\begin{tabular}{llp{8.75cm}}
 \cellcolor{white}/PP20/	& \textbf{Type}			& Database (DB Connection)\\
 \cellcolor{white}		& \textbf{Description}	& A Connection to the database should never be lost, an average uptime of 99.99\% has to be reached to satisfy any part of the system, currently needing data.\\
 \cellcolor{white}		\hfill \\
 \end{tabular}
 
 \noindent
-\begin{tabular}{llp{8cm}}
+\begin{tabular}{llp{8.75cm}}
 \cellcolor{white}/PP21/	& \textbf{Type}			& Database (DB Backup)\\
 \cellcolor{white}		& \textbf{Description}	& A database backup has to be initiated meeting the guidelines on general backup, also ensuring a consistent and complete history of any processed orders and any critical data.\\
 \cellcolor{white}		\hfill \\
@@ -714,27 +821,29 @@ as one big order every day.\\
 
 \section{Security}
 \noindent
-\begin{tabular}{llp{8cm}}
+\begin{tabular}{llp{8.75cm}}
 \cellcolor{white}/PP60/	& \textbf{Type}			& Security (Stock Availability)\\
 \cellcolor{white}		& \textbf{Description}	& Stock items should always be able to be ordered, ensuring fast delivery on order.\\
 \cellcolor{white}		\hfill \\
 \end{tabular}
 
 \noindent
-\begin{tabular}{llp{8cm}}
+\begin{tabular}{llp{8.75cm}}
 \cellcolor{white}/PP61/	& \textbf{Type}			& Security (Connection)\\
 \cellcolor{white}		& \textbf{Description}	& Any connection issued to the system and between system components should be at least encrypted with 256 bit SSL.\\
 \cellcolor{white}		\hfill \\
 \end{tabular}
 
 \noindent
-\begin{tabular}{llp{8cm}}
+\begin{tabular}{llp{8.75cm}}
 \cellcolor{white}/PP62/	& \textbf{Type}			& Security (Database)\\
 \cellcolor{white}		& \textbf{Description}	& The database should be on an encrypted device, securing personal customer data.\\
 \cellcolor{white}		\hfill \\
 \end{tabular}
 
 \chapter{Quality Requirements}
+
+\begin{center}
 
 \rowcolors{1}{tableEven}{tableOdd}
 \begin{tabular}{|lllll|}
@@ -771,33 +880,35 @@ exchangeability &  &  &  & \checkmark \\
 \hline
 \end{tabular}
 
+\end{center}
+
 \chapter{User Interface}
 Description of user interface elements for the client application and the web interface. Also a brief specification of the user rights management.
 
 \section{Client Application (for clerks)}
 \noindent
-\begin{tabular}{llp{8cm}}
+\begin{tabular}{llp{8.75cm}}
 \cellcolor{white}/U10/	& \textbf{Name}			& Interface\\
 \cellcolor{white}		& \textbf{Description}	& A clean and simple interface for the application should be developed, following BookExpress guidelines incorporated with recognizable and consistent menu structures and nomenclature. Integrating Drag\&Drop functionality into the interface to catch text- and file drops is also a necessity.\\
 \cellcolor{white}		\hfill \\
 \end{tabular}
 
 \noindent
-\begin{tabular}{llp{8cm}}
+\begin{tabular}{llp{8.75cm}}
 \cellcolor{white}/U11/	& \textbf{Name}			& Input Handling\\
 \cellcolor{white}		& \textbf{Description}	& Much like in the web interface the client should be always informed when his data might be inconsistent or contain errors - sanity checks should display information where necessary. Also an auto completion should appear where appropriate to support the user - this should also apply to Drag\&Dropped input.\\
 \cellcolor{white}		\hfill \\
 \end{tabular}
 
 \noindent
-\begin{tabular}{llp{8cm}}
+\begin{tabular}{llp{8.75cm}}
 \cellcolor{white}/U12/	& \textbf{Name}			& Performance\\
 \cellcolor{white}		& \textbf{Description}	& The application should have a maximum boot time of 5 seconds, loading more complex data in background threads to speed up the process. The application should for no other task take longer than 2 to 3 seconds, but if an delay is experienced through locked CPU, full memory, network delays or other means which cannot be affected by the application itself, there should be an appropriate message indicating that the application is experiencing unexpected delays.\\
 \cellcolor{white}		\hfill \\
 \end{tabular}
 
 \noindent
-\begin{tabular}{llp{8cm}}
+\begin{tabular}{llp{8.75cm}}
 \cellcolor{white}/U13/	& \textbf{Name}			& Data Consistency\\
 \cellcolor{white}		& \textbf{Description}	& The application should make auto saves and save its working data as often as possible from memory to the hard drive to be able to recover from an unexpected system failure or experienced error. Also there should be a revisioning system implemented to handle wrongly entered data and make reverting to previous states as easy as possible. There should be at least 25 steps of retention.\\
 \cellcolor{white}		\hfill \\
@@ -805,28 +916,28 @@ Description of user interface elements for the client application and the web in
 
 \section{Web Interface (for customers)}
 \noindent
-\begin{tabular}{llp{8cm}}
+\begin{tabular}{llp{8.75cm}}
 \cellcolor{white}/U20/	& \textbf{Name}			& Interface\\
 \cellcolor{white}		& \textbf{Description}	& An easy to use interface should be developed through clear structures and responsible use of styling elements, especially an appropriate amount of whitespace.\\
 \cellcolor{white}		\hfill \\
 \end{tabular}
 
 \noindent
-\begin{tabular}{llp{8cm}}
+\begin{tabular}{llp{8.75cm}}
 \cellcolor{white}/U21/	& \textbf{Name}			& Compatibility\\
 \cellcolor{white}		& \textbf{Description}	& New web technologies such as \acrshort{html}5, \acrshort{css}3 and modern \gls{js} libraries like jQuery or Dojo should be used to deliver an appealing user experience, but downwards compatibility for different browsers has to be ensured also. The major browsers should be supported to at least 1 previous major version, except \gls{ie} which should only be supported from IE9 onwards.\\
 \cellcolor{white}		\hfill \\
 \end{tabular}
 
 \noindent
-\begin{tabular}{llp{8cm}}
+\begin{tabular}{llp{8.75cm}}
 \cellcolor{white}/U22/	& \textbf{Name}			& Error Handling\\
 \cellcolor{white}		& \textbf{Description}	& A graceful error handling should be realised through means of various \gls{js} technologies displaying error messages instantly and where appropriate, e.g. directly beneath or adjanced[wie schreibt man das] to where the error occured, or if it is an error returned from the server on the location for general error and information messages. Those messages should be short and easy to understand, massively long error codes like introduced in Microsoft Windows have to be avoided.\\
 \cellcolor{white}		\hfill \\
 \end{tabular}
 
 \noindent
-\begin{tabular}{llp{8cm}}
+\begin{tabular}{llp{8.75cm}}
 \cellcolor{white}/U23/	& \textbf{Name}			& Input Handling\\
 \cellcolor{white}		& \textbf{Description}	& Whenever an user has to input data, several client and server based sanity checks should be employed to ensure consistent data. The client should, whenever appropriate, be supported by auto completion or suggest drop downs, speeding up data input and search processes.\\
 \cellcolor{white}		\hfill \\
@@ -836,7 +947,7 @@ Description of user interface elements for the client application and the web in
 \label{sec:rights-management}
 
 \noindent
-\begin{tabular}{llp{8cm}}
+\begin{tabular}{llp{8.75cm}}
 \cellcolor{white}/U30/	& \textbf{Name}			& Roles\\
 \cellcolor{white}		& \textbf{Description}	& Different types of users can perform different actions, this should be reflected by appropriate "views" for every user type.\\
 \cellcolor{white}		& \textbf{Role}			& \textbf{Book Store Client}\\
@@ -942,12 +1053,21 @@ The product can be divided into 1 server sub product and 2 client sub products w
 The server application provides every interface with data, processes new, incoming data and reads and writes to the database. This product component provides all necessary functionality to operate the clients and data management. It has to be implemented from the start.
 
 \section{Web Interface / Web Service}
-The web interface provides the 
+The web interface provides the book stores and publishers with a direct connection to the BookExpress service and is a crucial part of the service update. All major functionality should be implemented from the start. A development with dummy data is necessary, though, because the server application is written at the same time and cannot - on development - deliver the data.
 
 \section{Client Application}
+BookExpress employees use the client application to perform maintenance tasks for book shops and publishers, like creating new accounts or managing data. This application is also necessary right from the start, but some enhancements like bar code implementation, truck tracking system integration or optical signature processing can be implemented in a later version.
 
 \chapter{Additional Specifications and Stipulations}
+\begin{itemize}
+	\item The client application should be compliant to the norm ISO~9241-110 (formerly ISO~9241-10/1996)
+	\item Test and dummy data for developing purposes should be provided, or at least an example should be given from which this kind of data can be derived whilst development
+	\item Networking and connection to the development servers should be ensured by the client or development team (or an external contractor)
+\end{itemize}
+
 \chapter{Appendices}
+\addcontentsline{toc}{section}{Glossary}
+\addcontentsline{toc}{section}{Acronyms}
 \printglossaries
 
 \end{document}
