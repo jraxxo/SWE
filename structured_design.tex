@@ -110,15 +110,9 @@
 
 \makeglossaries
 
-\newglossaryentry{pin}{name=PIN,description={Personal Identification Number},plural=PINs, first={Personal Identification Number (PIN)}}
+\newglossaryentry{mvc}{name=MVC,description={Model View Controller},plural=MVCs, first={Model View Controller (MVC)}}
 
 \newacronym{led}{LED}{light-emitting diode}
-\newacronym{html}{HTML}{Hypertext Markup Language}
-\newacronym{css}{CSS}{Cascade Stylesheet}
-\newacronym{js}{JS}{JavaScript}
-\newacronym{ie}{IE}{InternetExplorer}
-\newacronym{vm}{VM}{Virtual Machine}
-\newacronym{ide}{IDE}{Integrated Development Environment}
 
 
 \begin{document}
@@ -160,7 +154,26 @@ The software architecture of a system is the set of structures needed to reason 
 In this chapter the programming pattern which the software architect has to implement is discussed at first, then common techniques for standardizing the code and enhancing readability and at last the implementation of the pattern into the software solution itself.
 
 \section{Programming Pattern}
+The "BookExpress" software should implement a simple \gls{mvc} pattern separating the user visible output from the internal data processing structures much like CSS separates the styling of a webpage from the HTML markup.
+
+The "Model" part of this set up fetches data from databases and holds them in objects - it is essentially the "data storage" of the application. The controller and view must not make any database queries, all data required for the specific controller/view has to be provided by the model itself, which in turn does make the necessary database requests. This can speed up the data retrieving process with smart caching times on the model part and also ensures a higher level of security by minimizing the chance of SQL-Injections possibly performed on the view.
+
+The "View" is essentially anything the user gets to see on his side of the application - the user interface. It also is the only point where the user can interact with the application, evaluating and providing data. The view itself can only retrieve data from the model, it can never make direct database lookups.
+
+The "Controller" holds the business and processing logic of the software. It decides which view should be displayed to the user and which model could be used. Any data sent from the view/the user is processed by the controller and sent to the appropriate models.
+
+In the "BookExpress" software there are two different implementations of this \gls{mvc} pattern. The web interface is the view component for the book shops and publishers, they interact with this view over their web browsers.
+For this view, the controller is implemented on the application server as a web server, providing requested views and processing delivered input data. The communication between the view and controller is made over the standard network protocol tcp/ip and the data transmitted varies from standard HTML/text pages to compressed JSON data, for asynchronous and dynamic client view updates.
+
+The "Model" in the first - and also in the second - set up is the application server itself, on which the web server runs. The application server is on the same machine as the web server, but logically a separate entity; it has access to the database server, which can also run on the same hardware, but also could run on a different machine. The data transmitted from model to controller and vice versa is composed of data objects transmitted binary for instant usage on the individual server; we do not have to compress data here, or serialize it, for the lack of data travelling distance.
+
+In the second case, when the "BookExpress" employees use the client application software, the \gls{mvc} varies a bit from the web interface implementation. Here the view \textbf{and} controller are both implemented in the application software itself, only the model is on the application server in an different location. Therefore the data transmitted from controller to model and vice versa has to be compressed and serialized, utilizing JSON and gzip compression to accomplish fast serialisation and minimisation for faster response times and as little as possible data transferred.
+
+TODO: Add an image illustrating this model
+
 \section{Programming Techniques}
+For standardisations 
+
 \section{Implementation}
 \subsection{Data Storage (Model)}
 \subsection{Web Interface (View)}
