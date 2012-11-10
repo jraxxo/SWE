@@ -20,11 +20,12 @@
 \\
 Client File & = & \{Client Data\} \\
 \\
-Client Data & = & PIN\\
+Client Data & = & Client PIN\\
 &  & + Address\\
 &  & + Correspondent\\
 &  & + Contract Data\\
 &  & + \{Order\}\\
+&  & + \{Invoice\}\\
 &  & + (Sales Volume)\\
 &  & + Login Data \\
 & = & Publisher Data\\
@@ -44,8 +45,11 @@ Name & = & Form Of Address\\
 &  & + Forename\\
 &  & + Surname\\
 &  & + (Trade Name)\\
+& = & Author\\
+& = & Publisher\\
+& = & Driver\\
 \\
-Login Data & = & PIN\\
+Login Data & = & [Client PIN $|$ Employee PIN]\\
 &  & + Password \\
 \end{tabular}
 
@@ -56,7 +60,7 @@ Login Data & = & PIN\\
 \\
 Order & = & Order Data\\
 \\
-Order Data & = & PIN\\
+Order Data & = & Order PIN\\
 &  & + 1\{Article\}\\
 &  & + Order Status\\
 &  & + Date \\
@@ -77,7 +81,8 @@ Date & = & Hour\\
 \\
 Stock & = & \{Article\} \\
 \\
-Article & = & Book Data+ Amount\\
+Article & = & Book Data\\
+&  & + Amount\\
 \\
 Book Data & = & [ISBN $|$ UPC $|$ EAN]\\
 &  & + 1\{Author\}\\
@@ -86,13 +91,9 @@ Book Data & = & [ISBN $|$ UPC $|$ EAN]\\
 &  & + (Article Cover)\\
 &  & + Price\\
 &  & + Availability\\
-\\
-Author & = & Name \\
-\\
-Publisher & = & Name \\
 \end{tabular}
 
-\subsubsection{Truck Informaton}
+\subsubsection{Truck Information}
 
 \begin{tabular}{p{3.5cm}p{0.5cm}p{8.5cm}}
 \\
@@ -100,9 +101,39 @@ Truck Fleet Data & = & Driver\\
 &  & + Registration Number\\
 &  & + Truck Status \\
 \\
-Driver & = & Name \\
+Truck Status & = & [Boxing $|$ Parcel Sorting Centre $|$ Delivering $|$ Traffic Jam $|$ Delivered] \\
+\end{tabular}
+
+\subsubsection{User Data}
+\begin{tabular}{p{3.5cm}p{0.5cm}p{8.5cm}}
 \\
-Truck Status & = & [Boxing $|$ Delivering $|$ Traffic Jam $|$ Delivered] \\
+Contract Data & = & Contract PIN\\
+& & + Signing Date\\
+& & + [Client Data $|$ Employee Data]\\
+& & + File On Server\\
+\\
+Signing Date & = & Day\\
+&  & + Month\\
+&  & + Year\\
+\\
+Invoice & = & Client Data\\
+&  & + Order\\
+&  & + Invoice PIN\\
+\end{tabular}
+
+\subsubsection{Employee}
+
+\begin{tabular}{p{3.5cm}p{0.5cm}p{8.5cm}}
+\\
+Employee File & = & \{Employee Data\}\\
+\\
+Employee Data & = & Employee PIN\\
+&  & + Address\\
+&  & + Contract Data\\
+&  & + Login Data\\
+&  & + Administrator\\
+\\
+Administrator & = & [True $|$ False]
 \end{tabular}
 
 \end{document}
