@@ -266,13 +266,13 @@ BookExpress has a restricted rights management with several roles (see \ref{sec:
 \cellcolor{white}		& \textbf{Goal} & Order is placed in an order queue\\
 \cellcolor{white}		& \textbf{Preconditions} & Client exists in database\\
 \cellcolor{white}		& & Client is authorized\\
-\cellcolor{white}		& \textbf{Postcondition success} & Order is placed in an order queue\\
+\cellcolor{white}		& \textbf{Postcondition success} & Order status is set to "Processing"\\
 \cellcolor{white}		& \textbf{Postcondition failure} & -\\
 \cellcolor{white}		& \textbf{Trigger} & Client initiates order process by calling an BookExpress employee\\
 \cellcolor{white}		& & BookExpress employee triggers manual order process\\
 \cellcolor{white}		& \textbf{Sequence} & BookExpress employee selects client in Software\\
 \cellcolor{white}		& & BookExpress employee enters ordered book into the system\\
-\cellcolor{white}		& & Order is placed in order queue\\
+\cellcolor{white}		& & Set order status to "Processing"\\
 \cellcolor{white}		& & Order notification containing detailed report is sent to client\\
 \cellcolor{white}\hfill \\
 \end{tabular}
@@ -282,12 +282,12 @@ BookExpress has a restricted rights management with several roles (see \ref{sec:
 \cellcolor{white}	 /PF11/	& \textbf{Process} & Validate order\\ 
 \cellcolor{white}		& \textbf{Category} & Must have\\
 \cellcolor{white}		& \textbf{Actor(s)} & System\\ 
-\cellcolor{white}		& \textbf{Description}	 & Order is checked for validation\\ 
+\cellcolor{white}		& \textbf{Description}	 & Order is checked as valid\\ 
 \cellcolor{white}		& \textbf{Goal} & The software checks every order for validation and confirms it to the client. BookExpress knows about every orders validation status.\\
-\cellcolor{white}		& \textbf{Preconditions} & Order is in order queue\\
-\cellcolor{white}		& \textbf{Postcondition success} & Client receives a confirmation email\\
-\cellcolor{white}		& \textbf{Postcondition failure} & Client receives a problem report about invalid order\\
-\cellcolor{white}		& \textbf{Trigger} & Order was placed and exists in order queue\\
+\cellcolor{white}		& \textbf{Preconditions} & Order status is "Processing"\\
+\cellcolor{white}		& \textbf{Postcondition success} & Client receives a confirmation email and order status is set to "Valid"\\
+\cellcolor{white}		& \textbf{Postcondition failure} & Client receives a problem report about invalid order and status is set to "Invalid"\\
+\cellcolor{white}		& \textbf{Trigger} & Order was placed and status is set to "Processing"\\
 \cellcolor{white}		& \textbf{Sequence} & System  gathers details and checks whether order is valid or not\\
 \cellcolor{white}		& & System sends mail to client\\
 \cellcolor{white}\hfill \\
@@ -318,10 +318,10 @@ BookExpress has a restricted rights management with several roles (see \ref{sec:
 \cellcolor{white}		& \textbf{Description}	 & A validated order gets forwarded to Logistics\\ 
 \cellcolor{white}		& \textbf{Goal} & Logistics proceeds processing the order\\
 \cellcolor{white}		& \textbf{Preconditions} & Order is valid\\
-\cellcolor{white}		& \textbf{Postcondition success} & Logistics processes delivery\\
+\cellcolor{white}		& \textbf{Postcondition success} & Logistics processes delivery and order satus is set to "Logistics"\\
 \cellcolor{white}		& \textbf{Postcondition failure} & Order could not be forwarded to Logistics\\
-\cellcolor{white}		& \textbf{Trigger} & Order is validated\\
-\cellcolor{white}		& \textbf{Sequence} & Send order information/details to Logistics\\
+\cellcolor{white}		& \textbf{Trigger} & Order status is set to "Valid"\\
+\cellcolor{white}		& \textbf{Sequence} & Send order information/details to Logistics and set order status to "Logistics"\\
 \cellcolor{white}\hfill \\
 \end{tabular}
 
@@ -332,15 +332,15 @@ BookExpress has a restricted rights management with several roles (see \ref{sec:
 \cellcolor{white}		& \textbf{Category} & Primary\\
 \cellcolor{white}		& \textbf{Description}	 &  The order is send to the book store\\
 \cellcolor{white}		& \textbf{Goal} & Deliver ordered books\\
-\cellcolor{white}		& \textbf{Preconditions} & Order is valid\\
+\cellcolor{white}		& \textbf{Preconditions} & Order status is "Logistics"\\
 \cellcolor{white}		& & Books are available in stock\\
-\cellcolor{white}		& \textbf{Postcondition success} & Order is marked as sent\\
-\cellcolor{white}		& \textbf{Postcondition failure} & Order could not be marked as sent\\
+\cellcolor{white}		& \textbf{Postcondition success} & Order status is set to "Delivery"\\
+\cellcolor{white}		& \textbf{Postcondition failure} & Order could not be marked as "Delivery"\\
 \cellcolor{white}		& \textbf{Trigger} & Forward order to Logistics\\
 \cellcolor{white}		& \textbf{Sequence} & Check if books are in stock\\
 \cellcolor{white}		& & Receive book store information\\
-\cellcolor{white}		& & Sent order to book store\\
-\cellcolor{white}		& & Mark order as in process of delivery\\
+\cellcolor{white}		& & Deliver order to book store\\
+\cellcolor{white}		& & Set order status to "Delivery"\\
 \cellcolor{white}\hfill \\
 \end{tabular}
 
@@ -353,11 +353,11 @@ BookExpress has a restricted rights management with several roles (see \ref{sec:
 \cellcolor{white}		& \textbf{Description}	 & Logistics confirms the correct delivery of an order\\
 \cellcolor{white}		& \textbf{Goal} & Delivery is successful\\
 \cellcolor{white}		& \textbf{Preconditions} & Order is marked as sent\\
-\cellcolor{white}		& \textbf{Postcondition success} & Order is marked as delivered\\
-\cellcolor{white}		& \textbf{Postcondition failure} & Order could not be marked as delivered\\
+\cellcolor{white}		& \textbf{Postcondition success} & Order status is set to "Delivered"\\
+\cellcolor{white}		& \textbf{Postcondition failure} & Order could not be set to "Delivered"\\
 \cellcolor{white}		& \textbf{Trigger} & Deliver order\\
 \cellcolor{white}		& \textbf{Sequence} & Get delivery status\\
-\cellcolor{white}		& & Mark order as delivered\\
+\cellcolor{white}		& & Order status is set to "Delivered"\\
 \cellcolor{white}\hfill \\
 \end{tabular}
 
@@ -382,13 +382,13 @@ BookExpress has a restricted rights management with several roles (see \ref{sec:
 \cellcolor{white}/PF20/	& \textbf{Process} & Create an invoice\\
 \cellcolor{white}		& \textbf{Actor(s)} & System\\
 \cellcolor{white}		& \textbf{Category} & Secondary\\
-\cellcolor{white}		& \textbf{Description}	 & The system creates an invoice after TODO /PF/ order is valid\\
+\cellcolor{white}		& \textbf{Description}	 & The system creates an invoice order status is set to "Valid"\\
 \cellcolor{white}		& \textbf{Goal} & Documenting order and deliver it with invoice\\
 \cellcolor{white}		& \textbf{Preconditions} & Order is valid\\
 \cellcolor{white}		& \textbf{Postcondition success} & Invoice successfully created\\
 \cellcolor{white}		& \textbf{Postcondition failure} & Invoice could not be created\\
 \cellcolor{white}		& & Check information about order\\
-\cellcolor{white}		& \textbf{Trigger} & Order is valid TODO /PF/\\
+\cellcolor{white}		& \textbf{Trigger} & Order status is "Valid"\\
 \cellcolor{white}		& \textbf{Sequence} & Create an entry in database\\
 \cellcolor{white}		& & List the ordered books with price\\
 \cellcolor{white}		& & List tax to invoice\\
@@ -512,17 +512,17 @@ BookExpress has a restricted rights management with several roles (see \ref{sec:
 \cellcolor{white}		& \textbf{Actor(s)} & Book Store Employee\\ 
 \cellcolor{white}		& \textbf{Description}	 & The Book Store orders a book from BookExpress.
 This can either happen through a constant connection where every order is individually processed or the store can choose to collect orders internally and send them
-as one big order every day.\\ 
+as one big order.\\ 
 \cellcolor{white}		& \textbf{Goal} & Order is placed\\
 \cellcolor{white}		& \textbf{Preconditions} & Client is successfully logged into the web interface\\
 \cellcolor{white}		& & Connection to BookExpress server is established\\
-\cellcolor{white}		& \textbf{Postcondition success} & Order is delivered to BookExpress  and added to the order queue\\
+\cellcolor{white}		& \textbf{Postcondition success} & Order is delivered to BookExpress  and the order status is set to "Processing"\\
 \cellcolor{white}		& \textbf{Postcondition failure} & Order is saved as draft and client gets a notification\\
 \cellcolor{white}		& \textbf{Trigger} & Menu Option "create new order" (Web interface)\\
 \cellcolor{white}		& \textbf{Sequence} & Client adds books to order (via book search or ISBN)\\
 \cellcolor{white}		& & Client specifies amount for every book\\
 \cellcolor{white}		& & Client submits order to server\\
-\cellcolor{white}		& & Order is in the order queue\\
+\cellcolor{white}		& & Order status is set to "Processing"\\
 \cellcolor{white}\hfill \\
 \end{tabular}
 
@@ -533,7 +533,7 @@ as one big order every day.\\
 \cellcolor{white}		& \textbf{Category} & Must have\\
 \cellcolor{white}		& \textbf{Description}	 & As long as the order is not validated, the user can change information\\
 \cellcolor{white}		& \textbf{Goal} & User can correct an order\\
-\cellcolor{white}		& \textbf{Preconditions} & Order exists and user is logged in\\
+\cellcolor{white}		& \textbf{Preconditions} & Order exists and user is logged in. Order status is set to "Processing"\\
 \cellcolor{white}		& \textbf{Postcondition success} & Order information successfully changed\\
 \cellcolor{white}		& \textbf{Postcondition failure} & Order information could not be changed because the order is already being validated\\
 \cellcolor{white}		& \textbf{Trigger} & Menu option "Change order"\\
@@ -550,15 +550,15 @@ as one big order every day.\\
 \cellcolor{white}/PF19/	& \textbf{Process} & Cancel Order\\
 \cellcolor{white}		& \textbf{Actor(s)} & Book Store Employee\\
 \cellcolor{white}		& \textbf{Category} & Must have\\
-\cellcolor{white}		& \textbf{Description}	 & The employee at the book store can cancel the order if it hasn?t been shipped yet\\
+\cellcolor{white}		& \textbf{Description}	 & The employee at the book store can cancel the order if the status isn't already set to "Delivery"\\
 \cellcolor{white}		& \textbf{Goal} & Current orders can be cancelled\\
 \cellcolor{white}		& \textbf{Preconditions} & Order exists\\
 \cellcolor{white}		& \textbf{Postcondition success} & Order successfully cancelled. Book Store receives a confirmation mail\\
 \cellcolor{white}		& \textbf{Postcondition failure} & Book Store receives a problem report\\
 \cellcolor{white}		& \textbf{Trigger} & Menu option "cancel order"\\
 \cellcolor{white}		& \textbf{Sequence} & Select order to cancel\\
-\cellcolor{white}		& & Check whether order isn't shipped yet\\
-\cellcolor{white}		& & Cancel order\\
+\cellcolor{white}		& & Check whether order status isn't set to "Delivery" or "Delivered"\\
+\cellcolor{white}		& & Set order status to "Canceled"\\
 \cellcolor{white}\hfill \\
 \end{tabular}
 
