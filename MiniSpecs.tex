@@ -4,17 +4,36 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{verbatim}
-\usepackage{listings} \lstset{numbers=left, numberstyle=\tiny, numbersep=5pt}
-
+\usepackage{listings} 
+\usepackage{color}
+\definecolor{lightlightgray}{gray}{0.9}
+\lstset{
+basicstyle=\ttfamily,                   % Code font, Examples: \footnotesize, \ttfamily
+keywordstyle=\color{OliveGreen},        % Keywords font ('*' = uppercase)
+commentstyle=\color{gray},              % Comments font
+numbers=left,                           % Line nums position
+numberstyle=\tiny,                      % Line-numbers fonts
+stepnumber=1,                           % Step between two line-numbers
+numbersep=5pt,                          % How far are line-numbers from code
+backgroundcolor=\color{lightlightgray},	 		% Choose background color
+frame=none,                             % A frame around the code
+tabsize=2,                              % Default tab size
+captionpos=b,                           % Caption-position = bottom
+breaklines=true,                        % Automatic line breaking?
+breakatwhitespace=false,                % Automatic breaks only at whitespace?
+showspaces=false,                       % Dont make spaces visible
+showtabs=false,                         % Dont make tabls visible
+columns=flexible,                       % Column format
+}
 \begin{document}
 
 \section{Mini Specifications}
 \subsection{Internal Product Functions}
 \subsubsection{Employees of "BookExpress"}
-
-  \begin{lstlisting} [caption=Register Publisher or Book shop (client)] {Name}
-  if ContractSigned then 
-  \end{lstlisting}
-
+\begin{lstlisting}[caption=Register Publisher or Book shop (client)]
+if (ContractSigned=true) then  
+	RegisterNewClient;
+ClientRegistered(Client)=true;
+\end{lstlisting}
 
 \end{document}
