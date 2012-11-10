@@ -19,19 +19,24 @@ Required Data (top level)
 ------------------------
 Client File
 Order
-Article
+
 
 \end{comment}
 
 % 12.5 cm in sum
 \begin{tabular}{p{4cm}p{0.5cm}p{8cm}}
 Client File & = & \{Client Data\} \\
-Client Data & = & ID + Name + Address + (Birthday) + (Sales Volume) + Login Data + Contract ID\\
-Name & = & Form Of Address + (Title) + Forename + Surname \\
-Address & = & [Street + Street Number $|$ Post-Office Box] + (Country Symbol) +  Postal Code + City + (Telephone Number) + (Fax) + Email Address\\
+Client Data & = & ID + Address + (Birthday) + (Sales Volume) + Login Data + Contract ID +  + \{Order-ID\}\\
+Address & = & [Street + Street Number $|$ Post-Office Box] + Name +  (Country Symbol) +  Postal Code + City + (Telephone Number) + (Fax) + Email Address\\
+Name & = & Form Of Address + (Title) + Forename + Surname + (Trade Name)\\
 Login Data & = & PIN + Password \\
-& = &  \\
-& = &  \\
+\\
+Order-ID & = & Order \\
+Order & = & 1\{Article\} + Date + Validation Status\\
+Article & = & ISBN + 1\{Author\} + (Article Cover) + Price +  Amount\\
+Author & = & Name \\
+Date = Hour + Minute + Day + Month + Year\\
+Validation Status & = & [  In Queue $|$ Valid $|$ Invalid $|$ Logistics $|$ Delivery $|$  ] \\
 & = &  \\
 \end{tabular}
 
