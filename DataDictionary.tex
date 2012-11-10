@@ -19,7 +19,7 @@ Required Data (top level)
 ------------------------
 Client File
 Order
-
+Stock
 
 \end{comment}
 
@@ -32,11 +32,15 @@ Name & = & Form Of Address + (Title) + Forename + Surname + (Trade Name)\\
 Login Data & = & PIN + Password \\
 \\
 Order-ID & = & Order \\
-Order & = & 1\{Article\} + Date + Validation Status\\
+Order & = & 1\{Article\} + Date + Status\\
 Article & = & ISBN + 1\{Author\} + (Article Cover) + Price +  Amount\\
 Author & = & Name \\
-Date = Hour + Minute + Day + Month + Year\\
-Validation Status & = & [  In Queue $|$ Valid $|$ Invalid $|$ Logistics $|$ Delivery $|$  ] \\
+Date & = & Hour + Minute + Day + Month + Year\\
+Validation Status & = & [ In Queue $|$ Valid $|$ Invalid $|$ Logistics $|$ Delivery $|$ Delivered] \\
+\\
+Stock & = & \{Article\} \\
+& = &  \\
+& = &  \\
 & = &  \\
 \end{tabular}
 
