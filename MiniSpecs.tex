@@ -15,7 +15,7 @@ numbers=left,                           % Line nums position
 numberstyle=\tiny,                      % Line-numbers fonts
 stepnumber=1,                           % Step between two line-numbers
 numbersep=5pt,                          % How far are line-numbers from code
-backgroundcolor=\color{lightlightgray},	 		% Choose background color
+backgroundcolor=\color{lightlightgray},	% Choose background color
 frame=none,                             % A frame around the code
 tabsize=2,                              % Default tab size
 captionpos=b,                           % Caption-position = bottom
@@ -30,10 +30,23 @@ columns=flexible,                       % Column format
 \section{Mini Specifications}
 \subsection{Internal Product Functions}
 \subsubsection{Employees of "BookExpress"}
-\begin{lstlisting}[caption=Register Publisher or Book shop (client)]
+\begin{lstlisting}[caption=/PF00/Register Publisher or Book shop (client)]
 if (ContractSigned=true) then  
 	RegisterNewClient;
-ClientRegistered(Client)=true;
+Registered(Client)=true;
 \end{lstlisting}
-
+\begin{lstlisting}[caption=/PF01/Edit client information]
+if (Registered(Client)=true) then  
+	EditClientInfo(Client);
+	SaveClientInfo(Client;
+\end{lstlisting}
+\begin{lstlisting}[caption=/PF02/Delete Account]
+if ((Registered(Client)=true) and OrderCount(Client)=0) then  
+	DeleteAccount(Client);
+	SendDeleteNotification(Client);
+\end{lstlisting}
+\begin{lstlisting}[caption=/PF10/Client places Order]
+if (Registered(Client)=true and Authorised(Client)=true) then  
+	if 
+\end{lstlisting}
 \end{document}
