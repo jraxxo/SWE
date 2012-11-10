@@ -6,12 +6,14 @@
  	(System.ValidatePassword()==true) then
  	System.Login;
 \end{lstlisting}
+
 \begin{lstlisting}[caption=/PF04/ Update Account Information]
  if (LoggedIn(Client)) then
  	System.EditData();
  	System.CheckData();
  	System.SaveData();
 \end{lstlisting}
+
 \begin{lstlisting}[caption=/PF05/ Logout]
  if (LoggedIn(Client)) then
  	System.ConfirmLogout();
@@ -19,26 +21,49 @@
 \end{lstlisting}
 
 \subsubsection{Book Stores ("Clients")}
+
 \begin{lstlisting}[caption=/PF40/ Search for a Book / Show Catalogue]
  if (LoggedIn(Client)) then
  	System.Search(SearchString)
  	System.ShowResults;
  	Order.Add(Book, Amount);
 \end{lstlisting}
+
 \begin{lstlisting}[caption=/PF17/ Book Store Order via Web Interface]
 if  (LoggedIn(Client)) then
 	Order.Add(Book, Amount);
 	System.SubmitOrder(Order);
 	Order.Status="Processing";
 \end{lstlisting}
+
 \begin{lstlisting}[caption=/PF18/ Change Order]
 if  ((Order.Status="Processing") and (LoggedIn(Client))) then
-	System.ShowOrder(Order);
+	System.ShowOrders();
+	System.SelectOrder(Order);
 	System.EditOrder(Order);
 	System.SubmitOrder(Order);
 	System.SendChangeNote(Order, Client);
 \end{lstlisting}
+
 \begin{lstlisting}[caption=/PF19/ Cancel Order]
-if (LoggedIn(Client)) and (Order.Status!=="Delivery"|"Delivered")
- 
+if (LoggedIn(Client)) and (Order.Status!=="Delivery"|"Delivered") then
+	System.ShowOrders();
+	System.SelectOrder(Order);
+	Order.Status="Canceled";
+\end{lstlisting}
+
+\begin{lstlisting}[caption=/PF50/ Tracking System]
+ if (Order.Status!==NULL) then
+ System.ShowOrders;
+ System.SelectOrder;
+ System.Print(Order.Status);
+\end{lstlisting}
+
+\subsubsection{Publishers}
+
+\begin{lstlisting}[caption=/PF60/ Inventory Maintenance]
+ if LoggedIn(Publisher) then
+ 	System.ShowInventory();
+ 	System.SelectEntry(Entry);
+ 	System.SaveEntry(Entry);
 \end{lstlisting}
