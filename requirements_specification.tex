@@ -340,9 +340,10 @@ BookExpress has a restricted rights management with several roles (see \ref{sec:
 \cellcolor{white}		& \textbf{Sequence} & Check if books are in stock\\
 \cellcolor{white}		& & Receive book store information\\
 \cellcolor{white}		& & Sent order to book store\\
-\cellcolor{white}		& & Mark order as sent\\
+\cellcolor{white}		& & Mark order as in process of delivery\\
 \cellcolor{white}\hfill \\
 \end{tabular}
+
 
 \noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
@@ -356,7 +357,7 @@ BookExpress has a restricted rights management with several roles (see \ref{sec:
 \cellcolor{white}		& \textbf{Postcondition failure} & Order could not be marked as delivered\\
 \cellcolor{white}		& \textbf{Trigger} & Deliver order\\
 \cellcolor{white}		& \textbf{Sequence} & Get delivery status\\
-\cellcolor{white}		& & Mark order as delivered if delivery status is "successfully delivered"\\
+\cellcolor{white}		& & Mark order as delivered\\
 \cellcolor{white}\hfill \\
 \end{tabular}
 
