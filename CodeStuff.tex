@@ -1,5 +1,36 @@
-\begin{lstlisting}[caption=/PF10/Client places Order]
+\begin{lstlisting}[caption=/PF10/ Client places Order]
 if (Registered(Client)==true and Authorised(Client)==true) then  
 	System.ManualOrder(Client, Book);
-	OrderStatus="Processing";
-	
+	Order.Status="Processing";
+	System.SendReport(Client);
+\end{lstlisting}
+\begin{lstlisting}[caption=/PF11/ Validate Order]
+if (Order.Status=="Processing") then 
+	Order.Check();
+	Order.Status="Valid";
+	System.SendConfirmation(Client);
+\end{lstlisting}
+\begin{lstlisting}[caption=/PF12/ Stock Update]
+if (Order.Placed(Client)==true or System.InitiateCheck is called) then
+	for i=0 to Order.Amount do
+		System.StockCheck(Book);
+		System.SubmitList(Book, (System.StockCheck(Book)-BookAmountOrdered))
+\end{lstlisting}
+\begin{lstlisting}[caption=/PF13/ Forward Order to Logistics]
+if (Order.Status=="Valid" then
+	System.SendOrder(Order);
+	Order.Status="Logistics";
+\end{lstlisting}
+\begin{lstlisting}[caption=/PF14/ Deliver Order]
+if ((Order.Status=="Valid") and (BookAmountOrdered <= System.StockCheck(Book))
+	Order.Deliver(Client.GetInfo);
+	Order.Status="Delivery"
+\end{lstlisting}
+\begin{lstlisting}[caption=/PF15/ Confirm Delivery]
+ Order.Status = Order.TrackingStatus;
+\end{lstlisting}
+\begin{lstlisting}[caption=/PF16/ BookExpress Order]
+ for i=0 to System.StockMax do
+ 	if System.StockCheck(Book)<=System.PredictedAmount(Book) then
+ 	System.OrderBook(Book, Book.Publisher);
+\end{lstlisting}
