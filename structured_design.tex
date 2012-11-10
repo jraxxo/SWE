@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 %% nicht vergessen draft raus zu nehmen, um echte Bilder einzubinden und die Problem-Vierecke verschwinden zu lassen
 \documentclass[11pt,a4paper,oneside,svgnames]{report}
 
@@ -152,7 +151,7 @@ Some description will have overlapping information with the requirements specifi
 \chapter{Software Architecture}
 The software architecture of a system is the set of structures needed to reason about the system, which comprise software elements, relations among them, and properties of both. The term also refers to documentation of a system's "software architecture".\footnote{ Clements, Paul; Felix Bachmann, Len Bass, David Garlan, James Ivers, Reed Little, Paulo Merson, Robert Nord, Judith Stafford (2010). Documenting Software Architectures: Views and Beyond, Second Edition. Boston: Addison-Wesley. ISBN 0-321-55268-7.}\footnote{Bass, Len; Paul Clements, Rick Kazman (2012). Software Architecture In Practice, Third Edition. Boston: Addison-Wesley. pp. 25–37. ISBN 0-321-81573-4.}
 
-In this chapter the programming pattern which the software architect has to implement is discussed at first, then the used software and application for realising the application and at last the implementation of the pattern into the software solution itself.
+In this chapter the programming pattern which the software architect has to implement is discussed at first, then common techniques for standardizing the code and enhancing readability and at last the implementation of the pattern into the software solution itself.
 
 \section{Programming Pattern}
 The "BookExpress" software should implement a simple \gls{mvc} pattern separating the user visible output from the internal data processing structures much like CSS separates the styling of a webpage from the HTML markup.
@@ -172,194 +171,9 @@ In the second case, when the "BookExpress" employees use the client application 
 
 TODO: Add an image illustrating this model
 
-\section{Implemented Software}
-The web application server should be a Java application server utilising the Java Platform, Enterprise Edition (Java EE). It can be any brand, ranging from IBM WAS to Apache TomEE, as long as it is Sun/Oracle Java EE certified\footnote{link to certification specification}. 
-
-\section{Implementation}
-\subsection{Data Storage (Model)}
-\subsection{Web Interface (View)}
-\subsection{Application Server/Web Server (Controller)}
-\section{Model Layers}
-\section{Module Relations/Dependencies}
-\chapter{Environment / General~Architecture}
-\section{Application Server}
-\section{Web Server}
-\section{Database Server}
-\section{Server Environment}
-\section{Client Environment}
-\chapter{Software Modules}
-\chapter{Data Dictionary}
-
-
-\chapter{Appendices}
-\addcontentsline{toc}{section}{Glossary}
-\addcontentsline{toc}{section}{Acronyms}
-\printglossaries
-
-=======
-%% nicht vergessen draft raus zu nehmen, um echte Bilder einzubinden und die Problem-Vierecke verschwinden zu lassen
-\documentclass[11pt,a4paper,oneside,svgnames]{report}
-
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{lmodern}
-\usepackage{eurosym}
-\usepackage[british]{babel}
-
-\usepackage{ae}
-\usepackage{hyperref}
-\usepackage[table]{xcolor}
-\usepackage{colortbl}
-\usepackage{multirow}
-\usepackage{tabularx}
-\usepackage{graphicx}
-\usepackage{tikz}
-\usepackage{kpfonts}
-\usepackage[explicit]{titlesec}
-\usepackage[acronym,nonumberlist,style=tree]{glossaries}
-\usepackage{amssymb}
-\usepackage[left=3.65cm,right=3.65cm]{geometry}
-
-\hypersetup{pdfpagemode=UseNone}
-
-%BEGIN Chapter Definition
-
-\makeatletter
-\def\thickhrulefill{\leavevmode \leaders \hrule height 1ex \hfill \kern \z@}
-\def\@makechapterhead#1{%
-  \vspace*{10\p@}%
-  {\parindent \z@ \raggedleft \reset@font
-            \scshape \@chapapp{} \thechapter
-        \par\nobreak
-        \interlinepenalty\@M
-    \Huge \bfseries #1\par\nobreak
-    %\vspace*{1\p@}%
-    \hrulefill
-    \par\nobreak
-    \vskip 50\p@
-  }}
-\def\@makeschapterhead#1{%
-  \vspace*{10\p@}%
-  {\parindent \z@ \raggedleft \reset@font
-            \scshape \vphantom{\@chapapp{} \thechapter}
-        \par\nobreak
-        \interlinepenalty\@M
-    \Huge \bfseries #1\par\nobreak
-    %\vspace*{1\p@}%
-    \hrulefill
-    \par\nobreak
-    \vskip 50\p@
-  }}
-
-%END Chapter Definition
-
-%BEGIN Title Definition
-
-\makeatletter
-\def\thickhrulefill{\leavevmode \leaders \hrule height 1pt\hfill \kern \z@}
-\renewcommand{\maketitle}{\begin{titlepage}%
-    \let\footnotesize\small
-    \let\footnoterule\relax
-    \parindent \z@
-    \reset@font
-    \null\vfil
-    \begin{flushleft}
-      \huge \@title
-    \end{flushleft}
-    \par
-    \hrule height 4pt
-    \par
-    \begin{flushright}
-      \LARGE \@author \par
-    \end{flushright}
-    \vskip 60\p@
-    \vfil\null
-  \end{titlepage}%
-  \setcounter{footnote}{0}%
-}
-
-%END Title Definition
-
-%Verschissener rotierter Text für verschissene Tabelle 14.1/2
-\makeatletter
-\newsavebox\zzz
-\def\mystrut{%
-\dimen@\wd\zzz
-\divide\dimen@\thr@@
-\advance\dimen@-\dp\@arstrutbox
-\rule\z@\dimen@}
-
-\def\rotatezzz{%
-\rotatebox{90}{\rlap{\kern-\dp\@arstrutbox\usebox\zzz}}}
-%END Verschissener rotierter Text
-
-\makeatother
-\title{Structured Design for Project ``BookExpress''}
-\author{Marc A. Harnos\\ {mharnos@gmail.com} \and Joscha Rapp\\ {jraxxo@gmail.com} \and Christian Schulz\\ {crs.s@gmx.net}}
-\author{Marc A. Harnos\\ Joscha Rapp\\ Christian Schulz}
-\date{October 2012}
-
-
-
-\definecolor{tableHead}{HTML}{40DD0E}
-\definecolor{tableEven}{HTML}{D7FCCC}
-\definecolor{tableOdd}{HTML}{F0FEEC}
-\definecolor{tableFoot}{HTML}{40DD0E}
-\renewcommand{\arraystretch}{1.25}
-
-\makeglossaries
-
-\newglossaryentry{pin}{name=PIN,description={Personal Identification Number},plural=PINs, first={Personal Identification Number (PIN)}}
-
-\newacronym{led}{LED}{light-emitting diode}
-\newacronym{html}{HTML}{Hypertext Markup Language}
-\newacronym{css}{CSS}{Cascade Stylesheet}
-\newacronym{js}{JS}{JavaScript}
-\newacronym{ie}{IE}{InternetExplorer}
-\newacronym{vm}{VM}{Virtual Machine}
-\newacronym{ide}{IDE}{Integrated Development Environment}
-
-
-\begin{document}
-
-\maketitle
-\tableofcontents
-
-\chapter*{Document History}
-
-\begin{center}
-
-\begin{tabular}{|l|l|l|l|}
-\hline 
-Editor(s) & Date & Purpose of Editing & Version \\ 
-\hline 
-Harnos, Rapp, Schulz & 2012-10-01 & Initial Document Creation & v0.01 \\ 
-\hline
-Harnos, Rapp & 2012-10-08 & Fick Das & v0.02 \\ 
-\hline
-Schulz & 2012-10-08 & Fick Das Nicht - Überstimmt & v0.03 \\ 
-\hline 
-\end{tabular} 
-
-\end{center}
-
-
-\chapter{Introduction}
-This structured design gives a detailed overview of the software design and system architecture, based on the previously developed requirement analysis and structured analysis. The structured design should be later on used for the implementation of the "BookExpress" system.
-
-This document describes the specifications for the software architecture, the functional abstraction layer of the previously defined data flow diagrams and detailed specification of the system modules.
-
-The description of the specific modules will vary in abstraction, allowing the software architect to implement his own, or the companies preferred, standards, without interfering in product functionality; whenever necessary the definitions provided will be more granular ensuring consistent quality and enforcing expected behaviour.
-
-Some description will have overlapping information with the requirements specification, in case this document is sent stand alone, to assure all information is being provided.
-
-\chapter{Software Architecture}
-The software architecture of a system is the set of structures needed to reason about the system, which comprise software elements, relations among them, and properties of both. The term also refers to documentation of a system's "software architecture".\footnote{ Clements, Paul; Felix Bachmann, Len Bass, David Garlan, James Ivers, Reed Little, Paulo Merson, Robert Nord, Judith Stafford (2010). Documenting Software Architectures: Views and Beyond, Second Edition. Boston: Addison-Wesley. ISBN 0-321-55268-7.}\footnote{Bass, Len; Paul Clements, Rick Kazman (2012). Software Architecture In Practice, Third Edition. Boston: Addison-Wesley. pp. 25–37. ISBN 0-321-81573-4.}
-
-In this chapter the programming pattern which the software architect has to implement is discussed at first, then common techniques for standardizing the code and enhancing readability and at last the implementation of the pattern into the software solution itself.
-
-\section{Programming Pattern}
 \section{Programming Techniques}
+For standardisations 
+
 \section{Implementation}
 \subsection{Data Storage (Model)}
 \subsection{Web Interface (View)}
@@ -381,5 +195,4 @@ In this chapter the programming pattern which the software architect has to impl
 \addcontentsline{toc}{section}{Acronyms}
 \printglossaries
 
->>>>>>> hw struct, nix
 \end{document}
