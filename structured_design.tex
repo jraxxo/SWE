@@ -7,6 +7,7 @@
 \usepackage{eurosym}
 \usepackage[british]{babel}
 
+\usepackage{longtable}
 \usepackage{ae}
 \usepackage{hyperref}
 \usepackage[table]{xcolor}
@@ -271,7 +272,7 @@ TODO: insert image picturing the modules sorted by layer
 
 \section{User Data}
 
-\begin{tabular}{p{3.5cm}p{0.5cm}p{8.5cm}}
+\begin{longtable}{p{3.5cm}p{0.5cm}p{8.5cm}}
 Client File & = & \{Client Data\} \\
 \\
 Client Data & = & Client PIN\\
@@ -308,12 +309,12 @@ Login Data & = & [Client PIN $|$ Employee PIN]\\
 \\
 Correspondent & = & Name\\
 &  & + (Email)\\
-\end{tabular}
+\end{longtable}
 
 
 \section{Order Data}
 
-\begin{tabular}{p{3.5cm}p{0.5cm}p{8.5cm}}
+\begin{longtable}{p{3.5cm}p{0.5cm}p{8.5cm}}
 Order & = & Order Data\\
 \\
 Order Data & = & Order PIN\\
@@ -328,12 +329,12 @@ Date & = & Hour\\
 &  & + Day\\
 &  & + Month\\
 &  & + Year\\
-\end{tabular}
+\end{longtable}
 
 \section{Internal Data}
 
 \subsection{Book Stock}
-\begin{tabular}{p{3.5cm}p{0.5cm}p{8.5cm}}
+\begin{longtable}{p{3.5cm}p{0.5cm}p{8.5cm}}
 Stock & = & \{Article\} \\
 \\
 Article & = & Book Data\\
@@ -348,20 +349,20 @@ Book Data & = & [ISBN $|$ UPC $|$ EAN]\\
 &  & + Availability\\
 \\
 Availability & = & [In Stock $|$ Ordered at Publisher $|$ N/A]\\
-\end{tabular}
+\end{longtable}
 
 \subsection{Truck Information}
 
-\begin{tabular}{p{3.5cm}p{0.5cm}p{8.5cm}}
+\begin{longtable}{p{3.5cm}p{0.5cm}p{8.5cm}}
 Truck Fleet Data & = & Driver\\
 &  & + Registration Number\\
 &  & + Truck Status \\
 \\
 Truck Status & = & [Boxing $|$ Parcel Sorting Centre $|$ Delivering $|$ Traffic Jam $|$ Delivered] \\
-\end{tabular}
+\end{longtable}
 
 \subsection{User Data}
-\begin{tabular}{p{3.5cm}p{0.5cm}p{8.5cm}}
+\begin{longtable}{p{3.5cm}p{0.5cm}p{8.5cm}}
 Contract Data & = & Contract PIN\\
 & & + Signing Date\\
 & & + [Client Data $|$ Employee Data]\\
@@ -377,11 +378,11 @@ Invoice & = & Client Data\\
 &  & + Invoice Status\\
 \\
 Invoice Status & = & [Paid $|$ Open]\\
-\end{tabular}
+\end{longtable}
 
 \subsection{Employee}
 
-\begin{tabular}{p{3.5cm}p{0.5cm}p{8.5cm}}
+\begin{longtable}{p{3.5cm}p{0.5cm}p{8.5cm}}
 Employee File & = & \{Employee Data\}\\
 \\
 Employee Data & = & Employee PIN\\
@@ -391,7 +392,7 @@ Employee Data & = & Employee PIN\\
 &  & + Administrator\\
 \\
 Administrator & = & [True $|$ False]
-\end{tabular}
+\end{longtable}
 
 
 \chapter{Appendices}
