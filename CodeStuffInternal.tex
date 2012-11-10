@@ -52,3 +52,6 @@ if (Order.Status="Valid") then
  if (System.Time=2400) then
  	System.RunBackup();
 \end{lstlisting}
+\begin{lstlisting}[caption=/PF15/ Confirm Delivery]
+ Order.Status = Order.TrackingStatus;
+\end{lstlisting}
