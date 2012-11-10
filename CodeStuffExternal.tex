@@ -1,3 +1,44 @@
-\begin{lstlisting}[caption=/PF15/ Confirm Delivery]
- Order.Status = Order.TrackingStatus;
+\begin{lstlisting}[caption=/PF03/ Login]
+ if (Registered(Client)) then
+ 	System.AskPIN();
+ 	System.AskPassword();
+ 	if ((System.ValidatePIN()==true) and
+ 	(System.ValidatePassword()==true) then
+ 	System.Login;
+\end{lstlisting}
+\begin{lstlisting}[caption=/PF04/ Update Account Information]
+ if (LoggedIn(Client)) then
+ 	System.EditData();
+ 	System.CheckData();
+ 	System.SaveData();
+\end{lstlisting}
+\begin{lstlisting}[caption=/PF05/ Logout]
+ if (LoggedIn(Client)) then
+ 	System.ConfirmLogout();
+ 	System.SessionTerminate();
+\end{lstlisting}
+
+\subsubsection{Book Stores ("Clients")}
+\begin{lstlisting}[caption=/PF40/ Search for a Book / Show Catalogue]
+ if (LoggedIn(Client)) then
+ 	System.Search(SearchString)
+ 	System.ShowResults;
+ 	Order.Add(Book, Amount);
+\end{lstlisting}
+\begin{lstlisting}[caption=/PF17/ Book Store Order via Web Interface]
+if  (LoggedIn(Client)) then
+	Order.Add(Book, Amount);
+	System.SubmitOrder(Order);
+	Order.Status="Processing";
+\end{lstlisting}
+\begin{lstlisting}[caption=/PF18/ Change Order]
+if  ((Order.Status="Processing") and (LoggedIn(Client))) then
+	System.ShowOrder(Order);
+	System.EditOrder(Order);
+	System.SubmitOrder(Order);
+	System.SendChangeNote(Order, Client);
+\end{lstlisting}
+\begin{lstlisting}[caption=/PF19/ Cancel Order]
+if (LoggedIn(Client)) and (Order.Status!=="Delivery"|"Delivered")
+ 
 \end{lstlisting}
