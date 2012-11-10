@@ -12,44 +12,97 @@
 % * to here
 
 \section{Data Dictionary}
+% summed up width of tabular has to be 12.5 cm
 
-\begin{comment}
+\subsection{User Data}
 
-Required Data (top level)
-------------------------
-Client File
-Order
-Stock
-
-\end{comment}
-
-% 12.5 cm in sum
 \begin{tabular}{p{3.5cm}p{0.5cm}p{8.5cm}}
+\\
 Client File & = & \{Client Data\} \\
-Client Data & = & PIN + Address + Correspondent + Contract Data + \{Order\} + (Sales Volume) + Login Data \\
+\\
+Client Data & = & PIN\\
+&  & + Address\\
+&  & + Correspondent\\
+&  & + Contract Data\\
+&  & + \{Order\}\\
+&  & + (Sales Volume)\\
+&  & + Login Data \\
 & = & Publisher Data\\
 & = & Book Store Data\\
-Address & = & [Street + Street Number $|$ Post-Office Box] + Name +  (Country Symbol) +  Postal Code + City + Phone Number + (Fax) + Email Address\\
-Name & = & Form Of Address + (Title) + Forename + Surname + (Trade Name)\\
-Login Data & = & PIN + Password \\
+\\
+Address & = & [Street + Street Number $|$ Post-Office Box]\\
+&  & + Name\\
+&  & +  (Country Symbol)\\
+&  & +  Postal Code\\
+&  & + City\\
+&  & + Phone Number\\
+&  & + (Fax)\\
+&  & + Email Address\\
+\\
+Name & = & Form Of Address\\
+&  & + (Title)\\
+&  & + Forename\\
+&  & + Surname\\
+&  & + (Trade Name)\\
+\\
+Login Data & = & PIN\\
+&  & + Password \\
+\end{tabular}
+
+
+\subsection{Order Data}
+
+\begin{tabular}{p{3.5cm}p{0.5cm}p{8.5cm}}
 \\
 Order & = & Order Data\\
-Order Data & = & PIN + 1\{Article\} + Date + Status\\
-Article & = & Book Data + Amount\\
-Book Data & = & [ISBN $|$ UPC $|$ EAN] + 1\{Author\} + Title + Publisher + (Article Cover) + Price + Availability\\
-Author & = & Name \\
-Date & = & Hour + Minute + Day + Month + Year\\
-Validation Status & = & [Processing $|$ Valid $|$ Invalid $|$ Logistics $|$ Delivery $|$ Delivered $|$ Canceled] \\
+\\
+Order Data & = & PIN\\
+&  & + 1\{Article\}\\
+&  & + Order Status\\
+&  & + Date \\
+\\
+Order Status & = & [Processing $|$ Valid $|$ Invalid $|$ Logistics $|$ Delivery $|$ Delivered $|$ Canceled] \\
+\\
+Date & = & Hour\\
+&  & + Minute\\
+&  & + Day\\
+&  & + Month\\
+&  & + Year\\
+\end{tabular}
+
+\subsection{Internal Data}
+
+\subsubsection{Book Stock}
+\begin{tabular}{p{3.5cm}p{0.5cm}p{8.5cm}}
 \\
 Stock & = & \{Article\} \\
 \\
-Truck Fleet Data & = & Driver + Registration Number + Truck Status \\
-Driver & = & Name \\
-Truck Status & = & [Boxing $|$ Delivering $|$ Traffic Jam $|$ Delivered] \\
+Article & = & Book Data+ Amount\\
 \\
-& = &  \\
-& = &  \\
-& = &  \\
+Book Data & = & [ISBN $|$ UPC $|$ EAN]\\
+&  & + 1\{Author\}\\
+&  & + Title\\
+&  & + Publisher\\
+&  & + (Article Cover)\\
+&  & + Price\\
+&  & + Availability\\
+\\
+Author & = & Name \\
+\\
+Publisher & = & Name \\
+\end{tabular}
+
+\subsubsection{Truck Informaton}
+
+\begin{tabular}{p{3.5cm}p{0.5cm}p{8.5cm}}
+\\
+Truck Fleet Data & = & Driver\\
+&  & + Registration Number\\
+&  & + Truck Status \\
+\\
+Driver & = & Name \\
+\\
+Truck Status & = & [Boxing $|$ Delivering $|$ Traffic Jam $|$ Delivered] \\
 \end{tabular}
 
 \end{document}
