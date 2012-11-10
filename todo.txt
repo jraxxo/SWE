@@ -1,0 +1,26 @@
+[A1]
+
+Context Diagram
+Hierarchy
+	Data Flow Diagram
+		Prozesse aufschlüsseln in Ebenen (Hauptprozess in Unterprozesse)
+	Mini Specs
+
+
+
+[A2] - Alles was der Programmierer wissen muss (ca. 56 Seiten)
+
+Introduction
+
+Logische (Publischer Connected, Application Server mit Webserver und Webinterface - Zugriff von Publischer, Zugriff auf Publisher, UML, Apache, Firewall, Finance usw.) und Physische (Rechnezentrum, Backup-Server, Storage-Server, Firewall (External/Internal), Custom-Support, ... + Beschreibung für Hardware-Punkte) Architektur
+
+MVC-Pattern
+
+Structured Design
+Jede Funktion beschreiben (Log in, Check Availability, Remove Book, Change Data, ...)
+
+Data Dictionary
+
+External UI 
+
+Komponente aufspalten (Logistics, ....)
