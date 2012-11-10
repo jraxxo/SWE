@@ -205,20 +205,11 @@ BookExpress has a restricted rights management with several roles (see \ref{sec:
 \noindent
 \rowcolors{1}{tableEven}{tableOdd}
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
-<<<<<<< HEAD
-/PF00/	& \textbf{Process}	& Register Publisher or Book Store (client)\\
-		& \textbf{Actor(s)} & BookExpress employee\\
-		& \textbf{Category} & Must have\\
-		& \textbf{Description}	 & A Book Express employee creates an account for a book shop or publisher after both business partners have signed a contract handling the business relations.\\
-		& \textbf{Goal} & The contract partner should have an account to log into the Software. After registration through the Book Express employee, the contract partner will be send a verification and its 
-=======
 \cellcolor{white}/PF00/	& \textbf{Process}	& Register Publisher or Book Shop (client)\\
 \cellcolor{white}		& \textbf{Actor(s)} & BookExpress employee\\
 \cellcolor{white}		& \textbf{Category} & Must have\\
 \cellcolor{white}		& \textbf{Description}	 & A Book Express employee creates an account for a book shop or publisher after both business partners have signed a contract handling the business relations.\\
-\cellcolor{white}		& \textbf{Goal} & The contract partner should have an account to log into the Software. After registration through the Book Express employee, the contract partner will be send a verification and its 
->>>>>>> changed glossaries, margin width, added cell colouring
-		 information via email.\\
+\cellcolor{white}		& \textbf{Goal} & The contract partner should have an account to log into the Software. After registration through the Book Express employee, the contract partner will be send a verification and its information via email.\\
 \cellcolor{white}		& \textbf{Preconditions} & Contract signed\\
 \cellcolor{white}		& \textbf{Postcondition success} & Successfully created account\\
 \cellcolor{white}		& \textbf{Postcondition failure} & Unsuccessful in creating an account\\
@@ -268,42 +259,6 @@ BookExpress has a restricted rights management with several roles (see \ref{sec:
 
 \noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
-<<<<<<< HEAD
-/PF03/	& \textbf{Process} & Register new BookExpress employee\\ 
-		& \textbf{Actor(s)} & Administrator\\ 
-		& \textbf{Category} & Must have\\
-		& \textbf{Description}	 & Register a new BookExpress employee\\ 
-		& \textbf{Goal} & New BookExpress employee\\
-		& \textbf{Preconditions} & There is a request to register a new employee\\
-		& \textbf{Postcondition success} & Employee is created\\
-		& \textbf{Postcondition failure} & -\\
-		& \textbf{Trigger} & Request to register new employee\\
-		& \textbf{Sequence} & Read request\\
-		& & Register employee with its data\\
-		& & Send notification mail to new employee\\
-		& & Close ticket\\
-\hfill \\		
-\end{tabular}
-
-\noindent
-\begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
-	 /PF10/	& \textbf{Process} & Client places order\\ 
-		& \textbf{Category} & Must have\\
-		& \textbf{Actor(s)} & BookExpress employee, client\\ 
-		& \textbf{Description}	 & A client orders book via telephone\\ 
-		& \textbf{Goal} & Order is placed in an order queue\\
-		& \textbf{Preconditions} & Client exists in database\\
-		& & Client is authorized\\
-		& \textbf{Postcondition success} & Order is placed in an order queue\\
-		& \textbf{Postcondition failure} & -\\
-		& \textbf{Trigger} & Client initiates order process by calling an BookExpress employee\\
-		& & BookExpress employee triggers manual order process\\
-		& \textbf{Sequence} & BookExpress employee selects client in Software\\
-		& & BookExpress employee enters ordered book into the system\\
-		& & Order is placed in order queue\\
-		& & Order notification containing detailed report is sent to client\\
-\hfill \\
-=======
 \cellcolor{white}	 /PF10/	& \textbf{Process} & Client places order\\ 
 \cellcolor{white}		& \textbf{Category} & Must have\\
 \cellcolor{white}		& \textbf{Actor(s)} & BookExpress employee, client\\ 
@@ -320,7 +275,6 @@ BookExpress has a restricted rights management with several roles (see \ref{sec:
 \cellcolor{white}		& & Order is placed in order queue\\
 \cellcolor{white}		& & Order notification containing detailed report is sent to client\\
 \cellcolor{white}\hfill \\
->>>>>>> changed glossaries, margin width, added cell colouring
 \end{tabular}
 
 \noindent
@@ -373,24 +327,6 @@ BookExpress has a restricted rights management with several roles (see \ref{sec:
 
 \noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
-<<<<<<< HEAD
-/PF14/	& \textbf{Process} & Deliver order\\
-		& \textbf{Actor(s)} & Logistics\\
-		& \textbf{Category} & Primary\\
-		& \textbf{Description}	 &  The order is send to the book store\\
-		& \textbf{Goal} & Deliver ordered books\\
-		& \textbf{Preconditions} & Order is valid\\
-		& & Books are available in stock\\
-		& \textbf{Postcondition success} & Order is marked as sent\\
-		& \textbf{Postcondition failure} & Order could not be marked as sent\\
-		& \textbf{Trigger} & Forward order to Logistics\\
-		& \textbf{Sequence} & Check if books are in stock\\
-		& & Receive book store information\\
-		& & Sent order to book store\\
-		& & Mark order as sent\\
-		
-\hfill \\
-=======
 \cellcolor{white}/PF14/	& \textbf{Process} & Deliver order\\
 \cellcolor{white}		& \textbf{Actor(s)} & System\\
 \cellcolor{white}		& \textbf{Category} & Primary\\
@@ -406,26 +342,10 @@ BookExpress has a restricted rights management with several roles (see \ref{sec:
 \cellcolor{white}		& & Sent order to book store\\
 \cellcolor{white}		& & Mark order as sent\\
 \cellcolor{white}\hfill \\
->>>>>>> changed glossaries, margin width, added cell colouring
 \end{tabular}
 
 \noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
-<<<<<<< HEAD
-/PF15/	& \textbf{Process} & Confirm delivery\\
-		& \textbf{Actor(s)} & Logistics\\
-		& \textbf{Category} & Primary\\
-		& \textbf{Description}	 & Logistics confirms the correct delivery of an order\\
-		& \textbf{Goal} & Delivery is successful\\
-		& \textbf{Preconditions} & Order is marked as sent\\
-		& \textbf{Postcondition success} & Order is marked as delivered\\
-		& \textbf{Postcondition failure} & Order could not be marked as delivered\\
-		& \textbf{Trigger} & Deliver order\\
-		& \textbf{Sequence} & Get delivery status\\
-		& & Mark order as delivered if delivery status is "successfully delivered"
-		
-\hfill \\
-=======
 \cellcolor{white}/PF15/	& \textbf{Process} & Confirm delivery\\
 \cellcolor{white}		& \textbf{Actor(s)} & Employee (Logistics)\\
 \cellcolor{white}		& \textbf{Category} & Primary\\
@@ -438,7 +358,6 @@ BookExpress has a restricted rights management with several roles (see \ref{sec:
 \cellcolor{white}		& \textbf{Sequence} & Get delivery status\\
 \cellcolor{white}		& & Mark order as delivered if delivery status is "successfully delivered"\\
 \cellcolor{white}\hfill \\
->>>>>>> changed glossaries, margin width, added cell colouring
 \end{tabular}
 
 \noindent
@@ -514,23 +433,6 @@ BookExpress has a restricted rights management with several roles (see \ref{sec:
 
 \noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
-<<<<<<< HEAD
-/PF04/	& \textbf{Process} & Login\\
-		& \textbf{Actor(s)} & Book store/publisher\\
-		& \textbf{Category} & Must have\\
-		& \textbf{Description}	 & The user logs on with his PIN and password\\
-		& \textbf{Goal} & Provide a fully functional system to the user\\
-		& \textbf{Preconditions} & Existing account\\
-		& \textbf{Postcondition success} & Successful login\\
-		& \textbf{Postcondition failure} & Unsuccessful login caused by a wrong PIN or password\\
-		& \textbf{Trigger} & Menu Option "Login"\\
-		& \textbf{Sequence} & Enter PIN\\
-		& & Enter password\\
-		& & Validity of data is checked by the System\\
-		& & Login successful or display an error message in case of unsuccessful login
-		
-\hfill \\
-=======
 \cellcolor{white}/PF03/	& \textbf{Process} & Login\\
 \cellcolor{white}		& \textbf{Actor(s)} & Book store/publisher\\
 \cellcolor{white}		& \textbf{Category} & Must have\\
@@ -545,27 +447,10 @@ BookExpress has a restricted rights management with several roles (see \ref{sec:
 \cellcolor{white}		& & Validity of data is checked by the System\\
 \cellcolor{white}		& & Login successful or display an error message in case of unsuccessful login\\
 \cellcolor{white}\hfill \\
->>>>>>> changed glossaries, margin width, added cell colouring
 \end{tabular}
 
 \noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
-<<<<<<< HEAD
-/PF05/	& \textbf{Process} & Update account information\\
-		& \textbf{Actor(s)} & Book store/publisher\\
-		& \textbf{Category} & Must have\\
-		& \textbf{Description}	 & The user is able to edit/update its account information (e.g. address, correspondent etc.)\\
-		& \textbf{Goal} & User is able to update changes\\
-		& \textbf{Preconditions} & User is logged on\\
-		& \textbf{Postcondition success} & Updating the account succeeded\\
-		& \textbf{Postcondition failure} & Updating the account failed\\
-		& \textbf{Trigger} & Menu option "edit\\
-		& \textbf{Sequence} Edit specific data\\
-		& & System checks correctness of data (e.g. email format etc.)\\
-		& & Submit edited data to the server\\
-		
-\hfill \\
-=======
 \cellcolor{white}/PF04/	& \textbf{Process} & Update account information\\
 \cellcolor{white}		& \textbf{Actor(s)} & Book store/publisher\\
 \cellcolor{white}		& \textbf{Category} & Must have\\
@@ -579,25 +464,10 @@ BookExpress has a restricted rights management with several roles (see \ref{sec:
 \cellcolor{white}		& & System checks correctness of data (e.g. email format etc.)\\
 \cellcolor{white}		& & Submit edited data to the server\\
 \cellcolor{white}\hfill \\
->>>>>>> changed glossaries, margin width, added cell colouring
 \end{tabular}
 
 \noindent
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
-<<<<<<< HEAD
-/PF06/	& \textbf{Process} & Logout\\
-		& \textbf{Actor(s)} & Book store/publisher\\
-		& \textbf{Category} & Must have\\
-		& \textbf{Description}	 & User logs out\\
-		& \textbf{Goal} & User is logged out\\
-		& \textbf{Preconditions} & User is logged in\\
-		& \textbf{Postcondition success} & Successful logout\\
-		& \textbf{Postcondition failure} & Unsuccessful logout caused by an abort of the user\\
-		& \textbf{Trigger} & Menu option "Logout"\\
-		& \textbf{Sequence} & User confirms to log out\\
-		& & The system terminates the current session\\
-\hfill \\
-=======
 \cellcolor{white}/PF05/	& \textbf{Process} & Logout\\
 \cellcolor{white}		& \textbf{Actor(s)} & Book store/publisher\\
 \cellcolor{white}		& \textbf{Category} & Must have\\
@@ -610,7 +480,6 @@ BookExpress has a restricted rights management with several roles (see \ref{sec:
 \cellcolor{white}		& \textbf{Sequence} & User confirms to log out\\
 \cellcolor{white}		& & The system terminates the current session\\
 \cellcolor{white}\hfill \\
->>>>>>> changed glossaries, margin width, added cell colouring
 \end{tabular}
 
 
@@ -1066,6 +935,8 @@ BookExpress employees use the client application to perform maintenance tasks fo
 \end{itemize}
 
 \chapter{Appendices}
+\section{muh}
+
 \addcontentsline{toc}{section}{Glossary}
 \addcontentsline{toc}{section}{Acronyms}
 \printglossaries
