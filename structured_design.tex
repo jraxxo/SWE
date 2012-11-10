@@ -269,6 +269,130 @@ TODO: insert image picturing the modules sorted by layer
 \chapter{Software Modules}
 \chapter{Data Dictionary}
 
+\section{User Data}
+
+\begin{tabular}{p{3.5cm}p{0.5cm}p{8.5cm}}
+Client File & = & \{Client Data\} \\
+\\
+Client Data & = & Client PIN\\
+&  & + Address\\
+&  & + Correspondent\\
+&  & + Contract Data\\
+&  & + \{Order\}\\
+&  & + \{Invoice\}\\
+&  & + (Sales Volume)\\
+&  & + Login Data \\
+& = & Publisher Data\\
+& = & Book Store Data\\
+\\
+Address & = & [Street + Street Number $|$ Post-Office Box]\\
+&  & + Name\\
+&  & +  (Country Symbol)\\
+&  & +  Postal Code\\
+&  & + City\\
+&  & + Phone Number\\
+&  & + (Fax)\\
+&  & + Email Address\\
+\\
+Name & = & Form Of Address\\
+&  & + (Title)\\
+&  & + Forename\\
+&  & + Surname\\
+&  & + (Trade Name)\\
+& = & Author\\
+& = & Publisher\\
+& = & Driver\\
+\\
+Login Data & = & [Client PIN $|$ Employee PIN]\\
+&  & + Password \\
+\\
+Correspondent & = & Name\\
+&  & + (Email)\\
+\end{tabular}
+
+
+\section{Order Data}
+
+\begin{tabular}{p{3.5cm}p{0.5cm}p{8.5cm}}
+Order & = & Order Data\\
+\\
+Order Data & = & Order PIN\\
+&  & + 1\{Article\}\\
+&  & + Order Status\\
+&  & + Date \\
+\\
+Order Status & = & [Processing $|$ Valid $|$ Invalid $|$ Logistics $|$ Delivery $|$ Delivered $|$ Canceled] \\
+\\
+Date & = & Hour\\
+&  & + Minute\\
+&  & + Day\\
+&  & + Month\\
+&  & + Year\\
+\end{tabular}
+
+\section{Internal Data}
+
+\subsection{Book Stock}
+\begin{tabular}{p{3.5cm}p{0.5cm}p{8.5cm}}
+Stock & = & \{Article\} \\
+\\
+Article & = & Book Data\\
+&  & + Amount\\
+\\
+Book Data & = & [ISBN $|$ UPC $|$ EAN]\\
+&  & + 1\{Author\}\\
+&  & + Title\\
+&  & + Publisher\\
+&  & + (Article Cover)\\
+&  & + Price\\
+&  & + Availability\\
+\\
+Availability & = & [In Stock $|$ Ordered at Publisher $|$ N/A]\\
+\end{tabular}
+
+\subsection{Truck Information}
+
+\begin{tabular}{p{3.5cm}p{0.5cm}p{8.5cm}}
+Truck Fleet Data & = & Driver\\
+&  & + Registration Number\\
+&  & + Truck Status \\
+\\
+Truck Status & = & [Boxing $|$ Parcel Sorting Centre $|$ Delivering $|$ Traffic Jam $|$ Delivered] \\
+\end{tabular}
+
+\subsection{User Data}
+\begin{tabular}{p{3.5cm}p{0.5cm}p{8.5cm}}
+Contract Data & = & Contract PIN\\
+& & + Signing Date\\
+& & + [Client Data $|$ Employee Data]\\
+& & + File On Server\\
+\\
+Signing Date & = & Day\\
+&  & + Month\\
+&  & + Year\\
+\\
+Invoice & = & Client Data\\
+&  & + Order\\
+&  & + Invoice PIN\\
+&  & + Invoice Status\\
+\\
+Invoice Status & = & [Paid $|$ Open]\\
+\end{tabular}
+
+\subsection{Employee}
+
+\begin{tabular}{p{3.5cm}p{0.5cm}p{8.5cm}}
+Employee File & = & \{Employee Data\}\\
+\\
+Employee Data & = & Employee PIN\\
+&  & + Address\\
+&  & + Contract Data\\
+&  & + Login Data\\
+&  & + Administrator\\
+\\
+Administrator & = & [True $|$ False]
+\end{tabular}
+
 
 \chapter{Appendices}
 \addcontentsline{toc}{section}{Glossary}
