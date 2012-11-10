@@ -51,6 +51,9 @@ Name & = & Form Of Address\\
 \\
 Login Data & = & [Client PIN $|$ Employee PIN]\\
 &  & + Password \\
+\\
+Correspondent & = & Name\\
+&  & + (Email)\\
 \end{tabular}
 
 
@@ -91,6 +94,8 @@ Book Data & = & [ISBN $|$ UPC $|$ EAN]\\
 &  & + (Article Cover)\\
 &  & + Price\\
 &  & + Availability\\
+\\
+Availability & = & [In Stock $|$ Ordered at Publisher $|$ N/A]\\
 \end{tabular}
 
 \subsubsection{Truck Information}
@@ -119,6 +124,9 @@ Signing Date & = & Day\\
 Invoice & = & Client Data\\
 &  & + Order\\
 &  & + Invoice PIN\\
+&  & + Invoice Status\\
+\\
+Invoice Status & = & [Paid $|$ Open]\\
 \end{tabular}
 
 \subsubsection{Employee}

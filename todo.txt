@@ -1,3 +1,7 @@
+[A1]
+
+DFD Datendurchsatz farblich darstellen
+
 [A2] - Alles was der Programmierer wissen muss (ca. 56 Seiten)
 
 Introduction
@@ -8,8 +12,6 @@ MVC-Pattern
 
 Structured Design
 Jede Funktion beschreiben (Log in, Check Availability, Remove Book, Change Data, ...)
-
-Data Dictionary
 
 External UI 
 
