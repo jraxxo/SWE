@@ -24,21 +24,29 @@ Stock
 \end{comment}
 
 % 12.5 cm in sum
-\begin{tabular}{p{4cm}p{0.5cm}p{8cm}}
+\begin{tabular}{p{3.5cm}p{0.5cm}p{8.5cm}}
 Client File & = & \{Client Data\} \\
-Client Data & = & ID + Address + (Birthday) + (Sales Volume) + Login Data + Contract ID +  + \{Order-ID\}\\
-Address & = & [Street + Street Number $|$ Post-Office Box] + Name +  (Country Symbol) +  Postal Code + City + (Telephone Number) + (Fax) + Email Address\\
+Client Data & = & PIN + Address + Correspondent + Contract Data + \{Order\} + (Sales Volume) + Login Data \\
+& = & Publisher Data\\
+& = & Book Store Data\\
+Address & = & [Street + Street Number $|$ Post-Office Box] + Name +  (Country Symbol) +  Postal Code + City + Phone Number + (Fax) + Email Address\\
 Name & = & Form Of Address + (Title) + Forename + Surname + (Trade Name)\\
 Login Data & = & PIN + Password \\
 \\
-Order-ID & = & Order \\
-Order & = & 1\{Article\} + Date + Status\\
-Article & = & ISBN + 1\{Author\} + (Article Cover) + Price +  Amount\\
+Order & = & Order Data\\
+Order Data & = & PIN + 1\{Article\} + Date + Status\\
+Article & = & Book Data + Amount\\
+Book Data & = & [ISBN $|$ UPC $|$ EAN] + 1\{Author\} + Title + Publisher + (Article Cover) + Price + Availability\\
 Author & = & Name \\
 Date & = & Hour + Minute + Day + Month + Year\\
-Validation Status & = & [ In Queue $|$ Valid $|$ Invalid $|$ Logistics $|$ Delivery $|$ Delivered] \\
+Validation Status & = & [Processing $|$ Valid $|$ Invalid $|$ Logistics $|$ Delivery $|$ Delivered $|$ Canceled] \\
 \\
 Stock & = & \{Article\} \\
+\\
+Truck Fleet Data & = & Driver + Registration Number + Truck Status \\
+Driver & = & Name \\
+Truck Status & = & [Boxing $|$ Delivering $|$ Traffic Jam $|$ Delivered] \\
+\\
 & = &  \\
 & = &  \\
 & = &  \\
