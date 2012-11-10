@@ -1,13 +1,3 @@
-[A1]
-
-Context Diagram
-Hierarchy
-	Data Flow Diagram
-		Prozesse aufschlüsseln in Ebenen (Hauptprozess in Unterprozesse)
-	Mini Specs
-
-
-
 [A2] - Alles was der Programmierer wissen muss (ca. 56 Seiten)
 
 Introduction

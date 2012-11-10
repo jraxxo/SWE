@@ -643,12 +643,22 @@ as one big order.\\
 \cellcolor{white}		& \textbf{Composition}	& PIN, ISBN, Amount, Price, Date\\
 \cellcolor{white}		& \textbf{Size}		& 2,500,000\\
 \cellcolor{white}		& \textbf{Traffic}		& High\\
+\cellcolor{white}\hfill \\
+\cellcolor{white}/PD42/	& \textbf{Data}			& Invoice Data\\
+\cellcolor{white}		& \textbf{Composition}	& Order Data, Book Store Data, PIN\\
+\cellcolor{white}		& \textbf{Size}		& 500,000\\
+\cellcolor{white}		& \textbf{Traffic}		& Very High\\
 \end{tabular} 
 \section{Internal Data}
 \subsection{Book Stock}
 \begin{tabular}{llp{8.75cm}}
 \cellcolor{white}/PD10/	& \textbf{Data}			& Book Data\\
 \cellcolor{white}		& \textbf{Composition}	& ISBN, UPC/EAN, Title, Author, Publisher, Availability\\
+\cellcolor{white}		& \textbf{Size}		& approx 1,500,000\\
+\cellcolor{white}		& \textbf{Traffic}		& Average\\
+\cellcolor{white}\hfill \\
+\cellcolor{white}/PD11/	& \textbf{Data}			& Stock Data\\
+\cellcolor{white}		& \textbf{Composition}	& Book Data, Availability\\
 \cellcolor{white}		& \textbf{Size}		& approx 1,500,000\\
 \cellcolor{white}		& \textbf{Traffic}		& Average\\
 \end{tabular} 
@@ -658,6 +668,13 @@ as one big order.\\
 \cellcolor{white}		& \textbf{Composition}	& Driver, Registration Number, Truck Status\\
 \cellcolor{white}		& \textbf{Size}		& 1,000\\
 \cellcolor{white}		& \textbf{Traffic}		& Average\\
+\end{tabular} 
+\subsection{Backup}
+\begin{tabular}{llp{8.75cm}}
+\cellcolor{white}/PD60/	& \textbf{Data}			& Backup\\
+\cellcolor{white}		& \textbf{Composition}	& User Data, Order Data, Internal Data (except Backup)\\
+\cellcolor{white}		& \textbf{Size}		& 5,000,000\\
+\cellcolor{white}		& \textbf{Traffic}		& High\\
 \end{tabular} 
 
 \chapter{Product Performance}
