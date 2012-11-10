@@ -11,6 +11,8 @@
 \usepackage{hyperref}
 \usepackage[table]{xcolor}
 \usepackage{colortbl}
+\usepackage{multirow}
+\usepackage{tabularx}
 \usepackage{graphicx}
 \usepackage{tikz}
 \usepackage{kpfonts}
@@ -79,6 +81,19 @@
 
 %END Title Definition
 
+%Verschissener rotierter Text für verschissene Tabelle 14.1/2
+\makeatletter
+\newsavebox\zzz
+\def\mystrut{%
+\dimen@\wd\zzz
+\divide\dimen@\thr@@
+\advance\dimen@-\dp\@arstrutbox
+\rule\z@\dimen@}
+
+\def\rotatezzz{%
+\rotatebox{90}{\rlap{\kern-\dp\@arstrutbox\usebox\zzz}}}
+%END Verschissener rotierter Text
+
 \makeatother
 \title{Software Requirements Specifications for Project ``BookExpress''}
 \author{Marc A. Harnos\\ {mharnos@gmail.com} \and Joscha Rapp\\ {jraxxo@gmail.com} \and Christian Schulz\\ {crs.s@gmx.net}}
@@ -90,6 +105,8 @@
 \definecolor{tableHead}{HTML}{40DD0E}
 \definecolor{tableEven}{HTML}{D7FCCC}
 \definecolor{tableOdd}{HTML}{F0FEEC}
+\definecolor{tableFoot}{HTML}{40DD0E}
+\renewcommand{\arraystretch}{1.25}
 
 \makeglossaries
 
@@ -715,10 +732,10 @@ as one big order.\\
 
 \begin{center}
 
-\rowcolors{1}{tableEven}{tableOdd}
+\rowcolors{2}{tableEven}{tableOdd}
 \begin{tabular}{|lllll|}
 \hline
-\cellcolor{tableHead}Product Quality & \cellcolor{tableHead}excellent & \cellcolor{tableHead}good & \cellcolor{tableHead}normal & \cellcolor{tableHead}not applicable \\ 
+\rowcolor{tableHead}Product Quality & excellent & good & normal & not applicable \\ 
 \hline
 Functionality &  &  &  &  \\ 
 suitability &  & \checkmark &  &  \\ 
@@ -936,7 +953,83 @@ BookExpress employees use the client application to perform maintenance tasks fo
 \end{itemize}
 
 \chapter{Appendices}
-\section{muh}
+\section{Effort Estimation}
+
+\rowcolors{2}{tableEven}{tableOdd}
+\begin{tabularx}{\textwidth}{|ccXlccrcr|}
+\hline
+\rowcolor[gray]{0.3} & \textcolor{white}{\#} & \textcolor{white}{Category} & \textcolor{white}{Class} & \textcolor{white}{Count} &  & \textcolor{white}{Weight} &  & \textcolor{white}{FP}\\
+\hline
+					&						&								& simple	& 2 & x & 3 & = & 6\\
+					&						&								& medium	& 4 & x & 4 & = & 16\\
+\multirow{-3}{*}{}	& \multirow{-3}{*}{1}	& \multirow{-3}{*}{Input Data}	& complex	& 2 & x & 6 & = & 12\\
+					\hline
+					&						&								& simple	& 2 & x & 3 & = & 6\\
+					&						&								& medium	& 3 & x & 4 & = & 12\\
+\multirow{-3}{*}{}	& \multirow{-3}{*}{2}	& \multirow{-3}{*}{Request}		& complex	& 1 & x & 6 & = & 6\\
+					\hline
+					&						&								& simple	& 4 & x & 4 & = & 16\\
+					&						&								& medium	& 1 & x & 5 & = & 5\\
+\multirow{-3}{*}{}	& \multirow{-3}{*}{3}	& \multirow{-3}{*}{Output Data}	& complex	& 1 & x & 7 & = & 7\\
+					\hline
+					&						&								& simple	& 0 & x & 7 & = & 0\\
+					&						&								& medium	& 2 & x & 10 & = & 20\\
+\multirow{-3}{*}{}	& \multirow{-3}{*}{4}	& \multirow{-3}{*}{Databases}	& complex	& 3 & x & 15 & = & 45\\
+					\hline
+					&						&								& simple	& 0 & x & 5 & = & 0\\
+					&						&								& medium	& 3 & x & 7 & = & 21\\
+\multirow{-3}{*}{}	& \multirow{-3}{*}{5}	& \multirow{-3}{*}{External Data}& complex	& 2 & x & 10 & = & 20\\
+					\hline
+\rowcolor{tableFoot}rFP &  & \multicolumn{5}{>{\columncolor{tableFoot}}l}{Total sum of raw function points} & = & 192\\
+\hline
+\end{tabularx}
+
+\renewcommand{\arraystretch}{0.9}
+\savebox\zzz{\small {\begin{tabular}[c]{@{}c@{}} \hiderowcolors Applications\\Logic \end{tabular}}}
+
+\renewcommand{\arraystretch}{1.25}
+\rowcolors{2}{tableEven}{tableOdd}
+\noindent\begin{tabularx}{\textwidth}{|cclcm{0.46cm}r>{\cellcolor{white}}r|>{\cellcolor{white}}c>{\cellcolor{white}}r>{\cellcolor{white}}r}
+\cline{1-7}
+\rowcolor[gray]{0.3} & & \textcolor{white}{Qualification Factors} & & \multicolumn{2}{>{\columncolor[gray]{0.3}}r}{\textcolor{white}{\begin{tabular}[c]{@{}r@{}}\cellcolor[gray]{0.3}max\\ \cellcolor[gray]{0.3}pts\end{tabular}}} & \cellcolor[gray]{0.3} \textcolor{white}{Weight} & & & \\
+& 0 & Base Level & & 							& 		& \cellcolor{tableOdd}70  & & & \\
+& 1 & Interface with other Applications & & 	& 5 	& 4.0 & & & \\
+& 2 & Distributed data processing & & 			& 5 	& 4.5 & & & \\
+& 3 & Rate of transactions & & 					& 5 	& 5.0 & & & \\
+\mystrut & 4a & Numerical Operations & &		& 10	& 7.0 & & & \\
+\mystrut & 4b & Control Procedures & &			& 5		& 5.0 & & & \\
+\mystrut & 4c & Exception Management & &		& 10	& 8.0 & & & \\
+\mystrut\rotatezzz & 4d & Logical Flows & &		& 5		& 5.0 & & & \\
+& 5 & Reusability & &							& 5		& 4.0 & & & \\
+& 6 & Database Conversions & &					& 5		& 5.0 & & & \\
+& 7 & Adaptability & &							& 5		& 3.5 & & & \\
+\cline{1-7}
+\end{tabularx}
+
+\vspace{0.25em}
+
+\rowcolors{1}{tableFoot}{tableFoot}
+\noindent\begin{tabularx}{\textwidth}{|cm{0.28cm}lccrm{1.3cm}cr|>{\cellcolor{white}}l}
+\cline{1-9}
+Q & & Qualification Coefficient & 0.01 & x 		& 		& \hfill 121 & = & 1.21 & \\ \cline{1-9}
+\multicolumn{9}{c}{} \\
+\cline{1-9}
+qFP & & Qualified Function Points & E & x 		&		& \hfill rFP & = & 234.74 & \\
+\cline{1-9}
+\multicolumn{9}{c}{} \\
+\cline{1-9}
+Size & & \multicolumn{3}{>{\cellcolor{tableFoot}}l}{Transformation qFP according to IBM data} & &	& = & 16.08 & M-Month\\
+\cline{1-9}
+\multicolumn{9}{c}{} \\
+\cline{1-9}
+Time & & \multicolumn{3}{>{\cellcolor{tableFoot}}l}{Transformation of Size according to Boehm}& & \multicolumn{1}{|c|}{D\footnote{B = Batch System, D = Dialogue System, R = Realtime System}} & = & 6.61 & C-Month\\
+\cline{1-9}
+\multicolumn{9}{c}{} \\
+\cline{1-9}
+Team & & \multicolumn{3}{>{\cellcolor{tableFoot}}l}{Division of Size by Time} & & & = & 2.43 & Employees\\
+\cline{1-9}
+\end{tabularx}
+
 
 \addcontentsline{toc}{section}{Glossary}
 \addcontentsline{toc}{section}{Acronyms}
