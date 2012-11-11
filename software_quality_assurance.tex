@@ -1,5 +1,5 @@
 %% nicht vergessen draft raus zu nehmen, um echte Bilder einzubinden und die Problem-Vierecke verschwinden zu lassen
-\documentclass[12pt,a4paper,oneside,svgnames]{report}
+\documentclass[11pt,a4paper,oneside,svgnames]{report}
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -119,8 +119,9 @@
 \tableofcontents
 
 \chapter*{Document History}
-\begin{center}
 
+\begin{table}[H]
+\centering
 \begin{tabular}{|l|l|l|l|}
 \hline 
 Editor(s) & Date & Purpose of Editing & Version \\ 
@@ -130,11 +131,38 @@ Harnos, Rapp, Schulz & 2012-10-01 & Initial Document Creation & v0.01 \\
 Harnos, Rapp & 2012-10-08 & Fick Das & v0.02 \\ 
 \hline
 Schulz & 2012-10-08 & Fick Das Nicht - Überstimmt & v0.03 \\ 
-\hline 
+\hline
 \end{tabular} 
+\caption{Document History Table}
+\label{tab:document-history}
+\end{table}
 
-\end{center}
 
 \chapter{Introduction}
 The software quality assurance concerns itself - as the title already suggests - with the issue of guaranteeing a certain level of quality of the final product. However, the testing does not only occur when the product is finished, as continuous testing is critical to keep the code free from errors early on - the earlier an error gets noticed, the less damage will be done by it. If you're making the mistake of testing at the end of the development phase, chances are pretty high that you may have some fundamental errors in your code, which possibly take a rather long time to fix, as so much more code is directly or indirectly relying on it. If you discover such an error, say, a few hours after it has been coded into the product, you'll be able to fix it rather quickly and everybody else working on the project can adapt themselves to it and change their code accordingly, which may take maybe half an hour or so - if you're discovering the mistake 2 weeks later, the possibility is very high that many others have already written a lot of code that depends on your underlying fundamentals, so a lot of code will have to get either fixed or maybe even rewritten completely, which costs a lot of working hours - and money. This is why continuous quality assurance is so very important - it may seem trivial and tedious at first, but it's nothing compared to the scenario that was just described. 
+
+\section{Functional}
+\section{Non-Functional}
+
+\chapter{Analysis/Testing}
+Introduction blub blub
+\section{Static Analysis}
+Code Inspection blub
+\section{Dynamic Analysis/Testing}
+\subsection{Integration Testing}
+\subsection{System Testing}
+\subsection{Module Testing}
+\subsubsection{Module 1}
+\subsubsection{Module 2}
+\subsubsection{Module 3}
+\subsubsection{Module 4, etc}
+
+\subsection{Acceptance Testing (weg lassen?)}
+
+\chapter{Appendices}
+\printglossaries\addcontentsline{toc}{section}{Glossary}\addcontentsline{toc}{section}{Acronyms}
+
+\listoffigures\addcontentsline{toc}{section}{List of figures}
+\listoftables\addcontentsline{toc}{section}{List of tables}
+
 \end{document}
