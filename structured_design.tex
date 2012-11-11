@@ -163,7 +163,7 @@ In this chapter the programming pattern which the software architect has to impl
 \section{Programming Pattern}
 The "BookExpress" software should implement a simple \gls{mvc} pattern separating the user visible output from the internal data processing structures much like CSS separates the styling of a webpage from the HTML markup.
 
-The "Model" part of this set up fetches data from databases and holds them in objects - it is essentially the "data storage" of the application. The controller and view must not make any database queries, all data required for the specific controller/view has to be provided by the model itself, which in turn does make the necessary database requests. This can speed up the data retrieving process with smart caching times on the model part and also ensures a higher level of security by minimizing the chance of SQL-Injections possibly performed on the view.
+The "Model" part of this set up fetches data from databases and holds them in objects - it is essentially the "data storage" of the application. The controller and view must not make any database queries, all data required for the specific controller/view has to be provided by the model itself, which in turn does make the necessary database requests. This can speed up the data retrieving process with smart caching times on the model part and also ensures a higher level of security by minimizing the chance of SQL-Injections possibly performed on the controller/view.
 
 The "View" is essentially anything the user gets to see on his side of the application - the user interface. It also is the only point where the user can interact with the application, evaluating and providing data. The view itself can only retrieve data from the model, it can never make direct database lookups.
 
@@ -174,12 +174,14 @@ For this view, the controller is implemented on the application server as a web 
 
 The "Model" in the first - and also in the second - set up is the application server itself, on which the web server runs. The application server is on the same machine as the web server, but logically a separate entity; it has access to the database server, which can also run on the same hardware, but also could run on a different machine. The data transmitted from model to controller and vice versa is composed of data objects transmitted binary for instant usage on the individual server; we do not have to compress data here, or serialize it, for the lack of data travelling distance.
 
-In the second case, when the "BookExpress" employees use the client application software, the \gls{mvc} varies a bit from the web interface implementation. Here the view \textbf{and} controller are both implemented in the application software itself, only the model is on the application server in an different location. Therefore the data transmitted from controller to model and vice versa has to be compressed and serialized, utilizing JSON and gzip compression to accomplish fast serialisation and minimisation for faster response times and as little as possible data transferred.
+In the second case, when the "BookExpress" employees use the client application software, the \gls{mvc} varies a bit from the web interface implementation. Here the application itself has its separate model, view and controller, which in turn all three act as a controller \textbf{and} view unit and the outlying model is on the application server in an different location. Therefore the data transmitted from this controller construct to the model and vice versa has to be compressed and serialized, utilizing JSON and gzip compression to accomplish fast serialisation and minimisation for faster response times and as little as possible data transferred. The communication between the inner model and inner controller are - as with the implementation on the application server - uncompressed and binary transferrals of Java objects.
 
-TODO: Add an image illustrating this model
+This set up accomplishes that the inner model can cache data and minimize the needed look up to the model on the application server, where as the inner controller and view do not have to be modified for this "special environment"; they get their data as if they were directly connected to the outer model - but with enhanced performance.
+
+TODO: Add an image illustrating this model [ref: T1 Model p9]
 
 \section{Programming Techniques and Software}
-For standardisations and readabilities sake simple rules should be honoured to ensure a consistent look of program code, making it for new software architects joining the team easier to understand the code and find code bits faster. Those rules are arbitrary and should be agreed upon the development team; they should be defined at the beginning of the project and extended if necessary. An example for such a rule would be the placement of curly brackets after method declarations, they could be defined directly after the declaration or in a new line.
+For standardisations and readabilities sake simple rules should be honoured to ensure a consistent look of program code, making it for new software architects joining the team easier to understand the code and find code parts faster. Those rules are arbitrary and should be agreed upon the development team; they should be defined at the beginning of the project and extended if necessary. An example for such a rule would be the placement of curly braces after method declarations, they could be defined directly after the declaration or in a new line.
 
 \lstset{
 	tabsize=4,
@@ -229,7 +231,7 @@ The server could be a WebSphere Application Server from IBM, but also an TomEE f
 
 Java EE should be used due to a number of advantages:
 \begin{itemize}
-	\item Implementation of MVC pattern comes naturally with Java EE application servers, because of how Java in general works and in particular the application server is modelled
+	\item Implementation of MVC pattern comes naturally with Java EE application servers, because of how Java in general works and in particular the application server is modelled with APIs and object oriented modularisation
 	\item It is a very popular software used by many companies, so the chances that the implementing software architect has already experience with it is very likely
 	\item The web server system is faster than common PHP servers, due to the compilation of web pages rather than script interpretation
 \end{itemize}
@@ -243,7 +245,7 @@ The model, which runs on the Java application server, has a intermediate connect
 The model also has an implemented security layer, denying access to data, which the user has no privileges to and blocking malicious requests. This security layer has to work quick, and in general the model has to be very responsive, due to the high data load.
 
 \subsection{Web Interface (View)}
-The view is the point, the interaction between the book stores, publishers and the system takes place. The web interface should look the same, and work with any new and standards compliant web browser; the supported browsers should at least include Mozilla Firefox from version 3.5 onwards, Chrome, Opera from version 9 onwards, Safari, and Internet Explorer from version 10 onwards.
+The view is the point, the interaction between the book stores, publishers and the system takes place. The web interface should look the same on, and work with any new and standards compliant web browser; the supported browsers should at least include Mozilla Firefox from version 3.5 onwards, Chrome, Opera from version 9 onwards, Safari, and Internet Explorer from version 10 onwards.
 
 The view itself should output standard complaint HTML5 code, and use modern JavaScript libraries to enhance the user experience and make user work flow easier to understand, i.e. by implementing visual clues which data is currently missing and suggesting search and input terms where appropriate.
 
@@ -251,20 +253,22 @@ The work flow has to be easy to understand, and the input fields and buttons sho
 
 \subsection{Application Server/Web Server (Controller)}
 The controller is processing user data, which always implies input errors and the possibility of an attack to the system. The data has to be checked for any inconsistency regarding data type and for missing data - also any attempt of system intrusion has to be recognised and prevented.
-The controller has a security and rights management layer implemented, preventing users from seeing data which they have no access to or visiting sites, they should not be able to see.
+The controller has a security and rights management layer implemented, preventing users from seeing views, they should not be able to see.
 
 The controller is running on a web server and is realised through \glspl{jsp}.
 
 \subsection{Client Application (Controller/View)}
-The client application is a stand alone Java application which incorporates the controller and view into one program. The data is retrieved from the application server and transmitted serialised through JSON strings. Hereby security is very important, the data is never transmitted without encryption ensuring packages could not be sniffed over the network. If the controller has to be written so it cannot be manipulated in a form, where the user is given more rights than he actually has - without model authorisation the controller should not be able to process any data to the view.
+The client application is a stand alone Java application which incorporates the model, view and controller into one program, and is regarded as a controller unit itself. The data is retrieved from the application server and transmitted serialised through JSON strings into the model of the application. Hereby security is very important, the data is never transmitted without encryption ensuring packages could not be sniffed over the network. The whole application as a controller has to be written so it cannot be manipulated in a form, where the user is given more rights than he actually has - without model authorisation the controller should not be able to process any data to the view nor retrieve such data from the model on the web server itself.
 
-The client application should be very responsive and fast - it also should integrate in the system very well enabling features as drag\&drop and the support for specialised hardware like graphical tablets for signature processing and bar code readers and gps tracking devices.
+The client application should be very responsive and fast - it also should integrate in the system very well enabling features as drag\&drop and the support for specialised hardware like graphical tablets for signature processing and bar code readers or gps tracking devices.
 
 \section{Model Layers}
-TODO: insert image picturing the modules sorted by layer
+TODO: insert image picturing the modules sorted by layer [ref: T1 Model p14]
 
 \section{Module Relations/Dependencies}
+This section shows the relations and dependencies between the modules in a layer structure, showing relations between the X big modules, A, B C, and listing their sub modules accordingly.
 
+TODO: insert image showing relations [ref: T3 Model p9]
 
 \chapter{Environment / General~Architecture}
 \section{Application Server}
