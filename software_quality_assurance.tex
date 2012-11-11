@@ -150,6 +150,7 @@ There are multiple ways to test a program or system to ensure that it is free of
 \item \textbf{Static Testing} or
 \item \textbf{Dynamic Testing}.
 \end{itemize}
+<<<<<<< HEAD
 The big difference between these two is that static methods, such as reviews, walkthroughs or inspections do not require the tester to actually run the program at all. Instead, they use certain tools to analyse the program in a static manner, i.e. scanning the source code for certain abnormalities that could possibly produce errors.  
 
 \section{Static Testing}
@@ -199,6 +200,36 @@ Acceptance testing is, much like system testing, a black box testing method for 
 The main difference between system testing is, that, as opposed to system testing, the acceptance testing is performed by the client/user - also called user acceptance testing (UAT) or end-user testing.
 
 With a successful acceptance test, the software is delivered to the client as a finished product and testing usually ends here.
+=======
+The big difference between these two is that static methods, such as reviews, walkthroughs or inspections do not require the tester to actually run the program at all. Instead, they use certain tools to analyse the program in a static manner, i.e. scanning the source code for certain abnormalities that could possibly produce errors. One of the big advantages of static software testing methods is that very complex systems that require very powerful hardware to run properly can be analysed and tested without having the aforementioned assets. However, there are always certain types of errors that are very hard to spot when you're not really running the system using test datasets.   
+\section{Static Analysis}
+Static Analysis is a very powerful static method for software analysis, and also the most common one. It was developed in the mid-70s by Michael Fagan at IBM. The main idea is that a round of qualified inspectors are getting together to discuss a piece of work that shall be integrated into the system in production. The meeting is moderated by a moderator who gets elected beforehand; usually that is the most experienced inspector. The inspection consists of 6 stages:
+\begin{itemize}
+\item \textbf{Planning:} The inspection is planned by the moderator.
+\item \textbf{Overview meeting:} The author describes the background of the work product.
+\item \textbf{Preparation:} Each inspector examines the work product to identify possible defects.
+\item \textbf{Inspection meeting:} During this meeting the reader reads through the work product, part by part and the inspectors point out the defects for every part.
+\item \textbf{Rework:} The author makes changes to the work product according to the action plans from the inspection meeting.
+\item \textbf{Follow-up:} The changes by the author are checked to make sure everything is correct.
+\end{itemize}
+It is important to note that the stages Preparation, Inspection meeting and Rework may be iterated as long as the predefined exit criteria (posed by the moderator) is not met. 
+The moderator was already mentioned a few times, however, every person taking part in the code inspection has a certain role to fulfil:
+\begin{itemize}
+\item \textbf{Author:} The creator of the inspected work product.
+\item \textbf{Moderator:} He is leading and coordinating the inspection.
+\item \textbf{Reader:}
+\end{itemize}
+\section{Dynamic Analysis/Testing}
+\subsection{Integration Testing}
+\subsection{System Testing}
+\subsection{Module Testing}
+\subsubsection{Module 1}
+\subsubsection{Module 2}
+\subsubsection{Module 3}
+\subsubsection{Module 4, etc}
+
+\subsection{Acceptance Testing (weg lassen?)}
+>>>>>>> added MOAR static shit
 
 \chapter{Appendices}
 \printglossaries\addcontentsline{toc}{section}{Glossary}\addcontentsline{toc}{section}{Acronyms}
