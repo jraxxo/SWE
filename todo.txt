@@ -1,10 +1,9 @@
 [A1]
 
-DFD Datendurchsatz farblich darstellen
+DFD Datendurchsatz farblich darstellen ?
 
 [A2]
 
-Software Modules beschreiben
 Describe MVC Layer 3.4 (see "T1 Model.pdf" p.15)
 
 Referenzen/Sources

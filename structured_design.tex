@@ -339,7 +339,27 @@ The client application should be very responsive and fast - it also should integ
  \caption{Model Layers}
 \end{figure}
 
+The figure describes the MVC patttern for BookExpress and consist of a View (Web Interface), Controller (Java Application / Web Server) and Model (Application Server).
 
+As shown in the diagram, the Client, Publisher and BookExpress Employees all use the same Web Interface to process data and functions but have different rights as to the different user types they have.. 
+The Administrative System, especially the Access Rights Management module determines whether a user is able to perform several tasks or not by checking the login data. 
+
+The level of restriction depend on a users login data. A Client or Publisher is restricted on average and an Administrator is not restricted therefore is able to access and perform every module and function.
+\\
+\begin{figure}[H]
+\begin{center}
+Client/Publisher < Employee < Administrator
+\end{center}
+\caption{Level of restriction}
+\end{figure}
+
+The View is only able request and receive data to/from the Controller which will handle those requests and decide what to do - according to the defined functions and models which perform tasks on those data to process the enquired actions which are handled by the four modules Ordering System, Invoice System, Logistics and Administrative System in the first place. For a more detailed description on what every module does, see \ref{sec:modules}. The requests from View to Controller are http get and post requests. The delivered data from Controller to View is formatted as HTML or JSON type.
+
+The Controller is only able to request data from the Model (Application Server) where all the databases are located on. For security purpose all databases are shielded behind the Security Layer which provides the required level of safety against unauthorized access and unlikely data abuse. The requests from Controller Model are mostly SQL requests. The delivered data from Model to Controller is mostly plain text.
+
+The database on the Application Server is divided up in several smaller databases to keep a good performance with comparatively lightweight data records resulting in less processing time relatively to the possibility of one big database which manages everything.
+
+sample process
 
 \section{Module Relations/Dependencies}
 This section shows the relations and dependencies between the modules in a layer structure, showing relations between the X big modules, A, B C, and listing their sub modules accordingly.
@@ -352,7 +372,7 @@ This section shows the relations and dependencies between the modules in a layer
 \end{figure}
 
 \chapter{Software Modules}
-
+\label{sec:modules}
 \section{Administrative System}
 
 \begin{figure}[H]
@@ -587,6 +607,16 @@ Employee Data & = & Employee PIN\\
 Administrator & = & [True $|$ False]\\
 \hfill\\
 \caption{Employee Data}\\
+\end{longtable}
+
+\begin{longtable}{p{3.5cm}p{0.5cm}p{8.5cm}}
+Backup & = &  Client File\\
+&  & + Order Data\\
+&  & + Stock \\
+&  & + Truck Fleet Data\\
+&  & + Employee File\\
+\hfill\\
+\caption{Backup Data}\\
 \end{longtable}
 
 
