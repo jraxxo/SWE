@@ -8,15 +8,6 @@ Introduction
 
 Logische (Publischer Connected, Application Server mit Webserver und Webinterface - Zugriff von Publischer, Zugriff auf Publisher, UML, Apache, Firewall, Finance usw.) und Physische (Rechnezentrum, Backup-Server, Storage-Server, Firewall (External/Internal), Custom-Support, ... + Beschreibung für Hardware-Punkte) Architektur
 
-MVC-Pattern
-——————
-App -Model
-Web Server - Controller -> Browser View
-
-App Server - Model
-Java App -> Controller & View
-————
-
 Structured Design
 Jede Funktion beschreiben (Log in, Check Availability, Remove Book, Change Data, ...)
 
