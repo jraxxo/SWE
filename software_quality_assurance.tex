@@ -144,25 +144,59 @@ The software quality assurance concerns itself - as the title already suggests -
 \section{Functional}
 \section{Non-Functional}
 
-\chapter{Analysis/Testing}
+\chapter{Software Testing}
 There are multiple ways to test a program or system to ensure that it is free of errors and functions properly. All of those fall in either one of the two big categories:
 \begin{itemize}
 \item \textbf{Static Testing} or
 \item \textbf{Dynamic Testing}.
 \end{itemize}
 The big difference between these two is that static methods, such as reviews, walkthroughs or inspections do not require the tester to actually run the program at all. Instead, they use certain tools to analyse the program in a static manner, i.e. scanning the source code for certain abnormalities that could possibly produce errors.  
-\section{Static Analysis}
 Static Analysis is obviously a static way of software testing 
-\section{Dynamic Analysis/Testing}
-\subsection{Integration Testing}
-\subsection{System Testing}
-\subsection{Module Testing}
-\subsubsection{Module 1}
-\subsubsection{Module 2}
-\subsubsection{Module 3}
-\subsubsection{Module 4, etc}
 
-\subsection{Acceptance Testing (weg lassen?)}
+\section{Dynamic Testing}
+Dynamic testing is described by executing actual programmed code for given test cases, as in contrast to static testing which involves reviews, inspections and walkthroughs.
+
+Dynamic testing can be performed even if the program itself is not finished yet to test parts of the software, especially individual modules and interfaces. Dynamic testing can be performed automatically on code compilation in form of, for example, unit tests.
+
+There are several types of testing, approaches - one of them is the "box approach", which is separated into "white box"/"glass box" and "black box" testing; there is also a mixture of those approaches, the "grey box" testing.
+
+\subsection{White Box / Glass Box Testing}
+White box testing tests internal program functionality and structures, rather than the user functionality. For white box testing, the internal system perspective as well as the programming skills are used to design the test cases - the tester has to know the inner workings of the program to develop those test cases.
+
+Common tests with white box testing include, API testing, fault injection and mutation testing.
+
+A disadvantage of white box testing is, that it does not detect missing functionality of the program, but only implemented errors - so missing design specifications might not be detected.
+
+\subsection{Black Box Testing}
+As opposed to the white/glass box testing, in the black box testing the tester does not know anything about the inner workings of the software, the software is seen as a "black box". The tester knows what the software has to do, but not how it accomplishes the results.
+
+Common tests performed with black box testing include, state transition tables, decision table testing, use case testing and specification-based testing.
+
+\paragraph{Specification-based testing}
+Specification-based testing takes the requirements of the software design and tests the software functionality for those requirements. The testing consists of previously developed test cases which should perform a certain output for a given input, an expected behaviour is tested. This test can be built with the requirements specifications.
+
+\subsection{Testing levels}
+\subsubsection{Unit Testing}
+Unit testing, or module testing, test the proper functionality of parts of code, like modules, functions and interfaces. This type of testing is usually written before, or at the same time as the code is developed, by the developers themselves to test if everything is working as expected; as described in the design.
+
+This kind of test will never turn out positive if the function or interface is not implemented by design specifications. Unit testing is a kind of white box testing.
+
+\subsubsection{Integration Testing}
+Integration testing tests if interfaces work together according to software design. Such tests can detect interfaces not working properly in the whole scheme of the application, so finding them and fixing the issue is made possible/faster.
+
+Integration tests are used to test if modules/components integrate into interfaces and make sure that the system works as one unit in the end.
+
+\subsubsection{System Testing}
+System testing tests the whole system (as one unit) for compliance with the design specifications. As opposed to unit and integration testing, system testing is a kind of black box testing, so no inner workings of the system have to be known to the tester - the tester does only have to test the system as a whole against the specifications.
+
+System testing is in general only performed after the integration testing passes successfully.
+
+\subsubsection{Acceptance Testing}
+Acceptance testing is, much like system testing, a black box testing method for testing the whole software against agreed system design/the specification.
+
+The main difference between system testing is, that, as opposed to system testing, the acceptance testing is performed by the client/user - also called user acceptance testing (UAT) or end-user testing.
+
+With a successful acceptance test, the software is delivered to the client as a finished product and testing usually ends here.
 
 \chapter{Appendices}
 \printglossaries\addcontentsline{toc}{section}{Glossary}\addcontentsline{toc}{section}{Acronyms}
