@@ -134,7 +134,7 @@
 
 \chapter*{Document History}
 
-\begin{table}[h]
+\begin{table}[H]
 \centering
 \begin{tabular}{|l|l|l|l|}
 \hline 
@@ -449,6 +449,8 @@ Login Data & = & [Client PIN $|$ Employee PIN]\\
 \\
 Correspondent & = & Name\\
 &  & + (Email)\\
+\hfill\\
+\caption{Client Data}\\
 \end{longtable}
 
 
@@ -469,6 +471,8 @@ Date & = & Hour\\
 &  & + Day\\
 &  & + Month\\
 &  & + Year\\
+\hfill\\
+\caption{Order Data}\\
 \end{longtable}
 
 \section{Internal Data}
@@ -489,6 +493,8 @@ Book Data & = & [ISBN $|$ UPC $|$ EAN]\\
 &  & + Availability\\
 \\
 Availability & = & [In Stock $|$ Ordered at Publisher $|$ N/A]\\
+\hfill\\
+\caption{Book Data}\\
 \end{longtable}
 
 \subsection{Truck Information}
@@ -499,6 +505,8 @@ Truck Fleet Data & = & Driver\\
 &  & + Truck Status \\
 \\
 Truck Status & = & [Boxing $|$ Parcel Sorting Centre $|$ Delivering $|$ Traffic Jam $|$ Delivered] \\
+\hfill\\
+\caption{Truck Fleet Data}\\
 \end{longtable}
 
 \subsection{User Data}
@@ -518,6 +526,8 @@ Invoice & = & Client Data\\
 &  & + Invoice Status\\
 \\
 Invoice Status & = & [Paid $|$ Open]\\
+\hfill\\
+\caption{Contract Data}\\
 \end{longtable}
 
 \subsection{Employee}
@@ -531,14 +541,14 @@ Employee Data & = & Employee PIN\\
 &  & + Login Data\\
 &  & + Administrator\\
 \\
-Administrator & = & [True $|$ False]
+Administrator & = & [True $|$ False]\\
+\hfill\\
+\caption{Employee Data}\\
 \end{longtable}
 
 
 \chapter{Appendices}
-\addcontentsline{toc}{section}{Glossary}
-\addcontentsline{toc}{section}{Acronyms}
-\printglossaries
+\printglossaries\addcontentsline{toc}{section}{Glossary}\addcontentsline{toc}{section}{Acronyms}
 
 \listoffigures\addcontentsline{toc}{section}{List of figures}
 \listoftables\addcontentsline{toc}{section}{List of tables}
