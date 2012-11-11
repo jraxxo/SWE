@@ -1,0 +1,140 @@
+%% nicht vergessen draft raus zu nehmen, um echte Bilder einzubinden und die Problem-Vierecke verschwinden zu lassen
+\documentclass[12pt,a4paper,oneside,svgnames]{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{eurosym}
+\usepackage[british]{babel}
+\usepackage{float}
+
+\usepackage{longtable}
+\usepackage{ae}
+\usepackage{hyperref}
+\usepackage[table]{xcolor}
+\usepackage{colortbl}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{kpfonts}
+\usepackage[explicit]{titlesec}
+\usepackage[acronym,nonumberlist,style=tree]{glossaries}
+\usepackage{amssymb}
+\usepackage[left=3.65cm,right=3.65cm]{geometry}
+\usepackage{listings}
+
+
+%BEGIN Chapter Definition
+
+\makeatletter
+\def\thickhrulefill{\leavevmode \leaders \hrule height 1ex \hfill \kern \z@}
+\def\@makechapterhead#1{%
+  \vspace*{10\p@}%
+  {\parindent \z@ \raggedleft \reset@font
+            \scshape \@chapapp{} \thechapter
+        \par\nobreak
+        \interlinepenalty\@M
+    \Huge \bfseries #1\par\nobreak
+    %\vspace*{1\p@}%
+    \hrulefill
+    \par\nobreak
+    \vskip 50\p@
+  }}
+\def\@makeschapterhead#1{%
+  \vspace*{10\p@}%
+  {\parindent \z@ \raggedleft \reset@font
+            \scshape \vphantom{\@chapapp{} \thechapter}
+        \par\nobreak
+        \interlinepenalty\@M
+    \Huge \bfseries #1\par\nobreak
+    %\vspace*{1\p@}%
+    \hrulefill
+    \par\nobreak
+    \vskip 50\p@
+  }}
+
+%END Chapter Definition
+
+%BEGIN Title Definition
+
+\makeatletter
+\def\thickhrulefill{\leavevmode \leaders \hrule height 1pt\hfill \kern \z@}
+\renewcommand{\maketitle}{\begin{titlepage}%
+    \let\footnotesize\small
+    \let\footnoterule\relax
+    \parindent \z@
+    \reset@font
+    \null\vfil
+    \begin{flushleft}
+      \huge \@title
+    \end{flushleft}
+    \par
+    \hrule height 4pt
+    \par
+    \begin{flushright}
+      \LARGE \@author \par
+    \end{flushright}
+    \vskip 60\p@
+    \vfil\null
+  \end{titlepage}%
+  \setcounter{footnote}{0}%
+}
+
+%END Title Definition
+
+%Verschissener rotierter Text für verschissene Tabelle 14.1/2
+\makeatletter
+\newsavebox\zzz
+\def\mystrut{%
+\dimen@\wd\zzz
+\divide\dimen@\thr@@
+\advance\dimen@-\dp\@arstrutbox
+\rule\z@\dimen@}
+
+\def\rotatezzz{%
+\rotatebox{90}{\rlap{\kern-\dp\@arstrutbox\usebox\zzz}}}
+%END Verschissener rotierter Text
+
+\makeatother
+\title{Software Quality Assurance for Project ``BookExpress''}
+\author{Marc A. Harnos\\ {mharnos@gmail.com} \and Joscha Rapp\\ {jraxxo@gmail.com} \and Christian Schulz\\ {crs.s@gmx.net}}
+\author{Marc A. Harnos\\ Joscha Rapp\\ Christian Schulz}
+\date{October 2012}
+
+
+
+\definecolor{tableHead}{HTML}{40DD0E}
+\definecolor{tableEven}{HTML}{D7FCCC}
+\definecolor{tableOdd}{HTML}{F0FEEC}
+\definecolor{tableFoot}{HTML}{40DD0E}
+
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+\renewcommand{\arraystretch}{1.25}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\chapter*{Document History}
+\begin{center}
+
+\begin{tabular}{|l|l|l|l|}
+\hline 
+Editor(s) & Date & Purpose of Editing & Version \\ 
+\hline 
+Harnos, Rapp, Schulz & 2012-10-01 & Initial Document Creation & v0.01 \\ 
+\hline
+Harnos, Rapp & 2012-10-08 & Fick Das & v0.02 \\ 
+\hline
+Schulz & 2012-10-08 & Fick Das Nicht - Überstimmt & v0.03 \\ 
+\hline 
+\end{tabular} 
+
+\end{center}
+
+\chapter{Introduction}
+The software quality assurance concerns itself - as the title already suggests - with the issue of guaranteeing a certain level of quality of the final product. However, the testing does not only occur when the product is finished, as continuous testing is critical to keep the code free from errors early on - the earlier an error gets noticed, the less damage will be done by it. If you're making the mistake of testing at the end of the development phase, chances are pretty high that you may have some fundamental errors in your code, which possibly take a rather long time to fix, as so much more code is directly or indirectly relying on it. If you discover such an error, say, a few hours after it has been coded into the product, you'll be able to fix it rather quickly and everybody else working on the project can adapt themselves to it and change their code accordingly, which may take maybe half an hour or so - if you're discovering the mistake 2 weeks later, the possibility is very high that many others have already written a lot of code that depends on your underlying fundamentals, so a lot of code will have to get either fixed or maybe even rewritten completely, which costs a lot of working hours - and money. This is why continuous quality assurance is so very important - it may seem trivial and tedious at first, but it's nothing compared to the scenario that was just described. 
+\end{document}
