@@ -1,6 +1,7 @@
 [A1]
 
 DFD Datendurchsatz farblich darstellen
+2.3 Operating system
 
 [A2] - Alles was der Programmierer wissen muss (ca. 56 Seiten)
 
