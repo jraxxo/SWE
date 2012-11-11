@@ -2,8 +2,10 @@
 
 DFD Datendurchsatz farblich darstellen
 
-[A2] - Alles was der Programmierer wissen muss (ca. 56 Seiten)
-
-Logische (Publischer Connected, Application Server mit Webserver und Webinterface - Zugriff von Publischer, Zugriff auf Publisher, UML, Apache, Firewall, Finance usw.) und Physische (Rechnezentrum, Backup-Server, Storage-Server, Firewall (External/Internal), Custom-Support, ... + Beschreibung für Hardware-Punkte) Architektur
+[A2]
 
 Software Modules beschreiben
+
+Referenzen/Sources
+Header and Footer
+Document History
