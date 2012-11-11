@@ -362,16 +362,23 @@ This section shows the relations and dependencies between the modules in a layer
 
 \subsection{Account Management}
 
-\subsubsection{Client}
-\subsubsection{Publisher}
+\subsubsection{Create/Edit/Delete Account}
+
+A registered Publisher or BookStore is able to access the Account Management to create, edit or delete its account if he has the rights to do so. The required data is looked up from the User Data database, which returns the requested information.
+
+Editing account information overrides the specific data records in the User Data database only if the changed records are in correct format (i.e. the email address has to has a specific format).
+
+An account is only deletable if the Client hasn't any pending orders which aren't in status "Delivered".
 
 \subsection{Rights Management}
 
-\subsubsection{Login/Logout Module}
-\paragraph{Client}
-\paragraph{Publisher}
-\paragraph{"BookExpress" Employee}
+\subsubsection{Login/Logout}
 
+The Rights Management is a security layer for processing the login and logout action performed by any user itself.
+
+Every registered Client or BookExpress employee is able to access the Web Interface. The Login/Logout-Process verifies the entered PIN and password with the User Data database and performs the requested action if the data is correct. The Access Rights Management doesn't need to edit data records of the database but only read them.
+
+If the entered data isn't correct the user gets a notification.
 
 \section{Ordering System}
 
@@ -383,12 +390,18 @@ This section shows the relations and dependencies between the modules in a layer
 \end{figure}
 
 \subsection{Order Module/Order Functions}
-\subsubsection{Client}
-\subsubsection{"BookExpress" Employee}
 
-\subsection{Inventory Module/Inventory Functions}
+\subsubsection{Create/Edit/Cancel Order}
 
-\subsection{Stock Update Module/Stock Functions}
+For creating an order, a registered client has to be authorised as well. The Edit/Cancel Order process fetches the specific information from the Order Data database. The Create Order process creates a new record in Order Data by accessing information from the Book Data and Book Stock database (User Data is also written into Order Data). The order is set to "Processing" and later on checked for validation.
+
+\subsubsection{Validate Order}
+
+Validate Order checks the status of the requested order and returns "Valid" to the inquirer if the check passed successfully.
+
+\subsubsection{Stock Update}
+
+The Stock Update process runs if either an employee initiates a check or an order was placed by a Client. For every order the system checks the stock for available books and returns a list of recommended books to order.
 
 \section{Logistics System}
 
