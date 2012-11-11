@@ -6,6 +6,7 @@
 \usepackage{lmodern}
 \usepackage{eurosym}
 \usepackage[british]{babel}
+\usepackage{float}
 
 \usepackage{longtable}
 \usepackage{ae}
@@ -180,7 +181,12 @@ In the second case, when the "BookExpress" employees use the client application 
 
 This set up accomplishes that the inner model can cache data and minimize the needed look up to the model on the application server, where as the inner controller and view do not have to be modified for this "special environment"; they get their data as if they were directly connected to the outer model - but with enhanced performance.
 
-TODO: Add an image illustrating this model [ref: T1 Model p9]
+\begin{figure}[H]
+ \begin{center}
+  \includegraphics[width=\textwidth]{MVC-small.png}
+ \end{center}
+ \caption{MVC Pattern}
+\end{figure}
 
 \section{Programming Techniques and Software}
 For standardisations and readabilities sake simple rules should be honoured to ensure a consistent look of program code, making it for new software architects joining the team easier to understand the code and find code parts faster. Those rules are arbitrary and should be agreed upon the development team; they should be defined at the beginning of the project and extended if necessary. An example for such a rule would be the placement of curly braces after method declarations, they could be defined directly after the declaration or in a new line.
