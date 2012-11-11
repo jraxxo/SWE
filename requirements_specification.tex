@@ -197,7 +197,7 @@ The employees of BookExpress shall be provided a web interface as well.
 \chapter{Product Environment}
 The Product takes the orders from the book stores and files them into the system, so that they can be prepared for shipping. For different sized book stores there should be several account types with separate functionality and different options for packaging and ordering. The targeting groups of the software solution are the book store owners(our consumers), the assistants of "BookExpress" and the distribution partners.
 \section{Application Area}
-The new IT system should replace the old system and provide administrative and commercial functions to relieve the employees of unnecessarily complex administrative tasks. Certain processes can be handled without any interaction at all, e.g. if a book runs low in stock, the system will automatically order new copies from the publisher.
+The new IT system should replace the old system and provide administrative and commercial functions to relieve the employees of unnecessarily complex administrative tasks. Certain processes can be handled without any interaction at all, e.g. if a book runs low in stock, the system will automatically order new copies from the publisher. 
 \section{User Groups}
 \begin{itemize}
 \item BookExpress commercial employees
@@ -207,9 +207,25 @@ The new IT system should replace the old system and provide administrative and c
 \end{itemize}
 \section{Operating Conditions}
 
+The hardware and software requirements for each system found in the following table, are just roughly described specifications. For detailed information concerning the product environment see section \ref{sec:tpe}.
+
+\rowcolors{1}{tableEven}{tableOdd}
+\begin{table}[H]
+\centering
+\begin{tabular}{p{2.5cm}p{4.5cm}p{4cm}p{1.5cm}}
+\rowcolor{white} \textbf{System} & \textbf{Physical Environment} & \textbf{Supervision} & \textbf{Uptime}\\
+\hline
+\cellcolor{white} BookExpress & Desktop-PC and Laptops. Mobile Clients at Logistics. & BookExpress IT employees & Business hours\\
+\cellcolor{white} Web Interface for Clients & Mostly Desktop-PC and laptops. & Error support by BookExpress IT employees & 24/7\\
+\cellcolor{white} Server & Backup system. Isolated server room. & BookExpress IT employees & 24/7\\
+\end{tabular}
+\caption{Operating Conditions}
+\label{tab:opcon}
+\end{table}
+
 \chapter{Product Overview}
 The following diagram is a graphical representation for specifying the right on accessing the different processes which the program provides.
-BookExpress has a restricted rights management with several roles (see \ref{sec:rights-management}) to the defined functions of the product (see \ref{sec:product-functions}).
+BookExpress has a restricted rights management with several roles (see {sec:rights-management}) to the defined functions of the product (see \ref{sec:product-functions}).
 
 \begin{figure}[h!]
  \begin{center}
@@ -224,7 +240,6 @@ BookExpress has a restricted rights management with several roles (see \ref{sec:
 \section{Internal}
 \subsection{Employees of ``BookExpress''}
 
-\rowcolors{1}{tableEven}{tableOdd}
 \begin{table}[H]
 \centering
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
@@ -1094,6 +1109,7 @@ Description of user interface elements for the client application and the web in
 \end{itemize}
 
 \chapter{Technical Product Environment}
+\label{sec:tpe}
 \section{Software}
 	\subsection{Server}
 		\begin{itemize}
