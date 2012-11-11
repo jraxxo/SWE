@@ -119,6 +119,8 @@
 
 \newglossaryentry{jsp}{name=JSP,description={Java Server Page},plural=JSPs, first={Java Server Page (JSP)}, firstplural={Java Server Pages (JSPs)}}
 
+\newglossaryentry{jre}{name=JRE,description={Java Runtime Environment},plural=JRE, first={Java Runtime Environment (JRE)}}
+
 \newacronym{led}{LED}{light-emitting diode}
 
 
@@ -271,11 +273,33 @@ This section shows the relations and dependencies between the modules in a layer
 TODO: insert image showing relations [ref: T3 Model p9]
 
 \chapter{Environment / General~Architecture}
+
+
 \section{Application Server}
 \section{Web Server}
 \section{Database Server}
 \section{Server Environment}
 \section{Client Environment}
+\subsection{Hardware}
+The hardware specifications for the client are basically the minimal requirements of the operating system. The client also should not have less than 2GB of RAM.
+
+Also the machine has to be able to access the network via an ethernet adapter so information from the web server application can be retrieved. The client's machine has to have enough free usb ports to support additional hardware like the graphical tablet, bar code readers and other possible hardware additions to the stand alone client.
+\subsection{Software}
+\subsubsection{Web Interface}
+The web interface is accessed through a web browser - this browser should be standards compliant.
+
+This list shows the supported browsers, but any other browser can work too, as long as it implements standards obedient rendering engines.
+
+\begin{itemize}
+	\item Firefox (version 3.5 or higher)
+	\item Chrome (any version)
+	\item Safari (version 4 or higher)
+	\item Opera (version 9 or higher)
+	\item Internet Explorer (version 10 or higher)
+\end{itemize}
+\subsubsection{Client Application}
+The client application for "BookExpress" employees should have the \gls{jre} installed, so the application can be executed. The operating system does not matter, but some hardware could possibly not be accessed by certain operating system, therefore also drivers for special hardware add ons, like the previously mentioned tablets and bar code readers, should be installable and present.
+
 \chapter{Software Modules}
 \chapter{Data Dictionary}
 
