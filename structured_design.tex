@@ -339,6 +339,8 @@ The client application should be very responsive and fast - it also should integ
  \caption{Model Layers}
 \end{figure}
 
+
+
 \section{Module Relations/Dependencies}
 This section shows the relations and dependencies between the modules in a layer structure, showing relations between the X big modules, A, B C, and listing their sub modules accordingly.
 
@@ -412,6 +414,20 @@ The Stock Update process runs if either an employee initiates a check or an orde
  \caption{Logistics}
 \end{figure}
 
+\subsection{Logistics Functions}
+
+\subsubsection{Deliver Orders}
+
+If the status of an order is "Valid" and the the requested books are currently available in the stock then the the Logistics initiates the delivery process by setting the order status to "Deliver". Therefore the Deliver Orders have to have access to the Order Data database (i.e. get the address of the receiver.)
+
+The Order Data History database saves all processed orders in all states to provide a version history for logging purposes.
+
+\subsubsection{Tracking System}
+
+The Tracking System shows detailed information of the current status of the requested order. If a status is set, the order status is printed. An order can have all possible status defined in the Data Dictionary (see \ref{sec:dd}).
+
+Part of the System is also to receive and edit the dedicated data record in the Truck Fleet Data database. These information are even more precise by showing the current status of the Truck (see  \ref{sec:truckInfo}).
+
 \section{Invoice System}
 
 \begin{figure}[H]
@@ -421,8 +437,22 @@ The Stock Update process runs if either an employee initiates a check or an orde
  \caption{Invoice System}
 \end{figure}
 
-\chapter{Data Dictionary}
+\subsection{Invoice Functions}
 
+The Invoice System handles the invoices which are triggered if the order status is set to "Valid".
+
+\subsubsection{Create/Get Invoice}
+
+The system automatically creates a new invoice which lists all ordered books with title, price, total price and tax.
+
+To process this function the method needs to have access to the Order Data database and the Invoice Data database to request and edit several information.
+
+\subsubsection{Send Invoice}
+
+If the invoice is completed, it is send. The user will get a notification including the invoice and by default the status is set to "Open".
+
+\chapter{Data Dictionary}
+\label{sec:dd}
 \section{User Data}
 
 \begin{longtable}{p{3.5cm}p{0.5cm}p{8.5cm}}
@@ -511,7 +541,7 @@ Availability & = & [In Stock $|$ Ordered at Publisher $|$ N/A]\\
 \end{longtable}
 
 \subsection{Truck Information}
-
+\label{sec:truckInfo}
 \begin{longtable}{p{3.5cm}p{0.5cm}p{8.5cm}}
 Truck Fleet Data & = & Driver\\
 &  & + Registration Number\\
