@@ -139,10 +139,7 @@ Schulz & 2012-10-08 & Fick Das Nicht - Überstimmt & v0.03 \\
 
 
 \chapter{Introduction}
-The software quality assurance concerns itself - as the title already suggests - with the issue of guaranteeing a certain level of quality of the final product. However, the testing does not only occur when the product is finished, as continuous testing is critical to keep the code free from errors early on - the earlier an error gets noticed, the less damage will be done by it. If you're making the mistake of testing at the end of the development phase, chances are pretty high that you may have some fundamental errors in your code, which possibly take a rather long time to fix, as so much more code is directly or indirectly relying on it. If you discover such an error, say, a few hours after it has been coded into the product, you'll be able to fix it rather quickly and everybody else working on the project can adapt themselves to it and change their code accordingly, which may take maybe half an hour or so - if you're discovering the mistake 2 weeks later, the possibility is very high that many others have already written a lot of code that depends on your underlying fundamentals, so a lot of code will have to get either fixed or maybe even rewritten completely, which costs a lot of working hours - and money. This is why continuous quality assurance is so very important - it may seem trivial and tedious at first, but it's nothing compared to the scenario that was just described. 
-
-\section{Functional}
-\section{Non-Functional}
+The software quality assurance concerns itself - as the title already suggests - with the issue of guaranteeing a certain level of quality of the final product. However, the testing does not only occur when the product is finished, as continuous testing is critical to keep the code free from errors early on - the earlier an error gets noticed, the less damage will be done by it. If you're making the mistake of testing at the end of the development phase, chances are pretty high that you may have some fundamental errors in your code, which possibly take a rather long time to fix, as so much more code is directly or indirectly relying on it. If you discover such an error, say, a few hours after it has been coded into the product, you'll be able to fix it rather quickly and everybody else working on the project can adapt themselves to it and change their code accordingly, which may take maybe half an hour or so - if you're discovering the mistake 2 weeks later, the possibility is very high that many others have already written a lot of code that depends on your underlying fundamentals, so a lot of code will have to get either fixed or maybe even rewritten completely, which costs a lot of working hours - and money. This is why continuous quality assurance is so very important - it may seem trivial and tedious at first, but it's nothing compared to the scenario that was just described.
 
 \chapter{Software Testing}
 There are multiple ways to test a program or system to ensure that it is free of errors and functions properly. All of those fall in either one of the two big categories:
@@ -150,11 +147,26 @@ There are multiple ways to test a program or system to ensure that it is free of
 \item \textbf{Static Testing} or
 \item \textbf{Dynamic Testing}.
 \end{itemize}
-<<<<<<< HEAD
-The big difference between these two is that static methods, such as reviews, walkthroughs or inspections do not require the tester to actually run the program at all. Instead, they use certain tools to analyse the program in a static manner, i.e. scanning the source code for certain abnormalities that could possibly produce errors.  
 
 \section{Static Testing}
-Static Analysis is obviously a static way of software testing 
+The big difference between these two is that static methods, such as reviews, walkthroughs or inspections do not require the tester to actually run the program at all. Instead, they use certain tools to analyse the program in a static manner, i.e. scanning the source code for certain abnormalities that could possibly produce errors. One of the big advantages of static software testing methods is that very complex systems that require very powerful hardware to run properly can be analysed and tested without having the aforementioned assets. However, there are always certain types of errors that are very hard to spot when you're not really running the system using test datasets.   
+\section{Static Analysis}
+Static Analysis is a very powerful static method for software analysis, and also the most common one. It was developed in the mid-70s by Michael Fagan at IBM. The main idea is that a round of qualified inspectors are getting together to discuss a piece of work that shall be integrated into the system in production. The meeting is moderated by a moderator who gets elected beforehand; usually that is the most experienced inspector. The inspection consists of 6 stages:
+\begin{itemize}
+\item \textbf{Planning:} The inspection is planned by the moderator.
+\item \textbf{Overview meeting:} The author describes the background of the work product.
+\item \textbf{Preparation:} Each inspector examines the work product to identify possible defects.
+\item \textbf{Inspection meeting:} During this meeting the reader reads through the work product, part by part and the inspectors point out the defects for every part.
+\item \textbf{Rework:} The author makes changes to the work product according to the action plans from the inspection meeting.
+\item \textbf{Follow-up:} The changes by the author are checked to make sure everything is correct.
+\end{itemize}
+It is important to note that the stages Preparation, Inspection meeting and Rework may be iterated as long as the predefined exit criteria (posed by the moderator) is not met. 
+The moderator was already mentioned a few times, however, every person taking part in the code inspection has a certain role to fulfil:
+\begin{itemize}
+\item \textbf{Author:} The creator of the inspected work product.
+\item \textbf{Moderator:} He is leading and coordinating the inspection.
+\item \textbf{Reader:}
+\end{itemize}
 
 \section{Dynamic Testing}
 Dynamic testing is described by executing actual programmed code for given test cases, as in contrast to static testing which involves reviews, inspections and walkthroughs.
@@ -200,36 +212,7 @@ Acceptance testing is, much like system testing, a black box testing method for 
 The main difference between system testing is, that, as opposed to system testing, the acceptance testing is performed by the client/user - also called user acceptance testing (UAT) or end-user testing.
 
 With a successful acceptance test, the software is delivered to the client as a finished product and testing usually ends here.
-=======
-The big difference between these two is that static methods, such as reviews, walkthroughs or inspections do not require the tester to actually run the program at all. Instead, they use certain tools to analyse the program in a static manner, i.e. scanning the source code for certain abnormalities that could possibly produce errors. One of the big advantages of static software testing methods is that very complex systems that require very powerful hardware to run properly can be analysed and tested without having the aforementioned assets. However, there are always certain types of errors that are very hard to spot when you're not really running the system using test datasets.   
-\section{Static Analysis}
-Static Analysis is a very powerful static method for software analysis, and also the most common one. It was developed in the mid-70s by Michael Fagan at IBM. The main idea is that a round of qualified inspectors are getting together to discuss a piece of work that shall be integrated into the system in production. The meeting is moderated by a moderator who gets elected beforehand; usually that is the most experienced inspector. The inspection consists of 6 stages:
-\begin{itemize}
-\item \textbf{Planning:} The inspection is planned by the moderator.
-\item \textbf{Overview meeting:} The author describes the background of the work product.
-\item \textbf{Preparation:} Each inspector examines the work product to identify possible defects.
-\item \textbf{Inspection meeting:} During this meeting the reader reads through the work product, part by part and the inspectors point out the defects for every part.
-\item \textbf{Rework:} The author makes changes to the work product according to the action plans from the inspection meeting.
-\item \textbf{Follow-up:} The changes by the author are checked to make sure everything is correct.
-\end{itemize}
-It is important to note that the stages Preparation, Inspection meeting and Rework may be iterated as long as the predefined exit criteria (posed by the moderator) is not met. 
-The moderator was already mentioned a few times, however, every person taking part in the code inspection has a certain role to fulfil:
-\begin{itemize}
-\item \textbf{Author:} The creator of the inspected work product.
-\item \textbf{Moderator:} He is leading and coordinating the inspection.
-\item \textbf{Reader:}
-\end{itemize}
-\section{Dynamic Analysis/Testing}
-\subsection{Integration Testing}
-\subsection{System Testing}
-\subsection{Module Testing}
-\subsubsection{Module 1}
-\subsubsection{Module 2}
-\subsubsection{Module 3}
-\subsubsection{Module 4, etc}
 
-\subsection{Acceptance Testing (weg lassen?)}
->>>>>>> added MOAR static shit
 
 \chapter{Appendices}
 \printglossaries\addcontentsline{toc}{section}{Glossary}\addcontentsline{toc}{section}{Acronyms}
