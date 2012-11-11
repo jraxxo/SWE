@@ -9,6 +9,7 @@
 
 \usepackage{ae}
 \usepackage{hyperref}
+\usepackage{float}
 \usepackage[table]{xcolor}
 \usepackage{colortbl}
 \usepackage{multirow}
@@ -19,7 +20,7 @@
 \usepackage[explicit]{titlesec}
 \usepackage[acronym,nonumberlist,style=tree]{glossaries}
 \usepackage{amssymb}
-\usepackage[left=3.65cm,right=3.65cm]{geometry}
+\usepackage[left=3.65cm,right=3.65cm,top=3cm,bottom=3cm]{geometry}
 
 
 %BEGIN Chapter Definition
@@ -27,7 +28,7 @@
 \makeatletter
 \def\thickhrulefill{\leavevmode \leaders \hrule height 1ex \hfill \kern \z@}
 \def\@makechapterhead#1{%
-  \vspace*{10\p@}%
+  \vspace*{0\p@}%
   {\parindent \z@ \raggedleft \reset@font
             \scshape \@chapapp{} \thechapter
         \par\nobreak
@@ -36,10 +37,10 @@
     %\vspace*{1\p@}%
     \hrulefill
     \par\nobreak
-    \vskip 50\p@
+    \vskip 20\p@
   }}
 \def\@makeschapterhead#1{%
-  \vspace*{10\p@}%
+  \vspace*{0\p@}%
   {\parindent \z@ \raggedleft \reset@font
             \scshape \vphantom{\@chapapp{} \thechapter}
         \par\nobreak
@@ -48,7 +49,7 @@
     %\vspace*{1\p@}%
     \hrulefill
     \par\nobreak
-    \vskip 50\p@
+    \vskip 20\p@
   }}
 
 %END Chapter Definition
@@ -131,8 +132,8 @@
 
 \chapter*{Document History}
 
-\begin{center}
-
+\begin{table}[H]
+\centering
 \begin{tabular}{|l|l|l|l|}
 \hline 
 Editor(s) & Date & Purpose of Editing & Version \\ 
@@ -143,9 +144,11 @@ Harnos, Rapp & 2012-10-08 & Fick Das & v0.02 \\
 \hline
 Schulz & 2012-10-08 & Fick Das Nicht - Überstimmt & v0.03 \\ 
 \hline 
-\end{tabular} 
+\end{tabular}
+\caption{Document History Table}
+\label{tab:document-history}
+\end{table}
 
-\end{center}
 
 \chapter{Product Purpose}
 To handle the addition of new books and the distribution in a better way, "BookExpress" asked us to develop an IT solution to optimize the idle time and labour usage by getting rid of the current, deprecated system. Furthermore one important goal of the software solution is to be very user friendly and easy to use; also there should be remote access implemented, so several customers can access the software at once and distribution partners can access and keep their book stock up to date.
@@ -215,15 +218,15 @@ BookExpress has a restricted rights management with several roles (see \ref{sec:
  \caption{The environmental view of the product}
 \end{figure}
 
-
 \chapter{Product Functions}
 \label{sec:product-functions}
 
 \section{Internal}
 \subsection{Employees of ``BookExpress''}
 
-\noindent
 \rowcolors{1}{tableEven}{tableOdd}
+\begin{table}[H]
+\centering
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
 \cellcolor{white}/PF00/	& \textbf{Process}	& Register Publisher or Book Shop (client)\\
 \cellcolor{white}		& \textbf{Actor(s)} & BookExpress employee\\
@@ -240,8 +243,12 @@ BookExpress has a restricted rights management with several roles (see \ref{sec:
 \cellcolor{white}		& & Send verification and account information to the contractor\\
 \cellcolor{white}\hfill \\		
 \end{tabular}
+\caption{/PF00/ Register Publisher or Book Shop}
+\label{tab:pf00}
+\end{table}
 
-\noindent
+\begin{table}[H]
+\centering
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
 \cellcolor{white}/PF01/	& \textbf{Process} & Edit client information\\
 \cellcolor{white}		& \textbf{Actor(s)} & BookExpress employee\\
@@ -257,8 +264,12 @@ BookExpress has a restricted rights management with several roles (see \ref{sec:
 \cellcolor{white}		& & Submit edited data to the server\\
 \cellcolor{white}\hfill \\
 \end{tabular}
+\caption{/PF01/ Edit client information}
+\label{tab:pf01}
+\end{table}
 
-\noindent
+\begin{table}[H]
+\centering
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
 \cellcolor{white}/PF02/	& \textbf{Process} & Delete account\\ 
 \cellcolor{white}		& \textbf{Actor(s)} & BookExpress Employee\\ 
@@ -276,8 +287,13 @@ BookExpress has a restricted rights management with several roles (see \ref{sec:
 \cellcolor{white}		& & Delete client\\
 \cellcolor{white}\hfill \\		
 \end{tabular}
+\caption{/PF02/ Delete Account}
+\label{tab:pf02}
+\end{table}
 
-\noindent
+
+\begin{table}[H]
+\centering
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
 \cellcolor{white}	 /PF10/	& \textbf{Process} & Client places order via Phone\\ 
 \cellcolor{white}		& \textbf{Category} & Must have\\
@@ -296,8 +312,12 @@ BookExpress has a restricted rights management with several roles (see \ref{sec:
 \cellcolor{white}		& & Order notification containing detailed report is sent to client\\
 \cellcolor{white}\hfill \\
 \end{tabular}
+\caption{/PF10/ Client places order via Phone}
+\label{tab:pf10}
+\end{table}
 
-\noindent
+\begin{table}[H]
+\centering
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
 \cellcolor{white}	 /PF11/	& \textbf{Process} & Validate order\\ 
 \cellcolor{white}		& \textbf{Category} & Must have\\
@@ -312,8 +332,12 @@ BookExpress has a restricted rights management with several roles (see \ref{sec:
 \cellcolor{white}		& & System sends mail to client\\
 \cellcolor{white}\hfill \\
 \end{tabular}
+\caption{/PF11/ Validate Order}
+\label{tab:pf11}
+\end{table}
 
-\noindent
+\begin{table}[H]
+\centering
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
 \cellcolor{white}	 /PF12/	& \textbf{Process} & Stock Update\\ 
 \cellcolor{white}		& \textbf{Category} & Must have\\
@@ -329,8 +353,12 @@ BookExpress has a restricted rights management with several roles (see \ref{sec:
 \cellcolor{white}		& & Submit list to system\\
 \cellcolor{white}\hfill \\
 \end{tabular}
+\caption{/PF12/ Stock Update}
+\label{tab:pf12}
+\end{table}
 
-\noindent
+\begin{table}[H]
+\centering
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
 \cellcolor{white}	 /PF13/	& \textbf{Process} & Forward order to Logistics\\ 
 \cellcolor{white}		& \textbf{Category} & Primary\\
@@ -344,8 +372,12 @@ BookExpress has a restricted rights management with several roles (see \ref{sec:
 \cellcolor{white}		& \textbf{Sequence} & Send order information/details to Logistics and set order status to "Logistics"\\
 \cellcolor{white}\hfill \\
 \end{tabular}
+\caption{/PF13/ Forward order to Logistics}
+\label{tab:pf13}
+\end{table}
 
-\noindent
+\begin{table}[H]
+\centering
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
 \cellcolor{white}/PF14/	& \textbf{Process} & Deliver order\\
 \cellcolor{white}		& \textbf{Actor(s)} & System\\
@@ -363,9 +395,13 @@ BookExpress has a restricted rights management with several roles (see \ref{sec:
 \cellcolor{white}		& & Set order status to "Delivery"\\
 \cellcolor{white}\hfill \\
 \end{tabular}
+\caption{/PF14/ Deliver Order}
+\label{tab:pf14}
+\end{table}
 
 
-\noindent
+\begin{table}[H]
+\centering
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
 \cellcolor{white}/PF15/	& \textbf{Process} & Confirm delivery\\
 \cellcolor{white}		& \textbf{Actor(s)} & Employee (Logistics)\\
@@ -380,8 +416,12 @@ BookExpress has a restricted rights management with several roles (see \ref{sec:
 \cellcolor{white}		& & Order status is set to "Delivered"\\
 \cellcolor{white}\hfill \\
 \end{tabular}
+\caption{/PF15/ Confirm Delivery}
+\label{tab:pf15}
+\end{table}
 
-\noindent
+\begin{table}[H]
+\centering
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
 \cellcolor{white}/PF16/	& \textbf{Process} & BookExpress Order\\
 \cellcolor{white}		& \textbf{Actor(s)} & BookExpress employee\\
@@ -396,8 +436,12 @@ BookExpress has a restricted rights management with several roles (see \ref{sec:
 \cellcolor{white}		& & Submit list to publisher\\
 \cellcolor{white}\hfill \\
 \end{tabular}
+\caption{/PF16/ BookExpress Order}
+\label{tab:pf16}
+\end{table}
 
-\noindent
+\begin{table}[H]
+\centering
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
 \cellcolor{white}/PF20/	& \textbf{Process} & Create an invoice\\
 \cellcolor{white}		& \textbf{Actor(s)} & System\\
@@ -414,8 +458,12 @@ BookExpress has a restricted rights management with several roles (see \ref{sec:
 \cellcolor{white}		& & List tax to invoice\\
 \cellcolor{white}\hfill \\
 \end{tabular}
+\caption{/PF20/ Create an invoice}
+\label{tab:pf20}
+\end{table}
 
-\noindent
+\begin{table}[H]
+\centering
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
 \cellcolor{white}/PF21/	& \textbf{Process} & Send invoice\\
 \cellcolor{white}		& \textbf{Actor(s)} & System\\
@@ -430,8 +478,12 @@ BookExpress has a restricted rights management with several roles (see \ref{sec:
 \cellcolor{white}		& & Send invoice to book store\\
 \cellcolor{white}\hfill \\
 \end{tabular}
+\caption{/PF21/ Send invoice}
+\label{tab:pf21}
+\end{table}
 
-\noindent
+\begin{table}[H]
+\centering
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
 \cellcolor{white}/PF30/	& \textbf{Process} & Backup\\
 \cellcolor{white}		& \textbf{Actor(s)} & System\\
@@ -446,12 +498,17 @@ BookExpress has a restricted rights management with several roles (see \ref{sec:
 \cellcolor{white}		& & Place backup on the backup server\\
 \cellcolor{white}\hfill \\
 \end{tabular}
+\caption{/PF30/ Backup}
+\label{tab:pf30}
+\end{table}
+
 
 \section{External}
 
 \subsection{Book Stores and Publishers}
 
-\noindent
+\begin{table}[H]
+\centering
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
 \cellcolor{white}/PF03/	& \textbf{Process} & Login\\
 \cellcolor{white}		& \textbf{Actor(s)} & Book store/publisher\\
@@ -468,8 +525,12 @@ BookExpress has a restricted rights management with several roles (see \ref{sec:
 \cellcolor{white}		& & Login successful or display an error message in case of unsuccessful login\\
 \cellcolor{white}\hfill \\
 \end{tabular}
+\caption{/PF03/ Login}
+\label{tab:pf03}
+\end{table}
 
-\noindent
+\begin{table}[H]
+\centering
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
 \cellcolor{white}/PF04/	& \textbf{Process} & Update account information\\
 \cellcolor{white}		& \textbf{Actor(s)} & Book store/publisher\\
@@ -485,8 +546,12 @@ BookExpress has a restricted rights management with several roles (see \ref{sec:
 \cellcolor{white}		& & Submit edited data to the server\\
 \cellcolor{white}\hfill \\
 \end{tabular}
+\caption{/PF04/ Update account information}
+\label{tab:pf04}
+\end{table}
 
-\noindent
+\begin{table}[H]
+\centering
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
 \cellcolor{white}/PF05/	& \textbf{Process} & Logout\\
 \cellcolor{white}		& \textbf{Actor(s)} & Book store/publisher\\
@@ -501,11 +566,15 @@ BookExpress has a restricted rights management with several roles (see \ref{sec:
 \cellcolor{white}		& & The system terminates the current session\\
 \cellcolor{white}\hfill \\
 \end{tabular}
+\caption{/PF05/ Logout}
+\label{tab:pf05}
+\end{table}
 
 
 \subsection{Book Stores (``Clients'')}
 
-\noindent
+\begin{table}[H]
+\centering
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
 \cellcolor{white}	 /PF40/	& \textbf{Process} & Search for a book/show catalogue\\ 
 \cellcolor{white}		& \textbf{Category} & Must have\\
@@ -523,8 +592,12 @@ BookExpress has a restricted rights management with several roles (see \ref{sec:
 \cellcolor{white}		& & Choose book from list to add it to the order\\
 \cellcolor{white}\hfill \\
 \end{tabular}
+\caption{/PF40/ Search for a book/show catalogue}
+\label{tab:pf40}
+\end{table}
 
-\noindent
+\begin{table}[H]
+\centering
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
 \cellcolor{white}/PF17/	& \textbf{Process} & Book Store Order\\ 
 \cellcolor{white}		& \textbf{Category} & Must have\\
@@ -544,8 +617,12 @@ as one big order.\\
 \cellcolor{white}		& & Order status is set to "Processing"\\
 \cellcolor{white}\hfill \\
 \end{tabular}
+\caption{/PF17/ Book Store Order}
+\label{tab:pf17}
+\end{table}
 
-\noindent
+\begin{table}[H]
+\centering
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
 \cellcolor{white}/PF18/	& \textbf{Process} & Change order\\
 \cellcolor{white}		& \textbf{Actor(s)} & Book store\\
@@ -563,8 +640,12 @@ as one big order.\\
 \cellcolor{white}		& & User receives a confirmation mail\\
 \cellcolor{white}\hfill \\
 \end{tabular}
+\caption{/PF18/ Change order}
+\label{tab:pf18}
+\end{table}
 
-\noindent
+\begin{table}[H]
+\centering
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
 \cellcolor{white}/PF19/	& \textbf{Process} & Cancel Order\\
 \cellcolor{white}		& \textbf{Actor(s)} & Book Store Employee\\
@@ -580,8 +661,12 @@ as one big order.\\
 \cellcolor{white}		& & Set order status to "Canceled"\\
 \cellcolor{white}\hfill \\
 \end{tabular}
+\caption{/PF19/ Cancel Order}
+\label{tab:pf19}
+\end{table}
 
-\noindent
+\begin{table}[H]
+\centering
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
 \cellcolor{white}/PF50/	& \textbf{Process} & Tracking System\\
 \cellcolor{white}		& \textbf{Actor(s)} & Book Store Employee\\
@@ -595,10 +680,15 @@ as one big order.\\
 \cellcolor{white}		& \textbf{Sequence} & Select order to track\\
 \cellcolor{white}\hfill \\
 \end{tabular}
+\caption{/PF50/ Tracking System}
+\label{tab:pf50}
+\end{table}
+
 
 \subsection{Publishers}
 
-\noindent
+\begin{table}[H]
+\centering
 \begin{tabular}{p{1.5cm}p{3cm}p{8cm}}
 \cellcolor{white}/PF60/	& \textbf{Process} & Inventory maintenance\\
 \cellcolor{white}		& \textbf{Actor(s)} & Publisher\\
@@ -614,6 +704,9 @@ as one big order.\\
 \cellcolor{white}		& & Submit list to server\\
 \cellcolor{white}\hfill \\
 \end{tabular}
+\caption{/PF60/ Inventory maintenance}
+\label{tab:pf60}
+\end{table}
 
 
 \chapter{Product Data}
@@ -621,20 +714,36 @@ as one big order.\\
 \subsection{Book Stores}
 
 \rowcolors{1}{tableEven}{tableOdd}
+
+\begin{table}[H]
+\centering
 \begin{tabular}{llp{8.75cm}}
 \cellcolor{white}/PD20/	& \textbf{Data}			& Book Store Data\\
 \cellcolor{white}		& \textbf{Composition}	& Name, PIN, Address, Correspondent, E-Mail Address, Phone Number, Contract Data\\
 \cellcolor{white}		& \textbf{Size}		& approx 10,000\\
 \cellcolor{white}		& \textbf{Traffic}		& Low\\
 \end{tabular} 
+\caption{/PD20/ Book Store Data}
+\label{tab:pd20}
+\end{table}
+
 \subsection{Publishers}
+\begin{table}[H]
+\centering
 \begin{tabular}{llp{8.75cm}}
 \cellcolor{white}/PD30/	& \textbf{Data}			& Publisher Data\\
 \cellcolor{white}		& \textbf{Composition}	& Name, PIN, Address, Correspondent, E-Mail Address, Phone Number, Contract Data\\
 \cellcolor{white}		& \textbf{Size}		& approx 15,000\\
 \cellcolor{white}		& \textbf{Traffic}		& Low\\
-\end{tabular} 
+\end{tabular}
+\caption{/PD30/ Publisher Data}
+\label{tab:pd30}
+\end{table}
+
+
 \section{Order Data}
+\begin{table}[H]
+\centering
 \begin{tabular}{llp{8.75cm}}
 \cellcolor{white}/PD40/	& \textbf{Data}			& Order Data\\
 \cellcolor{white}		& \textbf{Composition}	& PIN, ISBN, Amount, Price, Date, Current Ordering State\\
@@ -650,9 +759,16 @@ as one big order.\\
 \cellcolor{white}		& \textbf{Composition}	& Order Data, Book Store Data, PIN, Invoice Status\\
 \cellcolor{white}		& \textbf{Size}		& 500,000\\
 \cellcolor{white}		& \textbf{Traffic}		& Very High\\
-\end{tabular} 
+\end{tabular}
+\caption{/PD40/ Order Data, /PD41/ Order Data History, /PD42/ Invoice Data}
+\label{tab:pd40+}
+\end{table}
+
+
 \section{Internal Data}
 \subsection{Book Stock}
+\begin{table}[H]
+\centering
 \begin{tabular}{llp{8.75cm}}
 \cellcolor{white}/PD10/	& \textbf{Data}			& Book Data\\
 \cellcolor{white}		& \textbf{Composition}	& ISBN, UPC/EAN, Title, Author, Publisher, Availability\\
@@ -663,95 +779,149 @@ as one big order.\\
 \cellcolor{white}		& \textbf{Composition}	& Book Data, Availability\\
 \cellcolor{white}		& \textbf{Size}		& approx 1,500,000\\
 \cellcolor{white}		& \textbf{Traffic}		& Average\\
-\end{tabular} 
+\end{tabular}
+\caption{/PD10/ Book Data, /PD11/ Stock Data}
+\label{tab:pd10+}
+\end{table}
+
 \subsection{Truck Information}
+\begin{table}[H]
+\centering
 \begin{tabular}{llp{8.75cm}}
 \cellcolor{white}/PD50/	& \textbf{Data}			& Truck Fleet Data\\
 \cellcolor{white}		& \textbf{Composition}	& Driver, Registration Number, Truck Status\\
 \cellcolor{white}		& \textbf{Size}		& 1,000\\
 \cellcolor{white}		& \textbf{Traffic}		& Average\\
-\end{tabular} 
+\end{tabular}
+\caption{/PD50/ Truck Fleet Data}
+\label{tab:pd50}
+\end{table}
+
 \subsection{Backup}
+\begin{table}[H]
+\centering
 \begin{tabular}{llp{8.75cm}}
 \cellcolor{white}/PD60/	& \textbf{Data}			& Backup\\
 \cellcolor{white}		& \textbf{Composition}	& User Data, Order Data, Internal Data (except Backup)\\
 \cellcolor{white}		& \textbf{Size}		& 5,000,000\\
 \cellcolor{white}		& \textbf{Traffic}		& High\\
-\end{tabular} 
+\end{tabular}
+\caption{/PD60/ Backup}
+\label{tab:pd60}
+\end{table}
 
 \chapter{Product Performance}
 \section{System}
-\noindent
+\begin{table}[H]
+\centering
 \begin{tabular}{llp{8.75cm}}
 \cellcolor{white}/PP10/	& \textbf{Type}			& System (Web Interface)\\
 \cellcolor{white}		& \textbf{Description}	& The Web Interface should be always reachable during business hours, but also 24/7 for quick changes. The availability outside business hours can be less than 100\% but should not fall below 99.7\%.\\
 \cellcolor{white}		\hfill \\
 \end{tabular}
+\caption{/PP10/ System (Web Interface)}
+\label{tab:pp10}
+\end{table}
 
-\noindent
+\begin{table}[H]
+\centering
 \begin{tabular}{llp{8.75cm}}
 \cellcolor{white}/PP30/	& \textbf{Type}			& System (Order Processing)\\
 \cellcolor{white}		& \textbf{Description}	& The order processing should always be reachable, confirming (or informing about, in case of error) any order.\\
 \cellcolor{white}		\hfill \\
 \end{tabular}
+\caption{/PP30/ System (Order Processing)}
+\label{tab:pp30}
+\end{table}
 
-\noindent
+\begin{table}[H]
+\centering
 \begin{tabular}{llp{8.75cm}}
 \cellcolor{white}/PP40/	& \textbf{Type}			& System\\
 \cellcolor{white}		& \textbf{Description}	& The System in general should be reliable and responsive all the time, taking not longer than 1-3 seconds for any request.\\
 \cellcolor{white}		\hfill \\
 \end{tabular}
+\caption{/PP40/ System}
+\label{tab:pp40}
+\end{table}
 
-\noindent
+\begin{table}[H]
+\centering
 \begin{tabular}{llp{8.75cm}}
 \cellcolor{white}/PP50/	& \textbf{Type}			& System\\
 \cellcolor{white}		& \textbf{Description}	& The response time criteria should also be met, when the processing limit of max. 2.000 simultaneous orders is reached.\\
 \cellcolor{white}		\hfill \\
 \end{tabular}
+\caption{/PP50/ System}
+\label{tab:pp50}
+\end{table}
 
 \section{Database}
 
-\noindent
+\begin{table}[H]
+\centering
 \begin{tabular}{llp{8.75cm}}
 \cellcolor{white}/PP20/	& \textbf{Type}			& Database (DB Connection)\\
 \cellcolor{white}		& \textbf{Description}	& A Connection to the database should never be lost, an average uptime of 99.99\% has to be reached to satisfy any part of the system, currently needing data.\\
 \cellcolor{white}		\hfill \\
 \end{tabular}
+\caption{/PP20/ Database (DB Connection)}
+\label{tab:pp20}
+\end{table}
 
-\noindent
+\begin{table}[H]
+\centering
 \begin{tabular}{llp{8.75cm}}
 \cellcolor{white}/PP21/	& \textbf{Type}			& Database (DB Backup)\\
 \cellcolor{white}		& \textbf{Description}	& A database backup has to be initiated meeting the guidelines on general backup, also ensuring a consistent and complete history of any processed orders and any critical data.\\
 \cellcolor{white}		\hfill \\
 \end{tabular}
+\caption{/PP21/ Database (DB Backup)}
+\label{tab:pp21}
+\end{table}
 
 \section{Security}
-\noindent
+\begin{table}[H]
+\centering
 \begin{tabular}{llp{8.75cm}}
 \cellcolor{white}/PP60/	& \textbf{Type}			& Security (Stock Availability)\\
 \cellcolor{white}		& \textbf{Description}	& Stock items should always be able to be ordered, ensuring fast delivery on order.\\
 \cellcolor{white}		\hfill \\
 \end{tabular}
+\caption{/PP60/ Security (Stock Availability)}
+\label{tab:pp60}
+\end{table}
 
-\noindent
+\begin{table}[H]
+\centering
 \begin{tabular}{llp{8.75cm}}
 \cellcolor{white}/PP61/	& \textbf{Type}			& Security (Connection)\\
 \cellcolor{white}		& \textbf{Description}	& Any connection issued to the system and between system components should be at least encrypted with 256 bit SSL.\\
 \cellcolor{white}		\hfill \\
 \end{tabular}
+\caption{/PP61/ Security (Connection)}
+\label{tab:pp61}
+\end{table}
 
-\noindent
+\begin{table}[H]
+\centering
 \begin{tabular}{llp{8.75cm}}
 \cellcolor{white}/PP62/	& \textbf{Type}			& Security (Database)\\
 \cellcolor{white}		& \textbf{Description}	& The database should be on an encrypted device, securing personal customer data.\\
 \cellcolor{white}		\hfill \\
 \end{tabular}
+\caption{/PP62/ Security (Database)}
+\label{tab:pp62}
+\end{table}
+
 
 \chapter{Quality Requirements}
 
 \begin{center}
 
 \rowcolors{1}{tableEven}{tableOdd}
+\begin{table}[H]
+\centering
 \begin{tabular}{|lllll|}
 \hline
 \cellcolor{tableHead}Product Quality & \cellcolor{tableHead}excellent & \cellcolor{tableHead}good & \cellcolor{tableHead}normal & \cellcolor{tableHead}not applicable \\ 
@@ -785,6 +955,9 @@ conformity &  & \checkmark &  &  \\
 exchangeability &  &  &  & \checkmark \\
 \hline
 \end{tabular}
+\caption{Quality Requirements}
+\label{tab:quality-requirements}
+\end{table}
 
 \end{center}
 
@@ -792,67 +965,102 @@ exchangeability &  &  &  & \checkmark \\
 Description of user interface elements for the client application and the web interface. Also a brief specification of the user rights management.
 
 \section{Client Application (for clerks)}
-\noindent
+\begin{table}[H]
+\centering
 \begin{tabular}{llp{8.75cm}}
 \cellcolor{white}/U10/	& \textbf{Name}			& Interface\\
 \cellcolor{white}		& \textbf{Description}	& A clean and simple interface for the application should be developed, following BookExpress guidelines incorporated with recognizable and consistent menu structures and nomenclature. Integrating Drag\&Drop functionality into the interface to catch text- and file drops is also a necessity.\\
 \cellcolor{white}		\hfill \\
 \end{tabular}
+\caption{/U10/ Interface}
+\label{tab:u10}
+\end{table}
 
-\noindent
+\begin{table}[H]
+\centering
 \begin{tabular}{llp{8.75cm}}
 \cellcolor{white}/U11/	& \textbf{Name}			& Input Handling\\
 \cellcolor{white}		& \textbf{Description}	& Much like in the web interface the client should be always informed when his data might be inconsistent or contain errors - sanity checks should display information where necessary. Also an auto completion should appear where appropriate to support the user - this should also apply to Drag\&Dropped input.\\
 \cellcolor{white}		\hfill \\
 \end{tabular}
+\caption{/U11/ Input Handling}
+\label{tab:u11}
+\end{table}
 
-\noindent
+\begin{table}[H]
+\centering
 \begin{tabular}{llp{8.75cm}}
 \cellcolor{white}/U12/	& \textbf{Name}			& Performance\\
 \cellcolor{white}		& \textbf{Description}	& The application should have a maximum boot time of 5 seconds, loading more complex data in background threads to speed up the process. The application should for no other task take longer than 2 to 3 seconds, but if an delay is experienced through locked CPU, full memory, network delays or other means which cannot be affected by the application itself, there should be an appropriate message indicating that the application is experiencing unexpected delays.\\
 \cellcolor{white}		\hfill \\
 \end{tabular}
+\caption{/U12/ Performance}
+\label{tab:u12}
+\end{table}
 
-\noindent
+\begin{table}[H]
+\centering
 \begin{tabular}{llp{8.75cm}}
 \cellcolor{white}/U13/	& \textbf{Name}			& Data Consistency\\
 \cellcolor{white}		& \textbf{Description}	& The application should make auto saves and save its working data as often as possible from memory to the hard drive to be able to recover from an unexpected system failure or experienced error. Also there should be a revisioning system implemented to handle wrongly entered data and make reverting to previous states as easy as possible. There should be at least 25 steps of retention.\\
 \cellcolor{white}		\hfill \\
 \end{tabular}
+\caption{/U13/ Data Consistency}
+\label{tab:u13}
+\end{table}
+
 
 \section{Web Interface (for customers)}
-\noindent
+\begin{table}[H]
+\centering
 \begin{tabular}{llp{8.75cm}}
 \cellcolor{white}/U20/	& \textbf{Name}			& Interface\\
 \cellcolor{white}		& \textbf{Description}	& An easy to use interface should be developed through clear structures and responsible use of styling elements, especially an appropriate amount of whitespace.\\
 \cellcolor{white}		\hfill \\
 \end{tabular}
+\caption{/U20/ Interface}
+\label{tab:u20}
+\end{table}
 
-\noindent
+\begin{table}[H]
+\centering
 \begin{tabular}{llp{8.75cm}}
 \cellcolor{white}/U21/	& \textbf{Name}			& Compatibility\\
 \cellcolor{white}		& \textbf{Description}	& New web technologies such as \acrshort{html}5, \acrshort{css}3 and modern \gls{js} libraries like jQuery or Dojo should be used to deliver an appealing user experience, but downwards compatibility for different browsers has to be ensured also. The major browsers should be supported to at least 1 previous major version, except \gls{ie} which should only be supported from IE9 onwards.\\
 \cellcolor{white}		\hfill \\
 \end{tabular}
+\caption{/U21/ Compatibility}
+\label{tab:u21}
+\end{table}
 
-\noindent
+\begin{table}[H]
+\centering
 \begin{tabular}{llp{8.75cm}}
 \cellcolor{white}/U22/	& \textbf{Name}			& Error Handling\\
 \cellcolor{white}		& \textbf{Description}	& A graceful error handling should be realised through means of various \gls{js} technologies displaying error messages instantly and where appropriate, e.g. directly beneath or adjanced[wie schreibt man das] to where the error occured, or if it is an error returned from the server on the location for general error and information messages. Those messages should be short and easy to understand, massively long error codes like introduced in Microsoft Windows have to be avoided.\\
 \cellcolor{white}		\hfill \\
 \end{tabular}
+\caption{/U22/ Error Handling}
+\label{tab:u22}
+\end{table}
 
-\noindent
+\begin{table}[H]
+\centering
 \begin{tabular}{llp{8.75cm}}
 \cellcolor{white}/U23/	& \textbf{Name}			& Input Handling\\
 \cellcolor{white}		& \textbf{Description}	& Whenever an user has to input data, several client and server based sanity checks should be employed to ensure consistent data. The client should, whenever appropriate, be supported by auto completion or suggest drop downs, speeding up data input and search processes.\\
 \cellcolor{white}		\hfill \\
 \end{tabular}
+\caption{/U23/ Input Handling}
+\label{tab:u23}
+\end{table}
+
 
 \section{Rights Management}
 \label{sec:rights-management}
 
-\noindent
+\begin{table}[H]
+\centering
 \begin{tabular}{llp{8.75cm}}
 \cellcolor{white}/U30/	& \textbf{Name}			& Roles\\
 \cellcolor{white}		& \textbf{Description}	& Different types of users can perform different actions, this should be reflected by appropriate "views" for every user type.\\
@@ -866,6 +1074,9 @@ Description of user interface elements for the client application and the web in
 \cellcolor{white}		&						& Administrators have access to all data, have rights to create, edit and delete everything. Also administrators can create new accounts for BookExpress employees, restrict access and close accounts. All administrators are required to sign special disclosure agreements to protect the user data. There should be as few as possible administrator accounts created.\\
 \cellcolor{white}		\hfill \\
 \end{tabular}
+\caption{/30/ Rights Management}
+\label{tab:u30}
+\end{table}
 
 
 \chapter{Non-Functional Requirements}
@@ -975,6 +1186,8 @@ BookExpress employees use the client application to perform maintenance tasks fo
 \section{Effort Estimation (Function Point Analysis)}
 
 \rowcolors{2}{tableEven}{tableOdd}
+\begin{table}[H]
+\centering
 \begin{tabularx}{\textwidth}{|ccXlccrcr|}
 \hline
 \rowcolor[gray]{0.3} & \textcolor{white}{\#} & \textcolor{white}{Category} & \textcolor{white}{Class} & \textcolor{white}{Count} &  & \textcolor{white}{Weight} &  & \textcolor{white}{FP}\\
@@ -1002,13 +1215,19 @@ BookExpress employees use the client application to perform maintenance tasks fo
 \rowcolor{tableFoot}rFP &  & \multicolumn{5}{>{\columncolor{tableFoot}}l}{Total sum of raw function points} & = & 192\\
 \hline
 \end{tabularx}
+\caption{Function Point Analysis I}
+\label{tab:fpa1}
+\end{table}
 
 \renewcommand{\arraystretch}{0.9}
 \savebox\zzz{\small {\begin{tabular}[c]{@{}c@{}} \hiderowcolors Applications\\Logic \end{tabular}}}
 
 \renewcommand{\arraystretch}{1.25}
 \rowcolors{2}{tableEven}{tableOdd}
-\noindent\begin{tabularx}{\textwidth}{|cclcm{0.46cm}r>{\cellcolor{white}}r|>{\cellcolor{white}}c>{\cellcolor{white}}r>{\cellcolor{white}}r}
+
+\begin{table}[H]
+\centering
+\begin{tabularx}{\textwidth}{|cclcm{0.46cm}r>{\cellcolor{white}}r|>{\cellcolor{white}}c>{\cellcolor{white}}r>{\cellcolor{white}}r}
 \cline{1-7}
 \rowcolor[gray]{0.3} & & \textcolor{white}{Qualification Factors} & & \multicolumn{2}{>{\columncolor[gray]{0.3}}r}{\textcolor{white}{\begin{tabular}[c]{@{}r@{}}\cellcolor[gray]{0.3}max\\ \cellcolor[gray]{0.3}pts\end{tabular}}} & \cellcolor[gray]{0.3} \textcolor{white}{Weight} & & & \\
 & 0 & Base Level & & 							& 		& \cellcolor{tableOdd}70  & & & \\
@@ -1028,7 +1247,7 @@ BookExpress employees use the client application to perform maintenance tasks fo
 \vspace{0.25em}
 
 \rowcolors{1}{tableFoot}{tableFoot}
-\noindent\begin{tabularx}{\textwidth}{|cm{0.28cm}lccrm{1.3cm}cr|>{\cellcolor{white}}l}
+\begin{tabularx}{\textwidth}{|cm{0.28cm}lccrm{1.3cm}cr|>{\cellcolor{white}}l}
 \cline{1-9}
 Q & & Qualification Coefficient & 0.01 & x 		& 		& \hfill 121 & = & 1.21 & \\ \cline{1-9}
 \multicolumn{9}{c}{} \\
@@ -1048,10 +1267,14 @@ Time & & \multicolumn{3}{>{\cellcolor{tableFoot}}l}{Transformation of Size accor
 Team & & \multicolumn{3}{>{\cellcolor{tableFoot}}l}{Division of Size by Time} & & & = & 2.43 & Employees\\
 \cline{1-9}
 \end{tabularx}
+\caption{Function Point Analysis II}
+\label{tab:fpa2}
+\end{table}
 
 
-\addcontentsline{toc}{section}{Glossary}
-\addcontentsline{toc}{section}{Acronyms}
-\printglossaries
+\printglossaries\addcontentsline{toc}{section}{Glossary}\addcontentsline{toc}{section}{Acronyms}
+
+\listoffigures\addcontentsline{toc}{section}{List of Figures}
+\listoftables\addcontentsline{toc}{section}{List of Tables}
 
 \end{document}
