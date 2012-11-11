@@ -35,3 +35,4 @@
 *.bak
 *.swp
 *.~vsd
+*.DS_STORE
