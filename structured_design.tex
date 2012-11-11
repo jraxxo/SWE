@@ -122,6 +122,8 @@
 
 \newglossaryentry{jre}{name=JRE,description={Java Runtime Environment},plural=JRE, first={Java Runtime Environment (JRE)}}
 
+\newglossaryentry{jvm}{name=JVM,description={Java Virtual Machine},plural=JVM, first={Java Virtual Machine (JVM)}}
+
 \newacronym{led}{LED}{light-emitting diode}
 
 
@@ -158,12 +160,63 @@ The description of the specific modules will vary in abstraction, allowing the s
 
 Some description will have overlapping information with the requirements specification, in case this document is sent stand alone, to assure all information is being provided.
 
+\chapter{Environment / General~Architecture}
+This chapter describes the general architecture of the system and the environment, general information will be provided for the system here, which will be described in the next chapter in depth; also detailed hardware and software specifications will be discussed in this chapter.
+
+\section{Application Server}
+The application server incorporates the business logic and database requests and queries. It provides the business and data access layer of the application which is described in \ref{sec:mvc-pattern}. The application server processes requests from the web server and makes data objects in response to those requests, which can be used by the web server.
+
+\section{Web Server}
+The web server is implemented as a separate Java web server, like Tomcat, which can be incorporated in the application server, but also can run stand alone on another server. The server only processes requests from the web interface and decides which page to show, or if data received can be stored.
+
+The web server is only accessible through a certain range of ports which are necessary to display standard web pages and secure web pages, to prevent hijacking or the manipulation of server configuration files.
+
+\section{Database Server}
+The database server provides any data requested from the application server and can be hosted on separate servers, but could also be on the same hardware infrastructure. The server should be an advanced and stable system like an IBM DB2 System or an Oracle Database Management System, a MySql solution might also be applicable, but the better performance, faster response times and stability of dedicated database systems would be preferable.
+
+\section{Server Environment}
+For the product to work, servers must be able to run the \gls{jvm} on which our Java application server runs. The server could be any type of mainframe with virtualisation technology; but also any type of individual Unix or Windows servers with the server applications physically separate.
+
+An Unix system is preferable for the fewer system load from the operating system and improved stability. The data storage could also be allocated on separate storage units like medium sized magnetic storage units from IBM or HP.
+
+The important part is, that the servers have at least this kind of specification for the individual servers, the application server, web server and database server, or cumulative on big servers or mainframes:
+
+\begin{itemize}
+	\item at least 4GHz Quad-Core CPU per server
+	\item for each server at least 12 GB of RAM, for the database server at least 32GB
+	\item enough storage for temporary files and data, at least 1-3 TB per server, and at least 3-5TB for the application server
+\end{itemize}
+
+A fast LAN connection is required for each server; this connection should at least be a 10GBit connection so servers in a server farm or computing centre communicate as fast as possible minimizing data retrieval times.
+
+\section{Client Environment}
+\subsection{Hardware}
+The hardware specifications for the client are basically the minimal requirements of the operating system. The client also should not have less than 2GB of RAM.
+
+Also the machine has to be able to access the network via an ethernet adapter so information from the web server application can be retrieved. The client's machine has to have enough free usb ports to support additional hardware like the graphical tablet, bar code readers and other possible hardware additions to the stand alone client.
+\subsection{Software}
+\subsubsection{Web Interface}
+The web interface is accessed through a web browser - this browser should be standards compliant.
+
+This list shows the supported browsers, but any other browser can work too, as long as it implements standards obedient rendering engines.
+
+\begin{itemize}
+	\item Firefox (version 3.5 or higher)
+	\item Chrome (any version)
+	\item Safari (version 4 or higher)
+	\item Opera (version 9 or higher)
+	\item Internet Explorer (version 10 or higher)
+\end{itemize}
+\subsubsection{Client Application}
+The client application for "BookExpress" employees should have the \gls{jre} installed, so the application can be executed. The operating system does not matter, but some hardware could possibly not be accessed by certain operating system, therefore also drivers for special hardware add ons, like the previously mentioned tablets and bar code readers, should be installable and present.
+
 \chapter{Software Architecture}
 The software architecture of a system is the set of structures needed to reason about the system, which comprise software elements, relations among them, and properties of both. The term also refers to documentation of a system's "software architecture".\footnote{ Clements, Paul; Felix Bachmann, Len Bass, David Garlan, James Ivers, Reed Little, Paulo Merson, Robert Nord, Judith Stafford (2010). Documenting Software Architectures: Views and Beyond, Second Edition. Boston: Addison-Wesley. ISBN 0-321-55268-7.}\footnote{Bass, Len; Paul Clements, Rick Kazman (2012). Software Architecture In Practice, Third Edition. Boston: Addison-Wesley. pp. 25–37. ISBN 0-321-81573-4.}
 
 In this chapter the programming pattern which the software architect has to implement is discussed at first, then common techniques for standardizing the code and enhancing readability and the used software and at last the implementation of the pattern into the software solution itself.
 
 \section{Programming Pattern}
+\label{sec:mvc-pattern}
 The "BookExpress" software should implement a simple \gls{mvc} pattern separating the user visible output from the internal data processing structures much like CSS separates the styling of a webpage from the HTML markup.
 
 The "Model" part of this set up fetches data from databases and holds them in objects - it is essentially the "data storage" of the application. The controller and view must not make any database queries, all data required for the specific controller/view has to be provided by the model itself, which in turn does make the necessary database requests. This can speed up the data retrieving process with smart caching times on the model part and also ensures a higher level of security by minimizing the chance of SQL-Injections possibly performed on the controller/view.
@@ -278,35 +331,9 @@ This section shows the relations and dependencies between the modules in a layer
 
 TODO: insert image showing relations [ref: T3 Model p9]
 
-\chapter{Environment / General~Architecture}
-
-
-\section{Application Server}
-\section{Web Server}
-\section{Database Server}
-\section{Server Environment}
-\section{Client Environment}
-\subsection{Hardware}
-The hardware specifications for the client are basically the minimal requirements of the operating system. The client also should not have less than 2GB of RAM.
-
-Also the machine has to be able to access the network via an ethernet adapter so information from the web server application can be retrieved. The client's machine has to have enough free usb ports to support additional hardware like the graphical tablet, bar code readers and other possible hardware additions to the stand alone client.
-\subsection{Software}
-\subsubsection{Web Interface}
-The web interface is accessed through a web browser - this browser should be standards compliant.
-
-This list shows the supported browsers, but any other browser can work too, as long as it implements standards obedient rendering engines.
-
-\begin{itemize}
-	\item Firefox (version 3.5 or higher)
-	\item Chrome (any version)
-	\item Safari (version 4 or higher)
-	\item Opera (version 9 or higher)
-	\item Internet Explorer (version 10 or higher)
-\end{itemize}
-\subsubsection{Client Application}
-The client application for "BookExpress" employees should have the \gls{jre} installed, so the application can be executed. The operating system does not matter, but some hardware could possibly not be accessed by certain operating system, therefore also drivers for special hardware add ons, like the previously mentioned tablets and bar code readers, should be installable and present.
-
 \chapter{Software Modules}
+
+
 \chapter{Data Dictionary}
 
 \section{User Data}
