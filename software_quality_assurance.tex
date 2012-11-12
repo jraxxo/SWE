@@ -225,13 +225,14 @@ With a successful acceptance test, the software is delivered to the client as a 
 \subsection{Generality}
 
 \subsection{Security}
+By having a security layer which controls access to the databases and an administration module which restricts access to functionalities such as a rights management to check the user data for allowed actions - the BookExpress system is secured in standard way.
 
 \section{Usability}
 
 \subsection{Human Factors}
-Entry requirements are basic abilities such as language proficiency, culture and and intelligence level. Of course the learning time of the whole system is reduced to a minimum where no special training courses are required but a maximum of two hours intensive studying to understand the interaction of components and the modules altogether to achieve a measurable level of performance with the system.
+Entry requirements are basic abilities such as language proficiency, culture and and intelligence level. The learning time of the whole system is reduced to a minimum where no special training courses are required but a maximum of two hours intensive studying to understand the interaction of components and the modules altogether to achieve a measurable level of performance with the system.
 
-The system is design to ensure a high likeability and manageability.
+The system is designed to ensure a high likeability and manageability.
 
 \subsection{Aesthetics}
 The design pattern of the whole BookExpress System is based on the idea of simplicity, intuition, highest functionality and modern styling.
@@ -252,17 +253,18 @@ The description of modules has to be put into effect in a complete and accurate 
 \subsection{Frequency and severity of failure}
 Of course errors shouldn't occur at all. Anyhow, if failures appear to happen, they are categorised in different severities. The following table describes the different types of severities.
 
+\rowcolors{1}{tableEven}{tableOdd}
 \begin{table}[H]
 \begin{tabular}{p{4cm}p{8cm}}
-\textbf{Severity 1} & Error which results in having no active connection the the web interface at all. The Client or Publisher is strongly recommended to first check whether this is a failure of BookExpress or a local error such as unestablished internet connection. call the support team.  \\
-\textbf{Severity 2} & Error which results in not correctly working modules of the web interface. A FAQ is set up and describes best practices for troubleshooting. In urgent need the user can call the Support hotline.\\
+\textbf{Severity 1} & Error which results in having no active connection the the web interface at all. The Client or Publisher is strongly recommended to first check whether this is a failure of BookExpress or a local error such as unestablished internet connection.A client should call the support team.  \\
+\textbf{Severity 2} & Error which results in not correctly working modules of the web interface. A FAQ is set up and describes best practices for troubleshooting. In urgent need the user can call the support hotline.\\
 \textbf{Severity 3} & This severity describes other possible failure functions. The BookExpress Documentation is the best contact point in the first place. The BookExpress website also has a FAQ with detailed information.\\
 \end{tabular}
 \caption{Severities of failure}
 \end{table}
 
 \subsection{Recoverability}
-The set up backup server, which is, as well as the web server, running 24/7, ensures a high level of recoverability at possible loss of data. Several security purposes are taken for granted - e.g. a UPS (uninterrupted power supply) is installed for every server in case a unpredictable current interruption has taken place.
+The set up backup server, which is, as well as the web server, running 24/7, ensures a high level of recoverability for possible loss of data. Several security purposes are taken for granted - e.g. a UPS (uninterrupted power supply) is installed for every server in case a unpredictable current interruption has taken place.
 
 \subsection{Predictability}
 To avoid predictable errors during a system update, every action of a user is delayed to process after the update has successfully finished. and is up and running. During and update or upgrade the web interface is displaying a notification pop-up which states the current process.
@@ -280,6 +282,7 @@ The speed of actions and requests (e.g. searching for books) is fast on a high l
 By using modern techniques of web development and having a very good server system and optimised database transfers as well as an adjusted application server, BookExpress in summary is a highly efficient application.
 
 \subsection{Resource consumption}
+The hardware specifications of the BookExpress system are fully adequate to the requirements of operating such a complex composition.
 
 \subsection{Throughput}
 The different functions and therefore the different databases, have diverse throughputs from low (e.g. Publisher Data) to very high (e.g Order Data). The database server is configured to handle those varying workload easily.
