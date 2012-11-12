@@ -213,6 +213,41 @@ The main difference between system testing is, that, as opposed to system testin
 
 With a successful acceptance test, the software is delivered to the client as a finished product and testing usually ends here.
 
+\chapter{Test Cases For Black Box Testing}
+\section{Testing of actions carried out by the employees of BookExpress}
+\subsection{/PF00/ Register Book Shop (Client) or Publisher}
+To determine if the function works properly, we will register a new Book Store and a new publisher. 
+We will use the following test data:
+ 
+\begin{center}
+\textbf{Book Store}
+\begin{itemize}
+\item{ClientPIN: 012345}
+\item{Account Type: Book Store}
+\item{Address: 123 Example Avenue, 456 GreatTown}
+\item{Correspondent: John Doe}
+\item{Login: 012345 321 password}
+\end{itemize}
+\textbf{Publisher}
+\begin{itemize}
+\item{ClientPIN: 045678}
+\item{Account Type: Publisher}
+\item{Address: 123 Main Street, 456 Jones Town}
+\item{Correspondent: Malory Miller}
+\item{Login: 045678 123 aterriblesecret}
+\end{itemize}
+\end{center}
+\subsection{/PF01/ Edit client information}
+Now that we have a few Accounts, we want the client data to be correct and up-to-date, so we will test the function with the following updated information:
+\begin{itemize}
+\item{ClientPIN: 012345}
+\item{Address: 321 Example Street, 456 GreatTown}
+\item{Correspondent: Jane Doe}
+\item{Login: 012345 321 password}
+\end{itemize}
+\subsection{/PF02/ Delete Account}
+Now, we're dealing with the unfortunate Situtation that a client has decided to close his business. As we do not want our database to get clogged up with outdated and unnecessary information, we'll delete the client with the PIN 012345 from our database.
+\subsection{}
 
 \chapter{Quality model - FURPS}
 
