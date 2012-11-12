@@ -250,9 +250,16 @@ The description of modules has to be put into effect in a complete and accurate 
 \section{Reliability}
 
 \subsection{Frequency and severity of failure}
-Of course errors shouldn't occur at all. Anyhow, if failures appear to happen, they are categorised in different severities.
+Of course errors shouldn't occur at all. Anyhow, if failures appear to happen, they are categorised in different severities. The following table describes the different types of severities.
 
-Severity 1 is an 
+\begin{table}[H]
+\begin{tabular}{p{4cm}p{8cm}}
+\textbf{Severity 1} & Error which results in having no active connection the the web interface at all. The Client or Publisher is strongly recommended to first check whether this is a failure of BookExpress or a local error such as unestablished internet connection. call the support team.  \\
+\textbf{Severity 2} & Error which results in not correctly working modules of the web interface. A FAQ is set up and describes best practices for troubleshooting. In urgent need the user can call the Support hotline.\\
+\textbf{Severity 3} & This severity describes other possible failure functions. The BookExpress Documentation is the best contact point in the first place. The BookExpress website also has a FAQ with detailed information.\\
+\end{tabular}
+\caption{Severities of failure}
+\end{table}
 
 \subsection{Recoverability}
 The set up backup server, which is, as well as the web server, running 24/7, ensures a high level of recoverability at possible loss of data. Several security purposes are taken for granted - e.g. a UPS (uninterrupted power supply) is installed for every server in case a unpredictable current interruption has taken place.
@@ -267,14 +274,18 @@ To avoid predictable errors during a system update, every action of a user is de
 \section{Performance}
 
 \subsection{Speed}
+The speed of actions and requests (e.g. searching for books) is fast on a high level. This correlates with the response time of general statements and actions.
 
 \subsection{Efficiency}
+By using modern techniques of web development and having a very good server system and optimised database transfers as well as an adjusted application server, BookExpress in summary is a highly efficient application.
 
 \subsection{Resource consumption}
 
 \subsection{Throughput}
+The different functions and therefore the different databases, have diverse throughputs from low (e.g. Publisher Data) to very high (e.g Order Data). The database server is configured to handle those varying workload easily.
 
 \subsection{Response time}
+The response time is very fast. This appears to happen via request data optimisation by using compressed HTML and JSON.
 
 
 \section{Supportability}
