@@ -7,6 +7,8 @@ a
 NEGER
 Chris ist doof, Junge. JUNGE.
 MERGEKONFLIKT JUNGE.
+new data goes here
+bitches
 JUNGE.
 MERGE.
 CONLICT.
