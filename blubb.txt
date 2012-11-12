@@ -1,6 +1,15 @@
+<<<<<<< HEAD
 bla bla blubb
 jo jo jo 
 asdad 
 d
 ad
 a
+=======
+Chris ist doof, Junge. JUNGE.
+MERGEKONFLIKT JUNGE.
+JUNGE.
+MERGE.
+CONLICT.
+JUNGE.
+>>>>>>> 4806a78dcd7fc62b071480e6fb25134abf67c2ff
