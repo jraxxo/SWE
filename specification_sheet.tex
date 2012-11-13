@@ -1,9 +1,130 @@
-\documentclass[a4paper,draft]{article}
-\author{Marc A. Harnos\\mharnos@gmail.com \and Joscha Rapp\\jraxxo@gmail.com \and Christian Schulz\\crs.s@gmx.net}
+%% nicht vergessen draft raus zu nehmen, um echte Bilder einzubinden und die Problem-Vierecke verschwinden zu lassen
+\documentclass[11pt,a4paper,oneside,svgnames]{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{eurosym}
+\usepackage[british]{babel}
+
+\usepackage{ae}
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage[table]{xcolor}
+\usepackage{colortbl}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{kpfonts}
+\usepackage[explicit]{titlesec}
+\usepackage[acronym,nonumberlist,style=tree]{glossaries}
+\usepackage{amssymb}
+\usepackage[left=3.65cm,right=3.65cm,top=3cm,bottom=3cm]{geometry}
+
+
+%BEGIN Chapter Definition
+
+\makeatletter
+\def\thickhrulefill{\leavevmode \leaders \hrule height 1ex \hfill \kern \z@}
+\def\@makechapterhead#1{%
+  \vspace*{0\p@}%
+  {\parindent \z@ \raggedleft \reset@font
+            \scshape \@chapapp{} \thechapter
+        \par\nobreak
+        \interlinepenalty\@M
+    \Huge \bfseries #1\par\nobreak
+    %\vspace*{1\p@}%
+    \hrulefill
+    \par\nobreak
+    \vskip 20\p@
+  }}
+\def\@makeschapterhead#1{%
+  \vspace*{0\p@}%
+  {\parindent \z@ \raggedleft \reset@font
+            \scshape \vphantom{\@chapapp{} \thechapter}
+        \par\nobreak
+        \interlinepenalty\@M
+    \Huge \bfseries #1\par\nobreak
+    %\vspace*{1\p@}%
+    \hrulefill
+    \par\nobreak
+    \vskip 20\p@
+  }}
+
+%END Chapter Definition
+
+%BEGIN Title Definition
+
+\makeatletter
+\def\thickhrulefill{\leavevmode \leaders \hrule height 1pt\hfill \kern \z@}
+\renewcommand{\maketitle}{\begin{titlepage}%
+    \let\footnotesize\small
+    \let\footnoterule\relax
+    \parindent \z@
+    \reset@font
+    \null\vfil
+    \begin{flushleft}
+      \huge \@title
+    \end{flushleft}
+    \par
+    \hrule height 4pt
+    \par
+    \begin{flushright}
+      \LARGE \@author \par
+    \end{flushright}
+    \vskip 60\p@
+    \vfil\null
+  \end{titlepage}%
+  \setcounter{footnote}{0}%
+}
+
+%END Title Definition
+
+%Verschissener rotierter Text für verschissene Tabelle 14.1/2
+\makeatletter
+\newsavebox\zzz
+\def\mystrut{%
+\dimen@\wd\zzz
+\divide\dimen@\thr@@
+\advance\dimen@-\dp\@arstrutbox
+\rule\z@\dimen@}
+
+\def\rotatezzz{%
+\rotatebox{90}{\rlap{\kern-\dp\@arstrutbox\usebox\zzz}}}
+%END Verschissener rotierter Text
+
+\makeatother
+\title{Specification Sheet for Project ``BookExpress''}
+\author{Marc A. Harnos\\ {mharnos@gmail.com} \and Joscha Rapp\\ {jraxxo@gmail.com} \and Christian Schulz\\ {crs.s@gmx.net}}
+\author{Marc A. Harnos\\ Joscha Rapp\\ Christian Schulz}
+\date{October 2012}
+
+\definecolor{tableHead}{HTML}{5393B7}
+\definecolor{tableEven}{HTML}{DAF1FF}
+\definecolor{tableOdd}{HTML}{ADD0E5}
+\definecolor{tableFoot}{HTML}{5393B7}
+
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+\renewcommand{\arraystretch}{1.25}
+
+\makeglossaries
+
+\newglossaryentry{pin}{name=PIN,description={Personal Identification Number},plural=PINs, first={Personal Identification Number (PIN)}}
+
+\newacronym{led}{LED}{light-emitting diode}
+\newacronym{html}{HTML}{Hypertext Markup Language}
+\newacronym{css}{CSS}{Cascade Stylesheet}
+\newacronym{js}{JS}{JavaScript}
+\newacronym{ie}{IE}{InternetExplorer}
+\newacronym{vm}{VM}{Virtual Machine}
+\newacronym{ide}{IDE}{Integrated Development Environment}
+
 
 \begin{document}
-\title{BookExpress - Specification Sheet}
-\date{October 2012}
+
 \maketitle
 \clearpage
 \tableofcontents
