@@ -220,6 +220,7 @@ To determine if the function works properly, we will register a new Book Store a
 We will use the following test data:
  
 \begin{center}
+\label{client1}
 \textbf{Book Store}
 \begin{itemize}
 \item{ClientPIN: 012345}
@@ -228,6 +229,7 @@ We will use the following test data:
 \item{Correspondent: John Doe}
 \item{Login: 012345 321 password}
 \end{itemize}
+\label{publisher1}
 \textbf{Publisher}
 \begin{itemize}
 \item{ClientPIN: 045678}
@@ -247,7 +249,69 @@ Now that we have a few Accounts, we want the client data to be correct and up-to
 \end{itemize}
 \subsection{/PF02/ Delete Account}
 Now, we're dealing with the unfortunate Situtation that a client has decided to close his business. As we do not want our database to get clogged up with outdated and unnecessary information, we'll delete the client with the PIN 012345 from our database.
-\subsection{}
+\subsection{/PF10/ Client places Order via Phone}
+One of the most important functions of the system is, of course, the ordering process. As there are two ways of doing this, we'll have to test both of them. We will start by testing the 'old-fashioned' way of ordering books via a simple phone call. For this test, the following data shall be used:
+\begin{itemize}
+\label{testbook}
+\item{Title: The big test Book}
+\item{ISBN: 100101101001101101}
+\item{Author: Arthur Miller}
+\item{Publisher: Test Books Ltd.}
+\item{Price: 30,00}
+\item{Amount: 100}
+\end{itemize}
+\subsection{/PF11/ Validate Order}
+\label{automatic1}
+As this product function will be carried out automatically by the system after an order has been submitted, we do not require specific test data for it. It will get invoked when we submit our test data from /PF/10.
+\subsection{/PF12/ Stock Update}
+This product function can be invoked automatically (when an order is processed by the system) or manually (when a BookExpress employee decides to initiate it). 
+We shall test this function specifically by invoking it manually with the test data we introduced earlier at \ref{testbook}.
+\subsection{/PF13/ Forward order to logistics}
+See above at \ref{automatic}.
+\subsection{/PF14/ Deliver Order}
+See above at \ref{automatic}.
+\subsection{/PF15/ Confirm Delivery}
+The confirmation is also being carried out automatically when an order is processed completely. Therefore, see above at \ref{automatic}.
+\subsection{/PF16/ BookExpress Order}
+As the publishers are the only sources that BookExpress gets its books from, we will need to order books from them that are not available in our stock anymore.
+This functionality shall be tested using the test data from above(\ref{testbook}), as this has to happen: we are starting with a stock of zero books in our hyptothetical scenario and the customer orders this exact book, so we'll have to order it directly from the publisher before being able to ship it to our client.
+Because we want to ensure that we'll have the book in stock if they order it again, we will order twice the requested amount
+\subsection{/PF20/ Create an invoice}
+See above at \ref{automatic}.
+\subsection{/PF21/ Send invoice}
+See above at \ref{automatic}.
+\subsection{/PF30/ Backup}
+The Backup process is automatically started every 24 hours at 00:00. To see if the process runs properly, the system will either need to run for a whole day and night or we could just manipulate the system time of the underlying Operating System in order to save time if needed.
+\section{Book Stores and Publishers}
+\subsection{/PF03 Login}
+To ensure that clients and publishers are able to successfully access the system by logging in, we'll use the test data from \ref{client1} and \ref{publisher1} to test this functionality. 
+\subsection{/PF04/ Update account information}
+If a client or a publisher has, for example, physically moved his location of business or hired a new correspondent, they may want to update their contact data themselves as it's less complicated than notifying a BookExpress employee about the changes. To test this functionality, we will log in with \ref{publisher1}(the publisher test account) and update his information as follows:
+\begin{itemize}
+\item{ClientPIN: 045678}
+\item{Account Type: Publisher}
+\item{Address: 123 Main Street, 456 Jones Town}
+\item{Correspondent: Dean Winchester}
+\item{Login: 045678 123 waspurged}
+\end{itemize}
+\subsection{/PF05/ Logout}
+This test will be carried out after submitting the order from \ref{client1}.
+\section{Book Stores}   
+\subsection{/PF40/ Search for a book}
+This function is needed by the client to add specific books to his order. This way, he can check if a book can be delivered by us at all before ordering and possibly receiving a negative response which would result in wasted time and a lot of frustration on the side of the client. To test this functionality, we shall log in as \ref{client1} and search for "test book". The result should be \ref{testbook}.
+\subsection{/PF17/ Book Store Order}
+\label{orderfinal}
+This function is essentially the same as \ref{orderphone}, but it's carried out using the web interface instead of calling a BookExpress employee. In order to test it, we will cancel our first order using the cancel order function (\ref{cancel}) and order it again, this time using the web interface.
+\subsection{/PF18/ Change Order}
+In case a client has made a mistake in an order and it's been already submitted, he is able to change the order if it isn't shipped yet. We will take the order from \ref{client1} and change the ordered amount of books to 15.
+\subsection{/PF19/ Cancel Order}
+\label{cancel}
+If a client has made an Order and he comes to the conclusion that he won't be needing it anymore, he may cancel the order if it isn't shipped yet. We will cancel the first order (\ref{orderphone}) from our test client(\ref{client1}). This way, we can test both the cancel function as well as the second order function.
+\subsection{/PF50/ Tracking System}
+The tracking system is very important as it enables the client to make relatively precise predictions concerning the delivery date and time of his order. This is achieved by a GPS tracking system in each of our trucks. To get the current status or position of his order, the client (\ref{client1}) will log into the system and check the tracking status of his test order from \ref{orderfinal}. Depending on the time that has passed, he should get a valid status like "Processing".
+\section{Publishers}
+\subsection{/PF60/ Inventory Maintenance}
+If a publisher choses to discontinue a certain book or add a new book to his portfolio, he can change the list of available books that we can order from by himself using the web interface. First, before the test order from the client is received, we will log in as the publisher (\ref{publisher1}) and add the test book from \ref{testbook} to our inventory.  After we ordered and "received" the test book from \ref{testbook} as the client, we will log in as \ref{publisher1} and delete the test book (\ref{testbook}) from the inventory again.
 
 \chapter{Quality model /\\FURPS}
 The quality factors described by McCall and his colleagues represent one of a number suggested "check lists" for software quality. Hewlett-Packard developed a set of software quality factors that has been given the acronym FURPS - functionality, usability, reliability, performance, and supportability. The FURPS quality factors draw liberally from earlier work, defining the following attributes for each of the five major factors\footnote{http://www.1000sourcecodes.com/2012/05/software-engineering-furps.html}
