@@ -1,11 +1,7 @@
-[A1]
+Document History aller Dokumente
 
-DFD Datendurchsatz farblich darstellen ?
+[A1]
+Zahlen der Effort Estimation table stimmen nicht (Size, Time, Team)
 
 [A2]
-
-Describe MVC Layer 3.4 (see "T1 Model.pdf" p.15)
-
-Referenzen/Sources
 Header and Footer
-Document History
