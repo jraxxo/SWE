@@ -135,7 +135,7 @@ Schulz & 2012-10-08 & Fick Das Nicht - Überstimmt & v0.03 \\
 \label{tab:document-history}
 \end{table}
 
-
+\rowcolors{1}{tableEven}{tableOdd}
 \chapter{Introduction}
 The software quality assurance concerns itself - as the title already suggests - with the issue of guaranteeing a certain level of quality of the final product. However, the testing does not only occur when the product is finished, as continuous testing is critical to keep the code free from errors early on - the earlier an error gets noticed, the less damage will be done by it. If you're making the mistake of testing at the end of the development phase, chances are pretty high that you may have some fundamental errors in your code, which possibly take a rather long time to fix, as so much more code is directly or indirectly relying on it. If you discover such an error, say, a few hours after it has been coded into the product, you'll be able to fix it rather quickly and everybody else working on the project can adapt themselves to it and change their code accordingly, which may take maybe half an hour or so - if you're discovering the mistake 2 weeks later, the possibility is very high that many others have already written a lot of code that depends on your underlying fundamentals, so a lot of code will have to get either fixed or maybe even rewritten completely, which costs a lot of working hours - and money. This is why continuous quality assurance is so very important - it may seem trivial and tedious at first, but it's nothing compared to the scenario that was just described.
 
@@ -249,102 +249,53 @@ Now that we have a few Accounts, we want the client data to be correct and up-to
 Now, we're dealing with the unfortunate Situtation that a client has decided to close his business. As we do not want our database to get clogged up with outdated and unnecessary information, we'll delete the client with the PIN 012345 from our database.
 \subsection{}
 
-\chapter{Quality model - FURPS}
+\chapter{Quality model /\\FURPS}
+The quality factors described by McCall and his colleagues represent one of a number suggested "check lists" for software quality. Hewlett-Packard developed a set of software quality factors that has been given the acronym FURPS - functionality, usability, reliability, performance, and supportability. The FURPS quality factors draw liberally from earlier work, defining the following attributes for each of the five major factors\footnote{http://link-von-chris.de TODO Chris}
+
+This Quality Model and FURPS will evaluate Team 10 on the previously mentioned points.
 
 \section{Functionality}
+In this section the functionality of the software of Team 10 will be evaluated, including if everything in the specification sheet is met and if any additional functionality is incorporated in the requirements specification.
 
 \subsection{Feature Sets}
+Clients and publishers are able to work with "Bookcelerator" over a web interface, which they log in after authenticating with a gls{vpn} in "BookExpress". Employees of "BookExpress" work with a stand alone application, which is accessible only in their private network/Intranet.
 
-\subsection{Capabilities}
-
-\subsection{Generality}
+BookExpress employees can not only make maintenance work with the application but also work with publishers or book shops which can not, or are not willing to, work with the web interface - the employees can make and work with new order.
 
 \subsection{Security}
-By having a security layer which controls access to the databases and an administration module which restricts access to functionalities such as a rights management to check the user data for allowed actions - the BookExpress system is secured in standard way.
+"Bookcelerator" has an advanced backup system which ensures consistent and secure data management and data storage. Security is a mayor concern to "BookExpress", so every connection in the system is secured by modern encryption technologies like SSL. "Bookcelerator" over the web interface is accessible through a gls{vpn} which not only ensures more secure data transferral but also makes it nearly impossible to be compromised through an attacker from the internet - a "man in the middle" attack could be only possible through an attacker in the Intranet of "BookExpress" itself.
 
 \section{Usability}
+In this section we will not only discuss ease of use and learnability but also the efficiency and elegance of "Bookcelerator".\footnote{link-zu-usability-qualle TODO Chris}
 
 \subsection{Human Factors}
-Entry requirements are basic abilities such as language proficiency, culture and and intelligence level. The learning time of the whole system is reduced to a minimum where no special training courses are required but a maximum of two hours intensive studying to understand the interaction of components and the modules altogether to achieve a measurable level of performance with the system.
-
-The system is designed to ensure a high likeability and manageability.
+Human factors describe the ease of use and learnability of "Bookcelerator". The software is especially easy to use due to smart and appropriate usage of an advanced hinting system and error message system. Also "Boocelerator" displays drop downs with auto completion, where appropriate.
 
 \subsection{Aesthetics}
-The design pattern of the whole BookExpress System is based on the idea of simplicity, intuition, highest functionality and modern styling.
+The user interface is held simple, has much white space and is intuitively usable, with a steep learning curve.
 
-Every new user to the system should be able to access the required processes easily with making as few steps as possible and without searching more than a few seconds - the common way to realise such a straightforwarded interface is to use less text but more generalized and standardised symbols which conduce to a clearly not overloaded display. The context menus themselves are more text-based but without lack of simplicity in their meaning to the operator.
+TODO Chris
 
-\subsection{Consistency}
-Identifiers and labels are named consistent throughout the whole system. In general, actions are defined and arranged at one single place to prevent disorder and ambiguity from a users point of view. Menus are compressed in their logical context and are unique in occurrence.
 
 \subsection{Documentation}
-The documentation of the system has to be very clear so that in case of possible misunderstandings one can look up every defined process in detail and is able to apprehend the realisation in a comprehensible way.
-
-The description of modules has to be put into effect in a complete and accurate way.
+The "Bookcelerator" documentation is designed well with a non-technical user kept in mind, while writing it. The steps are described well and the language used is held simple and clear. The documentation is, while kept simple and clear, very detailed.
 
 
 \section{Reliability}
-
-\subsection{Frequency and severity of failure}
-Of course errors shouldn't occur at all. Anyhow, if failures appear to happen, they are categorised in different severities. The following table describes the different types of severities.
-
-\rowcolors{1}{tableEven}{tableOdd}
-\begin{table}[H]
-\begin{tabular}{p{4cm}p{8cm}}
-\textbf{Severity 1} & Error which results in having no active connection the the web interface at all. The Client or Publisher is strongly recommended to first check whether this is a failure of BookExpress or a local error such as unestablished internet connection.A client should call the support team.  \\
-\textbf{Severity 2} & Error which results in not correctly working modules of the web interface. A FAQ is set up and describes best practices for troubleshooting. In urgent need the user can call the support hotline.\\
-\textbf{Severity 3} & This severity describes other possible failure functions. The BookExpress Documentation is the best contact point in the first place. The BookExpress website also has a FAQ with detailed information.\\
-\end{tabular}
-\caption{Severities of failure}
-\end{table}
+Reliability is a mayor concern for "BookExpress", so the "Bookcelerator" application is designed with as little as possible down time in mind. An advanced backup system is also being used to speed up the recovery of the system in case of failure.
 
 \subsection{Recoverability}
-The set up backup server, which is, as well as the web server, running 24/7, ensures a high level of recoverability for possible loss of data. Several security purposes are taken for granted - e.g. a UPS (uninterrupted power supply) is installed for every server in case a unpredictable current interruption has taken place.
-
-\subsection{Predictability}
-To avoid predictable errors during a system update, every action of a user is delayed to process after the update has successfully finished. and is up and running. During and update or upgrade the web interface is displaying a notification pop-up which states the current process.
+Due to the advanced backup system of "Bookcelecrator" on different dedicated backup servers recoverability is held high and the system can be performed in a very short time after a failure. Backups are performed very frequently so data losses are minimised or in some cases not present at all.
 
 \subsection{Accuracy}
-
-\subsection{Mean time between failure (MTBF)}
+Search results are performed very accurate minimising data overhead and making searches for books as precise as possible. The accuracy is very important, small errors in ISBN numbers can create duplicate entries in the system and compromise data consistency - therefore this kind of data, and in general input data, is checked on multiple layers to ensure accurate results and consistent data.
 
 \section{Performance}
+Performance of software is very important; slow applications make users unhappy and increasingly more irritated. Also the delivery of books has to have a high-performance as well.
 
-\subsection{Speed}
-The speed of actions and requests (e.g. searching for books) is fast on a high level. This correlates with the response time of general statements and actions.
+\subsection{Speed and Efficiency}
+To ensure high performance "BookExpress" from team 10 employs IBM System~z mainframes which are extraordinary fast and reliable.
 
-\subsection{Efficiency}
-By using modern techniques of web development and having a very good server system and optimised database transfers as well as an adjusted application server, BookExpress in summary is a highly efficient application.
-
-\subsection{Resource consumption}
-The hardware specifications of the BookExpress system are fully adequate to the requirements of operating such a complex composition.
-
-\subsection{Throughput}
-The different functions and therefore the different databases, have diverse throughputs from low (e.g. Publisher Data) to very high (e.g Order Data). The database server is configured to handle those varying workload easily.
-
-\subsection{Response time}
-The response time is very fast. This appears to happen via request data optimisation by using compressed HTML and JSON.
-
-
-\section{Supportability}
-
-\subsection{Testability}
-
-\subsection{Extensibility}
-
-\subsection{Adaptability}
-
-\subsection{Maintainability}
-
-\subsection{Compatibility}
-
-\subsection{Configurability}
-
-\subsection{Serviceability}
-
-\subsection{Installability}
-
-\subsection{Localisability}
 
 
 \chapter{Appendices}
