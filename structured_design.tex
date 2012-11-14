@@ -148,7 +148,7 @@ Harnos, Rapp, Schulz & 2012-10-11 & Added Data Dictionary and updated Model Laye
 \hline
 Harnos & 2012-10-13 & General Architecture and added missing Software Modules  & v0.6 \\ 
 \hline 
-Rapp, Schulz & 2012-10-18 & Described MVC Pattern more precisely, fixed layout & v0.9\\ 
+Rapp, Schulz & 2012-10-18 & Added Mini Specifications & v0.9\\ 
 \hline
 Harnos, Rapp, Schulz & 2012-10-21 & Final check for spelling and correctness & v1.0\\ 
 \hline 
@@ -627,6 +627,154 @@ Backup & = &  Client File\\
 \caption{Backup Data}\\
 \end{longtable}
 
+\chapter{Mini Specifications}
+\section{Internal Product Functions}
+\subsection{Employees of "BookExpress"}
+\begin{lstlisting}[caption=/PF00/Register Publisher or Book shop (client)]
+if (ContractSigned==true) then  
+	System.RegisterNewClient;
+Registered(Client)=true;
+\end{lstlisting}
+\begin{lstlisting}[caption=/PF01/Edit client information]
+if (Registered(Client)==true) then  
+	System.EditClientInfo(Client);
+	System.SaveClientInfo(Client;
+\end{lstlisting}
+\begin{lstlisting}[caption=/PF02/Delete Account]
+if ((Registered(Client)==true) and Client.OrderCount==0) then  
+	System.DeleteAccount(Client);
+	System.SendDeleteNotification(Client);
+\end{lstlisting}
+\begin{lstlisting}[caption=/PF10/ Client places Order]
+if ((Registered(Client)==true) and (Authorised(Client)==true)) then  
+	System.ManualOrder(Client, Book);
+	Order.Status="Processing";
+	System.SendReport(Client);
+\end{lstlisting}
+\begin{lstlisting}[caption=/PF11/ Validate Order]
+if (Order.Status=="Processing") then 
+	Order.Check();
+	Order.Status="Valid";
+	System.SendConfirmation(Client);
+\end{lstlisting}
+\begin{lstlisting}[caption=/PF12/ Stock Update]
+if (Order.Placed(Client)==true or System.InitiateCheck is called) then
+	for i=0 to Order.Amount do
+		System.StockCheck(Book[i]);
+		System.SubmitList(Book[i], (System.StockCheck(Book[i])-Book.AmountOrdered))
+\end{lstlisting}
+\begin{lstlisting}[caption=/PF13/ Forward Order to Logistics]
+if (Order.Status=="Valid" then
+	System.SendOrder(Order);
+	Order.Status="Logistics";
+\end{lstlisting}
+\begin{lstlisting}[caption=/PF14/ Deliver Order]
+if ((Order.Status=="Valid") and (Book.AmountOrdered <= System.StockCheck(Book))
+	Order.Deliver(Client.GetInfo);
+	Order.Status="Delivery"
+\end{lstlisting}
+\begin{lstlisting}[caption=/PF15/ Confirm Delivery]
+ Order.Status = Order.TrackingStatus;
+\end{lstlisting}
+\begin{lstlisting}[caption=/PF16/ BookExpress Order]
+ for i=0 to System.StockMax do
+ 	if System.StockCheck(Book[i])<=System.PredictAmount(Book[i]) then
+ 	System.OrderBook(Book[i], Book[i].Publisher);
+\end{lstlisting}
+\begin{lstlisting}[caption=/PF20/ Create Invoice]
+if (Order.Status=="Valid") then
+	System.NewInvoice();
+	for i=0 to Order.Amount do 
+		Invoice.Write("Amount:", Book[i].AmountOrdered ,"Book:", Book[i].Title ,"Price:", (Book[i].AmountOrdered * Book[i].Price) )
+		Invoice.Total=Invoice.Total + (Book[i].AmountOrdered * Book[i].Price)
+		end;
+	Invoice.Write("Total:", Invoice.Total)
+	Invoice.Write("Tax:", (Invoice.Total * TaxRate));
+\end{lstlisting}
+\begin{lstlisting}[caption=/PF21/ Send Invoice]
+  if (Invoice.Complete==true) then 
+  	System.SendInvoice(Invoice);
+\end{lstlisting}
+\begin{lstlisting}[caption=/PF30/ Backup]
+ if (System.Time==2400) then
+ 	System.RunBackup();
+\end{lstlisting}
+\begin{lstlisting}[caption=/PF15/ Confirm Delivery]
+ Order.Status = Order.TrackingStatus;
+\end{lstlisting}
+
+\section{External Product Functions}
+\subsection{Book Stores and Publishers}
+
+\begin{lstlisting}[caption=/PF03/ Login]
+ if (Registered(Client)) then
+ 	System.AskPIN();
+ 	System.AskPassword();
+ 	if ((System.ValidatePIN()==true) and
+ 	(System.ValidatePassword()==true)) then
+ 	System.Login;
+\end{lstlisting}
+
+\begin{lstlisting}[caption=/PF04/ Update Account Information]
+ if (LoggedIn(Client)) then
+ 	System.EditData();
+ 	System.CheckData();
+ 	System.SaveData();
+\end{lstlisting}
+
+\begin{lstlisting}[caption=/PF05/ Logout]
+ if (LoggedIn(Client)) then
+ 	System.ConfirmLogout();
+ 	System.SessionTerminate();
+\end{lstlisting}
+
+\subsection{Book Stores ("Clients")}
+
+\begin{lstlisting}[caption=/PF40/ Search for a Book / Show Catalogue]
+ if (LoggedIn(Client)) then
+ 	System.Search(SearchString)
+ 	System.ShowResults;
+ 	Order.Add(Book, Amount);
+\end{lstlisting}
+
+\begin{lstlisting}[caption=/PF17/ Book Store Order via Web Interface]
+if  (LoggedIn(Client)) then
+	Order.Add(Book, Amount);
+	System.SubmitOrder(Order);
+	Order.Status="Processing";
+\end{lstlisting}
+
+\begin{lstlisting}[caption=/PF18/ Change Order]
+if  ((Order.Status=="Processing") and (LoggedIn(Client))) then
+	System.ShowOrders();
+	System.SelectOrder(Order);
+	System.EditOrder(Order);
+	System.SubmitOrder(Order);
+	System.SendChangeNote(Order, Client);
+\end{lstlisting}
+
+\begin{lstlisting}[caption=/PF19/ Cancel Order]
+if (LoggedIn(Client)) and (Order.Status!=="Delivery"|"Delivered") then
+	System.ShowOrders();
+	System.SelectOrder(Order);
+	Order.Status="Canceled";
+\end{lstlisting}
+
+\begin{lstlisting}[caption=/PF50/ Tracking System]
+ if (Order.Status!==NULL) then
+ System.ShowOrders;
+ System.SelectOrder;
+ System.Print(Order.Status);
+\end{lstlisting}
+
+\subsection{Publishers}
+
+\begin{lstlisting}[caption=/PF60/ Inventory Maintenance]
+ if LoggedIn(Publisher) then
+ 	System.ShowInventory();
+ 	System.SelectEntry(Entry);
+ 	System.SaveEntry(Entry);
+\end{lstlisting}
 
 \chapter{Appendices}
 \printglossaries\addcontentsline{toc}{section}{Glossary}\addcontentsline{toc}{section}{Acronyms}
