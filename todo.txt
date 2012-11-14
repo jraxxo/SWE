@@ -1,7 +1,9 @@
-Document History aller Dokumente
+GENERAL
+Header/Footer
+
+SPECIFICATION SHEET
+Product Overview is missing
 
 [A1]
 Zahlen der Effort Estimation table stimmen nicht (Size, Time, Team)
 
-[A2]
-Header and Footer
