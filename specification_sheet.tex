@@ -25,6 +25,15 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 
+\fancypagestyle{plain}{
+    \fancyhf{}
+	\fancyfoot[LO,LE]{M. A. Harnos, J. Rapp, C. Schulz}
+	\cfoot{}
+	\rfoot{\thepage}
+    \renewcommand{\headrulewidth}{0pt}
+	\renewcommand{\footrulewidth}{0.4pt}
+}
+
 %BEGIN Header and Footer Design
 \rhead{}
 \fancyhead[LO,LE]{\slshape \leftmark}
@@ -171,8 +180,14 @@ The new IT system will be used by employees of BookExpress as well as the custom
 \\
 \clearpage
 \chapter{Product Overview}
-OVERVIEW - what else?
-\\
+
+\begin{figure}[H]
+ \begin{center}
+  \includegraphics[width=\textwidth]{ProductOverview.png}
+ \end{center}
+ \caption{The Product Overview}
+\end{figure}
+
 \chapter{Product Functions}
 
 \rowcolors{1}{tableEven}{tableOdd}
@@ -348,6 +363,7 @@ To enhance the customer experience and speed up processes even more, every (bigg
 	 
 \end{tabbing} 
 
+\listoffigures\addcontentsline{toc}{section}{List of Figures}
 \listoftables\addcontentsline{toc}{section}{List of Tables}
 
 \end{document}
