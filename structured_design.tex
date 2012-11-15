@@ -27,25 +27,17 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 
-
-%\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
-%\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
-%\fancyhf{}
-%\fancyhead[LH]{\bfseries\rightmark}
-%\fancyhead[RE]{\bfseries\leftmark}
-
-%\fancyhead[LE,RO]{\slshape \rightmark}
+%BEGIN Header and Footer Design
 \rhead{}
 \fancyhead[LO,LE]{\slshape \leftmark}
-
 \fancyfoot[LO,LE]{M. A. Harnos, J. Rapp, C. Schulz}
 \cfoot{}
 \rfoot{\thepage}
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0.4pt}
+%END Header and Footer Design
 
 %BEGIN Chapter Definition
-
 \makeatletter
 \def\thickhrulefill{\leavevmode \leaders \hrule height 1ex \hfill \kern \z@}
 \def\@makechapterhead#1{%
@@ -359,7 +351,7 @@ The client application should be very responsive and fast - it also should integ
 \section{Model Layers}
 \begin{figure}[H]
  \begin{center}
-  \includegraphics[width=\textwidth]{LayeredModel.png}
+  \includegraphics[scale=0.68]{LayeredModel.png}
  \end{center}
  \caption{Model Layers}
 \end{figure}
